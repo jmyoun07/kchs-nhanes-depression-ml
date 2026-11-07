@@ -1,0 +1,74 @@
+[0_BASE] BASE_spec_500k                     n=  500,000 int=0.8310 pre=0.7740 post=0.7653  D=+0.0000/+0.0000/+0.0000
+[0_REF] REF_pool500k_s42                   n=  500,000 int=0.8291 pre=0.7694 post=0.7587  D=-0.0019/-0.0046/-0.0065
+
+########## A) 연령 하한/상한 (n=500k 통제, 평가는 20+ 고정) ##########
+  주의: KCHS 최소연령=20 → 19+ 학습표본은 존재하지 않음(민감도 불가)
+[A_age] A_20plus                           n=  500,000 int=0.8291 pre=0.7694 post=0.7587  D=+0.0000/+0.0000/+0.0000
+[A_age] A_25plus                           n=  500,000 int=0.8305 pre=0.7672 post=0.7650  D=+0.0014/-0.0022/+0.0063
+[A_age] A_30plus                           n=  500,000 int=0.8293 pre=0.7602 post=0.7659  D=+0.0002/-0.0092/+0.0071
+[A_age] A_40plus                           n=  500,000 int=0.8278 pre=0.7627 post=0.7532  D=-0.0013/-0.0067/-0.0055
+[A_age] A_50plus                           n=  500,000 int=0.8241 pre=0.7606 post=0.7520  D=-0.0050/-0.0088/-0.0068
+[A_age] A_20to64                           n=  500,000 int=0.8308 pre=0.7644 post=0.7608  D=+0.0017/-0.0050/+0.0021
+[A_age] A_20to79                           n=  500,000 int=0.8290 pre=0.7644 post=0.7613  D=-0.0001/-0.0050/+0.0025
+[A_age] A_20to84                           n=  500,000 int=0.8311 pre=0.7592 post=0.7630  D=+0.0020/-0.0102/+0.0042
+
+--- 연령 상한코딩 정렬 (KCHS age=min(age,80)) ---
+[A_age] A_topcode80                        n=  500,000 int=0.8296 pre=0.7644 post=0.7573  D=+0.0005/-0.0050/-0.0015
+
+########## A2) 연령 재가중 / 층화학습 ##########
+[A2_reweight] A2_rw_kchs_surveyW_age             n=  500,000 int=0.8300 pre=0.7669 post=0.7594  D=+0.0009/-0.0025/+0.0006
+[A2_reweight] A2_rw_ageband_uniform              n=  500,000 int=0.8288 pre=0.7653 post=0.7585  D=-0.0003/-0.0041/-0.0003
+[A2_reweight] A2_rw_match_NHANESpre_age          n=  500,000 int=0.8299 pre=0.7670 post=0.7575  D=+0.0008/-0.0024/-0.0013  [GRAY]
+[A2_reweight] A2_rw_match_NHANESpost_age         n=  500,000 int=0.8297 pre=0.7679 post=0.7593  D=+0.0006/-0.0015/+0.0006  [GRAY]
+[A2_reweight] A2_rw_match_NHANESpre_agesex       n=  500,000 int=0.8293 pre=0.7648 post=0.7589  D=+0.0001/-0.0046/+0.0001  [GRAY]
+
+--- 도메인 분류기 밀도비 가중 (GRAY) ---
+  domain AUC(train fit) = 1.0000
+[A2_reweight] A2_rw_densratio_clip99             n=  500,000 int=0.8291 pre=0.7694 post=0.7587  D=+0.0000/+0.0000/+0.0000  [GRAY]
+[A2_reweight] A2_rw_densratio_clip95             n=  500,000 int=0.8291 pre=0.7694 post=0.7587  D=+0.0000/+0.0000/+0.0000  [GRAY]
+
+--- 연령 층화학습 (밴드별 개별 모델) ---
+[A2_reweight] A2_stratified_3band                n=  500,000 int=0.8271 pre=0.7603 post=0.7533  D=-0.0021/-0.0091/-0.0054
+
+########## I) 클래스 불균형 (AUROC=순위지표에 대한 실제 영향) ##########
+  pos=18,107 neg=481,893 ratio=26.6
+[I_imbalance] I_spw1                             n=  500,000 int=0.8291 pre=0.7694 post=0.7587  D=+0.0000/+0.0000/+0.0000
+[I_imbalance] I_spw2                             n=  500,000 int=0.8297 pre=0.7692 post=0.7623  D=+0.0006/-0.0001/+0.0035
+[I_imbalance] I_spw3                             n=  500,000 int=0.8294 pre=0.7705 post=0.7641  D=+0.0003/+0.0011/+0.0054
+[I_imbalance] I_spw5                             n=  500,000 int=0.8297 pre=0.7678 post=0.7629  D=+0.0006/-0.0016/+0.0041
+[I_imbalance] I_spw10                            n=  500,000 int=0.8302 pre=0.7695 post=0.7633  D=+0.0011/+0.0002/+0.0045
+[I_imbalance] I_spw26.6                          n=  500,000 int=0.8290 pre=0.7636 post=0.7629  D=-0.0001/-0.0057/+0.0041
+[I_imbalance] I_is_unbalance                     n=  500,000 int=0.8289 pre=0.7616 post=0.7631  D=-0.0002/-0.0078/+0.0043
+
+--- 언더샘플링(양성 전량 유지, 음성 축소) ---
+[I_imbalance] I_under_1to1                       n=   36,214 int=0.8302 pre=0.7639 post=0.7568  D=+0.0011/-0.0055/-0.0020
+[I_imbalance] I_under_1to4                       n=   90,535 int=0.8291 pre=0.7713 post=0.7578  D=-0.0000/+0.0019/-0.0009
+[I_imbalance] I_under_1to9                       n=  181,070 int=0.8301 pre=0.7638 post=0.7600  D=+0.0010/-0.0055/+0.0012
+
+--- 오버샘플링(양성 복제) ---
+[I_imbalance] I_over_pos_x3                      n=  536,214 int=0.8299 pre=0.7680 post=0.7632  D=+0.0008/-0.0014/+0.0044
+[I_imbalance] I_over_pos_x5                      n=  572,428 int=0.8298 pre=0.7694 post=0.7622  D=+0.0007/+0.0000/+0.0034
+[I_imbalance] I_over_pos_x10                     n=  662,963 int=0.8300 pre=0.7690 post=0.7620  D=+0.0009/-0.0004/+0.0033
+
+--- focal loss ---
+Traceback (most recent call last):
+  File "C:\Users\rudtn\Desktop\claude code\지역사회건강\experiments\path3_02_design.py", line 226, in <module>
+    r, _, _ = B.run(f"I_focal_a{a}_g{g}", tr500, est=est, note=f"focal alpha={a} gamma={g}")
+              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rudtn\Desktop\claude code\지역사회건강\experiments\path3_common.py", line 131, in run
+    pi = pipe.predict_proba(Xho)[:, 1]
+         ~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\rudtn\AppData\Local\Programs\Python\Python314\Lib\site-packages\sklearn\pipeline.py", line 926, in predict_proba
+    return self.steps[-1][1].predict_proba(Xt, **params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\rudtn\Desktop\claude code\지역사회건강\experiments\path3_02_design.py", line 198, in predict_proba
+    raw = self.predict(X, raw_score=True, **kw)
+  File "C:\Users\rudtn\AppData\Local\Programs\Python\Python314\Lib\site-packages\lightgbm\sklearn.py", line 1597, in predict
+    result = self.predict_proba(
+        X=X,
+    ...<6 lines>...
+        **kwargs,
+    )
+  File "C:\Users\rudtn\Desktop\claude code\지역사회건강\experiments\path3_02_design.py", line 198, in predict_proba
+    raw = self.predict(X, raw_score=True, **kw)
+TypeError: lightgbm.sklearn.LGBMClassifier.predict() got multiple values for keyword argument 'raw_score'

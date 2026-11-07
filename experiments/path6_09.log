@@ -1,0 +1,14 @@
+BASE_lgbm        pre=0.774013  post=0.765262
+G1_gate          pre=0.775776  post=0.769713
+G2_fixed_a0.4    pre=0.774494  post=0.770766
+B5_blend_a0.9    pre=0.774981  post=0.767463
+LOGIT_only       pre=0.758511  post=0.759478
+{'model': 'G1_gate', 'set': 'pre', 'n_boot': 2000, 'delta': 0.001763, 'lo': -0.001017, 'hi': 0.004765, 'p_gt0': 0.8865, 'sig': 'n.s.'}
+{'model': 'G2_fixed_a0.4', 'set': 'pre', 'n_boot': 2000, 'delta': 0.000481, 'lo': -0.00391, 'hi': 0.005085, 'p_gt0': 0.593, 'sig': 'n.s.'}
+{'model': 'B5_blend_a0.9', 'set': 'pre', 'n_boot': 2000, 'delta': 0.000968, 'lo': -0.000248, 'hi': 0.002167, 'p_gt0': 0.9335, 'sig': 'n.s.'}
+{'model': 'LOGIT_only', 'set': 'pre', 'n_boot': 2000, 'delta': -0.015502, 'lo': -0.026374, 'hi': -0.004267, 'p_gt0': 0.001, 'sig': '유의'}
+{'model': 'G1_gate', 'set': 'post', 'n_boot': 2000, 'delta': 0.00445, 'lo': 0.00173, 'hi': 0.007228, 'p_gt0': 1.0, 'sig': '유의'}
+{'model': 'G2_fixed_a0.4', 'set': 'post', 'n_boot': 2000, 'delta': 0.005503, 'lo': 0.001437, 'hi': 0.00956, 'p_gt0': 0.997, 'sig': '유의'}
+{'model': 'B5_blend_a0.9', 'set': 'post', 'n_boot': 2000, 'delta': 0.002201, 'lo': 0.001179, 'hi': 0.00316, 'p_gt0': 1.0, 'sig': '유의'}
+{'model': 'LOGIT_only', 'set': 'post', 'n_boot': 2000, 'delta': -0.005784, 'lo': -0.015938, 'hi': 0.004596, 'p_gt0': 0.145, 'sig': 'n.s.'}
+saved. TOTAL 107.7 s

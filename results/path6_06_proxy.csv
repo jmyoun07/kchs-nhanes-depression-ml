@@ -1,0 +1,10 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,seconds,note
+PX_base_lgbm,0.830969,0.774013,0.765262,True,,α=1.0 기준선
+PX1_iid_OOF_pick_a0.90,0.830937,0.774981,0.767463,True,,PX1_iid_OOF 프록시가 고른 α=0.90 (KCHS 내부만 사용)
+PX2_LOYO_mean_pick_a0.85,0.830761,0.775356,0.76838,True,,PX2_LOYO_mean 프록시가 고른 α=0.85 (KCHS 내부만 사용)
+PX2_LOYO_min_pick_a0.70,0.829618,0.775194,0.770367,True,,PX2_LOYO_min 프록시가 고른 α=0.70 (KCHS 내부만 사용)
+PX3_region_mean_pick_a0.85,0.830761,0.775356,0.76838,True,,PX3_region_mean 프록시가 고른 α=0.85 (KCHS 내부만 사용)
+PX3_region_min_pick_a0.75,0.830103,0.775383,0.76995,True,,PX3_region_min 프록시가 고른 α=0.75 (KCHS 내부만 사용)
+PX4_age_holdout_pick_a0.70,0.829618,0.775194,0.770367,True,,PX4_age_holdout 프록시가 고른 α=0.70 (KCHS 내부만 사용)
+PX4b_age_old_pick_a0.65,0.829028,0.774821,0.770721,True,,PX4b_age_old 프록시가 고른 α=0.65 (KCHS 내부만 사용)
+PX5_tail_holdout_pick_a0.60,0.828331,0.774494,0.770766,True,,PX5_tail_holdout 프록시가 고른 α=0.60 (KCHS 내부만 사용)

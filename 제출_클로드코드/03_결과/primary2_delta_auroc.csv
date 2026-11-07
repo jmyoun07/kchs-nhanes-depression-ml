@@ -1,0 +1,2 @@
+﻿contrast,delta,CI_lo,CI_hi,P,replicates_pre,replicates_post,pairs
+post − pre (external AUROC),0.005563,-0.044569,0.056146,0.8628,1000,1000,20000

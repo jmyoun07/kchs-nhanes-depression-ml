@@ -1,0 +1,11 @@
+{
+ "R1_loyo_mean": "B16_l15_mcs2000_lam100_col06_sub08f1",
+ "R2_loyo_min": "C09",
+ "R3_reg_min": "C09",
+ "R4_loyo_mean_m_std": "B03_l15_mcs1000_lam100_c06",
+ "R5_worst_all": "C09",
+ "R6_avg_mins": "C09",
+ "R7_avg_means": "C02",
+ "R8_cvar3_years": "C05",
+ "R9_ens_top5_worst_all": "C09,C01,C02,B11_bin32_l15_mcs2000,C05"
+}

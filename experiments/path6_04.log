@@ -1,0 +1,21 @@
+design matrix (500000, 20)
+PCA cum-var: [0.175 0.295 0.375 0.434 0.49  0.544 0.596 0.643 0.689 0.733 0.775 0.814
+ 0.852 0.884 0.914]
+  L1 PCA k=3  KCHS OOF=0.71305
+  L1 PCA k=5  KCHS OOF=0.77646
+  L1 PCA k=8  KCHS OOF=0.78987
+  L1 PCA k=12  KCHS OOF=0.80230
+  L1 PCA k=16  KCHS OOF=0.81989
+  L1 PCA k=20  KCHS OOF=0.82577
+L1 selected k = 20
+{'name': 'L1_pcaKCHS_k3', 'internal': 0.723876, 'ext_pre': 0.687391, 'ext_post': 0.674688, 'protocol_compliant': False, 'seconds': None, 'note': '★진단전용: k 외부선택은 위반 | OOF=0.71305'}
+{'name': 'L1_pcaKCHS_k5', 'internal': 0.777109, 'ext_pre': 0.732759, 'ext_post': 0.724012, 'protocol_compliant': False, 'seconds': None, 'note': '★진단전용: k 외부선택은 위반 | OOF=0.77646'}
+{'name': 'L1_pcaKCHS_k8', 'internal': 0.788131, 'ext_pre': 0.745428, 'ext_post': 0.732424, 'protocol_compliant': False, 'seconds': None, 'note': '★진단전용: k 외부선택은 위반 | OOF=0.78987'}
+{'name': 'L1_pcaKCHS_k12', 'internal': 0.801665, 'ext_pre': 0.748476, 'ext_post': 0.733796, 'protocol_compliant': False, 'seconds': None, 'note': '★진단전용: k 외부선택은 위반 | OOF=0.80230'}
+{'name': 'L1_pcaKCHS_k16', 'internal': 0.819283, 'ext_pre': 0.756386, 'ext_post': 0.747273, 'protocol_compliant': False, 'seconds': None, 'note': '★진단전용: k 외부선택은 위반 | OOF=0.81989'}
+{'name': 'L1_pcaKCHS_k20', 'internal': 0.827256, 'ext_pre': 0.763015, 'ext_post': 0.762339, 'protocol_compliant': True, 'seconds': None, 'note': '★KCHS OOF 선택 k | OOF=0.82577'}
+{'name': 'L2_pcaPOOL_k8', 'internal': 0.789474, 'ext_pre': 0.744412, 'ext_post': 0.737967, 'protocol_compliant': False, 'seconds': None, 'note': '★회색: NHANES 공변량으로 PCA 적합(라벨 미사용). 배포시 대상분포 필요'}
+{'name': 'L2_pcaPOOL_k12', 'internal': 0.803193, 'ext_pre': 0.744016, 'ext_post': 0.736124, 'protocol_compliant': False, 'seconds': None, 'note': '★회색: NHANES 공변량으로 PCA 적합(라벨 미사용). 배포시 대상분포 필요'}
+{'name': 'L2_pcaPOOL_k20', 'internal': 0.828941, 'ext_pre': 0.765887, 'ext_post': 0.759569, 'protocol_compliant': False, 'seconds': None, 'note': '★회색: NHANES 공변량으로 PCA 적합(라벨 미사용). 배포시 대상분포 필요'}
+domain AUC: 0.8852
+{'name': 'L3_domain_deflate_1', 'internal': 0.830753, 'ext_pre': 0.767387, 'ext_post': 0.763342, 'protocol_compliant': False, 'seconds': None, 'note': '★회색: KCHS-NHANES 판별방향 제거(대상 공변량 사용, 라벨 미사용)'}

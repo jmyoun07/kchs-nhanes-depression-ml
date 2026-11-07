@@ -1,0 +1,32 @@
+==================================================================================
+[1-2] 하위군 보정 slope + AUROC 층별 군집 부트스트랩 CI
+==================================================================================
+  Sex: female                      n=54,588  AUROC 0.822 [0.811,0.833]  slope 1.007
+  Sex: male                        n=45,412  AUROC 0.831 [0.816,0.845]  slope 0.998
+  Age 20-39                        n=20,508  AUROC 0.785 [0.766,0.802]  slope 0.973
+  Age 40-59                        n=34,520  AUROC 0.828 [0.812,0.843]  slope 1.018
+  Age 60+                          n=44,972  AUROC 0.859 [0.849,0.870]  slope 1.008
+  Education: college               n=37,939  AUROC 0.813 [0.798,0.828]  slope 1.029
+  Education: high school           n=28,973  AUROC 0.829 [0.814,0.845]  slope 0.978
+  Education: middle                n=11,329  AUROC 0.830 [0.810,0.850]  slope 0.929
+  Education: <=elementary          n=21,682  AUROC 0.816 [0.804,0.829]  slope 0.940
+  NHANES pre race: Mexican American n=   914  AUROC 0.697 [0.646,0.751]  slope 0.579
+  NHANES pre race: Other Hispanic  n=   813  AUROC 0.777 [0.747,0.808]  slope 0.729
+  NHANES pre race: Non-Hispanic White n= 2,798  AUROC 0.778 [0.743,0.809]  slope 0.663
+  NHANES pre race: Non-Hispanic Black n= 2,096  AUROC 0.762 [0.738,0.786]  slope 0.722
+  NHANES pre race: Non-Hispanic Asian n=   886  AUROC 0.810 [0.748,0.857]  slope 0.782
+  NHANES pre race: Other/multiracial n=   381  AUROC 0.772 [0.698,0.840]  slope 0.715
+
+==================================================================================
+[3] NHANES 자기적합 오라클(진단 목적) — 학습기별 5-fold CV + 부트스트랩 CI
+==================================================================================
+  Logistic regression                oracle AUROC 0.7654  95% CI [0.748,0.782]
+  Penalized logistic (L2, C=0.1)     oracle AUROC 0.7655  95% CI [0.749,0.782]
+  Histogram gradient boosting        oracle AUROC 0.7672  95% CI [0.751,0.783]
+  LightGBM (small)                   oracle AUROC 0.7721  95% CI [0.757,0.787]
+  In-sample (apparent) upper bound   0.8261
+
+  → 학습기별 오라클 범위 0.765–0.772 · 최고 학습기 CI [0.757,0.787]
+
+저장: results/fairness_ci.csv, subgroup_calibration.csv, oracle_ci.csv
+완료.

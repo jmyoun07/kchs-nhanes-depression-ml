@@ -1,0 +1,8 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,seconds,note
+G0_lgbm,0.830969,0.774013,0.765262,True,,기준선 딥LGBM
+G10L_gate2LR_c4.3_s0.5_a0.3,0.830229,0.775776,0.769713,True,,게이트 목표=LR (프록시=0.81271)
+G10S_gate2shallow_c4.3_s2.0_a1.0,0.83184,0.770219,0.768277,True,,★신규 게이트 목표=얕은트리 (프록시=0.81293)
+DIAG_fixed_gate2shallow_a0.2,0.831473,0.773249,0.766492,False,,★진단전용: 얕은트리 고정혼합 외부곡선(α 외부선택은 위반)
+DIAG_fixed_gate2shallow_a0.4,0.831785,0.772078,0.76753,False,,★진단전용: 얕은트리 고정혼합 외부곡선(α 외부선택은 위반)
+DIAG_fixed_gate2shallow_a0.6,0.831926,0.770418,0.768075,False,,★진단전용: 얕은트리 고정혼합 외부곡선(α 외부선택은 위반)
+DIAG_fixed_gate2shallow_a0.8,0.831873,0.768342,0.768248,False,,★진단전용: 얕은트리 고정혼합 외부곡선(α 외부선택은 위반)

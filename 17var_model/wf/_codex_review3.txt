@@ -1,0 +1,35 @@
+You are an adversarial peer reviewer for the Journal of Medical Internet Research (JMIR). This manuscript has already been through two revision rounds; your job is to find what still remains. Report ONLY concrete, checkable defects.
+
+SUBMISSION (this folder)
+- Manuscript: docs/manuscript_17var.md
+- Multimedia Appendix 1: docs/TRIPOD_AI_checklist.md
+- Multimedia Appendix 2: docs/appendix2_crosswalk.md
+- Multimedia Appendix 3: docs/appendix3_utility.md
+- Multimedia Appendix 4: docs/appendix4_ceiling.md
+- Model card: docs/model_card_17var.md
+- LOCKED Korean pre-specification (2026-07-15): docs/prespecification_17var.md
+- Internal QC ledger: docs/evidence_ledger.md
+- Cover letter: docs/cover_letter.md
+
+EVIDENCE
+- results/*.csv — CURRENT authoritative files: review2_metrics.csv, review2_gain.csv, review2_fairness.csv, review2_operating.csv, review2_prevalence.csv, review2_overlap.csv, parsimonious_clean.csv, shap_importance_train.csv, continuous_score.csv, oracle_ci.csv, fairness_ci.csv, subgroup_calibration.csv, table_s4_operating.csv, table_s4_netbenefit.csv, table3_characteristics.csv, shap_cross.csv, sensitivity_full.csv, final_sensitivity.csv, audit_algo_comparison.csv, audit_14var_tuning.csv, ceiling_experiments.csv
+- Note: final_metrics.csv / final_parsimonious.csv / gain_14to17_bootstrap.csv / fairness.csv / table_s1_operating.csv are EARLIER generations. Where they disagree with the review2_*/parsimonious_clean files, the review2_* files are authoritative. Flag any manuscript number that traces only to a superseded file.
+- Parent folder ../results/ has pathG_02b_kchs_samesize.csv, dpq_missingness.txt, qc_crosswalk.txt, ext_transport_combo.csv, ext_candidate_transferability.csv
+- Code: 20_final_pipeline.py, 21_figures_tables.py, 22_supplement.py, 23_extra_metrics.py, 36_utility.py, 37_gain_boot.py, 38_table_figs.py, 41_audit_recompute.py, 42_audit_tuning.py, 43_consolidate.py, 44_make_docx.py, 45_make_appendix_docx.py, 46_review_fixes.py, 47_review2_recompute.py, 48_parsimonious_clean.py, 49_continuous_score.py, 50_figures_update.py; ../src/01_harmonize.py, ../src/15_ext_harmonize.py; ../experiments/roundF_nested.py
+- Figures: results/figures/*.png (characteristics, calibration, roc_curves, sensitivity, shap_importance, subgroup_forest, dca)
+
+CHECK EXHAUSTIVELY — use python/pandas to recompute, do not trust the text
+1. Numeric fidelity: every number in the abstract, Results 3.1-3.8, Table 1, Table 2, and the figure legends must match its CURRENT source file including rounding. Flag numbers traceable only to superseded files, or to no file.
+2. Methods vs code: verify each claim in Methods 2.1-2.14 against what the scripts actually do. Pay attention to the rescaled cluster bootstrap in 47_review2_recompute.py (is the Rao-Wu rescaling implemented correctly? check the m_h selection logic carefully), the cross-fit recalibration, the 450k/50k parsimonious selection design in 48_parsimonious_clean.py, the continuous-score analysis in 49, and the ordinal-as-numeric handling.
+3. Leakage and pre-specification fidelity: translate the locked Korean pre-specification and the parent-folder protocol (../docs/protocol_text.md, ../docs/SAP.md) yourself; flag anything the manuscript attributes to them that they do not say, and any remaining route by which external data influenced any选择. Check H1-H4 claims against what those documents actually specify.
+4. Cross-document consistency: manuscript vs four appendices vs model card vs checklist vs cover letter vs evidence ledger. Stale numbers, stale cross-references, figures/tables cited but absent or present but never cited, figure numbering vs order of first citation, and whether the docx generator's figure list matches the legends.
+5. Statistical soundness: the rescaled bootstrap, the centred paired bootstrap P values, decision-curve net benefit and its comparators, complete-case handling, subgroup inference, the oracle framing, and whether the causal language about concept shift is now properly hedged.
+
+RULES
+- READ ONLY. Do not modify any file.
+- Ignore intentional placeholders: "[to be completed]" (authors) and "[to be inserted]" (IRB number, repository DOI).
+- No style or wording opinions. Only defects with a file+value that contradicts the text.
+- For each defect: exact quoted text, section, contradicting file+value, severity (blocking/important/minor), precise correction.
+- State explicitly for each of the five categories whether you found nothing.
+
+Finish with a one-line verdict.

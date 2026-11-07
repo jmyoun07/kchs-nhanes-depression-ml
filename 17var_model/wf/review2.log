@@ -1,0 +1,48 @@
+[재현] 내부 0.8315 / pre 0.7718 / post 0.7688
+
+[중첩] hold-out 군집 78,239개 중 학습셋과 공유 72,018개 (92.0%) · 레코드 91,997/100,000 (92.0%)
+
+[유병률] food_insecure — 결측 제외 available-case
+   KCHS         결측 22.13%  |  naive 2.91%  available-case 3.74%
+   NHANES pre   결측 6.00%  |  naive 15.57%  available-case 16.38%
+   NHANES post  결측 6.26%  |  naive 16.05%  available-case 17.23%
+
+[운영지점] 관측 점수 전체에서 정확 Youden 재산출
+   Internal     Youden t=0.03327  sens 0.730 spec 0.780 PPV 0.110 NPV 0.987
+   NHANES pre   Youden t=0.03547  sens 0.733 spec 0.687 PPV 0.178 NPV 0.965
+   NHANES post  Youden t=0.02821  sens 0.739 spec 0.667 PPV 0.236 NPV 0.948
+
+[주요지표] Rao-Wu-Yue 재척도 부트스트랩 CI + ECE
+   Internal(hold-out)   AUROC 0.8315 [0.8219,0.8410]  AUPRC 0.233 [0.215,0.251]  ECE 0.0038
+   NHANES pre           AUROC 0.7718 [0.7348,0.8075]  AUPRC 0.267 [0.211,0.332]  ECE 0.0318
+   NHANES post          AUROC 0.7688 [0.7391,0.7992]  AUPRC 0.346 [0.307,0.390]  ECE 0.0667
+
+[하위군] AUROC(재척도 CI) · 보정 slope · CITL — NHANES post 포함
+   KCHS hold-out Sex: female                  n=54,588  AUROC 0.822 [0.811,0.834]  slope 1.007  CITL +0.111
+   KCHS hold-out Sex: male                    n=45,412  AUROC 0.831 [0.813,0.846]  slope 0.998  CITL +0.090
+   KCHS hold-out Age 20-39                    n=20,508  AUROC 0.785 [0.763,0.807]  slope 0.973  CITL -0.009
+   KCHS hold-out Age 40-59                    n=34,520  AUROC 0.828 [0.812,0.844]  slope 1.018  CITL +0.159
+   KCHS hold-out Age 60+                      n=44,972  AUROC 0.859 [0.848,0.871]  slope 1.008  CITL +0.159
+   KCHS hold-out Education: college           n=37,939  AUROC 0.813 [0.796,0.829]  slope 1.029  CITL -0.018
+   KCHS hold-out Education: high school       n=28,973  AUROC 0.829 [0.812,0.849]  slope 0.978  CITL +0.141
+   KCHS hold-out Education: middle            n=11,329  AUROC 0.830 [0.802,0.853]  slope 0.929  CITL +0.256
+   KCHS hold-out Education: <=elementary      n=21,682  AUROC 0.816 [0.800,0.833]  slope 0.940  CITL +0.206
+   NHANES pre   Race: Mexican American       n=   914  AUROC 0.697 [0.625,0.777]  slope 0.579  CITL -0.105
+   NHANES post  Race: Mexican American       n=   330  AUROC 0.689 [0.609,0.794]  slope 0.553  CITL +1.030
+   NHANES pre   Race: Other Hispanic         n=   813  AUROC 0.777 [0.733,0.818]  slope 0.729  CITL +0.385
+   NHANES post  Race: Other Hispanic         n=   499  AUROC 0.790 [0.747,0.843]  slope 0.696  CITL +0.638
+   NHANES pre   Race: Non-Hispanic White     n= 2,798  AUROC 0.778 [0.727,0.825]  slope 0.663  CITL +0.682
+   NHANES post  Race: Non-Hispanic White     n= 3,215  AUROC 0.770 [0.723,0.812]  slope 0.695  CITL +1.296
+   NHANES pre   Race: Non-Hispanic Black     n= 2,096  AUROC 0.762 [0.727,0.800]  slope 0.722  CITL +0.056
+   NHANES post  Race: Non-Hispanic Black     n=   598  AUROC 0.727 [0.650,0.794]  slope 0.554  CITL +0.843
+   NHANES pre   Race: Non-Hispanic Asian     n=   886  AUROC 0.810 [0.725,0.875]  slope 0.782  CITL +0.371
+   NHANES post  Race: Non-Hispanic Asian     n=   228  AUROC 0.841 [0.638,0.988]  slope 1.214  CITL +0.773
+   NHANES pre   Race: Other/multiracial      n=   381  AUROC 0.772 [0.673,0.871]  slope 0.715  CITL +0.806
+   NHANES post  Race: Other/multiracial      n=   340  AUROC 0.786 [0.709,0.873]  slope 0.776  CITL +0.985
+
+[14→17] 재척도 부트스트랩 + 중심화 P
+   NHANES pre: 14 0.7493 → 17 0.7718  Δ=+0.0225 95%CI[+0.0131,+0.0330]  P=0.0005
+   NHANES post: 14 0.7530 → 17 0.7688  Δ=+0.0158 95%CI[+0.0075,+0.0231]  P=0.0005
+
+저장: results/review2_*.csv
+완료.

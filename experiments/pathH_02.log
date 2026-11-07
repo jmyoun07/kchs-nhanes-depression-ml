@@ -1,0 +1,25 @@
+    [drop_age] fold0 53s
+    [drop_age] fold1 99s
+    [drop_age] fold2 152s
+    [drop_age] fold3 203s
+    [drop_age] fold4 250s
+drop_age                       OOF=0.8218 郴何=0.8219 pre=0.7591 post=0.7340
+    [drop_sleep_hrs] fold0 57s
+    [drop_sleep_hrs] fold1 108s
+    [drop_sleep_hrs] fold2 160s
+    [drop_sleep_hrs] fold3 238s
+    [drop_sleep_hrs] fold4 383s
+drop_sleep_hrs                 OOF=0.8176 郴何=0.8174 pre=0.7696 post=0.7609
+    [drop_bmi] fold0 55s
+    [drop_bmi] fold1 116s
+    [drop_bmi] fold2 206s
+    [drop_bmi] fold3 295s
+    [drop_bmi] fold4 372s
+drop_bmi                       OOF=0.8298 郴何=0.8303 pre=0.7690 post=0.7673
+    [drop_income_q] fold0 101s
+    [drop_income_q] fold1 191s
+    [drop_income_q] fold2 283s
+    [drop_income_q] fold3 392s
+    [drop_income_q] fold4 489s
+drop_income_q                  OOF=0.8301 郴何=0.8291 pre=0.7743 post=0.7624
+    [drop_srh] fold0 196s

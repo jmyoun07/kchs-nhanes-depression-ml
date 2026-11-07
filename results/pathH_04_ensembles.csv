@@ -1,0 +1,60 @@
+﻿name,method,how,n_members,oof,internal,ext_pre,ext_post,protocol_compliant,members,note
+BASE_lgbm_base,single,prob,1,0.8303310573093439,0.8309685814470213,0.7740131977508524,0.765262430372477,True,lgbm_base,명세 기준선
+F_all_prob,uniform,prob,27,0.8301986453806613,0.8318044985243414,0.7713523166340579,0.7684017796617199,True,27 models,all 균등 결합
+F_all_rank,uniform,rank,27,0.831041079179834,0.8318276314723978,0.7744498142871185,0.7706246775428616,True,27 models,all 균등 결합
+F_all_logit,uniform,logit,27,0.8305660335453062,0.8320978117602104,0.7736596145586117,0.7708266404521804,True,27 models,all 균등 결합
+F_gbdt_prob,uniform,prob,14,0.832006974350155,0.8319696514027203,0.7731579856148467,0.7685917072844839,True,cat_base;cat_d4;histgb;lgbm_base;lgbm_d2;lgbm_d3;lgbm_d4;lgbm_deep;lgbm_goss;lgbm_reg;lgbm_stump;xgb_base;xgb_d3;xgb_d8,gbdt 균등 결합
+F_gbdt_rank,uniform,rank,14,0.8319579179186047,0.8320168928732397,0.7731825594872535,0.7690278833457338,True,cat_base;cat_d4;histgb;lgbm_base;lgbm_d2;lgbm_d3;lgbm_d4;lgbm_deep;lgbm_goss;lgbm_reg;lgbm_stump;xgb_base;xgb_d3;xgb_d8,gbdt 균등 결합
+F_gbdt_logit,uniform,logit,14,0.831951719385843,0.8320038550303381,0.7731295928430341,0.768857008199847,True,cat_base;cat_d4;histgb;lgbm_base;lgbm_d2;lgbm_d3;lgbm_d4;lgbm_deep;lgbm_goss;lgbm_reg;lgbm_stump;xgb_base;xgb_d3;xgb_d8,gbdt 균등 결합
+F_depth_prob,uniform,prob,6,0.8315042841521185,0.8313597657760464,0.7719387358751498,0.7672107636991733,True,lgbm_stump;lgbm_d2;lgbm_d3;lgbm_d4;lgbm_base;lgbm_deep,depth 균등 결합
+F_depth_rank,uniform,rank,6,0.8314785345851645,0.8314600274940379,0.7721752834498183,0.7680448744119878,True,lgbm_stump;lgbm_d2;lgbm_d3;lgbm_d4;lgbm_base;lgbm_deep,depth 균등 결합
+F_depth_logit,uniform,logit,6,0.8314517210730723,0.8313997469367009,0.7721615650872793,0.7677953915044611,True,lgbm_stump;lgbm_d2;lgbm_d3;lgbm_d4;lgbm_base;lgbm_deep,depth 균등 결합
+F_algdiv_prob,uniform,prob,9,0.831950704002831,0.8329162672939965,0.7747457065008685,0.7699724559401644,True,lgbm_base;xgb_base;cat_base;histgb;rf;et;logit_l2;logit_spline;mlp32,algdiv 균등 결합
+F_algdiv_rank,uniform,rank,9,0.831564130388758,0.8324641962232369,0.7755853862658119,0.7706473799709929,True,lgbm_base;xgb_base;cat_base;histgb;rf;et;logit_l2;logit_spline;mlp32,algdiv 균등 결합
+F_algdiv_logit,uniform,logit,9,0.8317636703843323,0.8327610501888723,0.7750601822425781,0.7710589711966358,True,lgbm_base;xgb_base;cat_base;histgb;rf;et;logit_l2;logit_spline;mlp32,algdiv 균등 결합
+F_subspace_prob,uniform,prob,2,0.8271296278638836,0.82689270235288,0.7703358418269824,0.7536877207095918,True,drop_age;drop_sleep_hrs,subspace 균등 결합
+F_subspace_rank,uniform,rank,2,0.8254215400697753,0.8251832221554832,0.7710851049238847,0.753436636549518,True,drop_age;drop_sleep_hrs,subspace 균등 결합
+F_subspace_logit,uniform,logit,2,0.8262563080245552,0.8260418436058388,0.7708415388008274,0.7535785469053731,True,drop_age;drop_sleep_hrs,subspace 균등 결합
+F_dropone_prob,uniform,prob,2,0.8271296278638836,0.82689270235288,0.7703358418269824,0.7536877207095918,True,drop_age;drop_sleep_hrs,dropone 균등 결합
+F_dropone_rank,uniform,rank,2,0.8254215400697753,0.8251832221554832,0.7710851049238847,0.753436636549518,True,drop_age;drop_sleep_hrs,dropone 균등 결합
+F_dropone_logit,uniform,logit,2,0.8262563080245552,0.8260418436058388,0.7708415388008274,0.7535785469053731,True,drop_age;drop_sleep_hrs,dropone 균등 결합
+TOP2_rank,topk_oof,rank,2,0.8319799808857562,0.8322689329930673,0.7697725422503559,0.7705426274812399,True,cat_base;cat_d4,OOF AUC 상위 2개
+TOP2_logit,topk_oof,logit,2,0.8319825446518786,0.8322689180789102,0.7696979940958554,0.7705579942170283,True,cat_base;cat_d4,OOF AUC 상위 2개
+TOP3_rank,topk_oof,rank,3,0.8321694147250591,0.8322296759053225,0.7698435962090202,0.7708901280577363,True,cat_base;cat_d4;histgb_d3,OOF AUC 상위 3개
+TOP3_logit,topk_oof,logit,3,0.832173412359354,0.8322247925774311,0.7697729097705966,0.7709304627414847,True,cat_base;cat_d4;histgb_d3,OOF AUC 상위 3개
+TOP5_rank,topk_oof,rank,5,0.8321410588759436,0.8322875360975176,0.7699982554360579,0.7702955311065038,True,cat_base;cat_d4;histgb_d3;lgbm_d2;xgb_d3,OOF AUC 상위 5개
+TOP5_logit,topk_oof,logit,5,0.8321503762068452,0.8322877493501013,0.769949017670594,0.7702970957325675,True,cat_base;cat_d4;histgb_d3;lgbm_d2;xgb_d3,OOF AUC 상위 5개
+TOP8_rank,topk_oof,rank,8,0.8321692268031265,0.8322673410903532,0.7718977650046747,0.7693376451458819,True,cat_base;cat_d4;histgb_d3;lgbm_d2;xgb_d3;lgbm_reg;lgbm_d3;xgb_base,OOF AUC 상위 8개
+TOP8_logit,topk_oof,logit,8,0.832182388527909,0.8322697157332589,0.7717195760419018,0.7693256140768712,True,cat_base;cat_d4;histgb_d3;lgbm_d2;xgb_d3;lgbm_reg;lgbm_d3;xgb_base,OOF AUC 상위 8개
+TOP12_rank,topk_oof,rank,12,0.8320476827358361,0.8321969457899447,0.77305656654258,0.7690919838273821,True,cat_base;cat_d4;histgb_d3;lgbm_d2;xgb_d3;lgbm_reg;lgbm_d3;xgb_base;lgbm_goss;lgbm_d4;lgbm_base;xgb_d8,OOF AUC 상위 12개
+TOP12_logit,topk_oof,logit,12,0.8320554882495984,0.8322029271713967,0.7729627964352925,0.7690616674584638,True,cat_base;cat_d4;histgb_d3;lgbm_d2;xgb_d3;lgbm_reg;lgbm_d3;xgb_base;lgbm_goss;lgbm_d4;lgbm_base;xgb_d8,OOF AUC 상위 12개
+TOP20_rank,topk_oof,rank,20,0.8323176300766445,0.8327793194108821,0.77364471187868,0.7704598479385929,True,cat_base;cat_d4;histgb_d3;lgbm_d2;xgb_d3;lgbm_reg;lgbm_d3;xgb_base;lgbm_goss;lgbm_d4;lgbm_base;xgb_d8;histgb;rf;lgbm_stump;mlp32;logit_spline;lgbm_deep;mlp64_32;et,OOF AUC 상위 20개
+TOP20_logit,topk_oof,logit,20,0.8323118540445301,0.8327776012483941,0.7733377753866864,0.770430525822252,True,cat_base;cat_d4;histgb_d3;lgbm_d2;xgb_d3;lgbm_reg;lgbm_d3;xgb_base;lgbm_goss;lgbm_d4;lgbm_base;xgb_d8;histgb;rf;lgbm_stump;mlp32;logit_spline;lgbm_deep;mlp64_32;et,OOF AUC 상위 20개
+WAUC_all_rank,oofauc_weight,rank,27,0.8315526996668116,0.8320523772540693,0.7743988756360076,0.7706571928294229,True,27 models,OOF AUC^4 가중
+WAUC_gbdt_rank,oofauc_weight,rank,14,0.8319649713804216,0.832030660868082,0.7731400161771209,0.7690193826337862,True,cat_base;cat_d4;histgb;lgbm_base;lgbm_d2;lgbm_d3;lgbm_d4;lgbm_deep;lgbm_goss;lgbm_reg;lgbm_stump;xgb_base;xgb_d3;xgb_d8,OOF AUC^4 가중
+WAUC_algdiv_rank,oofauc_weight,rank,9,0.8317322817515533,0.8326521865991869,0.7756251828809773,0.770601941490709,True,lgbm_base;xgb_base;cat_base;histgb;rf;et;logit_l2;logit_spline;mlp32,OOF AUC^4 가중
+WAUC_subspace_rank,oofauc_weight,rank,2,0.8254820857846698,0.825243034587435,0.7709584539696612,0.7530574036168044,True,drop_age;drop_sleep_hrs,OOF AUC^4 가중
+GREEDY_all_rank,greedy_oof,rank,7,0.8325991702936472,0.8332135447900744,0.7724376642063544,0.7716561282474201,True,cat_base;cat_d4;histgb_d3;lgbm_reg;mlp32;rf;xgb_d8,"Caruana 탐욕(OOF만), 반복30, OOF=0.83260"
+GREEDY_all_logit,greedy_oof,logit,11,0.8326534075773779,0.8333133176188132,0.7732606520543979,0.7709514378251605,True,cat_base;cat_d4;et;histgb_d3;lgbm_d2;lgbm_reg;lgbm_stump;mlp32;rf;xgb_base;xgb_d8,"Caruana 탐욕(OOF만), 반복30, OOF=0.83265"
+GREEDYBAG_all_rank,greedy_bagged,rank,13,0.8326333899312263,0.8332823743589591,0.7728537268206521,0.7711951060836899,True,cat_base;cat_d4;et;histgb_d3;lgbm_d2;lgbm_goss;lgbm_reg;lgbm_stump;logit_spline;mlp32;rf;xgb_base;xgb_d8,배깅 탐욕 10회 평균(OOF만)
+NNLS_all_rank,nnls_oof,rank,7,0.8301933644662621,0.8319362458116831,0.7745334657475461,0.7652683533152664,True,drop_age;et;gnb;histgb_d3;lgbm_d2;lgbm_deep;rf,가중 NNLS(OOF만)
+STACK_all_C1.0_w1,stacking,logit,27,0.8301605154412532,0.8321093500068705,0.7732706625299174,0.7706114995381127,True,27 models,메타=로지스틱 C=1.0 weighted=True; 선택지표=OOF내 5-fold CV
+STACK_all_C1.0_w0,stacking,logit,27,0.8322720913622932,0.8338530991403641,0.7721087217350062,0.771908845372033,True,27 models,메타=로지스틱 C=1.0 weighted=False; 선택지표=OOF내 5-fold CV
+STACK_all_C0.01_w1,stacking,logit,27,0.8270487788702034,0.8299127891070781,0.7702782461582569,0.76798889153302,True,27 models,메타=로지스틱 C=0.01 weighted=True; 선택지표=OOF내 5-fold CV
+STACK_all_C0.01_w0,stacking,logit,27,0.8323529588192202,0.8337933508870764,0.7721810075265172,0.7720480079346453,True,27 models,메타=로지스틱 C=0.01 weighted=False; 선택지표=OOF내 5-fold CV
+STACK_gbdt_C1.0_w1,stacking,logit,14,0.8319397763476704,0.832001278275819,0.7731433986059709,0.7688130718899315,True,14 models,메타=로지스틱 C=1.0 weighted=True; 선택지표=OOF내 5-fold CV
+STACK_gbdt_C1.0_w0,stacking,logit,14,0.8321865695532384,0.8328279029226822,0.7714503078114829,0.7711814490431451,True,14 models,메타=로지스틱 C=1.0 weighted=False; 선택지표=OOF내 5-fold CV
+STACK_gbdt_C0.01_w1,stacking,logit,14,0.8304096785736622,0.831992104623601,0.7731537832462647,0.7687885758982493,True,14 models,메타=로지스틱 C=0.01 weighted=True; 선택지표=OOF내 5-fold CV
+STACK_gbdt_C0.01_w0,stacking,logit,14,0.8322234515661205,0.832750887648089,0.7718230209074055,0.770910969492912,True,14 models,메타=로지스틱 C=0.01 weighted=False; 선택지표=OOF내 5-fold CV
+STACK_algdiv_C1.0_w1,stacking,logit,9,0.8318303813864598,0.83279805618819,0.7748672127135853,0.7711923161822634,True,9 models,메타=로지스틱 C=1.0 weighted=True; 선택지표=OOF내 5-fold CV
+STACK_algdiv_C1.0_w0,stacking,logit,9,0.832399059726127,0.833829355554254,0.7735102454437369,0.7694561070034973,True,9 models,메타=로지스틱 C=1.0 weighted=False; 선택지표=OOF내 5-fold CV
+STACK_algdiv_C0.01_w1,stacking,logit,9,0.8270791500957079,0.8327904081142997,0.7748785917032021,0.7711805198734347,True,9 models,메타=로지스틱 C=0.01 weighted=True; 선택지표=OOF내 5-fold CV
+STACK_algdiv_C0.01_w0,stacking,logit,9,0.8323784443238263,0.8337817016494815,0.7736679322882782,0.7695972839888255,True,9 models,메타=로지스틱 C=0.01 weighted=False; 선택지표=OOF내 5-fold CV
+STACK_subspace_C1.0_w1,stacking,logit,2,0.8262891764520528,0.8260809858617365,0.7706916653845821,0.7533456471760012,True,2 models,메타=로지스틱 C=1.0 weighted=True; 선택지표=OOF내 5-fold CV
+STACK_subspace_C1.0_w0,stacking,logit,2,0.8259481977919221,0.8258654411908977,0.7680297210807454,0.7479231738247368,True,2 models,메타=로지스틱 C=1.0 weighted=False; 선택지표=OOF내 5-fold CV
+STACK_subspace_C0.01_w1,stacking,logit,2,0.752453591277684,0.8260768692127993,0.7707217985447987,0.7533880836439542,True,2 models,메타=로지스틱 C=0.01 weighted=True; 선택지표=OOF내 5-fold CV
+STACK_subspace_C0.01_w0,stacking,logit,2,0.8259897571879956,0.8258925761763832,0.7680427425205918,0.7480620832468663,True,2 models,메타=로지스틱 C=0.01 weighted=False; 선택지표=OOF내 5-fold CV
+ORACLE_greedy_pre_rank,oracle_ext,rank,2,0.8300939113034749,0.8316801591267362,0.7816640741433432,0.763754027334224,False,et;xgb_base,[비준수] pre 라벨로 가중치 선택. 상한 진단용
+ORACLE_greedy_post_rank,oracle_ext,rank,1,0.8251598971121836,0.8285583213619383,0.7601491316900121,0.7764064825582102,False,mlp64_32,[비준수] post 라벨로 가중치 선택. 상한 진단용
+ORACLE_best_single_pre,oracle_ext,prob,1,0.8223819850398194,0.8251799938085682,0.7776338691318176,0.7538436539011812,False,et,[비준수] pre 기준 최고 단일모델
+ORACLE_best_single_post,oracle_ext,prob,1,0.8251598971121836,0.8285583213619383,0.7601491316900121,0.7764064825582102,False,mlp64_32,[비준수] post 기준 최고 단일모델

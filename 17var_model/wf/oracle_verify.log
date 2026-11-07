@@ -1,0 +1,10 @@
+pre: logit=0.7724  lgbm=0.7651  MAX=0.7724
+post: logit=0.7702  lgbm=0.7618  MAX=0.7702
+pool: logit=0.7654  lgbm=0.7754  MAX=0.7754
+POOL oracle max=0.7754  95%CI=[0.7545, 0.7948]  (n_boot=2000)
+
+SUMMARY
+  pre: logit=0.7724 lgbm=0.7651 max=0.7724
+  post: logit=0.7702 lgbm=0.7618 max=0.7702
+  pool: logit=0.7654 lgbm=0.7754 max=0.7754
+  pool_CI=[0.7545,0.7948]

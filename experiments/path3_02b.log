@@ -1,0 +1,21 @@
+[0_REF] REF_pool500k_s42                   n=  500,000 int=0.8291 pre=0.7694 post=0.7587  D=+0.0000/+0.0000/+0.0000
+
+########## I2) focal loss ##########
+[I_imbalance] I_focal_a0.25_g1.0                 n=  500,000 int=0.8296 pre=0.7665 post=0.7598  D=+0.0005/-0.0028/+0.0011
+[I_imbalance] I_focal_a0.25_g2.0                 n=  500,000 int=0.8303 pre=0.7665 post=0.7599  D=+0.0012/-0.0029/+0.0011
+[I_imbalance] I_focal_a0.5_g2.0                  n=  500,000 int=0.8296 pre=0.7686 post=0.7613  D=+0.0004/-0.0008/+0.0026
+[I_imbalance] I_focal_a0.75_g2.0                 n=  500,000 int=0.8303 pre=0.7694 post=0.7629  D=+0.0012/+0.0000/+0.0042
+[I_imbalance] I_focal_a0.9_g2.0                  n=  500,000 int=0.8299 pre=0.7699 post=0.7621  D=+0.0008/+0.0005/+0.0033
+
+########## O) 이상치/극단값 처리 (cutpoint는 KCHS train에서만) ##########
+[O_outlier] O_wins_bmisleep_1_99               n=  500,000 int=0.8292 pre=0.7660 post=0.7599  D=+0.0001/-0.0034/+0.0011
+[O_outlier] O_wins_bmisleep_05_995             n=  500,000 int=0.8295 pre=0.7673 post=0.7603  D=+0.0004/-0.0021/+0.0016
+[O_outlier] O_wins_bmisleep_25_975             n=  500,000 int=0.8295 pre=0.7696 post=0.7619  D=+0.0004/+0.0002/+0.0032
+[O_outlier] O_wins_allnum_1_99                 n=  500,000 int=0.8296 pre=0.7678 post=0.7613  D=+0.0005/-0.0016/+0.0026
+[O_outlier] O_wins_allnum_25_975               n=  500,000 int=0.8295 pre=0.7676 post=0.7611  D=+0.0004/-0.0018/+0.0024
+[O_outlier] O_clip_plausible                   n=  500,000 int=0.8298 pre=0.7657 post=0.7603  D=+0.0007/-0.0036/+0.0015
+Traceback (most recent call last):
+  File "C:\Users\rudtn\Desktop\claude code\지역사회건강\experiments\path3_02b_focal_outlier.py", line 121, in <module>
+    v[(v < lo) | (v > hi)] = np.nan
+    ~^^^^^^^^^^^^^^^^^^^^^
+ValueError: assignment destination is read-only

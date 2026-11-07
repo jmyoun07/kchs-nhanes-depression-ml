@@ -1,0 +1,8 @@
+shapes (2048510, 22) (7888, 21) (5210, 21)
+train 500000 holdout 100000 prevalence tr/ho 0.0361 0.0361
+internal(unweighted holdout) = 0.8434
+pre  weighted AUROC = 0.7718
+post weighted AUROC = 0.7688
+pre  95% CI = [0.7313, 0.8075]  bootmean=0.7729  nreps=500
+post 95% CI = [0.7390, 0.7936]  bootmean=0.7689  nreps=500
+DONE

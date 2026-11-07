@@ -1,0 +1,3 @@
+﻿name,internal,ext_pre,ext_post,note,fit_seconds
+D0_baseline_80_20_incq_trainonly,0.8335354283913193,0.7681989407876537,0.7680069111051206,spec reproduction (corrected split),78.9
+D0_literal_500k_100k,0.8309685808790941,0.7740130223968016,0.765262430372477,literal spec wording; does NOT reproduce target,61.5

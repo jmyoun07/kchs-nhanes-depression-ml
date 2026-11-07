@@ -1,0 +1,326 @@
+[
+ {
+  "item": "1",
+  "location": "Title: identifies development plus external validation, the outcome and the two national-survey populations; PHQ-9 >=10 is specified in the Abstract and Methods, and the adult age range (20 years or older) in Methods, Participants and Outcome.",
+  "status": "addressed",
+  "quote": "A Survey-Based Machine Learning Depression Screener Developed in Korea and Externally Validated in the United States Across the COVID-19 Period: Algorithm Development and Validation Study"
+ },
+ {
+  "item": "2",
+  "location": "Abstract: structured Background/Objective/Methods/Results/Conclusions with data sources, PHQ-9 >=10 outcome, 17 predictors, sample sizes, AUROC and calibration with CIs; the registration statement and adult eligibility appear in Methods rather than in the abstract.",
+  "status": "addressed",
+  "quote": "Elastic net, random forest and gradient boosting were developed in KCHS (2017-2025; pooled n=2,048,510; cluster-level split into a 500,000-record training set and a 100,001-record hold-out sharing no cluster) using a harmonized 17-predictor set shared with NHANES, one item of which is unavailable in the pre-pandemic NHANES file."
+ },
+ {
+  "item": "3a",
+  "location": "Introduction, paragraphs 1-2: incomplete community detection, PHQ-9-based screening, prior KCHS/KNHANES models [5,6] and internal-validation-only reviews [7,8]; the cross-sectional, current-symptom (diagnostic) framing is stated in Strengths and Limitations, not the Introduction.",
+  "status": "addressed",
+  "quote": "ML models for depression have been developed repeatedly from large national surveys, including the KCHS and the Korea National Health and Nutrition Examination Survey (KNHANES) [5,6], typically reporting strong internal discrimination."
+ },
+ {
+  "item": "3b",
+  "location": "Introduction (triage rationale for community and primary-care detection), Discussion, Clinical and Policy Implications (intended use is triage, not diagnosis), and Multimedia Appendix 1, Part D: a triage aid for population screening programs and web or mobile self-assessment, operated by public-health and primary-care services rather than by individuals acting alone.",
+  "status": "addressed",
+  "quote": "The model is intended as a triage aid for population-level screening programs and web or mobile self-assessment services, to be operated by public-health and primary-care services rather than by individuals acting alone, and to prioritize who receives a full PHQ-9 and clinical follow-up."
+ },
+ {
+  "item": "3c",
+  "location": "Not specifically addressed; the Introduction describes no known sociodemographic inequalities in depression, although Methods, Predictors and Harmonization cites a socioeconomic-inequalities meta-analysis [21] as predictor rationale and Results and Discussion report subgroup fairness.",
+  "status": "not_addressed",
+  "quote": "The harmonized set is drawn from domains with established associations with depression in the epidemiological literature: socioeconomic position [21], sleep duration [22], physical activity [23], body mass index [24], smoking [25], living alone [26] and partnership status [27]."
+ },
+ {
+  "item": "4",
+  "location": "Introduction, final paragraph: five aims (develop in KCHS; externally validate in NHANES; contrast pandemic periods and quantify recalibration; derive a parsimonious model; test the external ceiling) with pre-specified hypotheses H1-H4.",
+  "status": "addressed",
+  "quote": "This study pursued five aims: (1) develop an ML depression-screening model in KCHS; (2) externally validate it in US NHANES (geographic transportability); (3) evaluate it separately in the pre- and post-COVID-19 cycles and quantify recalibration (transportability across target periods); (4) derive a parsimonious model for a low-burden digital tool; and (5) determine whether any residual external shortfall is closable by modeling, using a catalogued leakage-controlled optimization registry and an in-domain oracle fitted inside the external population."
+ },
+ {
+  "item": "5a",
+  "status": "addressed",
+  "location": "Methods, Study Design and Data Sources: development in KCHS, a nationwide KDCA household-interview survey under a complex-sample design; evaluation in NHANES, an NCHS interview-plus-examination survey; rationale for the pairing (identical PHQ-9 outcome, differing country and health system) in the Introduction.",
+  "quote": "Development used the Korea Community Health Survey, a nationwide Korea Disease Control and Prevention Agency (KDCA) survey [17] of community-dwelling adults that conducts annual in-person household interviews (~230,000/year) under a stratified, clustered, weighted complex-sample design."
+ },
+ {
+  "item": "5b",
+  "status": "addressed",
+  "location": "Methods, Study Design and Data Sources: KCHS 2017-2025 pooled; NHANES pre-pandemic 2017-March 2020 and post-pandemic August 2021-August 2023. The design is cross-sectional (Discussion, Strengths and Limitations), hence there is no follow-up period.",
+  "quote": "Two periods were used as separate validation sets: pre-pandemic (2017-March 2020, \"P_\" files; n=7,888) and post-pandemic (August 2021-August 2023, \"_L\" files; n=5,210)."
+ },
+ {
+  "item": "6a",
+  "status": "addressed",
+  "location": "Methods, Study Design and Data Sources: general-population community-dwelling adults nationwide in Korea and the US, the NHANES depression module administered in mobile examination centers; survey strata and primary sampling unit counts in Multimedia Appendix 1, Table A.3.",
+  "quote": "External validation used NHANES, an NCHS survey combining household interview and mobile examination center assessment; the sample design and estimation procedures for the 2015-2018 cycles are documented by NCHS [18]; the pre-pandemic combined file and the 2021-2023 cycle carry separate NCHS documentation and weight variables, which are named in Multimedia Appendix 1; depression was measured with the Depression Screener (DPQ; PHQ-9) module."
+ },
+ {
+  "item": "6b",
+  "status": "addressed",
+  "location": "Methods, Participants and Outcome: adults aged 20 years or older with all nine PHQ-9 items answered, the NHANES estimation frame being the examined sample; pregnant respondents retained; derivation counts in Multimedia Appendix 1, Table A.4.",
+  "quote": "Eligible respondents were adults aged 20 years or older with all nine PHQ-9 items answered."
+ },
+ {
+  "item": "6c",
+  "status": "not_applicable",
+  "location": "Not applicable; no treatments were administered in these observational surveys and no treatment variable was modeled. Discussion, Strengths and Limitations, and Multimedia Appendix 1, Part D note that a prior physician diagnosis of depression is not recorded in KCHS, precluding a diagnosis-based exclusion.",
+  "quote": ""
+ },
+ {
+  "item": "7",
+  "status": "addressed",
+  "location": "Methods, Predictors and Harmonization (one preprocessing pipeline fitted in training, applied unchanged everywhere) and External Validation and Sensitivity Analyses (adversarial audit plus peer review correcting seven defects); group-differential module non-response in Multimedia Appendix 1, Table S8.",
+  "quote": "An adversarial data-integrity audit corrected three silent data-processing defects before final analysis: living alone fabricated to a constant in NHANES pre-pandemic, post-pandemic physical activity coded 0 for every respondent through a unit-field parsing error, and an income refusal code (77777) not treated as missing, which had placed non-respondents in the top income quintile.",
+  "corrected": true
+ },
+ {
+  "item": "8a",
+  "status": "addressed",
+  "location": "Methods, Participants and Outcome: PHQ-9 total ≥10, nine items scored 0-3, computed identically in both surveys, with the cut-off rationale; the design is cross-sectional, and the outcome is current symptoms rather than a future horizon (Discussion, Strengths and Limitations).",
+  "quote": "The outcome is current depression, defined as a PHQ-9 total of at least 10 and computed identically in both surveys (nine items, scored 0 to 3); the ≥10 cut-off is the conventional screening threshold and has been evaluated against semi-structured diagnostic interviews in individual-participant-data meta-analyses [3,19] and validated in a Korean population [20]."
+ },
+ {
+  "item": "8b",
+  "status": "not_applicable",
+  "location": "Not applicable; the outcome is a nine-item self-report questionnaire with fixed 0-3 item scoring and a fixed sum cut-off of 10; no assessor interpretation enters the outcome definition.",
+  "quote": ""
+ },
+ {
+  "item": "8c",
+  "status": "addressed",
+  "location": "Methods, Participants and Outcome: states that predictors and outcome were recorded in the same survey contact and that blinding does not apply to secondary analysis of already-collected survey responses.",
+  "quote": "Predictors and outcome were recorded in the same survey contact and were therefore measured contemporaneously; blinding of outcome or predictor assessment does not apply to secondary analysis of already-collected survey responses."
+ },
+ {
+  "item": "9a",
+  "status": "addressed",
+  "location": "Methods, Predictors and Harmonization: all 616 KCHS concepts crosswalked under three eligibility criteria, circular items excluded a priori; the dated amendment and the rejected candidates are in Multimedia Appendix 1, Part A, sections B.2-B.3.",
+  "quote": "The harmonized set was assembled by crosswalking all 616 KCHS concepts against the NHANES codebook for both cycles and retaining concepts that are (i) available in NHANES, (ii) collected in more than one KCHS survey year, and (iii) not circular with the PHQ-9 outcome.",
+  "corrected": true
+ },
+ {
+  "item": "9b",
+  "status": "addressed",
+  "location": "Methods, Predictors and Harmonization and Table 1: all 17 predictors defined with the source variables; year- and cycle-specific resolutions in Multimedia Appendix 1, Table A.2; measurement timing and the blinding statement in Participants and Outcome.",
+  "quote": "The final harmonized set comprised 17 predictors (Table 1): age, sex, education, household income (within-survey quintiles), self-rated health, partnership, living alone, smoking, alcohol, physical activity, sleep duration, body mass index (BMI), hypertension, diabetes, employment (KCHS soa_01z1 ↔ NHANES OCD150), self-rated oral health (ora_01z1 ↔ OHQ845), and household food insecurity (nue_01z1 ↔ FSDAD)."
+ },
+ {
+  "item": "9c",
+  "status": "not_applicable",
+  "location": "Not applicable; predictors are fixed-code survey items or measured values needing no assessor interpretation; the Discussion notes only that every value was collected by interviewer administration or in an examination center.",
+  "quote": ""
+ },
+ {
+  "item": "10",
+  "status": "addressed",
+  "location": "Methods, Model Development and Evaluation: no a priori calculation; 500,000 training records (~18,000 events, ~1,000 per predictor), 100,001 hold-out (~3,600 events), and all eligible external respondents (728 and 661 events, the binding precision constraint).",
+  "quote": "No a priori sample-size calculation was performed; the samples are those the data allow."
+ },
+ {
+  "item": "11",
+  "status": "addressed",
+  "location": "Methods, Predictors and Harmonization: one preprocessing pipeline fitted in the training set and applied unchanged, the income quintile excepted; the imputation scheme and the two alternative schemes tested in sensitivity analysis are in Multimedia Appendix 1, Part D and Table S5.",
+  "quote": "In the gradient-boosting primary model, binary predictors were passed through with missingness preserved and handled natively by the tree learner, while continuous predictors were median-imputed and categorical predictors mode-imputed within the same pipeline."
+ },
+ {
+  "item": "12a",
+  "status": "addressed",
+  "location": "Methods, Study Design and Data Sources and Model Development and Evaluation: 2,048,510 KCHS records split at cluster level into a 500,000-record training set and a 100,001-record hold-out sharing no cluster; no a priori sample-size calculation, ~18,000 training events reported instead.",
+  "quote": "From this pooled sample, clusters defined as survey year crossed with design stratum crossed with primary sampling unit were randomly permuted and assigned whole to the hold-out until 100,001 records had accumulated; the training set is a random 500,000-record draw from the records remaining in the clusters not assigned to the hold-out."
+ },
+ {
+  "item": "12b",
+  "status": "addressed",
+  "location": "Table 1 (age top-coded at 80 years) and Methods, Predictors and Harmonization (income recomputed as a within-cohort rank quintile) and Model Development and Evaluation (main-effects representation selected over four candidate interaction terms); ordinal scores modeled as numeric and standardized, and continuous predictors median-imputed, in Multimedia Appendix 1, Part D.",
+  "quote": "Household income (within-survey quintile), self-rated health and self-rated oral health are ordinal scores and were modeled as numeric variables rather than as unordered categories, and were median-imputed and standardized."
+ },
+ {
+  "item": "12c",
+  "status": "addressed",
+  "location": "Methods, Model Development and Evaluation: elastic net, random forest and LightGBM; 24-configuration randomized search plus identical 5-fold cross-validated grids inside the training set; pre-specified AUROC then calibration-slope tie-break selected LightGBM; internal validation in the cluster-disjoint hold-out.",
+  "quote": "Second, all three algorithms were tuned over comparable 5-configuration grids under an identical protocol (5-fold stratified cross-validation in a 200,000-record subsample of the training set, scored by unweighted cross-validated AUROC) and compared at each algorithm's best configuration; comparing a penalized linear model against two tree ensembles under one protocol follows evidence that machine learning shows no systematic advantage over regression once validation bias is controlled [32]."
+ },
+ {
+  "item": "12d",
+  "status": "addressed",
+  "location": "Methods, Study Design and Data Sources and Model Development and Evaluation: cluster-level split with 0 shared clusters, PSU-resampled bootstrap, PSU-grouped recalibration folds; performance quantified separately by country and pandemic period; leave-one-year-out check in Multimedia Appendix 1, Table S12.",
+  "quote": "The two sides share 0 clusters, and the hold-out spans 9,636 clusters; hence the internal estimate refers to clusters the model never saw and not merely to new individuals within sampled clusters."
+ },
+ {
+  "item": "12e",
+  "status": "addressed",
+  "location": "Methods, Model Development and Evaluation: weighted AUROC, AUPRC, calibration slope, CITL, Brier, ECE, operating characteristics and decision-curve net benefit over thresholds 0.02-0.30; calibration assessed at the moderate level of the calibration hierarchy; ROC, calibration and decision-curve plots.",
+  "quote": "Performance was summarized by discrimination (AUROC and area under the precision-recall curve [AUPRC]), calibration, and operating characteristics, all complex-survey weighted."
+ },
+ {
+  "item": "12f",
+  "status": "addressed",
+  "location": "Methods, External Validation and Sensitivity Analyses: three out-of-sample updates cross-fitted over five PSU-grouped folds (intercept only; intercept plus slope; temperature scaling), applied to each external cohort overall without re-estimating predictor effects; intercept-plus-slope is the recommended update.",
+  "quote": "Following the plan, recalibration was applied in three steps, each cross-fitted over five folds grouped by primary sampling unit, so that no cluster contributes both to fitting an update and to evaluating it: intercept only, intercept plus slope (the two-parameter Platt-type update), and one-parameter temperature scaling with the intercept fixed at zero."
+ },
+ {
+  "item": "12g",
+  "status": "addressed",
+  "location": "Methods, External Validation and Sensitivity Analyses and Data Availability: the KCHS-trained model scored NHANES without refitting through the development-fitted pipeline; fixed seed and hyperparameters, preprocessing specification, model card and code available from the corresponding author on request.",
+  "quote": "All missing-data handling was performed by a preprocessing pipeline fitted in the development training set and applied unchanged to the internal hold-out and to each external set (no leakage)."
+ },
+ {
+  "item": "13",
+  "status": "addressed",
+  "location": "Methods, Model Development and Evaluation: no class weighting, resampling or other imbalance correction; the learner was fitted on the natural 3.6% event rate, a departure from the plan documented in Multimedia Appendix 1, Table S9.",
+  "quote": "No class weighting, resampling, or other imbalance correction was applied; the learner was fitted on the natural 3.6% event rate, which departs from the plan's recommended class weighting (Multimedia Appendix 1, Table S9)."
+ },
+ {
+  "item": "14",
+  "status": "addressed",
+  "location": "Methods, External Validation and Sensitivity Analyses: weighted subgroup AUROC and calibration slope across sex, age, education, household income quintile and, in NHANES, race and ethnicity, with the rationale stated and a 0.05 AUROC deviation from the cohort value pre-specified as the flag; results in Results, Interpretability, Fairness, and Clinical Utility and Table S7.",
+  "quote": "Three further analyses were undertaken: interpretability, through global importance from tree-based Shapley additive explanations (SHAP) [37] and cross-survey rank concordance of predictor importance (Spearman correlation between KCHS and each NHANES cycle) as a mechanistic view of transportability; fairness, through weighted subgroup AUROC and calibration slope across sex, age, education, and (NHANES) race/ethnicity, since algorithmic performance can differ systematically across groups even when overall accuracy is high [38]; and a parsimonious model for a low-burden self-administered form.",
+  "corrected": true
+ },
+ {
+  "item": "15",
+  "status": "addressed",
+  "location": "Methods, Model Development and Evaluation: output is a predicted probability; one triage threshold fixed in development at 85% sensitivity (0.02051) and transported unchanged; Youden and prevalence reference thresholds in Multimedia Appendix 1, Table S1.",
+  "quote": "A single operating threshold was fixed once in the development data at the predicted probability giving 85% sensitivity (0.02051) and then applied unchanged to the internal hold-out and to both external cohorts, so that the external operating characteristics are transported values rather than values selected in the cohort where those characteristics are reported."
+ },
+ {
+  "item": "16",
+  "status": "addressed",
+  "location": "Methods, Participants and Outcome and Predictors and Harmonization: identical PHQ-9 ≥10 outcome and ≥20-year eligibility; NHANES adds a mobile examination center frame; alcohol, activity, income and BMI instruments differ; living alone absent pre-pandemic.",
+  "quote": "Alcohol, physical activity, and income use different instruments and were reduced to conservatively comparable definitions."
+ },
+ {
+  "item": "17",
+  "status": "addressed",
+  "location": "Methods, Ethical Considerations: exemption granted by the Institutional Review Board of Daejeon University; NHANES collection approved by the NCHS Research Ethics Review Board; original-survey written consent obtained, no additional consent required for de-identified records.",
+  "quote": "The present secondary analysis was reviewed by the Institutional Review Board of Daejeon University, which granted an exemption from review (approval number [to be inserted]) on the grounds that the study uses publicly available and de-identified data, collects and records no personal identifiers, and poses no more than minimal risk (no participant contact, intervention, or biological sampling)."
+ },
+ {
+  "item": "18a",
+  "status": "addressed",
+  "location": "Back matter, Funding: states that the research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.",
+  "quote": "This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors."
+ },
+ {
+  "item": "18b",
+  "status": "addressed",
+  "location": "Back matter, Conflicts of Interest: the authors declare no conflicts of interest.",
+  "quote": "The authors declare no conflicts of interest."
+ },
+ {
+  "item": "18c",
+  "status": "addressed",
+  "location": "Methods, Study Design and Data Sources and Data Availability: dated protocol and statistical analysis plan written before any analysis, plus a dated predictor-set amendment written after the 14-predictor external result was known but locked before any model using the amended set was fitted; all released with the analysis code.",
+  "quote": "The study protocol and statistical analysis plan, including the four hypotheses, were written and dated before any analysis."
+ },
+ {
+  "item": "18d",
+  "status": "addressed",
+  "location": "Methods, Study Design and Data Sources: states that the study was not registered in a public registry; Multimedia Appendix 1, Table S9 records non-registration as a departure from the analysis plan's intention.",
+  "quote": "The study was not registered in a public registry."
+ },
+ {
+  "item": "18e",
+  "status": "addressed",
+  "location": "Back matter, Data Availability: NHANES openly available from NCHS; KCHS microdata access-controlled through the KDCA raw-data request-and-review process and non-redistributable under the data-use agreement; derived result tables provided as Multimedia Appendices.",
+  "quote": "NHANES data are openly available from the NCHS (https://wwwn.cdc.gov/nchs/nhanes/)."
+ },
+ {
+  "item": "18f",
+  "status": "addressed",
+  "location": "Back matter, Data Availability: analysis code with fixed seed and hyperparameters, the preprocessing specification, harmonization dictionary and model card are available from the corresponding author on reasonable request rather than deposited in a public repository.",
+  "quote": "Analysis code sufficient to refit the reported model exactly from the source data (fixed seed, fixed hyperparameters), the full preprocessing specification (including the household income quintile, which is derived within the target cohort before the fitted pipeline is applied and is therefore not reproducible from a single individual's record alone), the variable-harmonization dictionary, the model card, and the protocol, statistical analysis plan and amendment documents are available from the corresponding author upon reasonable request, subject to applicable survey data-use restrictions; derived result tables are provided as Multimedia Appendices."
+ },
+ {
+  "item": "19",
+  "status": "addressed",
+  "location": "Methods, Ethical Considerations: patients and members of the public were not involved in the design, conduct, reporting or dissemination plans of this secondary analysis of existing survey data.",
+  "quote": "Patients and members of the public were not involved in the design, conduct, reporting or dissemination plans of this secondary analysis of existing survey data."
+ },
+ {
+  "item": "20a",
+  "status": "addressed",
+  "location": "Methods, Participants and Outcome; Results, Participant Characteristics: NHANES flow 9,232→8,544→7,888 and 7,809→6,064→5,210, with Multimedia Appendix 1 Tables A.4 and S8; described in text, no diagram; cross-sectional, with no follow-up time.",
+  "quote": "In NHANES the depression module is administered in the mobile examination center, and the estimation frame is therefore the examined sample: of 9,232 interviewed adults aged 20 years or older in the pre-pandemic file, 8,544 were examined and 7,888 answered all nine items; the corresponding post-pandemic counts were 7,809, 6,064 and 5,210."
+ },
+ {
+  "item": "20b",
+  "status": "addressed",
+  "location": "Results, Participant Characteristics: per-cohort age, sex, BMI, food insecurity and weighted depression prevalence; Figure 1 and Multimedia Appendix 1 Table S4 add every characteristic with missing shares; non-response differed by education and race/ethnicity.",
+  "quote": "The pooled KCHS development sample comprised 2,048,510 adults and the external cohorts 7,888 pre-pandemic and 5,210 post-pandemic NHANES adults, similar in mean age (49.4, 48.4 and 48.8 years) and in sex composition (50.5%, 51.5% and 50.8% female) but not in outcome frequency."
+ },
+ {
+  "item": "20c",
+  "status": "addressed",
+  "location": "Results, Participant Characteristics: development-versus-validation comparison of BMI (23.7 vs 29.8/29.7), food insecurity (3.7% vs 16.4%/17.2%) and outcome prevalence (3.6% vs 8.4%/12.2%); Multimedia Appendix 1 Table S4 tabulates all predictors side by side.",
+  "quote": "The surveys also differed markedly on measured covariates: mean BMI 23.7 (KCHS) vs 29.8 and 29.7 (NHANES pre and post), and weighted food-insecurity prevalence 3.7% in KCHS vs 16.4% and 17.2% in the NHANES cycles, computed among respondents with the item recorded (missing 22.1%, 6.0% and 6.3%, respectively; every characteristic in Table S4 uses available-case denominators)."
+ },
+ {
+  "item": "21",
+  "status": "addressed",
+  "location": "Methods, Model Development and Evaluation: training 500,000 (~18,000 events), hold-out 100,001 (~3,600), external cohorts 7,888 (728 events) and 5,210 (661); the 300,000-record and 200,000-record tuning subsamples and the 450,000/50,000 parsimony split are in Multimedia Appendix 1, Part D.",
+  "quote": "What that supplies is reported instead: the training set carries approximately 18,000 events, about 1,000 per candidate predictor and far above conventional events-per-predictor requirements, and the hold-out approximately 3,600.",
+  "corrected": true
+ },
+ {
+  "item": "22",
+  "status": "addressed",
+  "location": "Methods, Model Development and Evaluation (algorithm, search and selection rule), with the full LightGBM hyperparameter configuration in Multimedia Appendix 1, Part D and in the model card; Results, Parsimonious Deployment Model: the six items; Data Availability: preprocessing specification and refitting code, no public model object.",
+  "quote": "Analysis code sufficient to refit the reported model exactly from the source data (fixed seed, fixed hyperparameters), the full preprocessing specification (including the household income quintile, which is derived within the target cohort before the fitted pipeline is applied and is therefore not reproducible from a single individual's record alone), the variable-harmonization dictionary, the model card, and the protocol, statistical analysis plan and amendment documents are available from the corresponding author upon reasonable request, subject to applicable survey data-use restrictions; derived result tables are provided as Multimedia Appendices.",
+  "corrected": true
+ },
+ {
+  "item": "23a",
+  "status": "addressed",
+  "location": "Results, External Validation Across Country and Pandemic Period: Table 2 gives AUROC, AUPRC and calibration with bootstrap CIs; subgroup AUROCs with CIs in Interpretability, Fairness, and Clinical Utility and Multimedia Appendix 1 Table S7 (Figures 2, 3, 6).",
+  "quote": "Internal hold-out AUROC was 0.836 (95% CI 0.827-0.846), AUPRC 0.246, Brier 0.030, calibration slope 1.03, CITL +0.10; H1 met."
+ },
+ {
+  "item": "23b",
+  "status": "addressed",
+  "location": "Results, External Validation Across Country and Pandemic Period: performance reported separately by country and pandemic cycle with a formal between-cycle difference; heterogeneity across within-survey clusters (year, stratum, primary sampling unit) was not itself estimated.",
+  "quote": "External AUROC differed between cycles by +0.006 (95% CI -0.045 to +0.056; bootstrap P=.86); the interval was formed by differencing independently drawn replicate statistics from the two cohorts, the cycles being disjoint samples."
+ },
+ {
+  "item": "24",
+  "status": "addressed",
+  "location": "Results, External Validation Across Country and Pandemic Period: three out-of-sample updating steps reported; intercept-plus-slope restored slope 1.00 and CITL 0.00 in both cycles (Table 2; Multimedia Appendix 1, Table S16), with discrimination essentially unchanged.",
+  "quote": "Of the three pre-specified recalibration steps applied out-of-sample, intercept-only updating removed the mean bias but left the slope unchanged (0.65 pre, 0.68 post), intercept-plus-slope updating restored both (slope 1.00 and 1.00, CITL 0.00), and temperature scaling was intermediate, leaving the slope at 0.83 pre and 1.17 post with CITL +0.02 and -0.02; intercept-plus-slope is therefore the recommended deployment update; H2 and H3 supported."
+ },
+ {
+  "item": "24",
+  "location": "Results, External Validation Across Country and Pandemic Period, and Table 2: intercept-only, intercept-plus-slope and temperature-scaling updates applied out-of-sample by cross-fitting; recalibrated slope 1.00 and CITL 0.00 in both cycles (Multimedia Appendix 1, Table S16).",
+  "status": "addressed",
+  "quote": "Of the three pre-specified recalibration steps applied out-of-sample, intercept-only updating removed the mean bias but left the slope unchanged (0.65 pre, 0.68 post), intercept-plus-slope updating restored both (slope 1.00 and 1.00, CITL 0.00), and temperature scaling was intermediate, leaving the slope at 0.83 pre and 1.17 post with CITL +0.02 and -0.02; intercept-plus-slope is therefore the recommended deployment update; H2 and H3 supported."
+ },
+ {
+  "item": "25",
+  "location": "Discussion, Principal Findings and Comparison With Prior Work: internal 0.836 versus external ~0.77 set against prior internal-only Korean models; fairness interpreted in Clinical and Policy Implications, which requires continuous subgroup monitoring.",
+  "status": "addressed",
+  "quote": "A depression-screening ML model developed in Korea and externally validated in the US met its internal target (AUROC 0.836) and retained clinically useful, though lower, discrimination (~0.77) on genuinely external US data and across the COVID-19 shift, with calibration recoverable by lightweight recalibration."
+ },
+ {
+  "item": "26",
+  "location": "Discussion, Strengths and Limitations: complete-case depression-module non-response, differing predictor measurement, cross-sectional design, hold-out rather than cross-validated internal estimates, 728 and 661 external events limiting calibration precision, and the dated predictor-set amendment.",
+  "status": "addressed",
+  "quote": "Depression-module non-response within the mobile examination center estimation frame cost 7.7% of the pre-pandemic and 14.1% of the post-pandemic sample, counting any unanswered item (14.6% and 33.3% on the wider interview frame; Multimedia Appendix 1, Table S8), and was handled as complete-case; given that non-response was differential by education and by race and ethnicity, the external estimates, and particularly the post-pandemic subgroup results, may be biased in an unknown direction."
+ },
+ {
+  "item": "27a",
+  "location": "Methods, Predictors and Harmonization and External Validation and Sensitivity Analyses: the fitted preprocessing pipeline handles missing inputs unchanged at scoring, an absent column follows a default branch, and the income quintile requires a local reference distribution.",
+  "status": "addressed",
+  "quote": "Living alone has no missing values anywhere in the KCHS training data; the learner therefore never observes a missing value for it and never learns a missing direction for it; at prediction time the missing values are treated as zero and follow the same branch as \"not living alone.\""
+ },
+ {
+  "item": "27b",
+  "location": "Discussion, Clinical and Policy Implications, and Multimedia Appendix 1, Part D: intended users are public-health and primary-care services operating a screening program, not individuals acting alone; the model outputs a triage probability and does not diagnose.",
+  "status": "addressed",
+  "quote": "The model is intended as a triage aid for population-level screening programs and web or mobile self-assessment services, to be operated by public-health and primary-care services rather than by individuals acting alone, and to prioritize who receives a full PHQ-9 and clinical follow-up."
+ },
+ {
+  "item": "27c",
+  "location": "Discussion, Clinical and Policy Implications and Conclusions: local recalibration and re-evaluated item reduction before deployment, continuous subgroup monitoring, and new predictor domains rather than further algorithm search as the route to higher external discrimination.",
+  "status": "addressed",
+  "quote": "One practical consequence follows: for a screener of this kind, the remaining gains are more likely to come from predictor domains a development survey does not yet collect than from further algorithm search.",
+  "corrected": true
+ }
+]

@@ -1,0 +1,11 @@
+name,internal,ext_pre,ext_post,protocol_compliant,seconds,note
+L1_pcaKCHS_k3,0.723876,0.687391,0.674688,False,,진단전용: k 외부선택은 위반 | OOF=0.71305
+L1_pcaKCHS_k5,0.777109,0.732759,0.724012,False,,진단전용: k 외부선택은 위반 | OOF=0.77646
+L1_pcaKCHS_k8,0.788131,0.745428,0.732424,False,,진단전용: k 외부선택은 위반 | OOF=0.78987
+L1_pcaKCHS_k12,0.801665,0.748476,0.733796,False,,진단전용: k 외부선택은 위반 | OOF=0.80230
+L1_pcaKCHS_k16,0.819283,0.756386,0.747273,False,,진단전용: k 외부선택은 위반 | OOF=0.81989
+L1_pcaKCHS_k20,0.827256,0.763015,0.762339,True,,★KCHS OOF 선택 k=20(전차원) | OOF=0.82577 | 기준선보다 낮음(축소무익)
+L2_pcaPOOL_k8,0.789474,0.744412,0.737967,False,,회색: NHANES 공변량으로 PCA 적합(라벨 미사용)
+L2_pcaPOOL_k12,0.803193,0.744016,0.736124,False,,회색: NHANES 공변량으로 PCA 적합(라벨 미사용)
+L2_pcaPOOL_k20,0.828941,0.765887,0.759569,False,,회색: NHANES 공변량으로 PCA 적합(라벨 미사용)
+L3_domain_deflate_1,0.830753,0.767387,0.763342,False,,회색: KCHS-NHANES 판별방향 제거(대상 공변량 사용). 기준선보다 낮음

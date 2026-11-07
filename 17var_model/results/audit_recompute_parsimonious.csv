@@ -1,0 +1,7 @@
+﻿k,vars,internal,ext_pre,ext_post
+3,srh;age;sex,0.7817,0.7131,0.7257
+4,srh;age;sex;sleep_hrs,0.8017,0.7244,0.7378
+5,srh;age;sex;sleep_hrs;oral_health,0.8092,0.7413,0.7452
+8,srh;age;sex;sleep_hrs;oral_health;partnered;employed;smoking,0.8245,0.7703,0.7532
+12,srh;age;sex;sleep_hrs;oral_health;partnered;employed;smoking;bmi;income_q;food_insecure;current_drinker,0.8307,0.7712,0.7674
+17,srh;age;sex;sleep_hrs;oral_health;partnered;employed;smoking;bmi;income_q;food_insecure;current_drinker;edu;active;living_alone;htn;dm,0.8315,0.7718,0.7688

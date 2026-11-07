@@ -1,0 +1,15 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,note,sec,d_internal,d_pre,d_post
+00_native_binary,0.830969,0.774013,0.765262,True,기준선(=명세 재현),83.1,,,
+90_is_unbalance,0.829297,0.773294,0.766783,True,is_unbalance=True (양성 손실을 n_neg/n_pos 로 가중),97.2,-0.001672,-0.000719,0.001521
+91_scale_pos_weight_2,0.830372,0.774126,0.767786,True,scale_pos_weight=2,147.7,-0.000597,0.000113,0.002524
+91_scale_pos_weight_5,0.830389,0.774322,0.766297,True,scale_pos_weight=5,156.7,-0.00058,0.000309,0.001035
+91_scale_pos_weight_10,0.830033,0.77505,0.767693,True,scale_pos_weight=10,136.9,-0.000936,0.001037,0.002431
+91_scale_pos_weight_26.7,0.830096,0.771565,0.76618,True,scale_pos_weight=26.7,78.9,-0.000873,-0.002448,0.000918
+92_sigmoid_0.5,0.830968,0.774011,0.7653,True,binary objective sigmoid=0.5 (손실 기울기 스케일),66.1,-1e-06,-2e-06,3.8e-05
+92_sigmoid_0.75,0.830966,0.774013,0.765263,True,binary objective sigmoid=0.75 (손실 기울기 스케일),75.7,-3e-06,0.0,1e-06
+92_sigmoid_1.5,0.830968,0.774012,0.765334,True,binary objective sigmoid=1.5 (손실 기울기 스케일),78.7,-1e-06,-1e-06,7.2e-05
+92_sigmoid_2.0,0.830966,0.774015,0.765326,True,binary objective sigmoid=2.0 (손실 기울기 스케일),83.7,-3e-06,2e-06,6.4e-05
+93_no_boost_from_average,0.830939,0.772912,0.7636,True,boost_from_average=False,63.0,-3e-05,-0.001101,-0.001662
+94_undersample_1to1,0.827848,0.769634,0.765985,True,음성 언더샘플링 1:1 (n=36066),53.5,-0.003121,-0.004379,0.000723
+94_undersample_1to3,0.82994,0.770221,0.767642,True,음성 언더샘플링 1:3 (n=72132),51.8,-0.001029,-0.003792,0.00238
+94_undersample_1to10,0.831145,0.772033,0.76783,True,음성 언더샘플링 1:10 (n=198363),49.6,0.000176,-0.00198,0.002568

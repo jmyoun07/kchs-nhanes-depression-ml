@@ -1,0 +1,22 @@
+﻿cohort,subgroup,n,AUROC,CI_lo,CI_hi,cal_slope,CITL
+KCHS hold-out,Sex: female,54588,0.822,0.811,0.834,1.007,0.111
+KCHS hold-out,Sex: male,45412,0.831,0.813,0.846,0.998,0.09
+KCHS hold-out,Age 20-39,20508,0.785,0.763,0.807,0.973,-0.009
+KCHS hold-out,Age 40-59,34520,0.828,0.812,0.844,1.018,0.159
+KCHS hold-out,Age 60+,44972,0.859,0.848,0.871,1.008,0.159
+KCHS hold-out,Education: college,37939,0.813,0.796,0.829,1.029,-0.018
+KCHS hold-out,Education: high school,28973,0.829,0.812,0.849,0.978,0.141
+KCHS hold-out,Education: middle,11329,0.83,0.802,0.853,0.929,0.256
+KCHS hold-out,Education: <=elementary,21682,0.816,0.8,0.833,0.94,0.206
+NHANES pre,Race: Mexican American,914,0.697,0.625,0.777,0.579,-0.105
+NHANES post,Race: Mexican American,330,0.689,0.609,0.794,0.553,1.03
+NHANES pre,Race: Other Hispanic,813,0.777,0.733,0.818,0.729,0.385
+NHANES post,Race: Other Hispanic,499,0.79,0.747,0.843,0.696,0.638
+NHANES pre,Race: Non-Hispanic White,2798,0.778,0.727,0.825,0.663,0.682
+NHANES post,Race: Non-Hispanic White,3215,0.77,0.723,0.812,0.695,1.296
+NHANES pre,Race: Non-Hispanic Black,2096,0.762,0.727,0.8,0.722,0.056
+NHANES post,Race: Non-Hispanic Black,598,0.727,0.65,0.794,0.554,0.843
+NHANES pre,Race: Non-Hispanic Asian,886,0.81,0.725,0.875,0.782,0.371
+NHANES post,Race: Non-Hispanic Asian,228,0.841,0.638,0.988,1.214,0.773
+NHANES pre,Race: Other/multiracial,381,0.772,0.673,0.871,0.715,0.806
+NHANES post,Race: Other/multiracial,340,0.786,0.709,0.873,0.776,0.985

@@ -1,0 +1,13 @@
+﻿name,internal,ext_pre,ext_post,d_pre,d_post,protocol_compliant,note
+logloss_seed42,0.830588,0.772075,0.763515,-0.001938,-0.001747,True,logloss seed=42 (32s)
+ranknet_seed42,0.831263,0.775284,0.770151,0.001271,0.004889,True,ranknet seed=42 (68s)
+logloss_seed7,0.830716,0.77108,0.765868,-0.002933,0.000606,True,logloss seed=7 (44s)
+ranknet_seed7,0.830638,0.774566,0.767647,0.000553,0.002385,True,ranknet seed=7 (63s)
+logloss_seed123,0.831045,0.773474,0.765871,-0.000539,0.000609,True,logloss seed=123 (49s)
+ranknet_seed123,0.830942,0.771959,0.767097,-0.002054,0.001835,True,ranknet seed=123 (59s)
+logloss_seed2024,0.83054,0.775116,0.766,0.001103,0.000738,True,logloss seed=2024 (41s)
+ranknet_seed2024,0.831351,0.771669,0.769054,-0.002344,0.003792,True,ranknet seed=2024 (67s)
+logloss_seed99,0.830471,0.772804,0.765224,-0.001209,-3.8e-05,True,logloss seed=99 (39s)
+ranknet_seed99,0.83111,0.772193,0.767182,-0.00182,0.00192,True,ranknet seed=99 (67s)
+logloss_seedens_raw,0.831022,0.773657,0.765953,-0.000356,0.000691,True,logloss 5시드 raw-score 평균 앙상블
+ranknet_seedens_raw,0.831387,0.773691,0.768805,-0.000322,0.003543,True,ranknet 5시드 raw-score 평균 앙상블

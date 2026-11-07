@@ -1,0 +1,45 @@
+경로2 (공변량 분포만 쓰는 도메인 적응) 실측 요약 — pathG
+================================================================
+생성 스크립트: experiments/pathG_00_baseline.py, pathG_01_da.py,
+              pathG_02_ceiling.py, pathG_02b_ceiling_rest.py,
+              pathG_03_refine.py, pathG_04_final.py, pathG_05_boot.py
+
+기준선 재현(과제 명세 코드 그대로, 500k/100k, seed42):
+  내부 0.830969 · 외부 pre 0.774013 · post 0.765262  → 목표값과 소수3자리 일치.
+
+목표 0.80 도달: 실패(어떤 기법으로도, 회색지대 포함).
+총 실험 121건(pathG_ALL_results.csv). 전 기법 외부 변동 ±0.01 이내.
+
+핵심 진단(왜 0.80이 불가능한가):
+1) NHANES in-domain ORACLE 상한(NHANES 라벨 직접 사용, 17변수 최선 모델):
+   pre 0.7733 · post 0.7696 · pooled 0.7737.
+   → 전이 baseline pre 0.774는 이미 NHANES 자체 상한에 도달. post도 0.005 이내.
+2) KCHS 동일표본(n=7888) 5-fold CV: 0.805~0.823.
+   → 17변수는 KCHS에서 0.80 이상 신호를 가지나 NHANES에서는 ~0.77이 한계.
+3) 단변량: 최강예측인자 srh 가중AUROC KCHS 0.757 → NHANES 0.697/0.681.
+   → 예측인자-우울 관계가 NHANES에서 본질적으로 약함(공변량이동으로 교정불가).
+4) 부트스트랩 CI(PSU/strata 복원추출 3000회):
+   pre 0.774 [0.748, 0.797] P(≥0.80)=1.1%
+   post 0.765 [0.743, 0.787] P(≥0.80)=0.0%
+   → 95% 상한도 0.80 미달.
+
+기법별 최선(모두 baseline 대비 ±0.01, 회색지대는 protocol_compliant=False):
+  중요도가중(IW): 도메인분류기 AUC 0.98(거의 완전분리)→ ESS 붕괴, 최선 pre 0.7727(-0.0014)
+  표본트리밍:      pre 0.7736(top75, -0.0004 노이즈)
+  CORAL/대각CORAL: pre 0.71~0.76(악화). 평균/공분산 정렬이 신호를 파괴
+  불변특징 다운웨이트: post 0.7697(+0.0044 노이즈), pre 변화없음
+  주변분포 raking(age×sex): pre 0.7748(+0.0008 노이즈) ← 전 기법 통틀어 외부 pre 최고
+  조합(raking+CORAL): pre 0.7115(CORAL 손상 지배)
+  프로토콜 준수 강건화(무작위 마스킹, NHANES 미사용): pre 하락
+
+protocol_compliant 판정:
+  - IW/CORAL/트리밍/불변특징/raking/조합은 모두 NHANES 공변량(분포)을 학습에 사용
+    → §2.10 라벨은 안 쓰나 배포시 타깃 공변량 필요 → 배포현실성 제약, False로 판정.
+    (raking의 인구 마진만은 공개통계로도 근사 가능해 상대적으로 현실성 높음 — note 명시)
+  - living_alone은 NHANES pre에서 100% 결측(구조적)이라 도메인분류기 AUC=1.0 붕괴의 원인.
+    도메인분류기에서 제외(noLA)해야 IW가 동작. dropLA/LAmask는 사실상 17→16변수라 변수고정 제약과 충돌 → False.
+  - 오라클/동일표본 상한, 단변량은 진단 전용(라벨 사용 또는 배포불가) → False.
+
+결론: 확정 한계치 = 외부 pre ≈ 0.774(=NHANES 자체 상한), post ≈ 0.765.
+      17변수 고정 하에 NHANES에서 0.80은 도달 불가이며, 이는 공변량이동 문제가 아니라
+      NHANES 내 신호의 환원불가 상한(≈0.77) 때문임.

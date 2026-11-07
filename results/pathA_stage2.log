@@ -1,0 +1,15 @@
+B00_logit_linear                       int=0.8105 pre=0.7585 post=0.7595 ok=True [6.7s] 로지스틱 기준선(17변수 선형)
+knots(train-only): {'age': [np.float64(25.0), np.float64(44.0), np.float64(57.0), np.float64(68.0), np.float64(82.0)], 'bmi': [np.float64(18.72), np.float64(21.6), np.float64(23.4), np.float64(25.3), np.float64(29.41)], 'sleep_hrs': [np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(7.29), np.float64(8.57)]}
+B01_logit_rcs3                         int=0.8230 pre=0.7655 post=0.7685 ok=True [10.0s] age/bmi/sleep RCS5 (knot=KCHS train 분위)
+B02_lgbm_rcs3                          int=0.8318 pre=0.7669 post=0.7651 ok=True [279.6s] LGBM+RCS (트리는 단조변환 불변 → 무효과 예상)
+B03_logit_rcs_inter                    int=0.8256 pre=0.7626 post=0.7702 ok=True [16.0s] RCS + 명시적 상호작용 8개
+B04_logit_inter_only                   int=0.8140 pre=0.7551 post=0.7639 ok=True [10.4s] 선형 + 상호작용만
+B05_lgbm_rcs_inter                     int=0.8317 pre=0.7638 post=0.7659 ok=True [72.0s] LGBM + RCS + 상호작용
+B06_logit_srh_onehot                   int=0.8156 pre=0.7619 post=0.7636 ok=True [11.2s] srh/oral_health One-Hot
+B07_lgbm_srh_onehot                    int=0.8309 pre=0.7702 post=0.7625 ok=True [44.0s] srh/oral_health One-Hot + LGBM
+B08_lgbm_srh_bin_raw                   int=0.8188 pre=0.7709 post=0.7542 ok=True [69.3s] srh/oh 원값 절단 이진화(>=4)
+B09_lgbm_srh_bin_pctmatch              int=0.8188 pre=0.7709 post=0.7542 ok=True [91.1s] 설문내 분위절단 이진화(KCHS 비율 srh=0.136 oh=0.266 매칭)
+B10_logit_srh_target                   int=0.8043 pre=0.7564 post=0.7564 ok=True [6.8s] srh/oh 타깃인코딩(KCHS train 라벨만)
+B11_lgbm_srh_target                    int=0.8305 pre=0.7747 post=0.7649 ok=True [82.4s] srh/oh 타깃인코딩 + LGBM
+B12_lgbm_decile_phys                   int=0.8280 pre=0.7648 post=0.7694 ok=True [59.5s] age/bmi/sleep 설문내 10분위 구간화
+saved: C:/Users/rudtn/Desktop/claude code/지역사회건강\results\pathA_spline_int.csv

@@ -1,0 +1,2 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,note,secs
+G00_baseline_literal,0.830969,0.774013,0.765262,True,"과제 명세 코드 그대로(500k/100k, seed42). 목표 0.8310/0.7740/0.7653",9.4

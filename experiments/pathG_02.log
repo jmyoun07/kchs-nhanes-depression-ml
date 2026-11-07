@@ -1,0 +1,19 @@
+=== in-domain ORACLE ceiling (NHANES 라벨 사용, 진단 전용) ===
+{"name": "CEIL_oracle_pre_logit_C1", "scope": "pre", "model": "logit_C1", "n": 7888, "wauc": 0.77331, "sd": 0.00193, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_pre_logit_C0.1", "scope": "pre", "model": "logit_C0.1", "n": 7888, "wauc": 0.77258, "sd": 0.00173, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_pre_lgb_small", "scope": "pre", "model": "lgb_small", "n": 7888, "wauc": 0.76172, "sd": 0.00271, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_pre_lgb_base", "scope": "pre", "model": "lgb_base", "n": 7888, "wauc": 0.7392, "sd": 0.00236, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_pre_rf", "scope": "pre", "model": "rf", "n": 7888, "wauc": 0.76475, "sd": 0.00164, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_post_logit_C1", "scope": "post", "model": "logit_C1", "n": 5210, "wauc": 0.76842, "sd": 0.00242, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_post_logit_C0.1", "scope": "post", "model": "logit_C0.1", "n": 5210, "wauc": 0.76964, "sd": 0.00223, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_post_lgb_small", "scope": "post", "model": "lgb_small", "n": 5210, "wauc": 0.76433, "sd": 0.00066, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_post_lgb_base", "scope": "post", "model": "lgb_base", "n": 5210, "wauc": 0.72937, "sd": 0.0026, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_post_rf", "scope": "post", "model": "rf", "n": 5210, "wauc": 0.76867, "sd": 0.0014, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_pooled_logit_C1", "scope": "pooled", "model": "logit_C1", "n": 13098, "wauc": 0.76499, "sd": 0.00071, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_pooled_logit_C0.1", "scope": "pooled", "model": "logit_C0.1", "n": 13098, "wauc": 0.76512, "sd": 0.00068, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_pooled_lgb_small", "scope": "pooled", "model": "lgb_small", "n": 13098, "wauc": 0.77368, "sd": 0.00187, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_pooled_lgb_base", "scope": "pooled", "model": "lgb_base", "n": 13098, "wauc": 0.76031, "sd": 0.001, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+{"name": "CEIL_oracle_pooled_rf", "scope": "pooled", "model": "rf", "n": 13098, "wauc": 0.76577, "sd": 0.00145, "protocol_compliant": false, "note": "NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단"}
+=== KCHS 동일 표본크기 대조 ===
+{"name": "CEIL_kchs_n7888_logit_C1", "scope": "kchs_n7888", "model": "logit_C1", "n": 7888, "wauc": 0.80336, "sd": 0.00328, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n7888_lgb_small", "scope": "kchs_n7888", "model": "lgb_small", "n": 7888, "wauc": 0.81805, "sd": 0.00776, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}

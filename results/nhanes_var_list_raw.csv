@@ -1,0 +1,176 @@
+﻿var,label,comp,pre,post
+ALQ111,Ever had a drink of any kind of alcohol,ALQ,O,O
+ALQ121,Past 12 mo how often drink alcoholic bev,ALQ,O,O
+ALQ130,Avg # alcoholic drinks/day - past 12 mos,ALQ,O,O
+ALQ142,# days have 4 or 5 drinks/past 12 mos,ALQ,O,O
+ALQ151,Ever have 4/5 or more drinks every day?,ALQ,O,O
+ALQ170,Past 30 days # times 4-5 drinks on an oc,ALQ,O,O
+ALQ270,# times 4-5 drinks in 2hrs/past 12 mos,ALQ,O,O
+ALQ280,# times 8+ drinks in 1 day/past 12 mos,ALQ,O,O
+ALQ290,# times 12+ drinks in 1 day/past 12 mos,ALQ,O,
+SEQN,Respondent sequence number,ALQ,O,O
+BMDBMIC,BMI Category - Children/Youth,BMX,O,O
+BMDSTATS,Body Measures Component Status Code,BMX,O,O
+BMIARMC,Arm Circumference Comment,BMX,O,O
+BMIARML,Upper Arm Length Comment,BMX,O,O
+BMIHEAD,Head Circumference Comment,BMX,O,O
+BMIHIP,Hip Circumference Comment,BMX,O,O
+BMIHT,Standing Height Comment,BMX,O,O
+BMILEG,Upper Leg Length Comment,BMX,O,O
+BMIRECUM,Recumbent Length Comment,BMX,O,O
+BMIWAIST,Waist Circumference Comment,BMX,O,O
+BMIWT,Weight Comment,BMX,O,O
+BMXARMC,Arm Circumference (cm),BMX,O,O
+BMXARML,Upper Arm Length (cm),BMX,O,O
+BMXBMI,Body Mass Index (kg/m**2),BMX,O,O
+BMXHEAD,Head Circumference (cm),BMX,O,O
+BMXHIP,Hip Circumference (cm),BMX,O,O
+BMXHT,Standing Height (cm),BMX,O,O
+BMXLEG,Upper Leg Length (cm),BMX,O,O
+BMXRECUM,Recumbent Length (cm),BMX,O,O
+BMXWAIST,Waist Circumference (cm),BMX,O,O
+BMXWT,Weight (kg),BMX,O,O
+BPD035,Age told had hypertension,BPQ,O,
+BPQ020,Ever told you had high blood pressure,BPQ,O,O
+BPQ030,Told had high blood pressure - 2+ times,BPQ,O,O
+BPQ040A,Taking prescription for hypertension,BPQ,O,
+BPQ050A,Now taking prescribed medicine for HBP,BPQ,O,
+BPQ060,Ever had blood cholesterol checked,BPQ,O,
+BPQ070,When blood cholesterol last checked,BPQ,O,
+BPQ080,Doctor told you - high cholesterol level,BPQ,O,O
+BPQ090D,Told to take prescriptn for cholesterol,BPQ,O,
+BPQ100D,Now taking prescribed medicine,BPQ,O,
+BPQ101D,Taking meds to lower blood cholesterol?,BPQ,,O
+BPQ150,Taking high blood pressure medication,BPQ,,O
+AIALANGA,Language of ACASI Interview,DEMO,O,
+DMDBORN4,Country of birth,DEMO,O,O
+DMDEDUC2,Education level - Adults 20+,DEMO,O,O
+DMDHHSIZ,Total number of people in the Household,DEMO,,O
+DMDHRAGZ,HH ref persons age in years,DEMO,,O
+DMDHREDZ,HH ref persons education level,DEMO,,O
+DMDHRGND,HH ref persons gender,DEMO,,O
+DMDHRMAZ,HH ref persons marital status,DEMO,,O
+DMDHSEDZ,HH ref persons spouses education level,DEMO,,O
+DMDMARTZ,Marital status,DEMO,O,O
+DMDYRUSR,Length of time in US,DEMO,,O
+DMDYRUSZ,Length of time in US,DEMO,O,
+DMQMILIZ,Served active duty in US Armed Forces,DEMO,,O
+FIAINTRP,Interpreter used in Family Interview?,DEMO,O,
+FIALANG,Language of Family Interview,DEMO,O,
+FIAPROXY,Proxy used in Family Interview?,DEMO,O,
+INDFMPIR,Ratio of family income to poverty,DEMO,O,O
+MIAINTRP,Interpreter used in MEC Interview?,DEMO,O,
+MIALANG,Language of MEC Interview,DEMO,O,
+MIAPROXY,Proxy used in MEC Interview?,DEMO,O,
+RIAGENDR,Gender,DEMO,O,O
+RIDAGEMN,Age in months at screening - 0 to 24 mos,DEMO,O,O
+RIDAGEYR,Age in years at screening,DEMO,O,O
+RIDEXAGM,Age in months at exam - 0 to 19 years,DEMO,,O
+RIDEXMON,Six month time period,DEMO,O,O
+RIDEXPRG,Pregnancy status at exam,DEMO,O,O
+RIDRETH1,Race/Hispanic origin,DEMO,O,O
+RIDRETH3,Race/Hispanic origin w/ NH Asian,DEMO,O,O
+RIDSTATR,Interview/Examination status,DEMO,O,O
+SDDSRVYR,Data release cycle,DEMO,O,O
+SDMVPSU,Masked variance pseudo-PSU,DEMO,O,O
+SDMVSTRA,Masked variance pseudo-stratum,DEMO,O,O
+SIAINTRP,Interpreter used in SP Interview?,DEMO,O,
+SIALANG,Language of SP Interview,DEMO,O,
+SIAPROXY,Proxy used in SP Interview?,DEMO,O,
+WTINT2YR,Full sample 2-year interview weight,DEMO,,O
+WTINTPRP,Full sample interview weight,DEMO,O,
+WTMEC2YR,Full sample 2-year MEC exam weight,DEMO,,O
+WTMECPRP,Full sample MEC exam weight,DEMO,O,
+DID040,Age when first told you had diabetes,DIQ,O,O
+DID060,How long taking insulin,DIQ,O,O
+DID250,Past year how many times seen doctor,DIQ,O,
+DID260,How often check blood for glucose/sugar,DIQ,O,
+DID310D,What does Dr say DBP should be,DIQ,O,
+DID310S,What does Dr say SBP should be,DIQ,O,
+DID320,What was most recent LDL number,DIQ,O,
+DID330,What does Dr say LDL should be,DIQ,O,
+DID341,Past year times Dr check feet for sores,DIQ,O,
+DID350,How often do you check your feet,DIQ,O,
+DIQ010,Doctor told you have diabetes,DIQ,O,O
+DIQ050,Taking insulin now,DIQ,O,O
+DIQ060U,Unit of measure (month/year),DIQ,O,O
+DIQ070,Take diabetic pills to lower blood sugar,DIQ,O,O
+DIQ080,Diabetes affected eyes/had retinopathy,DIQ,O,
+DIQ160,Ever told you have prediabetes,DIQ,O,O
+DIQ180,Had blood tested past three years,DIQ,O,O
+DIQ230,How long ago saw a diabetes specialist,DIQ,O,
+DIQ240,Is there one Dr you see for diabetes,DIQ,O,
+DIQ260U,Unit of measure (day/week/month/year),DIQ,O,
+DIQ275,Past year Dr checked for A1C,DIQ,O,
+DIQ280,What was your last A1C level,DIQ,O,
+DIQ291,What does Dr say A1C should be,DIQ,O,
+DIQ300D,What was your recent DBP,DIQ,O,
+DIQ300S,What was your recent SBP,DIQ,O,
+DIQ350U,Unit of measure (day/week/month/year),DIQ,O,
+DIQ360,Last time had pupils dilated for exam,DIQ,O,
+DPQ010,Have little interest in doing things,DPQ,O,O
+DPQ020,"Feeling down, depressed, or hopeless",DPQ,O,O
+DPQ030,Trouble sleeping or sleeping too much,DPQ,O,O
+DPQ040,Feeling tired or having little energy,DPQ,O,O
+DPQ050,Poor appetite or overeating,DPQ,O,O
+DPQ060,Feeling bad about yourself,DPQ,O,O
+DPQ070,Trouble concentrating on things,DPQ,O,O
+DPQ080,Moving or speaking slowly or too fast,DPQ,O,O
+DPQ090,Thoughts you would be better off dead,DPQ,O,O
+DPQ100,Difficulty these problems have caused,DPQ,O,O
+HSQ590,Blood ever tested for HIV virus?,HSQ,O,O
+HUD062,How long since last healthcare visit,HUQ,O,
+HUQ010,General health condition,HUQ,O,O
+HUQ030,Routine place to go for healthcare,HUQ,O,O
+HUQ042,Type place most often go for healthcare,HUQ,,O
+HUQ051,#times receive healthcare over past year,HUQ,O,
+HUQ055,Past 12 months had video conf w/Dr?,HUQ,,O
+HUQ071,Overnight hospital patient in last year,HUQ,O,
+HUQ090,Seen mental health professional/past yr,HUQ,O,O
+PAD615,Minutes vigorous-intensity work,PAQ,O,
+PAD630,Minutes moderate-intensity work,PAQ,O,
+PAD645,Minutes walk/bicycle for transportation,PAQ,O,
+PAD660,Minutes vigorous recreational activities,PAQ,O,
+PAD675,Minutes moderate recreational activities,PAQ,O,
+PAD680,Minutes sedentary activity,PAQ,O,O
+PAD790Q,Frequency of moderate LTPA,PAQ,,O
+PAD790U,Moderate LTPA unit (day/week/month/year),PAQ,,O
+PAD800,Minutes moderate LTPA,PAQ,,O
+PAD810Q,Frequency of vigorous LTPA,PAQ,,O
+PAD810U,Vigorous LTPA unit (day/week/month/year),PAQ,,O
+PAD820,Minutes vigorous LTPA,PAQ,,O
+PAQ605,Vigorous work activity,PAQ,O,
+PAQ610,Number of days vigorous work,PAQ,O,
+PAQ620,Moderate work activity,PAQ,O,
+PAQ625,Number of days moderate work,PAQ,O,
+PAQ635,Walk or bicycle,PAQ,O,
+PAQ640,Number of days walk or bicycle,PAQ,O,
+PAQ650,Vigorous recreational activities,PAQ,O,
+PAQ655,Days vigorous recreational activities,PAQ,O,
+PAQ665,Moderate recreational activities,PAQ,O,
+PAQ670,Days moderate recreational activities,PAQ,O,
+SLD012,Sleep hours - weekdays or workdays,SLQ,O,O
+SLD013,Sleep hours - weekends,SLQ,O,O
+SLQ030,How often do you snore?,SLQ,O,
+SLQ040,How often do you snort or stop breathing,SLQ,O,
+SLQ050,Ever told doctor had trouble sleeping?,SLQ,O,
+SLQ120,How often feel overly sleepy during day?,SLQ,O,
+SLQ300,Usual sleep time on weekdays or workdays,SLQ,O,O
+SLQ310,Usual wake time on weekdays or workdays,SLQ,O,O
+SLQ320,Usual sleep time on weekends,SLQ,O,O
+SLQ330,Usual wake time on weekends,SLQ,O,O
+SMAQUEX2,Questionnaire Mode Flag,SMQ,O,O
+SMD030,Age started smoking cigarettes regularly,SMQ,O,
+SMD057,# cigarettes smoked per day when quit,SMQ,O,
+SMD100FL,Cigarette Filter type,SMQ,O,
+SMD100MN,Cigarette Menthol indicator,SMQ,O,O
+SMD630,Age first smoked whole cigarette,SMQ,O,O
+SMD641,# days smoked cigs during past 30 days,SMQ,O,O
+SMD650,Avg # cigarettes/day during past 30 days,SMQ,O,O
+SMQ020,Smoked at least 100 cigarettes in life,SMQ,O,O
+SMQ040,Do you now smoke cigarettes?,SMQ,O,O
+SMQ050Q,How long since quit smoking cigarettes,SMQ,O,
+SMQ050U,Unit of measure (day/week/month/year),SMQ,O,
+SMQ078,How soon after waking do you smoke,SMQ,O,
+SMQ621,Cigarettes smoked in entire life,SMQ,O,O
+SMQ670,Tried to quit smoking,SMQ,O,

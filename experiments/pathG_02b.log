@@ -1,0 +1,36 @@
+{"name": "CEIL_kchs_n7888_logit_C1", "scope": "kchs_n7888", "model": "logit_C1", "n": 7888, "wauc": 0.80483, "sd": 0.00311, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n7888_lgb_small", "scope": "kchs_n7888", "model": "lgb_small", "n": 7888, "wauc": 0.82288, "sd": 0.00451, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n7888_lgb_base", "scope": "kchs_n7888", "model": "lgb_base", "n": 7888, "wauc": 0.80784, "sd": 0.00118, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n13098_logit_C1", "scope": "kchs_n13098", "model": "logit_C1", "n": 13098, "wauc": 0.81048, "sd": 0.00096, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n13098_lgb_small", "scope": "kchs_n13098", "model": "lgb_small", "n": 13098, "wauc": 0.80223, "sd": 0.00296, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n13098_lgb_base", "scope": "kchs_n13098", "model": "lgb_base", "n": 13098, "wauc": 0.77405, "sd": 0.00668, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n50000_logit_C1", "scope": "kchs_n50000", "model": "logit_C1", "n": 50000, "wauc": 0.80793, "sd": 0.0, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n50000_lgb_small", "scope": "kchs_n50000", "model": "lgb_small", "n": 50000, "wauc": 0.82459, "sd": 0.0, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n50000_lgb_base", "scope": "kchs_n50000", "model": "lgb_base", "n": 50000, "wauc": 0.81371, "sd": 0.0, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n200000_logit_C1", "scope": "kchs_n200000", "model": "logit_C1", "n": 200000, "wauc": 0.81317, "sd": 0.0, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n200000_lgb_small", "scope": "kchs_n200000", "model": "lgb_small", "n": 200000, "wauc": 0.83021, "sd": 0.0, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+{"name": "CEIL_kchs_n200000_lgb_base", "scope": "kchs_n200000", "model": "lgb_base", "n": 200000, "wauc": 0.82671, "sd": 0.0, "protocol_compliant": true, "note": "KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리"}
+=== 단변량 가중 AUROC ===
+Traceback (most recent call last):
+  File "C:\Users\rudtn\Desktop\claude code\지역사회건강\experiments\pathG_02b_ceiling_rest.py", line 83, in <module>
+    sc = v.astype(float).values
+         ~~~~~~~~^^^^^^^
+  File "C:\Users\rudtn\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\generic.py", line 6541, in astype
+    new_data = self._mgr.astype(dtype=dtype, errors=errors)
+  File "C:\Users\rudtn\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\internals\managers.py", line 614, in astype
+    return self.apply("astype", dtype=dtype, errors=errors)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rudtn\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\internals\managers.py", line 445, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "C:\Users\rudtn\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\internals\blocks.py", line 607, in astype
+    new_values = astype_array_safe(values, dtype, errors=errors)
+  File "C:\Users\rudtn\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\dtypes\astype.py", line 240, in astype_array_safe
+    new_values = astype_array(values, dtype, copy=copy)
+  File "C:\Users\rudtn\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\dtypes\astype.py", line 182, in astype_array
+    values = values.astype(dtype, copy=copy)
+  File "C:\Users\rudtn\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\arrays\string_arrow.py", line 336, in astype
+    return self.to_numpy(dtype=dtype, na_value=np.nan)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rudtn\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\arrays\arrow\array.py", line 1729, in to_numpy
+    result = result.astype(dtype, copy=False)
+ValueError: could not convert string to float: 'M'

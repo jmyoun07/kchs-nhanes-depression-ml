@@ -1,0 +1,7 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,seconds,note
+CEIL_oracle_logit_C1,,0.769347,0.76168,False,,"★ORACLE 상한진단(§2.10 위반): NHANES 자체 교차적합 5-fold×3rep, pooled=0.7648, sd_pre=0.0013"
+CEIL_oracle_logit_C0.1,,0.768955,0.762369,False,,"★ORACLE 상한진단(§2.10 위반): NHANES 자체 교차적합 5-fold×3rep, pooled=0.7649, sd_pre=0.0014"
+CEIL_oracle_logit_C0.03,,0.767969,0.763474,False,,"★ORACLE 상한진단(§2.10 위반): NHANES 자체 교차적합 5-fold×3rep, pooled=0.7649, sd_pre=0.0013"
+CEIL_oracle_lgbm_shallow,,0.772598,0.776004,False,,"★ORACLE 상한진단(§2.10 위반): NHANES 자체 교차적합 5-fold×3rep, pooled=0.7786, sd_pre=0.0028"
+CEIL_oracle_lgbm_d2,,0.76891,0.772924,False,,"★ORACLE 상한진단(§2.10 위반): NHANES 자체 교차적합 5-fold×3rep, pooled=0.7755, sd_pre=0.0022"
+REF_kchs_internal_baseline,0.830969,,,True,,"참고: 동일 17변수 KCHS 내부(대표본, 동일분포) 성능"

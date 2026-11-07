@@ -1,0 +1,7 @@
+﻿set,probabilities,cal_slope,slope_lo,slope_hi,CITL,CITL_lo,CITL_hi,ECE,nested
+NHANES pre,as transported,0.650748,0.533337,0.773542,0.508497,0.37081,0.637454,0.030223,no
+NHANES pre,after intercept/slope recalibration,0.998299,0.816666,1.187912,-0.000276,-0.124354,0.109213,0.009572,no
+NHANES pre,after intercept/slope recalibration (nested),0.998299,0.950187,0.998306,-0.000276,-0.014413,0.016845,0.009572,yes
+NHANES post,as transported,0.681259,0.602922,0.764296,1.125516,0.976405,1.258382,0.067641,no
+NHANES post,after intercept/slope recalibration,0.996365,0.8779,1.126015,-0.003205,-0.134585,0.118999,0.014488,no
+NHANES post,after intercept/slope recalibration (nested),0.996365,0.96513,1.004512,-0.003205,-0.02418,0.012983,0.014488,yes

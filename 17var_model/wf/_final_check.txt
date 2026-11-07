@@ -1,0 +1,4 @@
+OK    0.832
+OK    Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+UnicodeEncodeError: 'cp949' codec can't encode character '\u2013' in position 5: illegal multibyte sequence

@@ -1,0 +1,57 @@
+Fitting default LightGBM: baseline
+baseline: weighted_holdout_auroc=0.755579
+Fitting default LightGBM: plus_A
+plus_A: weighted_holdout_auroc=0.757596
+Fitting default LightGBM: plus_A_B
+plus_A_B: weighted_holdout_auroc=0.758070
+Running 3-fold weighted-AUROC CV tuning for compliant A+B feature set...
+CV lightgbm 01/09 g00_default fold 1/3: weighted_auc=0.760305 seconds=9.0
+CV lightgbm 01/09 g00_default fold 2/3: weighted_auc=0.760950 seconds=8.3
+CV lightgbm 01/09 g00_default fold 3/3: weighted_auc=0.758080 seconds=8.8
+CV lightgbm 02/09 g01_small_leaves fold 1/3: weighted_auc=0.761030 seconds=14.3
+CV lightgbm 02/09 g01_small_leaves fold 2/3: weighted_auc=0.761690 seconds=13.7
+CV lightgbm 02/09 g01_small_leaves fold 3/3: weighted_auc=0.758856 seconds=14.6
+CV lightgbm 03/09 g02_regularized fold 1/3: weighted_auc=0.761302 seconds=31.9
+CV lightgbm 03/09 g02_regularized fold 2/3: weighted_auc=0.761947 seconds=28.5
+CV lightgbm 03/09 g02_regularized fold 3/3: weighted_auc=0.758846 seconds=30.3
+CV lightgbm 04/09 g03_medium_leaves fold 1/3: weighted_auc=0.760717 seconds=31.8
+CV lightgbm 04/09 g03_medium_leaves fold 2/3: weighted_auc=0.761538 seconds=27.0
+CV lightgbm 04/09 g03_medium_leaves fold 3/3: weighted_auc=0.758940 seconds=27.8
+CV lightgbm 05/09 g04_heavy_regularization fold 1/3: weighted_auc=0.760665 seconds=39.0
+CV lightgbm 05/09 g04_heavy_regularization fold 2/3: weighted_auc=0.761570 seconds=35.3
+CV lightgbm 05/09 g04_heavy_regularization fold 3/3: weighted_auc=0.759119 seconds=39.6
+CV lightgbm 06/09 g05_large_leaves_regularized fold 1/3: weighted_auc=0.758170 seconds=30.2
+CV lightgbm 06/09 g05_large_leaves_regularized fold 2/3: weighted_auc=0.759528 seconds=28.5
+CV lightgbm 06/09 g05_large_leaves_regularized fold 3/3: weighted_auc=0.757032 seconds=31.4
+CV lightgbm 07/09 g06_balanced_class_weight fold 1/3: weighted_auc=0.760060 seconds=33.6
+CV lightgbm 07/09 g06_balanced_class_weight fold 2/3: weighted_auc=0.760764 seconds=28.7
+CV lightgbm 07/09 g06_balanced_class_weight fold 3/3: weighted_auc=0.758700 seconds=30.0
+CV lightgbm 08/09 g07_shallow_long fold 1/3: weighted_auc=0.761105 seconds=41.3
+CV lightgbm 08/09 g07_shallow_long fold 2/3: weighted_auc=0.761502 seconds=36.9
+CV lightgbm 08/09 g07_shallow_long fold 3/3: weighted_auc=0.758513 seconds=42.5
+CV lightgbm 09/09 g08_deeper_long fold 1/3: weighted_auc=0.758280 seconds=57.3
+CV lightgbm 09/09 g08_deeper_long fold 2/3: weighted_auc=0.760112 seconds=48.4
+CV lightgbm 09/09 g08_deeper_long fold 3/3: weighted_auc=0.757266 seconds=54.1
+Best LightGBM config: g02_regularized
+Fitting tuned LightGBM (g02_regularized): plus_A_B_C
+plus_A_B_C: weighted_holdout_auroc=0.758951
+Fitting tuned LightGBM (g02_regularized): plus_A_B_C_D
+plus_A_B_C_D: weighted_holdout_auroc=0.823641
+Fitting tuned LightGBM (g02_regularized): plus_A_B_C_D_E
+plus_A_B_C_D_E: weighted_holdout_auroc=0.888359
+Running 3-fold weighted-AUROC CV tuning for elastic-net logistic on A+B features...
+Alternative-model tuning frame: n=300000 events=10820
+CV elasticnet 01/04 en_C0.1_l1r0.0 fold 1/3: weighted_auc=0.731254 seconds=4.6
+CV elasticnet 01/04 en_C0.1_l1r0.0 fold 2/3: weighted_auc=0.737255 seconds=4.5
+CV elasticnet 01/04 en_C0.1_l1r0.0 fold 3/3: weighted_auc=0.728563 seconds=4.6
+CV elasticnet 02/04 en_C0.3_l1r0.25 fold 1/3: weighted_auc=0.731517 seconds=7.9
+CV elasticnet 02/04 en_C0.3_l1r0.25 fold 2/3: weighted_auc=0.737109 seconds=8.6
+CV elasticnet 02/04 en_C0.3_l1r0.25 fold 3/3: weighted_auc=0.728577 seconds=9.3
+CV elasticnet 03/04 en_C1_l1r0.5 fold 1/3: weighted_auc=0.731507 seconds=12.6
+CV elasticnet 03/04 en_C1_l1r0.5 fold 2/3: weighted_auc=0.737063 seconds=9.3
+CV elasticnet 03/04 en_C1_l1r0.5 fold 3/3: weighted_auc=0.728486 seconds=10.0
+CV elasticnet 04/04 en_C3_l1r0.5 fold 1/3: weighted_auc=0.731486 seconds=10.1
+CV elasticnet 04/04 en_C3_l1r0.5 fold 2/3: weighted_auc=0.737064 seconds=13.1
+CV elasticnet 04/04 en_C3_l1r0.5 fold 3/3: weighted_auc=0.728432 seconds=14.6
+Best elastic-net config: en_C0.3_l1r0.25
+Running 3-fold weighted-AUROC CV tuning for random forest on A+B features...

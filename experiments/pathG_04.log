@@ -1,0 +1,11 @@
+{"name": "G04_base", "internal": 0.830969, "ext_pre": 0.774013, "ext_post": 0.765262, "protocol_compliant": true, "note": "기준선 재현", "secs": 124.9}
+{"name": "G04_DIAGCORAL_t2s_pre", "internal": 0.83032, "ext_pre": 0.718151, "ext_post": 0.751246, "protocol_compliant": false, "note": "대각 CORAL(도메인별 표준화, 기준 pre). NHANES 공변량 → 회색지대", "d_internal": -0.000649, "d_pre": -0.055862, "d_post": -0.014016, "secs": 118.3}
+SAVED C:/Users/rudtn/Desktop/claude code/지역사회건강\results\pathG_04_final.csv
+{"name": "G04_DIAGCORAL_t2s_post", "internal": 0.83032, "ext_pre": 0.712138, "ext_post": 0.754862, "protocol_compliant": false, "note": "대각 CORAL(도메인별 표준화, 기준 post). NHANES 공변량 → 회색지대", "d_internal": -0.000649, "d_pre": -0.061875, "d_post": -0.0104, "secs": 120.1}
+SAVED C:/Users/rudtn/Desktop/claude code/지역사회건강\results\pathG_04_final.csv
+{"name": "G04_DIAGCORAL_t2s_both", "internal": 0.83032, "ext_pre": 0.711395, "ext_post": 0.750791, "protocol_compliant": false, "note": "대각 CORAL(도메인별 표준화, 기준 both). NHANES 공변량 → 회색지대", "d_internal": -0.000649, "d_pre": -0.062618, "d_post": -0.014471, "secs": 95.3}
+SAVED C:/Users/rudtn/Desktop/claude code/지역사회건강\results\pathG_04_final.csv
+{"name": "G04_LAMASK_p0.5", "internal": 0.830766, "ext_pre": 0.770837, "ext_post": 0.767486, "protocol_compliant": false, "note": "living_alone 50% 학습결측(NHANES pre 100%결측 구조 이용). 회색지대", "d_internal": -0.000203, "d_pre": -0.003176, "d_post": 0.002224, "secs": 69.7}
+SAVED C:/Users/rudtn/Desktop/claude code/지역사회건강\results\pathG_04_final.csv
+{"name": "G04_LAMASK_p1.0", "internal": 0.83115, "ext_pre": 0.771286, "ext_post": 0.761884, "protocol_compliant": false, "note": "living_alone 100% 학습결측(NHANES pre 100%결측 구조 이용). 회색지대", "d_internal": 0.000181, "d_pre": -0.002727, "d_post": -0.003378, "secs": 55.9}
+SAVED C:/Users/rudtn/Desktop/claude code/지역사회건강\results\pathG_04_final.csv

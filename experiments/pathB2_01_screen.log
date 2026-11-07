@@ -1,0 +1,197 @@
+screen: train=(500000, 20) valid=(250000, 20)  [16s]
+[A] LGBM baseline + 1D sweeps
+  lgb_base                                     0.83253  [40s]
+  lgb_num_leaves=7                             0.83290  [17s]
+  lgb_num_leaves=15                            0.83311  [15s]
+  lgb_num_leaves=23                            0.83312  [24s]
+  lgb_num_leaves=47                            0.83219  [47s]
+  lgb_num_leaves=63                            0.83238  [47s]
+  lgb_min_child_samples=100                    0.83289  [33s]
+  lgb_min_child_samples=300                    0.83313  [35s]
+  lgb_min_child_samples=1000                   0.83328  [22s]
+  lgb_min_child_samples=2500                   0.83274  [30s]
+  lgb_min_child_samples=5000                   0.83291  [48s]
+  lgb_reg_alpha=0.5                            0.83297  [41s]
+  lgb_reg_alpha=2                              0.83313  [29s]
+  lgb_reg_alpha=10                             0.83363  [45s]
+  lgb_reg_alpha=50                             0.83260  [34s]
+  lgb_reg_lambda=0.5                           0.83276  [29s]
+  lgb_reg_lambda=2                             0.83317  [33s]
+  lgb_reg_lambda=10                            0.83310  [39s]
+  lgb_reg_lambda=50                            0.83359  [31s]
+  lgb_max_depth=3                              0.83315  [18s]
+  lgb_max_depth=4                              0.83340  [21s]
+  lgb_max_depth=5                              0.83339  [33s]
+  lgb_max_depth=6                              0.83272  [38s]
+  lgb_max_depth=8                              0.83257  [19s]
+  lgb_learning_rate=0.01                       0.83248  [22s]
+  lgb_learning_rate=0.05                       0.83169  [36s]
+  lgb_learning_rate=0.1                        0.82799  [21s]
+  lgb_n_estimators=300                         0.83266  [12s]
+  lgb_n_estimators=1000                        0.83204  [25s]
+  lgb_n_estimators=2000                        0.83041  [63s]
+  lgb_subsample=0.5                            0.83323  [59s]
+  lgb_subsample=0.6                            0.83303  [8s]
+  lgb_subsample=1.0                            0.83253  [7s]
+  lgb_colsample_bytree=0.5                     0.83351  [9s]
+  lgb_colsample_bytree=0.6                     0.83288  [8s]
+  lgb_colsample_bytree=1.0                     0.83265  [7s]
+[A2] LGBM strong-regularization / shallow combos
+  lgb_combo0                                   0.83417  [11s]
+  lgb_combo1                                   0.83337  [13s]
+  lgb_combo2                                   0.83383  [13s]
+  lgb_combo3                                   0.83378  [8s]
+  lgb_combo4                                   0.83387  [12s]
+  lgb_combo5                                   0.83363  [22s]
+  lgb_combo6                                   0.83201  [9s]
+[A3] LGBM random search
+  lgb_rand00                                   0.83317  [20s]
+  lgb_rand01                                   0.83324  [25s]
+  lgb_rand02                                   0.83325  [23s]
+  lgb_rand03                                   0.83347  [7s]
+  lgb_rand04                                   0.83272  [21s]
+  lgb_rand05                                   0.83067  [10s]
+  lgb_rand06                                   0.83270  [23s]
+  lgb_rand07                                   0.83312  [5s]
+  lgb_rand08                                   0.83307  [13s]
+  lgb_rand09                                   0.83342  [15s]
+  lgb_rand10                                   0.83333  [9s]
+  lgb_rand11                                   0.83304  [27s]
+  lgb_rand12                                   0.83341  [14s]
+  lgb_rand13                                   0.82928  [4s]
+  lgb_rand14                                   0.83353  [9s]
+  lgb_rand15                                   0.83266  [4s]
+  lgb_rand16                                   0.83293  [12s]
+  lgb_rand17                                   0.83359  [18s]
+  lgb_rand18                                   0.83325  [9s]
+  lgb_rand19                                   0.83400  [14s]
+  lgb_rand20                                   0.83351  [6s]
+  lgb_rand21                                   0.83379  [30s]
+  lgb_rand22                                   0.83069  [6s]
+  lgb_rand23                                   0.82905  [4s]
+  lgb_rand24                                   0.83384  [44s]
+  lgb_rand25                                   0.83311  [5s]
+  lgb_rand26                                   0.83389  [15s]
+  lgb_rand27                                   0.83350  [9s]
+  lgb_rand28                                   0.83331  [12s]
+  lgb_rand29                                   0.83324  [5s]
+  lgb_rand30                                   0.83261  [6s]
+  lgb_rand31                                   0.82991  [3s]
+  lgb_rand32                                   0.83196  [15s]
+  lgb_rand33                                   0.83357  [19s]
+  lgb_rand34                                   0.83363  [25s]
+  lgb_rand35                                   0.83339  [26s]
+  lgb_rand36                                   0.83174  [5s]
+  lgb_rand37                                   0.83230  [6s]
+  lgb_rand38                                   0.83295  [4s]
+  lgb_rand39                                   0.83355  [20s]
+  lgb_rand40                                   0.83297  [5s]
+  lgb_rand41                                   0.83222  [3s]
+  lgb_rand42                                   0.83265  [6s]
+  lgb_rand43                                   0.83331  [8s]
+  lgb_rand44                                   0.83335  [6s]
+[B] monotone constraints
+  lgb_mono_srh_base                            0.83253  [7s]
+  lgb_mono_srh_reg                             0.83343  [13s]
+  lgb_mono_srh_oral_base                       0.83261  [7s]
+  lgb_mono_srh_oral_reg                        0.83284  [13s]
+  lgb_mono_srh_oral_inc_base                   0.83223  [7s]
+  lgb_mono_srh_oral_inc_reg                    0.83284  [14s]
+  lgb_mono_core_base                           0.83246  [8s]
+  lgb_mono_core_reg                            0.83277  [14s]
+  lgb_mono_core_age_base                       0.82407  [7s]
+  lgb_mono_core_age_reg                        0.82454  [14s]
+  lgb_mono_all17_base                          0.83185  [8s]
+  lgb_mono_all17_reg                           0.83214  [13s]
+[C] XGBoost / CatBoost / HistGB
+  xgb_0                                        0.83274  [15s]
+  xgb_1                                        0.83335  [12s]
+  xgb_2                                        0.83360  [12s]
+  xgb_3                                        0.82985  [18s]
+  xgb_4                                        0.83396  [24s]
+  xgb_5                                        0.83307  [26s]
+  xgb_6                                        0.83287  [23s]
+  xgb_7                                        0.83257  [36s]
+  xgb_mono_srh_oral_inc                        0.83272  [23s]
+  xgb_mono_core                                0.83267  [22s]
+  xgb_mono_all17                               0.83208  [22s]
+  cat_0                                        0.83404  [34s]
+  cat_1                                        0.83321  [29s]
+  cat_2                                        0.83289  [39s]
+  cat_3                                        0.83341  [48s]
+  cat_4                                        0.83302  [58s]
+  hgb_0                                        0.83214  [11s]
+  hgb_1                                        0.83297  [17s]
+  hgb_2                                        0.83320  [13s]
+  hgb_3                                        0.83082  [9s]
+  hgb_mono_srh_oral_inc                        0.83221  [13s]
+  hgb_mono_core                                0.83223  [13s]
+[D] regularized linear
+  !! logit_l2_C=0.0003: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_l2_C=0.001: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_l2_C=0.003: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_l2_C=0.01: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_l2_C=0.03: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_l2_C=0.1: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_l2_C=1.0: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_l1_C=0.001: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_l1_C=0.01: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_l1_C=0.1: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_l1_C=1.0: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_en_C=0.01_l1r=0.2: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_en_C=0.01_l1r=0.5: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_en_C=0.01_l1r=0.8: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_en_C=0.1_l1r=0.2: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_en_C=0.1_l1r=0.5: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_en_C=0.1_l1r=0.8: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_en_C=1.0_l1r=0.2: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_en_C=1.0_l1r=0.5: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+  !! logit_en_C=1.0_l1r=0.8: ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+DONE 122 configs, 2368s -> C:/Users/rudtn/Desktop/claude code/지역사회건강\results\pathB2_01_screen.csv
+                    name     family  valid_wauc
+              lgb_combo0 lgbm_combo    0.834166
+                   cat_0   catboost    0.834044
+              lgb_rand19  lgbm_rand    0.834004
+                   xgb_4        xgb    0.833961
+              lgb_rand26  lgbm_rand    0.833886
+              lgb_combo4 lgbm_combo    0.833866
+              lgb_rand24  lgbm_rand    0.833838
+              lgb_combo2 lgbm_combo    0.833834
+              lgb_rand21  lgbm_rand    0.833788
+              lgb_combo3 lgbm_combo    0.833781
+              lgb_combo5 lgbm_combo    0.833633
+        lgb_reg_alpha=10    lgbm_1d    0.833631
+              lgb_rand34  lgbm_rand    0.833627
+                   xgb_2        xgb    0.833604
+              lgb_rand17  lgbm_rand    0.833595
+       lgb_reg_lambda=50    lgbm_1d    0.833585
+              lgb_rand33  lgbm_rand    0.833573
+              lgb_rand39  lgbm_rand    0.833551
+              lgb_rand14  lgbm_rand    0.833534
+              lgb_rand20  lgbm_rand    0.833509
+lgb_colsample_bytree=0.5    lgbm_1d    0.833507
+              lgb_rand27  lgbm_rand    0.833502
+              lgb_rand03  lgbm_rand    0.833471
+        lgb_mono_srh_reg  lgbm_mono    0.833427
+              lgb_rand09  lgbm_rand    0.833418

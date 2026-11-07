@@ -1,0 +1,16 @@
+[설계] pooled n=13,098 · 층 39 · PSU 79
+
+[오라클] PSU 분리 그룹 CV
+   Logistic regression                0.7638  95% CI [0.739,0.788]   (예측 고정 재표집)
+   Penalized logistic (L2, C=0.1)     0.7640  95% CI [0.740,0.788]   (예측 고정 재표집)
+   Histogram gradient boosting        0.7724  95% CI [0.746,0.798]   (예측 고정 재표집)
+   LightGBM (small)                   0.7762  95% CI [0.753,0.799]   (예측 고정 재표집)
+
+[중첩 부트스트랩] LightGBM (small) — 복제마다 재적합(200회)
+   LightGBM (small): 재적합 포함 95% CI [0.745,0.794]  (n=200 복제)
+
+[레지스트리] 탐색 실험 수 집계
+   파일 117개 · 실험행 합계 2,199
+
+저장: results/review4_oracle_grouped.csv, experiment_registry.csv
+완료.

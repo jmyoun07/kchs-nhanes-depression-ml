@@ -1,0 +1,23 @@
+train=1638808 holdout=409702 pre=7888 post=5210
+lgbm_s42       내부=0.8335 pre=0.7682 post=0.7680 [69s]
+lgbm_s7        내부=0.8336 pre=0.7649 post=0.7681 [76s]
+lgbm_s2024     내부=0.8337 pre=0.7663 post=0.7676 [69s]
+lgbm_s1        내부=0.8336 pre=0.7684 post=0.7660 [56s]
+lgbm_s13       내부=0.8336 pre=0.7670 post=0.7655 [56s]
+lgbm_s99       내부=0.8336 pre=0.7678 post=0.7654 [84s]
+lgbm_s777      내부=0.8336 pre=0.7664 post=0.7648 [98s]
+lgbm_s31337    내부=0.8336 pre=0.7668 post=0.7675 [108s]
+lgbm_s555      내부=0.8335 pre=0.7679 post=0.7677 [103s]
+lgbm_s2718     내부=0.8336 pre=0.7673 post=0.7661 [88s]
+lgbm_reg       내부=0.8332 pre=0.7670 post=0.7688 [49s]
+[lgbm_shallow] 실패: ValueError: invalid literal for int() with base 10: 'hallow'
+lgbm_deep      내부=0.8336 pre=0.7643 post=0.7647 [144s]
+lgbm_dart      내부=0.8283 pre=0.7648 post=0.7610 [240s]
+lgbm_goss      내부=0.8339 pre=0.7666 post=0.7680 [108s]
+[rf] 실패: MemoryError: Unable to allocate 1.56 MiB for an array with shape (1638808,) and data type bool
+[et] 실패: MemoryError: Unable to allocate 1.56 MiB for an array with shape (1638808,) and data type bool
+histgb         내부=0.8333 pre=0.7634 post=0.7673 [145s]
+enet           내부=0.8119 pre=0.7583 post=0.7597 [817s]
+logit_plain    내부=0.8118 pre=0.7587 post=0.7600 [27s]
+gnb            내부=0.7622 pre=0.7266 post=0.7158 [20s]
+완료: C:\Users\rudtn\Desktop\claude code\지역사회건강\experiments\cache\base

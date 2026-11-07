@@ -1,0 +1,9 @@
+﻿name,auc,lo,hi,se,protocol_compliant,note
+baseline_ext_pre_bootCI,0.774013,0.7461,0.798387,0.012528,True,층내 PSU 재표집 부트스트랩 400회. 0.80 도달 필요 증가분=+0.0260 (= 2.1 SE)
+baseline_ext_post_bootCI,0.765262,0.745557,0.784885,0.009802,True,층내 PSU 재표집 부트스트랩 400회. 0.80 도달 필요 증가분=+0.0347 (= 3.5 SE)
+ORACLE_pre_selffit_lgb_5foldCV,0.761324,,,,False,★비준수(§2.10): NHANES 자체 라벨로 적합. 17변수 정보 상한 진단
+ORACLE_pre_selffit_logit_5foldCV,0.772438,,,,False,★비준수(§2.10): NHANES 자체 라벨로 적합. 17변수 정보 상한 진단
+ORACLE_post_selffit_lgb_5foldCV,0.769696,,,,False,★비준수(§2.10): NHANES 자체 라벨로 적합. 17변수 정보 상한 진단
+ORACLE_post_selffit_logit_5foldCV,0.770211,,,,False,★비준수(§2.10): NHANES 자체 라벨로 적합. 17변수 정보 상한 진단
+ORACLE_pooled_selffit_lgb_5foldCV,0.774288,0.768014,0.77222,,False,"★비준수(§2.10): pre+post 통합 자체적합. lo칸=pre, hi칸=post 부분 AUROC"
+ORACLE_pooled_selffit_logit_5foldCV,0.765392,0.770326,0.762168,,False,"★비준수(§2.10): pre+post 통합 자체적합. lo칸=pre, hi칸=post 부분 AUROC"

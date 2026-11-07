@@ -1,0 +1,10 @@
+﻿method,internal,pre,post,verdict
+baseline (300k),0.837,0.7694,0.7685,reference
+M1 monotonic constraints,0.8256,0.761,0.7461,lower
+M2 transport-stable selection (internal k*=0),0.837,0.7694,0.7685,no change
+M3 LOYO transfer-robust hyperparameters (→baseline cfg),0.837,0.7694,0.7685,no change
+M4 KCHS per-year ensemble,0.8372,0.7652,0.7658,lower
+M5 out-of-fold WoE target encoding,0.8369,0.7686,0.7695,no change
+M6a missing-indicator augmentation,0.8379,0.7675,0.7685,no change
+M6b explicit imputation (no tree-native),0.8372,0.7693,0.7684,no change
+M7 internal-CV-tuned config,0.8362,0.7719,0.7674,offsetting (pre↑ post↓)

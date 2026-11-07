@@ -1,0 +1,15 @@
+FOCUSED review — code and harmonization layer ONLY. Token budget is tight: report ONLY blocking or important defects that you have verified by running python against the data. Skip anything cosmetic, stylistic, or documentation-consistency related (a mechanical checker already covers text-vs-numbers).
+
+Scope, in priority order:
+1. ../src/01_harmonize.py and ../src/15_ext_harmonize.py — hunt for SILENT MISCODING of the same class as the already-found defect (income_q used pd.qcut(...,5,duplicates="drop") so NHANES post silently got 4 levels). Specifically check every predictor for: values that collapse or shift meaning between cohorts, missing/refusal codes not masked, fillna that turns unknown into a substantive category, cycle-specific code branches that disagree, and unit/scale mismatches. For each predictor, print the per-cohort distribution you used as evidence.
+2. 20_final_pipeline.py, 36_utility.py, 48_parsimonious_clean.py, 54_review3_ci.py, 55_oracle_grouped.py, 56_income_fix.py — verify the computations actually do what their docstrings claim. Focus on anything that could bias a headline number (AUROC, CI, net benefit, item-count selection).
+3. data/ext_{kchs,pre,post}.parquet — sanity-check the analytic data itself: impossible values, duplicated respondents, weights that do not sum sensibly, outcome/predictor leakage.
+
+Data: data/ext_kchs.parquet (2,048,510), ext_pre.parquet (7,888), ext_post.parquet (5,210). Raw NHANES/KCHS are not available; work from the parquets and the code.
+
+RULES
+- READ ONLY. Do not modify files.
+- Report at most 8 defects, most severe first. For each: what is wrong, the python evidence (numbers you computed), which headline result it affects, and the precise fix.
+- If a category is clean, say so in one line.
+- Do NOT report documentation wording, cross-reference, or rounding issues.
+Finish with one line: are there any remaining defects that would change a headline result?

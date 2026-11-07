@@ -1,0 +1,13 @@
+﻿name,scope,model,n,wauc,sd,protocol_compliant,note
+CEIL_kchs_n7888_logit_C1,kchs_n7888,logit_C1,7888,0.80483,0.00311,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n7888_lgb_small,kchs_n7888,lgb_small,7888,0.82288,0.00451,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n7888_lgb_base,kchs_n7888,lgb_base,7888,0.80784,0.00118,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n13098_logit_C1,kchs_n13098,logit_C1,13098,0.81048,0.00096,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n13098_lgb_small,kchs_n13098,lgb_small,13098,0.80223,0.00296,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n13098_lgb_base,kchs_n13098,lgb_base,13098,0.77405,0.00668,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n50000_logit_C1,kchs_n50000,logit_C1,50000,0.80793,0.0,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n50000_lgb_small,kchs_n50000,lgb_small,50000,0.82459,0.0,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n50000_lgb_base,kchs_n50000,lgb_base,50000,0.81371,0.0,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n200000_logit_C1,kchs_n200000,logit_C1,200000,0.81317,0.0,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n200000_lgb_small,kchs_n200000,lgb_small,200000,0.83021,0.0,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리
+CEIL_kchs_n200000_lgb_base,kchs_n200000,lgb_base,200000,0.82671,0.0,True,KCHS를 NHANES와 같은 표본크기로 줄여 5-fold CV → 표본크기 효과 분리

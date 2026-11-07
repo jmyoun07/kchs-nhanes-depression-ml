@@ -1,0 +1,15 @@
+feature,shift_score,metric
+bmi,0.47129293946501705,ks_statistic
+sleep_hrs,0.34863439817330427,ks_statistic
+edu,0.2421593905608144,categorical_total_variation
+active,0.17023916325518895,ks_statistic
+income_q,0.10715517918674428,ks_statistic
+age,0.08414369881862499,ks_statistic
+partnered,0.08304517157174868,ks_statistic
+htn,0.079749344742716,ks_statistic
+living_alone,0.07739142051948411,ks_statistic
+srh,0.06227137155237528,ks_statistic
+smoking,0.04767413035620836,categorical_total_variation
+current_drinker,0.03099936243983306,ks_statistic
+sex,0.021566390981968248,categorical_total_variation
+dm,0.019059880384778127,ks_statistic

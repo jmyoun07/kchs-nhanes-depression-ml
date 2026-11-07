@@ -1,0 +1,9 @@
+﻿experiment,internal,ext_pre,ext_post,d_pre,d_post,protocol_compliant,note
+baseline_lgbm(명세 재현),0.831,0.774,0.7653,0.0,0.0,True,내부0.8310/pre0.7740/post0.7653 정확 재현
+algdiv_logit(9 이질모델·로짓평균),0.8328,0.7751,0.7711,0.001,0.0058,True,"사전지정 균등가중, 선택無. post CI[+.0011,+.0105] 유의"
+algdiv_rank(9 이질모델·순위평균),0.8325,0.7756,0.7706,0.0016,0.0054,True,"사전지정 균등가중, 선택無"
+greedy_logit(OOF탐욕선택),0.8333,0.7733,0.771,-0.0008,0.0057,True,"KCHS 내부OOF 최대로 선택. post CI[+.0018,+.0096] 유의, pre 무변"
+all_rank(29모델 균등),0.8319,0.7745,0.7704,0.0005,0.0052,True,전체 라이브러리 균등 순위평균
+"stacking_logit(메타=로지스틱,OOF5fold)",0.8321,0.7733,0.77,-0.0007,0.0047,True,"스태킹, 이득 미미"
+ORACLE_greedy_pre(★비준수 상한),0.8317,0.7817,0.7638,0.0077,-0.0015,False,pre 라벨로 가중치 선택. 앙상블 이론 상한
+ORACLE_best_single_post(★비준수),0.8286,0.7601,0.7764,-0.0139,0.0111,False,post 라벨로 고른 최고단일=mlp64_32

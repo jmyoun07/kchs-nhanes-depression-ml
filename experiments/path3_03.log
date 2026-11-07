@@ -1,0 +1,30 @@
+########## A) 외부 AUROC 복합표본 부트스트랩 CI ##########
+기준선: int=0.8310 pre=0.7740 post=0.7653
+  NHANES pre: AUROC=0.7740 95%CI=[0.7492,0.7973] SE=0.0123 P(boot>=0.80)=0.012
+  NHANES post: AUROC=0.7653 95%CI=[0.7424,0.7876] SE=0.0112 P(boot>=0.80)=0.000
+
+########## B) 내부 전용 시간전이 CV (NHANES 미사용) ##########
+  [H_2017_2018] all_other_years      n=400,000 내부(해당연도)AUROC=0.8370
+  [H_2017_2018] nearest3             n=400,000 내부(해당연도)AUROC=0.8386
+  [H_2017_2018] farthest3            n=400,000 내부(해당연도)AUROC=0.8363
+  [H_2017_2018] postpandemic_only    n=400,000 내부(해당연도)AUROC=0.8367
+  [H_2017_2018] prepandemic_only     n=400,000 내부(해당연도)AUROC=0.8414
+  [H_2020_2021] all_other_years      n=400,000 내부(해당연도)AUROC=0.8138
+  [H_2020_2021] nearest3             n=400,000 내부(해당연도)AUROC=0.8208
+  [H_2020_2021] farthest3            n=400,000 내부(해당연도)AUROC=0.8234
+  [H_2020_2021] postpandemic_only    n=400,000 내부(해당연도)AUROC=0.8194
+  [H_2020_2021] prepandemic_only     n=400,000 내부(해당연도)AUROC=0.8134
+  [H_2024_2025] all_other_years      n=400,000 내부(해당연도)AUROC=0.8173
+  [H_2024_2025] nearest3             n=400,000 내부(해당연도)AUROC=0.8209
+  [H_2024_2025] farthest3            n=400,000 내부(해당연도)AUROC=0.8188
+  [H_2024_2025] postpandemic_only    n=400,000 내부(해당연도)AUROC=0.8209
+  [H_2024_2025] prepandemic_only     n=400,000 내부(해당연도)AUROC=0.8215
+
+--- 설계별 평균(내부 시간전이) ---
+  all_other_years      mean=0.8227 min=0.8138
+  farthest3            mean=0.8262 min=0.8188
+  nearest3             mean=0.8267 min=0.8208
+  postpandemic_only    mean=0.8257 min=0.8194
+  prepandemic_only     mean=0.8254 min=0.8134
+
+저장: C:/Users/rudtn/Desktop/claude code/지역사회건강\results\path3_03_bootci.csv / C:/Users/rudtn/Desktop/claude code/지역사회건강\results\path3_03_temporalcv.csv

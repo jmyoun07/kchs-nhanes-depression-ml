@@ -1,0 +1,10 @@
+﻿cond,internal,ext_pre,ext_post
+"Primary (17 predictors, corrected)",0.836454,0.765028,0.770591
+Food insecurity excluded (16),0.834099,0.759495,0.764047
+Three added predictors excluded (14),0.827005,0.745047,0.757501
+Weighted training,0.83552,0.764272,0.76754
+Missing-indicator imputation,0.837029,0.764229,0.771787
+Single chained-equations imputation,0.837334,0.763387,0.769514
+Age ≥30 (train and evaluate),0.838308,0.780582,0.787458
+Age ≥30 (train only),0.835502,0.769596,0.769179
+Outcome PHQ-9 ≥5,0.760611,0.735289,0.739601

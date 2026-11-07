@@ -1,0 +1,16 @@
+{"name": "E13_base(=C)", "internal": 0.833535, "ext_pre": 0.768199, "ext_post": 0.768007, "protocol_compliant": true, "note": "참조 기준선"}
+  [pre] domain-classifier AUC=1.0000 w: mean=0.000 p99=0.00 max=0.0
+{"name": "E13_1_iw_pre_clip99", "internal": 0.833535, "ext_pre": 0.768199, "ext_post": 0.768007, "protocol_compliant": false, "note": "중요도가중(라벨 미사용). 도메인판별AUC=1.000. NHANES pre 공변량 사용 → §2.10 위반", "delta_pre": 0.0, "delta_post": 0.0}
+{"name": "E13_1_iw_pre_clip95", "internal": 0.833535, "ext_pre": 0.768199, "ext_post": 0.768007, "protocol_compliant": false, "note": "중요도가중(라벨 미사용). 도메인판별AUC=1.000. NHANES pre 공변량 사용 → §2.10 위반", "delta_pre": 0.0, "delta_post": 0.0}
+{"name": "E13_1_iw_pre_noclip", "internal": 0.833535, "ext_pre": 0.768199, "ext_post": 0.768007, "protocol_compliant": false, "note": "중요도가중(라벨 미사용). 도메인판별AUC=1.000. NHANES pre 공변량 사용 → §2.10 위반", "delta_pre": 0.0, "delta_post": 0.0}
+{"name": "E13_1_iw_pre_sqrt", "internal": 0.833535, "ext_pre": 0.768199, "ext_post": 0.768007, "protocol_compliant": false, "note": "중요도가중 sqrt 완화", "delta_pre": 0.0, "delta_post": 0.0}
+  [prepost] domain-classifier AUC=0.9963 w: mean=0.170 p99=2.99 max=571.7
+{"name": "E13_1_iw_prepost_clip99", "internal": 0.828225, "ext_pre": 0.766274, "ext_post": 0.761417, "protocol_compliant": false, "note": "중요도가중(라벨 미사용). 도메인판별AUC=0.996. NHANES prepost 공변량 사용 → §2.10 위반", "delta_pre": -0.001925, "delta_post": -0.00659}
+{"name": "E13_1_iw_prepost_clip95", "internal": 0.830198, "ext_pre": 0.764183, "ext_post": 0.764626, "protocol_compliant": false, "note": "중요도가중(라벨 미사용). 도메인판별AUC=0.996. NHANES prepost 공변량 사용 → §2.10 위반", "delta_pre": -0.004016, "delta_post": -0.003381}
+{"name": "E13_1_iw_prepost_noclip", "internal": 0.82558, "ext_pre": 0.759096, "ext_post": 0.760084, "protocol_compliant": false, "note": "중요도가중(라벨 미사용). 도메인판별AUC=0.996. NHANES prepost 공변량 사용 → §2.10 위반", "delta_pre": -0.009103, "delta_post": -0.007922}
+{"name": "E13_1_iw_prepost_sqrt", "internal": 0.83191, "ext_pre": 0.764455, "ext_post": 0.761389, "protocol_compliant": false, "note": "중요도가중 sqrt 완화", "delta_pre": -0.003744, "delta_post": -0.006618}
+  [pre_trim] domain-classifier AUC=1.0000 w: mean=0.000 p99=0.00 max=0.0
+{"name": "E13_2_trim_top90", "internal": 0.833535, "ext_pre": 0.768199, "ext_post": 0.768007, "protocol_compliant": false, "note": "밀도비 상위 구간만 학습 n=1638808. NHANES pre 공변량 사용 → §2.10 위반", "delta_pre": 0.0, "delta_post": 0.0}
+{"name": "E13_2_trim_top75", "internal": 0.833535, "ext_pre": 0.768199, "ext_post": 0.768007, "protocol_compliant": false, "note": "밀도비 상위 구간만 학습 n=1638808. NHANES pre 공변량 사용 → §2.10 위반", "delta_pre": 0.0, "delta_post": 0.0}
+{"name": "E13_2_trim_top50", "internal": 0.833535, "ext_pre": 0.768199, "ext_post": 0.768007, "protocol_compliant": false, "note": "밀도비 상위 구간만 학습 n=1638808. NHANES pre 공변량 사용 → §2.10 위반", "delta_pre": 0.0, "delta_post": 0.0}
+{"name": "E13_3_quantile_align_all_num", "internal": 0.833528, "ext_pre": 0.765266, "ext_post": 0.767113, "protocol_compliant": false, "note": "수치형 6개를 각 집단 내 가중 백분위로 변환. NHANES 공변량 분포 사용 → §2.10 위반", "delta_pre": -0.002933, "delta_post": -0.000894}

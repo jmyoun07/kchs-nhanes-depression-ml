@@ -1,0 +1,11 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,rule,note
+baseline_literal,0.830969,0.774013,0.765262,True,,기준선 재현
+B16_l15_mcs2000_lam100_col06_sub08f1,0.831826,0.770682,0.769341,True,R1_loyo_mean,KCHS 내부 CV 규칙 R1_loyo_mean이 선택. dpre=-0.0033 dpost=+0.0041
+C09,0.832166,0.770868,0.770985,True,R2_loyo_min,KCHS 내부 CV 규칙 R2_loyo_min이 선택. dpre=-0.0031 dpost=+0.0057
+C09,0.832166,0.770868,0.770985,True,R3_reg_min,KCHS 내부 CV 규칙 R3_reg_min이 선택. dpre=-0.0031 dpost=+0.0057
+B03_l15_mcs1000_lam100_c06,0.831527,0.76987,0.768806,True,R4_loyo_mean_m_std,KCHS 내부 CV 규칙 R4_loyo_mean_m_std이 선택. dpre=-0.0041 dpost=+0.0035
+C09,0.832166,0.770868,0.770985,True,R5_worst_all,KCHS 내부 CV 규칙 R5_worst_all이 선택. dpre=-0.0031 dpost=+0.0057
+C09,0.832166,0.770868,0.770985,True,R6_avg_mins,KCHS 내부 CV 규칙 R6_avg_mins이 선택. dpre=-0.0031 dpost=+0.0057
+C02,0.831875,0.771044,0.767813,True,R7_avg_means,KCHS 내부 CV 규칙 R7_avg_means이 선택. dpre=-0.0030 dpost=+0.0026
+C05,0.831579,0.767802,0.769508,True,R8_cvar3_years,KCHS 내부 CV 규칙 R8_cvar3_years이 선택. dpre=-0.0062 dpost=+0.0042
+"C09,C01,C02,B11_bin32_l15_mcs2000,C05",0.832276,0.770373,0.769611,True,R9_ens_top5_worst_all,KCHS 내부 CV 규칙 R9_ens_top5_worst_all이 선택. dpre=-0.0036 dpost=+0.0043

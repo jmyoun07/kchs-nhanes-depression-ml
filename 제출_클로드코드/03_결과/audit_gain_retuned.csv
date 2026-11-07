@@ -1,0 +1,4 @@
+﻿set,AUROC_14_retuned,AUROC_14_shared,AUROC_17,delta_retuned,CI_lo,CI_hi,p
+Internal(hold-out),0.8222,0.8227,0.8315,0.0093,,,
+NHANES pre,0.7493,0.7497,0.7718,0.0225,0.0154,0.03,0.0
+NHANES post,0.753,0.7543,0.7688,0.0158,0.0102,0.021,0.0

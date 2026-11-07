@@ -1,0 +1,22 @@
+Extract + align new domains:
+  pre: age match=1.00000  comorb NaN=0.0%  hc_visits NaN=0.2%  hosp NaN=0.0%
+  post: age match=1.00000  comorb NaN=0.0%  hc_visits NaN=100.0%  hosp NaN=100.0%
+  pooled N=13098, dep rate=0.1060
+
+Univariate signal (pooled, complete cases):
+  comorb       r=+0.144  mean=0.882  NaN%=0.0
+  hc_visits    r=+0.152  mean=2.421  NaN%=39.9
+  hospitalized r=+0.056  mean=0.117  NaN%=39.8
+
+================================================================
+Pooled 5-fold oracle (best of Logit/LGBM, weighted AUROC)
+================================================================
+  17 baseline           oracle=0.7653  (best=Logit, {'Logit': 0.7652791878425356, 'LGBM': 0.7498947702665292})
+  +multimorbidity       oracle=0.7742  (best=Logit, {'Logit': 0.7741726389990364, 'LGBM': 0.7524310385084887})
+  +healthcare util      oracle=0.7710  (best=Logit, {'Logit': 0.7709787208974775, 'LGBM': 0.761021020861364})
+  +both new domains     oracle=0.7781  (best=Logit, {'Logit': 0.7781018692337766, 'LGBM': 0.7640350196805892})
+
+  Delta (17 -> +both) = +0.0128
+
+Bootstrap 95% CI on delta (paired, 1000 resamples, weighted AUROC):
+  delta point=+0.0128  mean=+0.0129  95% CI=[+0.0073, +0.0188]  P(delta>0)=1.000

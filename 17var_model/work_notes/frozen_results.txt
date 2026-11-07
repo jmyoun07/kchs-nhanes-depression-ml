@@ -1,0 +1,51 @@
+selected six items: self-rated health, age, sex, sleep duration, self-rated oral health, partnership. Evaluated afterwards on data that played no part in selection, this six-item form achieved 
+On the selection set, discrimination rose steeply and then flattened (1 item 0.741; 3 items 0.781; 5 items 0.813; 6 items 0.818; 8 items 0.825; 12 items 0.832; 17 items 0.833)
+with positive predictive value 0.147 and 0.214 externally (number needed to screen 6.8 and 4.7) and negative predictive value 0.970 and 0.953; 
+Internal hold-out AUROC was 0.836 (95% CI 0.827-0.846), AUPRC 0.246, Brier 0.030, calibration slope 1.03, CITL +0.10
+sensitivity/specificity were 0.833/0.665 internally, 0.810/0.566 in NHANES pre and 0.791/0.596 in NHANES post, 
+the Korea-US gap narrows from about 0.07 AUROC at the ≥10 threshold to about 0.02 at ≥5 (0.761 vs 0.735-0.740)
+lowered discrimination throughout (0.761/0.735/0.740) at a much higher weighted prevalence (15.6%/25.0%/32.1%)
+for the full 17-predictor model fitted on the same data (a loss of 0.015 internally, 0.018 pre-pandemic and 
+hold-out AUROC 0.822, NHANES pre 0.748 and NHANES post 0.757, against 0.837/0.766/0.769 
+single chained-equations imputation of the continuous predictors (0.837/0.763/0.770)
+the model flagged 47% of the pre-pandemic and 45% of the post-pandemic population
+0.833/0.665 internally, 0.810/0.566 in NHANES pre and 0.791/0.596 in NHANES post
+the difference is +0.006 (95% CI -0.045 to +0.056; bootstrap P=.86)
+was 3.6% in KCHS against 8.4% and 12.2% in the two NHANES cycles
+ρ=0.378 internally, 0.403 pre-pandemic and 0.439 post-pandemic
+| AUROC (95% CI) | 0.836 (0.827-0.846) | 0.765 (0.724-0.804) |
+hold-out AUROC 0.822, NHANES pre 0.748 and NHANES post 0.757
+aged ≥30 years *improved* discrimination (0.838/0.781/0.787)
+0.012 post-pandemic, each within the plan's 0.02 tolerance)
+weighted training (0.836/0.764/0.768 internal/pre/post)
+0.764-0.776 (best learner 0.776, 95% CI 0.753-0.799
+missing-indicator imputation (0.837/0.764/0.772)
+2,199 recorded runs across 117 experiment files
+| AUPRC (95% CI) | 0.246 (0.227-0.266) |
+0.745-0.794 when the oracle is refitted
+| CITL (95% CI) | +0.10 | +0.51 (
+Δ+0.020, 95% CI +0.010 to +0.030
+Δ+0.014, 95% CI +0.006 to +0.020
+(Spearman ρ=0.97 pre, 0.99 post)
+3.7% in KCHS vs 16.4% and 17.2%
+(KCHS 3.6% vs 8.4% and 12.2%)
+0.836 (95% CI 0.827-0.846)
+self-rated health (0.59)
+(0.06, ranked 10th)
+0.533-0.802
+0.822-0.854
+0.850-0.870
+0.716-0.874
+0.790-0.827
+0.701-0.853
+0.801-0.842
+0.726-0.815
+0.715-0.818
+0.725-0.820
+0.751-0.845
+0.727-0.805
+0.633-0.763
+0.665-0.865
+0.814-0.837
+0.656-0.987
+0.642-0.791

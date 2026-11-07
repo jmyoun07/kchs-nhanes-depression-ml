@@ -1,0 +1,8 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,note,secs,d_internal,d_pre,d_post
+G04_base,0.830969,0.774013,0.765262,True,기준선 재현,124.9,,,
+G04_DIAGCORAL_t2s_pre,0.83032,0.718151,0.751246,False,"대각 CORAL(도메인별 표준화, 기준 pre). NHANES 공변량 → 회색지대",118.3,-0.000649,-0.055862,-0.014016
+G04_DIAGCORAL_t2s_post,0.83032,0.712138,0.754862,False,"대각 CORAL(도메인별 표준화, 기준 post). NHANES 공변량 → 회색지대",120.1,-0.000649,-0.061875,-0.0104
+G04_DIAGCORAL_t2s_both,0.83032,0.711395,0.750791,False,"대각 CORAL(도메인별 표준화, 기준 both). NHANES 공변량 → 회색지대",95.3,-0.000649,-0.062618,-0.014471
+G04_LAMASK_p0.5,0.830766,0.770837,0.767486,False,living_alone 50% 학습결측(NHANES pre 100%결측 구조 이용). 회색지대,69.7,-0.000203,-0.003176,0.002224
+G04_LAMASK_p1.0,0.83115,0.771286,0.761884,False,living_alone 100% 학습결측(NHANES pre 100%결측 구조 이용). 회색지대,55.9,0.000181,-0.002727,-0.003378
+G04_COMBO_rakeAgeSex+diag_both,0.83005,0.71147,0.7608,False,age×sex raking + 대각 CORAL(both) 조합. 회색지대,,,,

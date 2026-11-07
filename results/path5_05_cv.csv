@@ -1,0 +1,8 @@
+﻿name,cv_mean,cv_sd,folds,sec,family,spec
+N_binary_baseline,0.830614,0.002668,"[0.827509, 0.835256, 0.829306, 0.829347, 0.831653]",185.9,native,"{""objective"": ""binary""}"
+N_lambdarank_g100,0.830162,0.00285,"[0.826865, 0.834956, 0.828066, 0.829415, 0.83151]",457.0,native,"{""objective"": ""lambdarank"", ""group"": 100, ""lambdarank_truncation_level"": 30, ""label_gain"": [0, 1]}"
+N_lambdarank_g1000_full,0.831357,0.00263,"[0.82834, 0.83612, 0.829797, 0.830852, 0.831676]",310.9,native,"{""objective"": ""lambdarank"", ""group"": 1000, ""lambdarank_truncation_level"": 1000, ""label_gain"": [0, 1]}"
+N_scale_pos_weight_2,0.830534,0.002818,"[0.827451, 0.835642, 0.829071, 0.829306, 0.831202]",487.9,native,"{""objective"": ""binary"", ""scale_pos_weight"": 2}"
+N_cross_entropy,0.830614,0.002668,"[0.827509, 0.835256, 0.829306, 0.829347, 0.831653]",385.0,native,"{""objective"": ""cross_entropy""}"
+C_logloss_ctrl,0.830711,0.002804,"[0.8278, 0.835925, 0.829243, 0.829535, 0.831049]",433.5,custom,"{""kind"": ""logloss""}"
+focal_g0.5,0.830779,0.002854,"[0.827391, 0.835852, 0.829367, 0.82978, 0.831505]",773.3,custom,"{""kind"": ""focal"", ""gamma"": 0.5}"

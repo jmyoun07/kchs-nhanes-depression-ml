@@ -1,0 +1,120 @@
+﻿group,src,name,internal,ext_pre,ext_post,protocol_compliant,note,d_internal,d_pre,d_post,improves_all3,improves_both_ext
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,00_native_binary,0.830969,0.774013,0.765262,True,기준선(=명세 재현). 모든 비교의 절대 기준,0.0,0.0,0.0,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,01_custom_logloss_ctrl,0.830588,0.772075,0.763515,True,커스텀 objective 경로의 대조군(logloss). 커스텀군은 이 값과 비교,-0.000381,-0.001938,-0.001747,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,10_focal_g0.25,0.830397,0.772313,0.763833,True,"focal loss gamma=0.25, alpha 없음",-0.000572,-0.0017,-0.001429,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,10_focal_g0.5,0.831047,0.771167,0.763302,True,"focal loss gamma=0.5, alpha 없음",7.8e-05,-0.002846,-0.00196,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,10_focal_g1.0,0.83029,0.775779,0.765848,True,"focal loss gamma=1.0, alpha 없음",-0.000679,0.001766,0.000586,False,True
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,10_focal_g1.5,0.829379,0.774353,0.767606,True,"focal loss gamma=1.5, alpha 없음",-0.00159,0.00034,0.002344,False,True
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,10_focal_g2.0,0.830402,0.773689,0.766521,True,"focal loss gamma=2.0, alpha 없음",-0.000567,-0.000324,0.001259,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,10_focal_g3.0,0.825683,0.774203,0.756222,True,"focal loss gamma=3.0, alpha 없음",-0.005286,0.00019,-0.00904,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,11_focal_g1.0_hnorm,0.830291,0.775779,0.765857,True,focal gamma=1.0 + 총헤시안 정규화(logloss와 동일 스케일),-0.000678,0.001766,0.000595,False,True
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,11_focal_g2.0_hnorm,0.830402,0.773689,0.766497,True,focal gamma=2.0 + 총헤시안 정규화(logloss와 동일 스케일),-0.000567,-0.000324,0.001235,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,12_focal_g1.0_a0.75,0.828667,0.770396,0.76235,True,focal gamma=1.0 alpha=0.75 (클래스 가중),-0.002302,-0.003617,-0.002912,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,12_focal_g2.0_a0.75,0.830351,0.774094,0.768433,True,focal gamma=2.0 alpha=0.75 (클래스 가중),-0.000618,8.1e-05,0.003171,False,True
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,12_focal_g2.0_a0.9,0.830494,0.774556,0.769751,True,focal gamma=2.0 alpha=0.9 (클래스 가중),-0.000475,0.000543,0.004489,False,True
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,12_focal_g2.0_a0.25,0.829185,0.770871,0.761428,True,focal gamma=2.0 alpha=0.25 (클래스 가중),-0.001784,-0.003142,-0.003834,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,20_labelsmooth_e0.005,0.830829,0.770235,0.765069,True,label smoothing eps=0.005,-0.00014,-0.003778,-0.000193,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,20_labelsmooth_e0.01,0.831423,0.772611,0.762152,True,label smoothing eps=0.01,0.000454,-0.001402,-0.00311,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,20_labelsmooth_e0.02,0.830423,0.774045,0.761054,True,label smoothing eps=0.02,-0.000546,3.2e-05,-0.004208,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,20_labelsmooth_e0.05,0.830475,0.769054,0.760528,True,label smoothing eps=0.05,-0.000494,-0.004959,-0.004734,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,20_labelsmooth_e0.1,0.830027,0.767577,0.758168,True,label smoothing eps=0.1,-0.000942,-0.006436,-0.007094,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,20_labelsmooth_e0.2,0.828985,0.766955,0.76106,True,label smoothing eps=0.2,-0.001984,-0.007058,-0.004202,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,30_gce_q0.1,0.830386,0.773196,0.764386,True,"Generalized Cross Entropy q=0.1 (q→0=CE, 1=MAE) 라벨잡음 강건",-0.000583,-0.000817,-0.000876,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,30_gce_q0.3,0.829799,0.768274,0.764638,True,"Generalized Cross Entropy q=0.3 (q→0=CE, 1=MAE) 라벨잡음 강건",-0.00117,-0.005739,-0.000624,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,30_gce_q0.5,0.827519,0.765437,0.761066,True,"Generalized Cross Entropy q=0.5 (q→0=CE, 1=MAE) 라벨잡음 강건",-0.00345,-0.008576,-0.004196,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,30_gce_q1.0,0.777491,0.734984,0.725365,True,"Generalized Cross Entropy q=1.0 (q→0=CE, 1=MAE) 라벨잡음 강건",-0.053478,-0.039029,-0.039897,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,31_savage,0.82904,0.766086,0.761317,True,Savage loss(유계 손실),-0.001929,-0.007927,-0.003945,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,32_gradclip_c0.05,0.831327,0.768073,0.76363,True,Huber화 로지스틱: |grad| 절단 c=0.05,0.000358,-0.00594,-0.001632,False,False
+focal/labelsmooth/gce/gradclip/savage/brier,path5_01_screen.csv,32_gradclip_c0.1,0.830765,0.767398,0.763769,True,Huber화 로지스틱: |grad| 절단 c=0.1,-0.000204,-0.006615,-0.001493,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,00_native_binary,0.830969,0.774013,0.765262,True,기준선(재현값),0.0,0.0,0.0,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,01_custom_logloss_ctrl,0.830588,0.772075,0.763515,True,커스텀 대조군(path5_01 재현값),-0.000381,-0.001938,-0.001747,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,30_gce_q0.5,0.827519,0.765437,0.761066,True,GCE q=0.5,-0.00345,-0.008576,-0.004196,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,30_gce_q0.7,0.82183,0.762986,0.763055,True,GCE q=0.7,-0.009139,-0.011027,-0.002207,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,32_gradclip_c0.3,0.83034,0.770961,0.764555,True,Huber화 로지스틱: |grad| 절단 c=0.3,-0.000629,-0.003052,-0.000707,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,32_gradclip_c0.5,0.830582,0.768429,0.764396,True,Huber화 로지스틱: |grad| 절단 c=0.5,-0.000387,-0.005584,-0.000866,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,32_gradclip_c0.9,0.830627,0.770488,0.763537,True,Huber화 로지스틱: |grad| 절단 c=0.9,-0.000342,-0.003525,-0.001725,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,33_brier,0.82904,0.766086,0.761317,True,Brier(제곱)손실,-0.001929,-0.007927,-0.003945,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,40_cross_entropy,0.830969,0.774013,0.765262,True,LightGBM native cross_entropy,0.0,0.0,0.0,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,41_xentlambda,0.830451,0.775543,0.763978,True,LightGBM native cross_entropy_lambda,-0.000518,0.00153,-0.001284,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,42_regression_l2,0.829541,0.766599,0.761131,True,이진 라벨 L2 회귀(링크 없음),-0.001428,-0.007414,-0.004131,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,43_regression_huber,0.828742,0.76293,0.760072,True,native Huber 회귀 손실,-0.002227,-0.011083,-0.00519,False,False
+"gce/gradclip/brier/native대안(xent,huber,fair)",path5_01b_rest.csv,44_regression_fair,0.828221,0.762853,0.758075,True,native Fair 손실,-0.002748,-0.01116,-0.007187,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,00_native_binary,0.830969,0.774013,0.765262,True,기준선(path5_00 재현값),0.0,0.0,0.0,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,50_lambdarank_g20,0.829798,0.769273,0.770808,True,"lambdarank, 무작위 그룹크기=20, trunc=20",-0.001171,-0.00474,0.005546,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,50_lambdarank_g50,0.830387,0.774195,0.767642,True,"lambdarank, 무작위 그룹크기=50, trunc=30",-0.000582,0.000182,0.00238,False,True
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,50_lambdarank_g100,0.829774,0.775456,0.767794,True,"lambdarank, 무작위 그룹크기=100, trunc=30",-0.001195,0.001443,0.002532,False,True
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,50_lambdarank_g200,0.830197,0.770422,0.764364,True,"lambdarank, 무작위 그룹크기=200, trunc=30",-0.000772,-0.003591,-0.000898,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,50_lambdarank_g500,0.829746,0.760666,0.765438,True,"lambdarank, 무작위 그룹크기=500, trunc=30",-0.001223,-0.013347,0.000176,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,50_lambdarank_g1000,0.830153,0.766713,0.765017,True,"lambdarank, 무작위 그룹크기=1000, trunc=30",-0.000816,-0.0073,-0.000245,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,51_lambdarank_g50_fulltrunc,0.830336,0.772884,0.767286,True,"lambdarank, 그룹=50, truncation=전체(모든 쌍)",-0.000633,-0.001129,0.002024,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,51_lambdarank_g200_fulltrunc,0.830668,0.769571,0.767526,True,"lambdarank, 그룹=200, truncation=전체(모든 쌍)",-0.000301,-0.004442,0.002264,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,51_lambdarank_g1000_fulltrunc,0.830451,0.771859,0.77004,True,"lambdarank, 그룹=1000, truncation=전체(모든 쌍)",-0.000518,-0.002154,0.004778,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,52_rankxendcg_g50,0.827899,0.771002,0.758627,True,"rank_xendcg, 무작위 그룹크기=50",-0.00307,-0.003011,-0.006635,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,52_rankxendcg_g200,0.826673,0.768723,0.756714,True,"rank_xendcg, 무작위 그룹크기=200",-0.004296,-0.00529,-0.008548,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,52_rankxendcg_g1000,0.829568,0.766906,0.755635,True,"rank_xendcg, 무작위 그룹크기=1000",-0.001401,-0.007107,-0.009627,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,53_lambdarank_strat[age10]_g200,0.829561,0.76572,0.75356,True,"층화그룹(age10) 내 랭킹, 청크=200",-0.001408,-0.008293,-0.011702,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,53_lambdarank_strat[age10]_g1000,0.827831,0.768395,0.758839,True,"층화그룹(age10) 내 랭킹, 청크=1000",-0.003138,-0.005618,-0.006423,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,53_lambdarank_strat[age10_sex]_g200,0.823283,0.768981,0.759029,True,"층화그룹(age10_sex) 내 랭킹, 청크=200",-0.007686,-0.005032,-0.006233,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,53_lambdarank_strat[age10_sex]_g1000,0.823472,0.763735,0.760731,True,"층화그룹(age10_sex) 내 랭킹, 청크=1000",-0.007497,-0.010278,-0.004531,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,53_lambdarank_strat[age10_sex_year]_g200,0.823035,0.764402,0.764011,True,"층화그룹(age10_sex_year) 내 랭킹, 청크=200",-0.007934,-0.009611,-0.001251,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,53_lambdarank_strat[age10_sex_year]_g1000,0.820926,0.754004,0.757761,True,"층화그룹(age10_sex_year) 내 랭킹, 청크=1000",-0.010043,-0.020009,-0.007501,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,60_ranknet_K1,0.830704,0.766081,0.765762,True,"RankNet 쌍손실, 양성당 음성 1개 샘플",-0.000265,-0.007932,0.0005,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,60_ranknet_K5,0.830989,0.772636,0.768942,True,"RankNet 쌍손실, 양성당 음성 5개 샘플",2e-05,-0.001377,0.00368,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,61_ranknet_K5_ce0.25,0.83109,0.771492,0.769037,True,RankNet + logloss 혼합(ce비중=0.25),0.000121,-0.002521,0.003775,False,False
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,61_ranknet_K5_ce0.5,0.831263,0.775284,0.770151,True,RankNet + logloss 혼합(ce비중=0.5),0.000294,0.001271,0.004889,True,True
+lambdarank/rank_xendcg/RankNet(pairwise),path5_02_rank.csv,61_ranknet_K5_ce0.75,0.830831,0.771965,0.769141,True,RankNet + logloss 혼합(ce비중=0.75),-0.000138,-0.002048,0.003879,False,False
+groupDRO/전이정규화,path5_03_dro.csv,00_native_binary,0.830969,0.774013,0.765262,True,기준선(재현값),0.0,0.0,0.0,False,False
+groupDRO/전이정규화,path5_03_dro.csv,01_custom_logloss_ctrl,0.830588,0.772075,0.763515,True,커스텀 경로 대조군(logloss),-0.000381,-0.001938,-0.001747,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[year]_eta0.01,0.830978,0.771174,0.764196,True,"group DRO(온라인 지수가중), 그룹=year(9개), eta=0.01",9e-06,-0.002839,-0.001066,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[year]_eta0.1,0.829537,0.773006,0.762618,True,"group DRO(온라인 지수가중), 그룹=year(9개), eta=0.1",-0.001432,-0.001007,-0.002644,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[year]_eta1.0,0.827894,0.776566,0.759723,True,"group DRO(온라인 지수가중), 그룹=year(9개), eta=1.0",-0.003075,0.002553,-0.005539,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[age10]_eta0.01,0.830638,0.770506,0.767548,True,"group DRO(온라인 지수가중), 그룹=age10(7개), eta=0.01",-0.000331,-0.003507,0.002286,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[age10]_eta1.0,0.79569,0.752332,0.746624,True,"group DRO(온라인 지수가중), 그룹=age10(7개), eta=1.0",-0.035279,-0.021681,-0.018638,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[age10_sex]_eta0.01,0.83038,0.767653,0.765282,True,"group DRO(온라인 지수가중), 그룹=age10_sex(14개), eta=0.01",-0.000589,-0.00636,2e-05,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[age10_sex]_eta0.1,0.823809,0.757927,0.767885,True,"group DRO(온라인 지수가중), 그룹=age10_sex(14개), eta=0.1",-0.00716,-0.016086,0.002623,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[age10_sex]_eta1.0,0.780888,0.736379,0.71757,True,"group DRO(온라인 지수가중), 그룹=age10_sex(14개), eta=1.0",-0.050081,-0.037634,-0.047692,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[year_age10]_eta0.01,0.830644,0.765202,0.766141,True,"group DRO(온라인 지수가중), 그룹=year_age10(63개), eta=0.01",-0.000325,-0.008811,0.000879,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[year_age10]_eta0.1,0.825058,0.765991,0.768119,True,"group DRO(온라인 지수가중), 그룹=year_age10(63개), eta=0.1",-0.005911,-0.008022,0.002857,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[year_age10]_eta1.0,0.788336,0.731588,0.723588,True,"group DRO(온라인 지수가중), 그룹=year_age10(63개), eta=1.0",-0.042633,-0.042425,-0.041674,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[age10_sex_edu]_eta0.01,0.82656,0.762627,0.750761,True,"group DRO(온라인 지수가중), 그룹=age10_sex_edu(57개), eta=0.01",-0.004409,-0.011386,-0.014501,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[age10_sex_edu]_eta0.1,0.824136,0.758703,0.754948,True,"group DRO(온라인 지수가중), 그룹=age10_sex_edu(57개), eta=0.1",-0.006833,-0.01531,-0.010314,False,False
+groupDRO/전이정규화,path5_03_dro.csv,70_dro[age10_sex_edu]_eta1.0,0.786009,0.732945,0.740532,True,"group DRO(온라인 지수가중), 그룹=age10_sex_edu(57개), eta=1.0",-0.04496,-0.041068,-0.02473,False,False
+groupDRO/전이정규화,path5_03_dro.csv,71_dro[fine]_eta0.1,0.822821,0.757683,0.753417,True,"group DRO 세밀그룹(255개), eta=0.1",-0.008148,-0.01633,-0.011845,False,False
+groupDRO/전이정규화,path5_03_dro.csv,71_dro[fine]_eta1.0,0.757351,0.672164,0.69187,True,"group DRO 세밀그룹(255개), eta=1.0",-0.073618,-0.101849,-0.073392,False,False
+groupDRO/전이정규화,path5_03_dro.csv,80_transreg[year]_lam0.1,0.83065,0.775359,0.76448,True,전이정규화: 그룹(year) 예측평균 정렬 벌점 lam=0.1,-0.000319,0.001346,-0.000782,False,False
+groupDRO/전이정규화,path5_03_dro.csv,80_transreg[year]_lam1.0,0.830023,0.772403,0.765136,True,전이정규화: 그룹(year) 예측평균 정렬 벌점 lam=1.0,-0.000946,-0.00161,-0.000126,False,False
+groupDRO/전이정규화,path5_03_dro.csv,80_transreg[year]_lam10.0,0.830085,0.772812,0.763929,True,전이정규화: 그룹(year) 예측평균 정렬 벌점 lam=10.0,-0.000884,-0.001201,-0.001333,False,False
+groupDRO/전이정규화,path5_03_dro.csv,80_transreg[age10_sex]_lam0.1,0.83046,0.774574,0.766029,True,전이정규화: 그룹(age10_sex) 예측평균 정렬 벌점 lam=0.1,-0.000509,0.000561,0.000767,False,True
+groupDRO/전이정규화,path5_03_dro.csv,80_transreg[age10_sex]_lam1.0,0.830835,0.772493,0.764758,True,전이정규화: 그룹(age10_sex) 예측평균 정렬 벌점 lam=1.0,-0.000134,-0.00152,-0.000504,False,False
+groupDRO/전이정규화,path5_03_dro.csv,80_transreg[age10_sex]_lam10.0,0.829035,0.771724,0.768303,True,전이정규화: 그룹(age10_sex) 예측평균 정렬 벌점 lam=10.0,-0.001934,-0.002289,0.003041,False,False
+groupDRO/전이정규화,path5_03_dro.csv,80_transreg[age10_sex_edu]_lam0.1,0.830087,0.772632,0.763885,True,전이정규화: 그룹(age10_sex_edu) 예측평균 정렬 벌점 lam=0.1,-0.000882,-0.001381,-0.001377,False,False
+groupDRO/전이정규화,path5_03_dro.csv,80_transreg[age10_sex_edu]_lam1.0,0.829786,0.773288,0.763777,True,전이정규화: 그룹(age10_sex_edu) 예측평균 정렬 벌점 lam=1.0,-0.001183,-0.000725,-0.001485,False,False
+groupDRO/전이정규화,path5_03_dro.csv,80_transreg[age10_sex_edu]_lam10.0,0.826532,0.774511,0.767082,True,전이정규화: 그룹(age10_sex_edu) 예측평균 정렬 벌점 lam=10.0,-0.004437,0.000498,0.00182,False,True
+groupDRO/전이정규화,path5_03_dro.csv,81_transreg_m2[age10_sex]_lam1.0,0.830417,0.774882,0.765841,True,전이정규화 2차적률(평균+분산) lam=1.0,-0.000552,0.000869,0.000579,False,True
+groupDRO/전이정규화,path5_03_dro.csv,81_transreg_m2[age10_sex]_lam10.0,0.829025,0.774654,0.767698,True,전이정규화 2차적률(평균+분산) lam=10.0,-0.001944,0.000641,0.002436,False,True
+class-weight/undersample/sigmoid,path5_04_extra.csv,00_native_binary,0.830969,0.774013,0.765262,True,기준선(=명세 재현),0.0,0.0,0.0,False,False
+class-weight/undersample/sigmoid,path5_04_extra.csv,90_is_unbalance,0.829297,0.773294,0.766783,True,is_unbalance=True (양성 손실을 n_neg/n_pos 로 가중),-0.001672,-0.000719,0.001521,False,False
+class-weight/undersample/sigmoid,path5_04_extra.csv,91_scale_pos_weight_2,0.830372,0.774126,0.767786,True,scale_pos_weight=2,-0.000597,0.000113,0.002524,False,True
+class-weight/undersample/sigmoid,path5_04_extra.csv,91_scale_pos_weight_5,0.830389,0.774322,0.766297,True,scale_pos_weight=5,-0.00058,0.000309,0.001035,False,True
+class-weight/undersample/sigmoid,path5_04_extra.csv,91_scale_pos_weight_10,0.830033,0.77505,0.767693,True,scale_pos_weight=10,-0.000936,0.001037,0.002431,False,True
+class-weight/undersample/sigmoid,path5_04_extra.csv,91_scale_pos_weight_26.7,0.830096,0.771565,0.76618,True,scale_pos_weight=26.7,-0.000873,-0.002448,0.000918,False,False
+class-weight/undersample/sigmoid,path5_04_extra.csv,92_sigmoid_0.5,0.830968,0.774011,0.7653,True,binary objective sigmoid=0.5 (손실 기울기 스케일),-1e-06,-2e-06,3.8e-05,False,False
+class-weight/undersample/sigmoid,path5_04_extra.csv,92_sigmoid_0.75,0.830966,0.774013,0.765263,True,binary objective sigmoid=0.75 (손실 기울기 스케일),-3e-06,0.0,1e-06,False,False
+class-weight/undersample/sigmoid,path5_04_extra.csv,92_sigmoid_1.5,0.830968,0.774012,0.765334,True,binary objective sigmoid=1.5 (손실 기울기 스케일),-1e-06,-1e-06,7.2e-05,False,False
+class-weight/undersample/sigmoid,path5_04_extra.csv,92_sigmoid_2.0,0.830966,0.774015,0.765326,True,binary objective sigmoid=2.0 (손실 기울기 스케일),-3e-06,2e-06,6.4e-05,False,True
+class-weight/undersample/sigmoid,path5_04_extra.csv,93_no_boost_from_average,0.830939,0.772912,0.7636,True,boost_from_average=False,-3e-05,-0.001101,-0.001662,False,False
+class-weight/undersample/sigmoid,path5_04_extra.csv,94_undersample_1to1,0.827848,0.769634,0.765985,True,음성 언더샘플링 1:1 (n=36066),-0.003121,-0.004379,0.000723,False,False
+class-weight/undersample/sigmoid,path5_04_extra.csv,94_undersample_1to3,0.82994,0.770221,0.767642,True,음성 언더샘플링 1:3 (n=72132),-0.001029,-0.003792,0.00238,False,False
+class-weight/undersample/sigmoid,path5_04_extra.csv,94_undersample_1to10,0.831145,0.772033,0.76783,True,음성 언더샘플링 1:10 (n=198363),0.000176,-0.00198,0.002568,False,False
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,logloss_seed42,0.830588,0.772075,0.763515,True,logloss seed=42 (32s),-0.000381,-0.001938,-0.001747,False,False
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,ranknet_seed42,0.831263,0.775284,0.770151,True,ranknet seed=42 (68s),0.000294,0.001271,0.004889,True,True
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,logloss_seed7,0.830716,0.77108,0.765868,True,logloss seed=7 (44s),-0.000253,-0.002933,0.000606,False,False
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,ranknet_seed7,0.830638,0.774566,0.767647,True,ranknet seed=7 (63s),-0.000331,0.000553,0.002385,False,True
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,logloss_seed123,0.831045,0.773474,0.765871,True,logloss seed=123 (49s),7.6e-05,-0.000539,0.000609,False,False
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,ranknet_seed123,0.830942,0.771959,0.767097,True,ranknet seed=123 (59s),-2.7e-05,-0.002054,0.001835,False,False
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,logloss_seed2024,0.83054,0.775116,0.766,True,logloss seed=2024 (41s),-0.000429,0.001103,0.000738,False,True
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,ranknet_seed2024,0.831351,0.771669,0.769054,True,ranknet seed=2024 (67s),0.000382,-0.002344,0.003792,False,False
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,logloss_seed99,0.830471,0.772804,0.765224,True,logloss seed=99 (39s),-0.000498,-0.001209,-3.8e-05,False,False
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,ranknet_seed99,0.83111,0.772193,0.767182,True,ranknet seed=99 (67s),0.000141,-0.00182,0.00192,False,False
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,logloss_seedens_raw,0.831022,0.773657,0.765953,True,logloss 5시드 raw-score 평균 앙상블,5.3e-05,-0.000356,0.000691,False,False
+RankNet혼합 시드안정성(5시드)+앙상블,path5_08_seedstab.csv,ranknet_seedens_raw,0.831387,0.773691,0.768805,True,ranknet 5시드 raw-score 평균 앙상블,0.000418,-0.000322,0.003543,False,False

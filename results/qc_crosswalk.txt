@@ -1,0 +1,38 @@
+KCHS 2017: n=228381 완결=227605 유병=3.385% active결측%=0 bmi결측%=4
+KCHS 2018: n=228340 완결=227728 유병=3.798% active결측%=0 bmi결측%=7
+KCHS 2019: n=229099 완결=228142 유병=3.277% active결측%=0 bmi결측%=100
+KCHS 2020: n=229269 완결=228485 유병=2.817% active결측%=0 bmi결측%=2
+KCHS 2021: n=229242 완결=228852 유병=3.384% active결측%=0 bmi결측%=2
+KCHS 2022: n=231785 완결=231320 유병=3.953% active결측%=0 bmi결측%=1
+KCHS 2023: n=231752 완결=231134 유병=3.809% active결측%=0 bmi결측%=1
+KCHS 2024: n=231728 완결=231469 유병=4.216% active결측%=0 bmi결측%=1
+KCHS 2025: n=231615 완결=231290 유병=3.763% active결측%=0 bmi결측%=1
+[KCHS dev 2017-2025] 성인20+·PHQ완결 n=2048510 (원 2071211) | 우울 유병률 3.607%
+  결측%: age=0.0, sex=0.0, edu=0.1, income_raw=16.5, partnered=0.1, smoking=0.0, current_drinker=0.0, active=0.0, sleep_hrs=11.3, bmi=13.1, htn=0.0, dm=0.0
+  [!] [pre/DEMO] 원자료에 부재하여 누락된 컬럼: ['DMDHHSIZ']
+  [!] [pre] living_alone 100% 결측 — DMDHHSIZ 부재. 최빈값 대체 시 상수 날조가 되므로 모델링 단계에서 결측 유지 또는 변수 제외 필요(민감도로 정량화).
+[NHANES pre] 성인20+·PHQ완결 n=7888 (원 15560) | 우울 유병률 9.229%
+  결측%: age=0.0, sex=0.0, edu=0.1, income_raw=13.1, partnered=0.1, smoking=0.0, current_drinker=0.1, active=0.0, sleep_hrs=0.8, bmi=1.2, htn=0.1, dm=0.0
+[NHANES post] 성인20+·PHQ완결 n=5210 (원 11933) | 우울 유병률 12.687%
+  결측%: age=0.0, sex=0.0, edu=0.0, income_raw=12.0, partnered=0.1, smoking=0.1, current_drinker=0.4, active=0.7, sleep_hrs=1.0, bmi=0.9, htn=0.0, dm=0.0
+
+=== 연도별 크로스워크(핵심 변수) ===
+2017: income=fma_24z1, marital=sod_02z2, hh=fma_01z1, slp_wd=mtc_01z1, bmi=None, ht=oba_02z1, wt=wt, psu=jijum_cd, pa_md=pha_07z1
+2018: income=fma_14z1, marital=sod_02z2, hh=fma_01z1, slp_wd=mtc_01z1, bmi=oba_bmi, ht=oba_02z1, wt=wt, psu=jijum_cd, pa_md=None
+2019: income=fma_14z1, marital=sod_02z2, hh=fma_01z1, slp_wd=mtc_01z1, bmi=None, ht=None, wt=wt_p, psu=spot_no, pa_md=pha_07z1
+2020: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=mtc_17z1, bmi=oba_bmi, ht=None, wt=wt_p, psu=spot_no, pa_md=pha_07z1
+2021: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=mtc_17z1, bmi=None, ht=oba_02z1, wt=wt_p, psu=spot_no, pa_md=pha_07z1
+2022: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=mtc_17z1, bmi=None, ht=oba_02z1, wt=wt_p, psu=SPOT_NO, pa_md=pha_07z1
+2023: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=None, bmi=oba_bmi, ht=oba_02z1, wt=wt_p, psu=SPOT_NO, pa_md=pha_07z1
+2024: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=mtc_17z1, bmi=oba_bmi, ht=oba_02z1, wt=wt_p, psu=SPOT_NO, pa_md=pha_07z1
+2025: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=mtc_17z1, bmi=None, ht=oba_02z1, wt=wt_p, psu=SPOT_NO, pa_md=pha_07z1
+
+2017: income=fma_24z1, marital=sod_02z2, hh=fma_01z1, slp_wd=mtc_01z1, bmi=None, ht=oba_02z1, wt=wt, psu=jijum_cd, pa_md=pha_07z1
+2018: income=fma_14z1, marital=sod_02z2, hh=fma_01z1, slp_wd=mtc_01z1, bmi=oba_bmi, ht=oba_02z1, wt=wt, psu=jijum_cd, pa_md=None
+2019: income=fma_14z1, marital=sod_02z2, hh=fma_01z1, slp_wd=mtc_01z1, bmi=None, ht=None, wt=wt_p, psu=spot_no, pa_md=pha_07z1
+2020: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=mtc_17z1, bmi=oba_bmi, ht=None, wt=wt_p, psu=spot_no, pa_md=pha_07z1
+2021: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=mtc_17z1, bmi=None, ht=oba_02z1, wt=wt_p, psu=spot_no, pa_md=pha_07z1
+2022: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=mtc_17z1, bmi=None, ht=oba_02z1, wt=wt_p, psu=SPOT_NO, pa_md=pha_07z1
+2023: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=None, bmi=oba_bmi, ht=oba_02z1, wt=wt_p, psu=SPOT_NO, pa_md=pha_07z1
+2024: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=mtc_17z1, bmi=oba_bmi, ht=oba_02z1, wt=wt_p, psu=SPOT_NO, pa_md=pha_07z1
+2025: income=fma_14z1, marital=sod_02z3, hh=mbhld_co, slp_wd=mtc_17z1, bmi=None, ht=oba_02z1, wt=wt_p, psu=SPOT_NO, pa_md=pha_07z1

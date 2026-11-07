@@ -1,0 +1,5 @@
+﻿name,oof,internal,ext_pre,ext_post,secs,note,cols
+drop_age,0.8218127216663648,0.8219257259832493,0.7590755361527817,0.7339623415577836,303.4,age 제외 |k=16,"sleep_hrs,bmi,income_q,srh,oral_health,partnered,living_alone,current_drinker,active,htn,dm,employed,food_insecure,sex,edu,smoking"
+drop_sleep_hrs,0.8175802824049802,0.8174400601771173,0.7695782547056774,0.7608811810276157,450.7,sleep_hrs 제외 |k=16,"age,bmi,income_q,srh,oral_health,partnered,living_alone,current_drinker,active,htn,dm,employed,food_insecure,sex,edu,smoking"
+drop_bmi,0.829798050208366,0.8302976748093598,0.7689685762959116,0.7673443486758968,462.0,bmi 제외 |k=16,"age,sleep_hrs,income_q,srh,oral_health,partnered,living_alone,current_drinker,active,htn,dm,employed,food_insecure,sex,edu,smoking"
+drop_income_q,0.8300913897243031,0.8291134050184366,0.7743396057513534,0.7624368215601387,594.5,income_q 제외 |k=16,"age,sleep_hrs,bmi,srh,oral_health,partnered,living_alone,current_drinker,active,htn,dm,employed,food_insecure,sex,edu,smoking"

@@ -1,0 +1,6 @@
+개발셋 2017-2025 n=2048510 우울(비가중)=3.607% | train=1638808 holdout=409702 | income_q=train-only(#1)
+[elasticnet] CV-AUROC=0.8114 CV-slope=0.998 | (보고)가중 AUROC=0.8023 slope=0.997 Brier=0.0318
+[randomforest] CV-AUROC=0.8258 CV-slope=1.160 | (보고)가중 AUROC=0.8210 slope=1.105 Brier=0.0314
+[lightgbm] CV-AUROC=0.8262 CV-slope=0.960 | (보고)가중 AUROC=0.8241 slope=0.994 Brier=0.0312
+
+★ 주 모델 = lightgbm

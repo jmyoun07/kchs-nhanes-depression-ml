@@ -1,0 +1,8 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,seconds,note
+P8_C0_tree_all,0.83134,0.772255,0.765308,True,,★KCHS 꼬리프록시 선택 구조 (proxy=0.80990) | tree_feats=17
+P8_C1_no_bmi,0.830674,0.773029,0.76557,False,,★진단전용: 구조 외부선택은 §2.10 위반 (proxy=0.80915) | tree_feats=16
+P8_C2_no_bmi_sleep,0.822587,0.761209,0.76701,False,,★진단전용: 구조 외부선택은 §2.10 위반 (proxy=0.79943) | tree_feats=15
+P8_C3_no_highshift,0.819502,0.763116,0.760416,False,,★진단전용: 구조 외부선택은 §2.10 위반 (proxy=0.79736) | tree_feats=14
+P8_C4_tree_only_srh_oh,0.818602,0.763779,0.756628,False,,★진단전용: 구조 외부선택은 §2.10 위반 (proxy=0.79427) | tree_feats=7
+P8_C5_tree_none_pureLR,0.81046,0.758511,0.759478,False,,★진단전용: 구조 외부선택은 §2.10 위반 (proxy=0.80084) | tree_feats=0
+P8_C0_tree_all_GATED,0.830381,0.773717,0.76922,True,,"부분선형 하이브리드 + 밀도게이트(c=4.28,s=0.5,amax=0.3) 전과정 KCHS 프록시 선택 (proxy=0.81362)"

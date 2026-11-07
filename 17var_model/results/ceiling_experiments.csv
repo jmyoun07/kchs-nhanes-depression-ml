@@ -1,0 +1,16 @@
+﻿experiment,pre_AUROC,post_AUROC,verdict
+"Baseline 17-predictor transfer (LightGBM, KCHS 0.5M)",0.772,0.769,reference
++ welfare (18),0.772,0.769,no change
++ welfare + welfare_12mo (19),0.772,0.769,no change
++ welfare + sleep_weekend (19),0.771,0.769,no change
+KCHS training 1.0M,0.768,0.768,lower
+KCHS training 2.0M,0.767,0.767,lower
+5-seed ensemble,0.769,0.768,≈
+Logistic transfer,0.759,0.760,lower
+Elastic-net transfer,0.759,0.760,lower
+GBM+Logistic blend (w=0.5),0.768,0.771,offsetting
+Covariate-shift reweight (clip 3),0.766,0.758,lower
+Quantile normalization,0.762,0.773,offsetting
+ORACLE 5-fold CV (NHANES self-fit),0.768,0.767,CEILING
+ORACLE pooled 5-fold CV,0.765,0.765,CEILING
+"ORACLE apparent (in-sample, optimistic)",0.773,0.773,upper bound

@@ -1,0 +1,4 @@
+﻿algorithm,cv_auroc,cal_slope,abs_slope_minus_1,in_tie_band,selected_by_SAP_rule
+LightGBM,0.8396,1.0033,0.0033,True,True
+Random forest,0.835,1.2034,0.2034,True,False
+Elastic net,0.822,0.9983,0.0017,False,False

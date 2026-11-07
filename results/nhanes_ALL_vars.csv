@@ -1,0 +1,787 @@
+﻿var,comp,label,pre,post,both
+ACD011A,ACQ,Speak English at home - NHW or NHB,O,,False
+ACD011B,ACQ,Speak Spanish at home - NHW or NHB,O,,False
+ACD011C,ACQ,Speak other language at home -NHW or NHB,O,,False
+ACD040,ACQ,Language(s) spoken at home - Hispanics,O,O,True
+ACD110,ACQ,Language(s) spoken at home - Asians,O,,False
+ALQ111,ALQ,Ever had a drink of any kind of alcohol,O,O,True
+ALQ121,ALQ,Past 12 mo how often drink alcoholic bev,O,O,True
+ALQ130,ALQ,Avg # alcoholic drinks/day - past 12 mos,O,O,True
+ALQ142,ALQ,# days have 4 or 5 drinks/past 12 mos,O,O,True
+ALQ270,ALQ,# times 4-5 drinks in 2hrs/past 12 mos,O,O,True
+ALQ280,ALQ,# times 8+ drinks in 1 day/past 12 mos,O,O,True
+ALQ290,ALQ,# times 12+ drinks in 1 day/past 12 mos,O,,False
+ALQ151,ALQ,Ever have 4/5 or more drinks every day?,O,O,True
+ALQ170,ALQ,Past 30 days # times 4-5 drinks on an oc,O,O,True
+AUQ054,AUQ,General condition of hearing,O,O,True
+AUQ060,AUQ,Hear a whisper from across a quiet room?,O,,False
+AUQ070,AUQ,Hear normal voice across a quiet room?,O,,False
+AUQ080,AUQ,Hear a shout from across a quiet room?,O,,False
+AUQ090,AUQ,Hear if spoken loudly to in better ear?,O,,False
+AUQ400,AUQ,When began to have hearing loss?,O,,False
+AUQ410A,AUQ,Cause of hearing loss-Genetic/Hereditary,O,O,True
+AUQ410B,AUQ,Cause of hearing loss-Ear infections,O,O,True
+AUQ410C,AUQ,Cause of hearing loss-Ear diseases,O,O,True
+AUQ410D,AUQ,Cause of hearing loss-Illness/Infections,O,O,True
+AUQ410E,AUQ,Cause of hearing loss-Drugs/Medications,O,O,True
+AUQ410F,AUQ,Cause of hearing loss-Head/Neck injury,O,O,True
+AUQ410G,AUQ,Cause of hearing loss-Loud brief noise,O,O,True
+AUQ410H,AUQ,Cause of hearing loss-Long-term noise,O,O,True
+AUQ410I,AUQ,Cause of hearing loss-Aging,O,O,True
+AUQ410J,AUQ,Cause of hearing loss-Others,O,O,True
+AUQ156,AUQ,Ever used assistive listening devices?,O,,False
+AUQ420,AUQ,Ever had ear infections or earaches?,O,,False
+AUQ430,AUQ,Ever had 3 or more ear infections?,O,,False
+AUQ139,AUQ,Ever had tube placed in ear?,O,,False
+AUQ144,AUQ,Last time hearing tested by specialist?,O,O,True
+AUQ147,AUQ,Now use hearing aid/ amplifier/ implant,O,,False
+AUQ149A,AUQ,Now use a hearing aid,O,,False
+AUQ149B,AUQ,Now use a personal sound amplifier,O,,False
+AUQ149C,AUQ,Now have a cochlear implant,O,,False
+AUQ153,AUQ,Past 2 weeks how often worn hearing aid,O,,False
+AUQ630,AUQ,Ever worn hearing aid/amplifier/implant,O,,False
+AUQ440,AUQ,Ever had Special Ed/Early Intervention,O,,False
+AUQ450A,AUQ,Had service for speech-language,O,,False
+AUQ450B,AUQ,Had service for reading,O,,False
+AUQ450C,AUQ,Had service for hearing/listening skills,O,,False
+AUQ450D,AUQ,Had service for intellectual disability,O,,False
+AUQ450E,AUQ,Had service for movement/mobility issues,O,,False
+AUQ450F,AUQ,Had service for other disabilities,O,,False
+AUQ460,AUQ,Exposed to very loud noise 10+ hrs/wk,O,,False
+AUQ470,AUQ,How long exposed to loud noise 10+hrs/wk,O,,False
+AUQ101,AUQ,Difficult to follow conversation w/noise,O,O,True
+AUQ110,AUQ,Hearing causes frustration when talking?,O,,False
+AUQ480,AUQ,"Avoid groups, limit social life?",O,,False
+AUQ490,AUQ,"Problem with dizziness, lightheadedness?",O,,False
+AUQ191,AUQ,"Ears ringing, buzzing past year?",O,,False
+AUQ250,AUQ,"How long bothered by ringing, buzzing?",O,,False
+AUQ255,AUQ,In past yr how often had ringing/roaring,O,,False
+AUQ260,AUQ,Bothered by ringing after loud sounds?,O,,False
+AUQ270,AUQ,Bothered by ringing when going to sleep?,O,,False
+AUQ280,AUQ,How much of a problem is ringing?,O,,False
+AUQ500,AUQ,Discussed ringing with doctor?,O,,False
+AUQ300,AUQ,Ever used firearms for any reason?,O,,False
+AUQ310,AUQ,How many total rounds ever fired?,O,,False
+AUQ320,AUQ,Wear hearing protection when shooting?,O,,False
+AUQ330,AUQ,Ever had job exposure to loud noise?,O,,False
+AUQ340,AUQ,How long exposed to loud noise at work,O,,False
+AUQ350,AUQ,Ever exposed to very loud noise at work,O,,False
+AUQ360,AUQ,How long exposed to very loud noise?,O,,False
+AUQ370,AUQ,Had off-work exposure to loud noise?,O,,False
+AUQ510,AUQ,How long exposed to loud noise 10+hrs/wk,O,,False
+AUQ380,AUQ,Past year: worn hearing protection?,O,,False
+BMDSTATS,BMX,Body Measures Component Status Code,O,O,True
+BMXWT,BMX,Weight (kg),O,O,True
+BMIWT,BMX,Weight Comment,O,O,True
+BMXRECUM,BMX,Recumbent Length (cm),O,O,True
+BMIRECUM,BMX,Recumbent Length Comment,O,O,True
+BMXHEAD,BMX,Head Circumference (cm),O,O,True
+BMIHEAD,BMX,Head Circumference Comment,O,O,True
+BMXHT,BMX,Standing Height (cm),O,O,True
+BMIHT,BMX,Standing Height Comment,O,O,True
+BMXBMI,BMX,Body Mass Index (kg/m**2),O,O,True
+BMDBMIC,BMX,BMI Category - Children/Youth,O,O,True
+BMXLEG,BMX,Upper Leg Length (cm),O,O,True
+BMILEG,BMX,Upper Leg Length Comment,O,O,True
+BMXARML,BMX,Upper Arm Length (cm),O,O,True
+BMIARML,BMX,Upper Arm Length Comment,O,O,True
+BMXARMC,BMX,Arm Circumference (cm),O,O,True
+BMIARMC,BMX,Arm Circumference Comment,O,O,True
+BMXWAIST,BMX,Waist Circumference (cm),O,O,True
+BMIWAIST,BMX,Waist Circumference Comment,O,O,True
+BMXHIP,BMX,Hip Circumference (cm),O,O,True
+BMIHIP,BMX,Hip Circumference Comment,O,O,True
+BPQ020,BPQ,Ever told you had high blood pressure,O,O,True
+BPQ030,BPQ,Told had high blood pressure - 2+ times,O,O,True
+BPD035,BPQ,Age told had hypertension,O,,False
+BPQ040A,BPQ,Taking prescription for hypertension,O,,False
+BPQ050A,BPQ,Now taking prescribed medicine for HBP,O,,False
+BPQ080,BPQ,Doctor told you - high cholesterol level,O,O,True
+BPQ060,BPQ,Ever had blood cholesterol checked,O,,False
+BPQ070,BPQ,When blood cholesterol last checked,O,,False
+BPQ090D,BPQ,Told to take prescriptn for cholesterol,O,,False
+BPQ100D,BPQ,Now taking prescribed medicine,O,,False
+CDQ001,CDQ,SP ever had pain or discomfort in chest,O,,False
+CDQ002,CDQ,SP get it walking uphill or in a hurry,O,,False
+CDQ003,CDQ,During an ordinary pace on level ground,O,,False
+CDQ004,CDQ,If so does SP continue or slow down,O,,False
+CDQ005,CDQ,Does standing relieve pain/discomfort,O,,False
+CDQ006,CDQ,How soon is the pain relieved,O,,False
+CDQ009A,CDQ,Pain in right arm,O,,False
+CDQ009B,CDQ,Pain in right chest,O,,False
+CDQ009C,CDQ,Pain in neck,O,,False
+CDQ009D,CDQ,Pain in upper sternum,O,,False
+CDQ009E,CDQ,Pain in lower sternum,O,,False
+CDQ009F,CDQ,Pain in left chest,O,,False
+CDQ009G,CDQ,Pain in left arm,O,,False
+CDQ009H,CDQ,Pain in epigastric area,O,,False
+CDQ008,CDQ,Severe pain in chest more than half hour,O,,False
+CDQ010,CDQ,Shortness of breath on stairs/inclines,O,,False
+DBQ010,DBQ,Ever breastfed or fed breastmilk,O,O,True
+DBD030,DBQ,Age stopped breastfeeding(days),O,O,True
+DBD041,DBQ,Age first fed formula(days),O,O,True
+DBD050,DBQ,Age stopped receiving formula(days),O,O,True
+DBD055,DBQ,Age started other food/beverage,O,O,True
+DBD061,DBQ,Age first fed milk(days),O,O,True
+DBQ073A,DBQ,Type of milk first fed - whole milk,O,O,True
+DBQ073B,DBQ,Type of milk first fed - 2% milk,O,O,True
+DBQ073C,DBQ,Type of milk first fed - 1% milk,O,O,True
+DBQ073D,DBQ,Type of milk first fed - fat free milk,O,O,True
+DBQ073E,DBQ,Type of milk first fed - soy milk,O,O,True
+DBQ073U,DBQ,Type of milk first fed - other,O,O,True
+DBQ700,DBQ,How healthy is the diet,O,,False
+DBQ197,DBQ,Past 30 day milk product consumption,O,,False
+DBQ223A,DBQ,You drink whole or regular milk,O,,False
+DBQ223B,DBQ,You drink 2% fat milk,O,,False
+DBQ223C,DBQ,You drink 1% fat milk,O,,False
+DBQ223D,DBQ,You drink fat free/skim milk,O,,False
+DBQ223E,DBQ,You drink soy milk,O,,False
+DBQ223U,DBQ,You drink another type of milk,O,,False
+DBQ229,DBQ,Regular milk use 5 times per week,O,,False
+DBQ235A,DBQ,How often drank milk age 5-12,O,,False
+DBQ235B,DBQ,How often drank milk age 13-17,O,,False
+DBQ235C,DBQ,How often drank milk age 18-35,O,,False
+DBQ301,DBQ,Community/Government meals delivered,O,O,True
+DBQ330,DBQ,Eat meals at Community/Senior center,O,O,True
+DBQ360,DBQ,Attend kindergarten thru high school,O,O,True
+DBQ370,DBQ,School serves school lunches,O,O,True
+DBD381,DBQ,# of times/week get school lunch,O,O,True
+DBQ390,DBQ,"School lunch free, reduced or full price",O,O,True
+DBQ400,DBQ,School serve complete breakfast each day,O,O,True
+DBD411,DBQ,# of times/week get school breakfast,O,O,True
+DBQ421,DBQ,School breakfast free/reduced/full price,O,O,True
+DBQ424,DBQ,Summer program meal free/reduced price,O,O,True
+DBD895,DBQ,# of meals not home prepared,O,,False
+DBD900,DBQ,# of meals from fast food or pizza place,O,,False
+DBD905,DBQ,# of ready-to-eat foods in past 30 days,O,,False
+DBD910,DBQ,# of frozen meals/pizza in past 30 days,O,,False
+CBQ596,DBQ,Heard of My Plate,O,,False
+CBQ606,DBQ,Looked up My Plate on internet,O,,False
+CBQ611,DBQ,Tried My Plate plan,O,,False
+DBQ930,DBQ,Main meal planner/preparer,O,O,True
+DBQ935,DBQ,Shared meal planning/preparing duty,O,O,True
+DBQ940,DBQ,Main food shopper,O,O,True
+DBQ945,DBQ,Shared food shopping duty,O,O,True
+SDDSRVYR,DEMO,Data release cycle,O,O,True
+RIDSTATR,DEMO,Interview/Examination status,O,O,True
+RIAGENDR,DEMO,Gender,O,O,True
+RIDAGEYR,DEMO,Age in years at screening,O,O,True
+RIDAGEMN,DEMO,Age in months at screening - 0 to 24 mos,O,O,True
+RIDRETH1,DEMO,Race/Hispanic origin,O,O,True
+RIDRETH3,DEMO,Race/Hispanic origin w/ NH Asian,O,O,True
+RIDEXMON,DEMO,Six month time period,O,O,True
+DMDBORN4,DEMO,Country of birth,O,O,True
+DMDYRUSZ,DEMO,Length of time in US,O,,False
+DMDEDUC2,DEMO,Education level - Adults 20+,O,O,True
+DMDMARTZ,DEMO,Marital status,O,O,True
+RIDEXPRG,DEMO,Pregnancy status at exam,O,O,True
+SIALANG,DEMO,Language of SP Interview,O,,False
+SIAPROXY,DEMO,Proxy used in SP Interview?,O,,False
+SIAINTRP,DEMO,Interpreter used in SP Interview?,O,,False
+FIALANG,DEMO,Language of Family Interview,O,,False
+FIAPROXY,DEMO,Proxy used in Family Interview?,O,,False
+FIAINTRP,DEMO,Interpreter used in Family Interview?,O,,False
+MIALANG,DEMO,Language of MEC Interview,O,,False
+MIAPROXY,DEMO,Proxy used in MEC Interview?,O,,False
+MIAINTRP,DEMO,Interpreter used in MEC Interview?,O,,False
+AIALANGA,DEMO,Language of ACASI Interview,O,,False
+WTINTPRP,DEMO,Full sample interview weight,O,,False
+WTMECPRP,DEMO,Full sample MEC exam weight,O,,False
+SDMVPSU,DEMO,Masked variance pseudo-PSU,O,O,True
+SDMVSTRA,DEMO,Masked variance pseudo-stratum,O,O,True
+INDFMPIR,DEMO,Ratio of family income to poverty,O,O,True
+DEQ034A,DEQ,Stay in the shade?,O,O,True
+DEQ034C,DEQ,Wear a long sleeved shirt,O,O,True
+DEQ034D,DEQ,Use sunscreen?,O,O,True
+DED120,DEQ,Minutes outdoors 9am - 5pm work day,O,,False
+DED125,DEQ,Minutes outdoors 9am - 5pm not work day,O,,False
+DIQ010,DIQ,Doctor told you have diabetes,O,O,True
+DID040,DIQ,Age when first told you had diabetes,O,O,True
+DIQ160,DIQ,Ever told you have prediabetes,O,O,True
+DIQ180,DIQ,Had blood tested past three years,O,O,True
+DIQ050,DIQ,Taking insulin now,O,O,True
+DID060,DIQ,How long taking insulin,O,O,True
+DIQ060U,DIQ,Unit of measure (month/year),O,O,True
+DIQ070,DIQ,Take diabetic pills to lower blood sugar,O,O,True
+DIQ230,DIQ,How long ago saw a diabetes specialist,O,,False
+DIQ240,DIQ,Is there one Dr you see for diabetes,O,,False
+DID250,DIQ,Past year how many times seen doctor,O,,False
+DID260,DIQ,How often check blood for glucose/sugar,O,,False
+DIQ260U,DIQ,Unit of measure (day/week/month/year),O,,False
+DIQ275,DIQ,Past year Dr checked for A1C,O,,False
+DIQ280,DIQ,What was your last A1C level,O,,False
+DIQ291,DIQ,What does Dr say A1C should be,O,,False
+DIQ300S,DIQ,What was your recent SBP,O,,False
+DIQ300D,DIQ,What was your recent DBP,O,,False
+DID310S,DIQ,What does Dr say SBP should be,O,,False
+DID310D,DIQ,What does Dr say DBP should be,O,,False
+DID320,DIQ,What was most recent LDL number,O,,False
+DID330,DIQ,What does Dr say LDL should be,O,,False
+DID341,DIQ,Past year times Dr check feet for sores,O,,False
+DID350,DIQ,How often do you check your feet,O,,False
+DIQ350U,DIQ,Unit of measure (day/week/month/year),O,,False
+DIQ360,DIQ,Last time had pupils dilated for exam,O,,False
+DIQ080,DIQ,Diabetes affected eyes/had retinopathy,O,,False
+DPQ010,DPQ,Have little interest in doing things,O,O,True
+DPQ020,DPQ,"Feeling down, depressed, or hopeless",O,O,True
+DPQ030,DPQ,Trouble sleeping or sleeping too much,O,O,True
+DPQ040,DPQ,Feeling tired or having little energy,O,O,True
+DPQ050,DPQ,Poor appetite or overeating,O,O,True
+DPQ060,DPQ,Feeling bad about yourself,O,O,True
+DPQ070,DPQ,Trouble concentrating on things,O,O,True
+DPQ080,DPQ,Moving or speaking slowly or too fast,O,O,True
+DPQ090,DPQ,Thoughts you would be better off dead,O,O,True
+DPQ100,DPQ,Difficulty these problems have caused,O,O,True
+ECD010,ECQ,Mother's age when born,O,,False
+ECQ020,ECQ,Mother smoked when pregnant,O,,False
+ECD070A,ECQ,"Weight at birth, pounds",O,O,True
+ECD070B,ECQ,"Weight at birth, ounces",O,O,True
+ECQ080,ECQ,Weight more/less than 5.5 lbs,O,O,True
+ECQ090,ECQ,Weight more/less than 9.0 lbs,O,O,True
+WHQ030E,ECQ,How do you consider your child's weight,O,O,True
+MCQ080E,ECQ,Your child was overweight,O,O,True
+ECQ150,ECQ,Help your child control weight,O,,False
+FSDHH,FSQ,Household food security category,O,,False
+FSDAD,FSQ,Adult food security category,O,O,True
+FSD151,FSQ,HH Emergency food received,O,O,True
+FSQ165,FSQ,HH FS benefit: ever received,O,O,True
+FSQ012,FSQ,HH FS benefit: receive in last 12 months,O,O,True
+FSD230,FSQ,HH FS benefit: currently receive,O,O,True
+FSD162,FSQ,HH WIC benefit: receive in last 12 month,O,O,True
+FSQ760,FSQ,HH WIC benefit: received in last 30 days,O,O,True
+FSQ653,FSQ,CH WIC benefit: ever received,O,O,True
+FSD660ZC,FSQ,CH WIC benefit: currently receive,O,O,True
+FSD675,FSQ,CH WIC benefit: received in infancy,O,O,True
+FSD680,FSQ,CH WIC benefit: received b/w 1-4 yrs old,O,O,True
+FSD670ZC,FSQ,CH WIC benefit: # of months received,O,O,True
+FSQ690,FSQ,CH WIC benefit: Mom received while preg.,O,O,True
+FSQ695,FSQ,CH WIC benefit: starting month of preg.,O,O,True
+FSD652ZW,FSQ,WM WIC benefit: receive in latest preg.,O,,False
+FSD672ZW,FSQ,WM WIC benefit: starting month of preg.,O,,False
+FSD652CW,FSQ,WM WIC benefit: receive post-partum,O,,False
+FSD660ZW,FSQ,WM WIC benefit: currently receive,O,,False
+HEQ010,HEQ,Ever told you have Hepatitis B?,O,O,True
+HEQ020,HEQ,Ever prescribed meds treat Hepatitis B?,O,,False
+HEQ030,HEQ,Ever told you have Hepatitis C?,O,,False
+HEQ040,HEQ,Ever prescribed meds treat Hepatitis C?,O,,False
+HIQ011,HIQ,Covered by health insurance,O,O,True
+HIQ032A,HIQ,Covered by private insurance,O,O,True
+HIQ032B,HIQ,Covered by Medicare,O,O,True
+HIQ032C,HIQ,Covered by Medi-Gap,O,O,True
+HIQ032D,HIQ,Covered by Medicaid,O,O,True
+HIQ032E,HIQ,Covered by CHIP,O,O,True
+HIQ032H,HIQ,Covered by state-sponsored health plan,O,O,True
+HIQ032I,HIQ,Covered by other government insurance,O,O,True
+HIQ032J,HIQ,Not covered by any insurance,O,,False
+HIQ260,HIQ,Have Medicare?,O,,False
+HIQ105,HIQ,Insurance card available or not,O,,False
+HIQ270,HIQ,Do plans cover prescriptions?,O,,False
+HIQ210,HIQ,Time when no insurance in past year?,O,O,True
+HSQ590,HSQ,Blood ever tested for HIV virus?,O,O,True
+HUQ010,HUQ,General health condition,O,O,True
+HUQ030,HUQ,Routine place to go for healthcare,O,O,True
+HUQ051,HUQ,#times receive healthcare over past year,O,,False
+HUD062,HUQ,How long since last healthcare visit,O,,False
+HUQ071,HUQ,Overnight hospital patient in last year,O,,False
+HUQ090,HUQ,Seen mental health professional/past yr,O,O,True
+IMQ011,IMQ,Received Hepatitis A vaccine,O,O,True
+IMQ020,IMQ,Received Hepatitis B 3 dose series,O,,False
+IMQ060,IMQ,Received HPV vaccine (Females),O,O,True
+IMQ070,IMQ,Received HPV vaccine (Males),O,O,True
+IMQ081A,IMQ,Received Cervarix (Females)?,O,,False
+IMQ081B,IMQ,Received Gardasil (Females)?,O,,False
+IMQ081C,IMQ,Received Gardasil 9 (Females)?,O,,False
+IMQ081D,IMQ,Received Unknown Gardasil (Females)?,O,,False
+IMQ090,IMQ,Age first dose HPV,O,O,True
+IMQ100,IMQ,"Received HPV, # of doses",O,O,True
+INDFMMPI,INQ,Family monthly poverty level index,O,O,True
+INDFMMPC,INQ,Family monthly poverty level category,O,O,True
+KIQ022,KIQ_U,Ever told you had weak/failing kidneys?,O,O,True
+KIQ025,KIQ_U,Received dialysis in past 12 months?,O,O,True
+KIQ026,KIQ_U,Ever had kidney stones?,O,,False
+KIQ029,KIQ_U,Pass kidney stone in past 12 months?,O,,False
+KIQ005,KIQ_U,How often have urinary leakage?,O,O,True
+KIQ010,KIQ_U,How much urine lose each time?,O,O,True
+KIQ042,KIQ_U,Leak urine during physical activities?,O,O,True
+KIQ430,KIQ_U,How frequently does this occur?,O,,False
+KIQ044,KIQ_U,Urinated before reaching the toilet?,O,O,True
+KIQ450,KIQ_U,How frequently does this occur?,O,,False
+KIQ046,KIQ_U,Leak urine during nonphysical activities,O,,False
+KIQ470,KIQ_U,How frequently does this occur?,O,,False
+KIQ050,KIQ_U,How much did urine leakage bother you?,O,,False
+KIQ052,KIQ_U,How much were daily activities affected?,O,O,True
+KIQ480,KIQ_U,How many times urinate in night?,O,,False
+MCQ010,MCQ,Ever been told you have asthma,O,O,True
+MCQ025,MCQ,Age when first had asthma,O,,False
+MCQ035,MCQ,Still have asthma,O,O,True
+MCQ040,MCQ,Had asthma attack in past year,O,O,True
+MCQ050,MCQ,Emergency care visit for asthma/past yr,O,O,True
+AGQ030,MCQ,Did SP have episode of hay fever/past yr,O,O,True
+MCQ053,MCQ,Taking treatment for anemia/past 3 mos,O,O,True
+MCQ080,MCQ,Doctor ever said you were overweight,O,,False
+MCQ092,MCQ,Ever receive blood transfusion,O,,False
+MCD093,MCQ,Year receive blood transfusion,O,,False
+MCQ149,MCQ,Menstrual periods started yet?,O,O,True
+MCQ151,MCQ,Age in years at first menstrual period,O,,False
+RHD018,MCQ,Estimated age in months at menarche,O,,False
+MCQ160A,MCQ,Doctor ever said you had arthritis,O,O,True
+MCQ195,MCQ,Which type of arthritis was it?,O,O,True
+MCQ160B,MCQ,Ever told had congestive heart failure,O,O,True
+MCD180B,MCQ,Age when told you had heart failure,O,,False
+MCQ160C,MCQ,Ever told you had coronary heart disease,O,O,True
+MCD180C,MCQ,Age when told had coronary heart disease,O,,False
+MCQ160D,MCQ,Ever told you had angina/angina pectoris,O,O,True
+MCD180D,MCQ,Age when told you had angina pectoris,O,,False
+MCQ160E,MCQ,Ever told you had heart attack,O,O,True
+MCD180E,MCQ,Age when told you had heart attack,O,,False
+MCQ160F,MCQ,Ever told you had a stroke,O,O,True
+MCD180F,MCQ,Age when told you had a stroke,O,,False
+MCQ160M,MCQ,Ever told you had thyroid problem,O,O,True
+MCQ170M,MCQ,Do you still have thyroid problem,O,O,True
+MCD180M,MCQ,Age when told you had thyroid problem,O,,False
+MCQ160P,MCQ,"Ever told you had COPD, emphysema, ChB",O,O,True
+MCQ160L,MCQ,Ever told you had any liver condition,O,O,True
+MCQ170L,MCQ,Do you still have a liver condition,O,O,True
+MCD180L,MCQ,Age when told you had a liver condition,O,,False
+MCQ500,MCQ,Ever told you had any liver condition,O,O,True
+MCQ510A,MCQ,Liver condition: Fatty liver,O,O,True
+MCQ510B,MCQ,Liver condition: Liver fibrosis,O,O,True
+MCQ510C,MCQ,Liver condition: Liver cirrhosis,O,O,True
+MCQ510D,MCQ,Liver condition: Viral hepatitis,O,O,True
+MCQ510E,MCQ,Liver condition: Autoimmune hepatitis,O,O,True
+MCQ510F,MCQ,Liver condition: Other liver disease,O,O,True
+MCQ520,MCQ,Abdominal pain during past 12 months?,O,,False
+MCQ530,MCQ,Where was the most uncomfortable pain,O,,False
+MCQ540,MCQ,Ever seen a DR about this pain,O,,False
+MCQ550,MCQ,Has DR ever said you have gallstones,O,O,True
+MCQ560,MCQ,Ever had gallbladder surgery?,O,O,True
+MCQ570,MCQ,Age when 1st had gallbladder surgery?,O,,False
+MCQ220,MCQ,Ever told you had cancer or malignancy,O,O,True
+MCQ230A,MCQ,1st cancer - what kind was it?,O,O,True
+MCQ230B,MCQ,2nd cancer - what kind was it?,O,O,True
+MCQ230C,MCQ,3rd cancer - what kind was it?,O,O,True
+MCQ230D,MCQ,More than 3 kinds of cancer,O,O,True
+MCQ300B,MCQ,Close relative had asthma?,O,,False
+MCQ300C,MCQ,Close relative had diabetes?,O,,False
+MCQ300A,MCQ,Close relative had heart attack?,O,,False
+MCQ366A,MCQ,Doctor told you to control/lose weight,O,,False
+MCQ366B,MCQ,Doctor told you to exercise,O,,False
+MCQ366C,MCQ,Doctor told you to reduce salt in diet,O,,False
+MCQ366D,MCQ,Doctor told you to reduce fat/calories,O,,False
+MCQ371A,MCQ,Are you now controlling or losing weight,O,,False
+MCQ371B,MCQ,Are you now increasing exercise,O,,False
+MCQ371C,MCQ,Are you now reducing salt in diet,O,,False
+MCQ371D,MCQ,Are you now reducing fat in diet,O,,False
+OSQ230,MCQ,Any metal objects inside your body?,O,O,True
+OCD150,OCQ,Type of work done last week,O,O,True
+OCQ180,OCQ,Hours worked last week in total all jobs,O,O,True
+OCQ210,OCQ,Usually work 35 or more hours per week,O,O,True
+OCQ670,OCQ,Overall work schedule past 3 months,O,,False
+OCD383,OCQ,Main reason did not work last week,O,,False
+OHQ030,OHQ,When did you last visit a dentist,O,,False
+OHQ033,OHQ,Main reason for last dental visit,O,,False
+OHQ770,OHQ,Past yr need dental but couldn't get it,O,,False
+OHQ780A,OHQ,Could not afford the cost,O,,False
+OHQ780B,OHQ,Did not want to spend the money,O,,False
+OHQ780C,OHQ,Insurance did not cover procedures,O,,False
+OHQ780D,OHQ,Dental office is too far away,O,,False
+OHQ780E,OHQ,Office not open at convenient time,O,,False
+OHQ780F,OHQ,Another dentist recommended not doing it,O,,False
+OHQ780G,OHQ,Afraid or do not like dentists,O,,False
+OHQ780H,OHQ,Unable to take time off from work,O,,False
+OHQ780I,OHQ,Too busy,O,,False
+OHQ780J,OHQ,Expected dental problems to go away,O,,False
+OHQ780K,OHQ,Other reason could not get dental care,O,,False
+OHQ555G,OHQ,Age started brushing teeth,O,,False
+OHQ555Q,OHQ,Age started brushing teeth,O,,False
+OHQ555U,OHQ,Age started brushing teeth,O,,False
+OHQ560G,OHQ,Age started using toothpaste,O,,False
+OHQ560Q,OHQ,Age started using toothpaste,O,,False
+OHQ560U,OHQ,Age started using toothpaste,O,,False
+OHQ566,OHQ,Received Rx fluoride drops or tablets?,O,,False
+OHQ571Q,OHQ,Age started taking prescription fluoride,O,,False
+OHQ571U,OHQ,Age started taking prescription fluoride,O,,False
+OHQ576G,OHQ,Age stopped taking prescription fluoride,O,,False
+OHQ576Q,OHQ,Age stopped taking prescription fluoride,O,,False
+OHQ576U,OHQ,Age stopped taking prescription fluoride,O,,False
+OHQ610,OHQ,Told benefits of giving up cigarettes,O,,False
+OHQ612,OHQ,Told benefits of checking blood sugar,O,,False
+OHQ620,OHQ,How often last yr had aching in mouth?,O,O,True
+OHQ640,OHQ,Last yr had diff w/ job because of mouth,O,O,True
+OHQ835,OHQ,Do you think you might have gum disease?,O,,False
+OHQ845,OHQ,Rate the health of your teeth and gums,O,O,True
+OHQ848G,OHQ,# times you brush your teeth in 1 day?,O,,False
+OHQ848Q,OHQ,# times you brush your teeth in 1 day?,O,,False
+OHQ849,OHQ,How much toothpaste do you use?,O,,False
+OHQ850,OHQ,Ever had treatment for gum disease?,O,,False
+OHQ860,OHQ,Ever been told of bone loss around teeth,O,,False
+OHQ870,OHQ,How many days use dental floss/device,O,,False
+OSQ010A,OSQ,Broken or fractured a hip,O,,False
+OSQ010B,OSQ,Broken or fractured a wrist,O,,False
+OSQ010C,OSQ,Broken or fractured spine,O,,False
+OSQ020A,OSQ,# Times broken/fractured hip,O,,False
+OSQ020B,OSQ,# Times broken/fractured wrist,O,,False
+OSQ020C,OSQ,# Times broken/fractured spine,O,,False
+OSD030AA,OSQ,Age when fractured hip 1st time,O,,False
+OSQ040AA,OSQ,Under/over 50 when fracd. hip 1st time,O,,False
+OSD050AA,OSQ,Reason hip fracture occurred 1st time,O,,False
+OSD030AB,OSQ,Age when fractured hip 2nd time,O,,False
+OSQ040AB,OSQ,Under/over 50 when fracd. hip 2nd time,O,,False
+OSD050AB,OSQ,Reason hip fracture occurred 2nd time,O,,False
+OSD030AC,OSQ,Age when fractured hip 3rd time,O,,False
+OSQ040AC,OSQ,Under/over 50 when fracd. hip 3rd time,O,,False
+OSD050AC,OSQ,Reason hip fracture occurred 3rd time,O,,False
+OSD030BA,OSQ,Age when fractured wrist 1st time,O,,False
+OSQ040BA,OSQ,Under/over 50 when fracd. wrist 1st time,O,,False
+OSD050BA,OSQ,Reason wrist fracture occurred 1st time,O,,False
+OSD030BB,OSQ,Age when fractured wrist 2nd time,O,,False
+OSQ040BB,OSQ,Under/over 50 when fracd. wrist 2nd time,O,,False
+OSD050BB,OSQ,Reason wrist fracture occurred 2nd time,O,,False
+OSD030BC,OSQ,Age when fractured wrist 3rd time,O,,False
+OSQ040BC,OSQ,Under/over 50 when fracd. wrist 3rd time,O,,False
+OSD050BC,OSQ,Reason wrist fracture occurred 3rd time,O,,False
+OSD030BD,OSQ,Age when fractured wrist 4th time,O,,False
+OSQ040BD,OSQ,Under/over 50 when fracd. wrist 4th time,O,,False
+OSD050BD,OSQ,Reason wrist fracture occurred 4th time,O,,False
+OSD030BE,OSQ,Age when fractured wrist 5th time,O,,False
+OSQ040BE,OSQ,Under/over 50 when fracd. wrist 5th time,O,,False
+OSD050BE,OSQ,Reason wrist fracture occurred 5th time,O,,False
+OSD030BF,OSQ,Age when fractured wrist 6th time,O,,False
+OSQ040BF,OSQ,Under/over 50 when fracd. wrist 6th time,O,,False
+OSD030CA,OSQ,Age when fractured spine 1st time,O,,False
+OSQ040CA,OSQ,Under/over 50 when fracd. spine 1st time,O,,False
+OSD050CA,OSQ,Reason spine fracture occurred 1st time,O,,False
+OSD030CB,OSQ,Age when fractured spine 2nd time,O,,False
+OSQ040CB,OSQ,Under/over 50 when fracd. spine 2nd time,O,,False
+OSD050CB,OSQ,Reason spine fracture occurred 2nd time,O,,False
+OSD030CC,OSQ,Age when fractured spine 3rd time,O,,False
+OSQ040CC,OSQ,Under/over 50 when fracd. spine 3rd time,O,,False
+OSD050CC,OSQ,Reason spine fracture occurred 3rd time,O,,False
+OSD030CD,OSQ,Age when fractured spine 4th time,O,,False
+OSQ040CD,OSQ,Under/over 50 when fracd. spine 4th time,O,,False
+OSD050CD,OSQ,Reason spine fracture occurred 4th time,O,,False
+OSD030CE,OSQ,Age when fractured spine 5th time,O,,False
+OSQ040CE,OSQ,Under/over 50 when fracd. spine 5th time,O,,False
+OSD050CE,OSQ,Reason spine fracture occurred 5th time,O,,False
+OSQ080,OSQ,Doctor ever told any other fractures?,O,,False
+OSQ090A,OSQ,Fracture result of severe trauma?,O,,False
+OSQ100A,OSQ,Where fracture occurred,O,,False
+OSD110A,OSQ,How old when fracture occurred?,O,,False
+OSQ120A,OSQ,Any other fractures?,O,,False
+OSQ090B,OSQ,Fracture result of severe trauma?,O,,False
+OSQ100B,OSQ,Where fracture occurred,O,,False
+OSD110B,OSQ,How old when fracture occurred?,O,,False
+OSQ120B,OSQ,Any other fractures?,O,,False
+OSQ090C,OSQ,Fracture result of severe trauma?,O,,False
+OSQ100C,OSQ,Where fracture occurred,O,,False
+OSD110C,OSQ,How old when fracture occurred?,O,,False
+OSQ120C,OSQ,Any other fractures?,O,,False
+OSQ090D,OSQ,Fracture result of severe trauma?,O,,False
+OSQ100D,OSQ,Where fracture occurred,O,,False
+OSD110D,OSQ,How old when fracture occurred?,O,,False
+OSQ120D,OSQ,Any other fractures?,O,,False
+OSQ090E,OSQ,Fracture result of severe trauma?,O,,False
+OSQ100E,OSQ,Where fracture occurred,O,,False
+OSD110E,OSQ,How old when fracture occurred?,O,,False
+OSQ120E,OSQ,Any other fractures?,O,,False
+OSQ090F,OSQ,Fracture result of severe trauma?,O,,False
+OSQ100F,OSQ,Where fracture occurred,O,,False
+OSD110F,OSQ,How old when fracture occurred?,O,,False
+OSQ120F,OSQ,Any other fractures?,O,,False
+OSQ090G,OSQ,Fracture result of severe trauma?,O,,False
+OSQ120G,OSQ,Any other fractures?,O,,False
+OSQ090H,OSQ,Fracture result of severe trauma?,O,,False
+OSQ120H,OSQ,Any other fractures?,O,,False
+OSQ090I,OSQ,Fracture result of severe trauma?,O,,False
+OSQ120I,OSQ,Any other fractures?,O,,False
+OSQ090J,OSQ,Fracture result of severe trauma?,O,,False
+OSQ100J,OSQ,Where fracture occurred,O,,False
+OSD110J,OSQ,How old when fracture occurred?,O,,False
+OSQ120J,OSQ,Any other fractures?,O,,False
+OSQ060,OSQ,Ever told had osteoporosis/brittle bones,O,,False
+OSQ072,OSQ,Doctor prescribe RX for osteoporosis?,O,,False
+OSQ130,OSQ,Ever taken prednisone or cortisone daily,O,,False
+OSQ140Q,OSQ,How long used prednisone or cortisone?,O,,False
+OSQ140U,OSQ,How long used prednisone or cortisone?,O,,False
+OSQ150,OSQ,Parents ever told had osteoporosis?,O,,False
+OSQ160A,OSQ,Mother was told had osteoporosis,O,,False
+OSQ160B,OSQ,Father was told had osteoporosis,O,,False
+OSQ170,OSQ,Did mother ever fracture hip?,O,,False
+OSQ180,OSQ,How old mother when fractured hip?,O,,False
+OSQ190,OSQ,Under/over 50 years old,O,,False
+OSQ200,OSQ,Did father ever fracture hip?,O,,False
+OSQ210,OSQ,How old father when fractured hip?,O,,False
+OSQ220,OSQ,Under/over 50 years old,O,,False
+PAQ605,PAQ,Vigorous work activity,O,,False
+PAQ610,PAQ,Number of days vigorous work,O,,False
+PAD615,PAQ,Minutes vigorous-intensity work,O,,False
+PAQ620,PAQ,Moderate work activity,O,,False
+PAQ625,PAQ,Number of days moderate work,O,,False
+PAD630,PAQ,Minutes moderate-intensity work,O,,False
+PAQ635,PAQ,Walk or bicycle,O,,False
+PAQ640,PAQ,Number of days walk or bicycle,O,,False
+PAD645,PAQ,Minutes walk/bicycle for transportation,O,,False
+PAQ650,PAQ,Vigorous recreational activities,O,,False
+PAQ655,PAQ,Days vigorous recreational activities,O,,False
+PAD660,PAQ,Minutes vigorous recreational activities,O,,False
+PAQ665,PAQ,Moderate recreational activities,O,,False
+PAQ670,PAQ,Days moderate recreational activities,O,,False
+PAD675,PAQ,Minutes moderate recreational activities,O,,False
+PAD680,PAQ,Minutes sedentary activity,O,O,True
+PAQ706,PAQY,Days physically active at least 60 min.,O,O,True
+PUQ100,PUQMEC,Products used in home to control insects,O,O,True
+PUQ110,PUQMEC,Products used to kill weeds?,O,O,True
+RHQ010,RHQ,Age when first menstrual period occurred,O,O,True
+RHQ020,RHQ,Age range at first menstrual period,O,,False
+RHQ031,RHQ,Had regular periods in past 12 months,O,O,True
+RHD043,RHQ,Reason not having regular periods,O,O,True
+RHQ060,RHQ,Age at last menstrual period,O,O,True
+RHQ070,RHQ,Age range at last menstrual period,O,,False
+RHQ074,RHQ,Tried for a year to become pregnant?,O,,False
+RHQ076,RHQ,Seen a DR b/c unable to become pregnant?,O,,False
+RHQ078,RHQ,Ever treated for a pelvic infection/PID?,O,O,True
+RHQ131,RHQ,Ever been pregnant?,O,O,True
+RHD143,RHQ,Are you pregnant now?,O,O,True
+RHQ160,RHQ,How many times have been pregnant?,O,,False
+RHQ162,RHQ,"During pregnancy, told you have diabetes",O,,False
+RHD167,RHQ,Total number of deliveries,O,O,True
+RHQ171,RHQ,How many deliveries live birth result?,O,,False
+RHQ172,RHQ,Any babies weigh 9 lbs or more?,O,,False
+RHD180,RHQ,Age at first live birth,O,,False
+RHD190,RHQ,Age at last live birth,O,,False
+RHQ197,RHQ,How many months ago have baby?,O,,False
+RHQ200,RHQ,Now breastfeeding a child?,O,O,True
+RHD280,RHQ,Had a hysterectomy?,O,O,True
+RHQ305,RHQ,Had both ovaries removed?,O,O,True
+RHQ332,RHQ,Age when both ovaries removed,O,O,True
+RHQ540,RHQ,Ever use female hormones?,O,,False
+RHQ542A,RHQ,Hormone pills used,O,,False
+RHQ542B,RHQ,Hormone patches used,O,,False
+RHQ542C,RHQ,Hormone cream/suppository/injection used,O,,False
+RHQ542D,RHQ,Other form of female hormone used,O,,False
+RHQ554,RHQ,Use hormone pills w/estrogen only,O,,False
+RHQ570,RHQ,Used estrogen/progestin combo pills,O,,False
+RXQ510,RXQASA,Dr told to take daily low-dose aspirin?,O,O,True
+RXQ515,RXQASA,"Followed advice, took low-dose aspirin?",O,O,True
+RXQ520,RXQASA,Taking low-dose aspirin on your own?,O,O,True
+RXDUSE,RXQ_RX,"Taken prescription medicine, past month",O,,False
+RXDDRUG,RXQ_RX,Generic drug name,O,,False
+RXDDRGID,RXQ_RX,Generic drug code,O,,False
+RXQSEEN,RXQ_RX,Medicine container seen by interviewer,O,,False
+RXDDAYS,RXQ_RX,Number of days taken medicine,O,,False
+RXDRSC1,RXQ_RX,ICD-10-CM code 1,O,,False
+RXDRSC2,RXQ_RX,ICD-10-CM code 2,O,,False
+RXDRSC3,RXQ_RX,ICD-10-CM code 3,O,,False
+RXDRSD1,RXQ_RX,ICD-10-CM code 1 description,O,,False
+RXDRSD2,RXQ_RX,ICD-10-CM code 2 description,O,,False
+RXDRSD3,RXQ_RX,ICD-10-CM code 3 description,O,,False
+RXDCOUNT,RXQ_RX,Number of prescription medicines taken,O,,False
+SLQ300,SLQ,Usual sleep time on weekdays or workdays,O,O,True
+SLQ310,SLQ,Usual wake time on weekdays or workdays,O,O,True
+SLD012,SLQ,Sleep hours - weekdays or workdays,O,O,True
+SLQ320,SLQ,Usual sleep time on weekends,O,O,True
+SLQ330,SLQ,Usual wake time on weekends,O,O,True
+SLD013,SLQ,Sleep hours - weekends,O,O,True
+SLQ030,SLQ,How often do you snore?,O,,False
+SLQ040,SLQ,How often do you snort or stop breathing,O,,False
+SLQ050,SLQ,Ever told doctor had trouble sleeping?,O,,False
+SLQ120,SLQ,How often feel overly sleepy during day?,O,,False
+SMQ020,SMQ,Smoked at least 100 cigarettes in life,O,O,True
+SMD030,SMQ,Age started smoking cigarettes regularly,O,,False
+SMQ040,SMQ,Do you now smoke cigarettes?,O,O,True
+SMQ050Q,SMQ,How long since quit smoking cigarettes,O,,False
+SMQ050U,SMQ,Unit of measure (day/week/month/year),O,,False
+SMD057,SMQ,# cigarettes smoked per day when quit,O,,False
+SMQ078,SMQ,How soon after waking do you smoke,O,,False
+SMD641,SMQ,# days smoked cigs during past 30 days,O,O,True
+SMD650,SMQ,Avg # cigarettes/day during past 30 days,O,O,True
+SMD100FL,SMQ,Cigarette Filter type,O,,False
+SMD100MN,SMQ,Cigarette Menthol indicator,O,O,True
+SMQ670,SMQ,Tried to quit smoking,O,,False
+SMQ621,SMQ,Cigarettes smoked in entire life,O,O,True
+SMD630,SMQ,Age first smoked whole cigarette,O,O,True
+SMAQUEX2,SMQ,Questionnaire Mode Flag,O,O,True
+SMD460,SMQFAM,# of people who live here smoke tobacco?,O,O,True
+SMD470,SMQFAM,# of people who smoke inside this home?,O,O,True
+SMQ681,SMQRTU,Smoked tobacco last 5 days?,O,O,True
+SMQ690A,SMQRTU,Used last 5 days - Cigarettes,O,O,True
+SMQ710,SMQRTU,# days smoked cigarettes last 5 days,O,O,True
+SMQ720,SMQRTU,# cigarettes smoked per day,O,O,True
+SMQ725,SMQRTU,When did resp. smoke last cigarette?,O,O,True
+SMQ690B,SMQRTU,Used last 5 days - Pipes,O,O,True
+SMQ740,SMQRTU,# days smoked pipe over last 5 days,O,O,True
+SMQ690C,SMQRTU,Used last 5 days - Cigars,O,O,True
+SMQ770,SMQRTU,# days smoked cigars over last 5 days,O,O,True
+SMQ690G,SMQRTU,"Used last 5 days - Hookah, water pipes",O,O,True
+SMQ845,SMQRTU,# days smoked water pipe last 5 days,O,O,True
+SMQ690H,SMQRTU,Used last 5 days - E-cigarettes,O,,False
+SMQ849,SMQRTU,# days smoked e-cigarette last 5 days,O,O,True
+SMQ851,SMQRTU,Used smokeless tobacco last 5 days?,O,O,True
+SMQ690D,SMQRTU,Used last 5 days - Chewing tobacco,O,O,True
+SMQ800,SMQRTU,# days used chewing tobacco last 5 day,O,,False
+SMQ690E,SMQRTU,Used last 5 days - Snuff,O,O,True
+SMQ817,SMQRTU,# days used snuff over last 5 days,O,,False
+SMQ690K,SMQRTU,Used last 5 days - Other smokeless,O,O,True
+SMQ863,SMQRTU,Used nicotine replacement last 5 days?,O,O,True
+SMQ690F,SMQRTU,"Used last 5 days - Patch, gum, other",O,O,True
+SMQ830,SMQRTU,# days used nicotine quit smoking aids?,O,,False
+SMDANY,SMQRTU,Used any tobacco product last 5 days?,O,O,True
+SMAQUEX,SMQRTU,Questionnaire Mode Flag,O,,False
+WTSVOCPR,VTQ,VOC Subsample Weight Pre-Pandemic,O,,False
+VTQ210,VTQ,Attached garage?,O,,False
+VTQ200A,VTQ,Store paints or fuels inside home?,O,,False
+VTQ231A,VTQ,Use moth balls or toilet deodorizers?,O,O,True
+VTQ233A,VTQ,Past 3 days inhale smoke for 10 minutes,O,O,True
+VTQ233B,VTQ,When did you last inhale smoke for 10min,O,O,True
+VTQ241A,VTQ,Did you cook with natural gas?,O,,False
+VTD241B,VTQ,Long ago did you cook with natural gas?,O,,False
+VTQ244A,VTQ,Did you pump gas into your car?,O,O,True
+VTD244B,VTQ,Long ago did you pump gas in your car?,O,O,True
+VTQ251A,VTQ,"Spend time in pool, hot tub, steam room?",O,,False
+VTD251B,VTQ,"How long ago since at pool, hot tub?",O,,False
+VTQ261A,VTQ,In last 48 hrs use dry cleaning solvent?,O,O,True
+VTD261B,VTQ,Long since use dry cleaning solvents?,O,O,True
+VTQ271A,VTQ,"In last 48 hrs, bathe for 5+ minutes?",O,O,True
+VTD271B,VTQ,"How long, in hrs, since you bathed?",O,O,True
+VTQ281A,VTQ,In past 48 hrs breathe paint fumes?,O,O,True
+VTD281B,VTQ,"How long, since breathed paint fumes?",O,O,True
+VTQ281C,VTQ,In past 48 hrs breathe diesel fumes?,O,,False
+VTD281D,VTQ,"How long, since breathed diesel fumes?",O,,False
+VTQ281E,VTQ,Breathe fingernail polish fumes?,O,,False
+VTD281F,VTQ,"How long, since breathed polish fumes?",O,,False
+WHD010,WHQ,Current self-reported height (inches),O,O,True
+WHD020,WHQ,Current self-reported weight (pounds),O,O,True
+WHQ030,WHQ,How do you consider your weight,O,,False
+WHQ040,WHQ,"Like to weigh more, less or same",O,,False
+WHD050,WHQ,Self-reported weight - 1 yr ago (pounds),O,O,True
+WHQ060,WHQ,Weight change intentional,O,,False
+WHQ070,WHQ,Tried to lose weight in past year,O,O,True
+WHD080A,WHQ,Ate less to lose weight,O,,False
+WHD080B,WHQ,Switched to foods with lower calories,O,,False
+WHD080C,WHQ,Ate less fat to lose weight,O,,False
+WHD080D,WHQ,Exercised to lose weight,O,,False
+WHD080E,WHQ,Skipped meals,O,,False
+WHD080F,WHQ,Ate diet foods or products,O,,False
+WHD080G,WHQ,Used a liquid diet formula,O,,False
+WHD080H,WHQ,Joined a weight loss program,O,,False
+WHD080I,WHQ,Took prescription diet pills,O,,False
+WHD080J,WHQ,Took non-RX suppl. to lose weight,O,,False
+WHD080K,WHQ,Took laxatives or vomited,O,,False
+WHD080M,WHQ,Drank a lot of water,O,,False
+WHD080N,WHQ,Followed a special diet,O,,False
+WHD080O,WHQ,Ate fewer carbohydrates,O,,False
+WHD080P,WHQ,Started to smoke or began to smoke again,O,,False
+WHD080Q,WHQ,"Ate more fruits, vegetables, salads",O,,False
+WHD080R,WHQ,Changed eating habits,O,,False
+WHD080S,WHQ,"Ate less sugar, candy, sweets",O,,False
+WHD080T,WHQ,Ate less junk food or fast food,O,,False
+WHD080U,WHQ,Had weight loss surgery to lose weight,O,,False
+WHD080L,WHQ,Other,O,,False
+WHQ225,WHQ,Times lost 10 lbs or more to lose weight,O,,False
+WHD110,WHQ,Self-reported weight-10 yrs ago (pounds),O,,False
+WHD120,WHQ,Self-reported weight-age 25 (pounds),O,,False
+WHD130,WHQ,Self-reported height - age 25 (inches),O,,False
+WHD140,WHQ,Self-reported greatest weight (pounds),O,,False
+WHQ150,WHQ,Age when heaviest weight,O,,False
+ACD010A,ACQ,Speak English at home-Non-Hispanics,,O,False
+ACD010B,ACQ,Speak Spanish at home-Non-Hispanics,,O,False
+ACD010C,ACQ,Other language at home-Non-Hispanics,,O,False
+BAQ321A,BAQ,"Past 12 months, problems with vertigo",,O,False
+BAQ321B,BAQ,"Past 12 months, prblms w/blurring vision",,O,False
+BAQ321C,BAQ,"Past 12 months, problems with unsteady",,O,False
+BAQ321D,BAQ,"Past 12 months, problems w/light-headed",,O,False
+BAQ341,BAQ,"Past 12 months, which bothered the most?",,O,False
+BAQ391A,BAQ,Episodes with nausea or vomiting?,,O,False
+BAQ391B,BAQ,Episodes with migraine/severe headache?,,O,False
+BAQ401,BAQ,Balance prevent you from doing things,,O,False
+BAQ421,BAQ,How much of a problem was balance?,,O,False
+BAQ431,BAQ,Ever see health professional for balance,,O,False
+BAQ491,BAQ,Ever tried to treat balance problems?,,O,False
+BAQ530,BAQ,"Past 5 years, how many times fallen?",,O,False
+BAQ550,BAQ,"Past 12 months, number of times fallen?",,O,False
+BAQ560,BAQ,"Past 12 mnths, have injury from falling?",,O,False
+BPQ150,BPQ,Taking high blood pressure medication,,O,False
+BPQ101D,BPQ,Taking meds to lower blood cholesterol?,,O,False
+RIDEXAGM,DEMO,Age in months at exam - 0 to 19 years,,O,False
+DMQMILIZ,DEMO,Served active duty in US Armed Forces,,O,False
+DMDYRUSR,DEMO,Length of time in US,,O,False
+DMDHHSIZ,DEMO,Total number of people in the Household,,O,False
+DMDHRGND,DEMO,HH ref persons gender,,O,False
+DMDHRAGZ,DEMO,HH ref persons age in years,,O,False
+DMDHREDZ,DEMO,HH ref persons education level,,O,False
+DMDHRMAZ,DEMO,HH ref persons marital status,,O,False
+DMDHSEDZ,DEMO,HH ref persons spouses education level,,O,False
+WTINT2YR,DEMO,Full sample 2-year interview weight,,O,False
+WTMEC2YR,DEMO,Full sample 2-year MEC exam weight,,O,False
+FNQ021,FNQ,Difficulty seeing even w/glasses,,O,False
+FNQ041,FNQ,Difficulty hearing even w/hearing aids,,O,False
+FNQ050,FNQ,Use equip or assistance for walking,,O,False
+FNQ060,FNQ,Difficulty walking 100 yds w/o equipment,,O,False
+FNQ080,FNQ,Difficulty walking 100 yards,,O,False
+FNQ160,FNQ,Difficulty with self-care,,O,False
+FNQ100,FNQ,Difficulty being understood inside HH,,O,False
+FNQ110,FNQ,Difficulty being understood outside HH,,O,False
+FNQ120,FNQ,Difficulty learning things,,O,False
+FNQ170,FNQ,Difficulty remembering things,,O,False
+FNQ180,FNQ,Difficulty concentrating,,O,False
+FNQ190,FNQ,Difficulty accepting change,,O,False
+FNQ130,FNQ,Difficulty controlling behavior,,O,False
+FNQ200,FNQ,Difficulty making friends,,O,False
+FNQ140,FNQ,How often very anxious/nervous/worried,,O,False
+FNQ150,FNQ,How often very sad/depressed,,O,False
+FNDCDI,FNQ,CFM Disability Indicator for 5-17 years,,O,False
+FNQ410,FNQ,Difficulty seeing even w/glasses,,O,False
+FNQ430,FNQ,Difficulty hearing even w/hearing aids,,O,False
+FNQ440,FNQ,Difficulty walking or climbing steps,,O,False
+FNQ450,FNQ,Difficulty communicating,,O,False
+FNQ460,FNQ,Difficulty remembering or concentrating,,O,False
+FNQ470,FNQ,Difficulty with self-care,,O,False
+FNQ480,FNQ,Difficulty raising a 2-liter bottle,,O,False
+FNQ490,FNQ,Difficulty using hands and fingers,,O,False
+FNQ510,FNQ,How often feel worried/nervous/anxious,,O,False
+FNQ520,FNQ,Level of feeling worried/nervous/anxious,,O,False
+FNQ530,FNQ,How often feel depressed,,O,False
+FNQ540,FNQ,Level of feeling depressed,,O,False
+FNDADI,FNQ,WG-SS Disability Indicator 18+,,O,False
+FNDAEDI,FNQ,WG-SS Enhanced Disability Indicator 18+,,O,False
+FSD032A,FSQ,HH Worried run out of food,,O,False
+FSD032B,FSQ,HH Food didn't last,,O,False
+FSD032C,FSQ,HH Couldn't afford balanced meals,,O,False
+FSD041,FSQ,HH Adults cut size or skip meals,,O,False
+FSD052,FSQ,HH How often adults cut size/skip meals,,O,False
+FSD061,FSQ,HH Eat less than should,,O,False
+FSD071,FSQ,"HH Hungry, but didn't eat",,O,False
+FSD081,FSQ,"HH Lost weight, no money for food",,O,False
+FSD092,FSQ,HH Adults not eat whole day,,O,False
+FSD102,FSQ,HH How often adults not eat for day,,O,False
+FSD165N,FSQ,HH FS benefit: # of people ever received,,O,False
+FSD012N,FSQ,HH FS benefit: # of people received(12m),,O,False
+FSD230N,FSQ,HH FS benefit: #people currently receive,,O,False
+FSD795,FSQ,HH FS benefit: # of months received,,O,False
+FSD225,FSQ,HH FS benefit: time since last received,,O,False
+FSD235,FSQ,HH FS benefit: amount received last time,,O,False
+FSD760N,FSQ,HH WIC benefit: no. people received,,O,False
+HIQ032F,HIQ,Covered by military health care,,O,False
+HOD051,HOQ,Number of rooms in home,,O,False
+HUQ042,HUQ,Type place most often go for healthcare,,O,False
+HUQ055,HUQ,Past 12 months had video conf w/Dr?,,O,False
+INQ300,INQ,"Family has savings more than $20,000",,O,False
+IND310,INQ,Total savings/cash assets for the family,,O,False
+KIQ481,KIQ_U,How many times wake up and urinate?,,O,False
+OCQ215,OCQ,Number of days usually worked per week,,O,False
+OCQ383,OCQ,Main reason did not work last week,,O,False
+OHQ630,OHQ,How often felt bad because of mouth?,,O,False
+OHQ660,OHQ,Last yr avoid some food because of mouth,,O,False
+OHQ670,OHQ,Last yr couldn't eat because of mouth,,O,False
+OHQ680,OHQ,Last yr embarrassed because of mouth,,O,False
+PAQ711,PAQY,Hours per day TV/ videos watched?,,O,False
+PAD790Q,PAQ,Frequency of moderate LTPA,,O,False
+PAD790U,PAQ,Moderate LTPA unit (day/week/month/year),,O,False
+PAD800,PAQ,Minutes moderate LTPA,,O,False
+PAD810Q,PAQ,Frequency of vigorous LTPA,,O,False
+PAD810U,PAQ,Vigorous LTPA unit (day/week/month/year),,O,False
+PAD820,PAQ,Minutes vigorous LTPA,,O,False
+RXQ033,RXQ_RX,"Taken prescription medicine, past month",,O,False
+RXQ050,RXQ_RX,Number of prescription medicines taken,,O,False
+SMQ846,SMQRTU,Used last 5 days - E-cigarettes,,O,False
+WTSVOC2Y,VTQ,VOC Subsample Weight,,O,False

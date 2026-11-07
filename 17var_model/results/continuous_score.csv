@@ -1,0 +1,4 @@
+﻿set,spearman_classifier,spearman_regressor,R2_regressor,mean_phq9
+Internal(hold-out),0.378,0.402,0.216,2.27
+NHANES pre,0.403,0.403,0.166,3.17
+NHANES post,0.439,0.424,0.102,3.96

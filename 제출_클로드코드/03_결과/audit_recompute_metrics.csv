@@ -1,0 +1,4 @@
+﻿set,cal_slope,cal_intercept_free,CITL_offset,recal_slope,recal_CITL_offset,AUROC,AUPRC,Brier,recal_AUROC,recal_AUPRC,recal_Brier,CI_lo_stratified,CI_hi_stratified,CI_lo_pooled,CI_hi_pooled,AUPRC_lo,AUPRC_hi
+Internal(hold-out),1.004,0.115,0.103,0.999,-0.0,0.8315,0.233,0.0308,0.8313,0.232,0.0308,0.8222,0.8406,0.8222,0.8409,0.216,0.25
+NHANES pre,0.664,-0.302,0.49,0.988,-0.001,0.7718,0.267,0.071,0.7691,0.262,0.0699,0.7449,0.7966,0.7329,0.8079,0.228,0.315
+NHANES post,0.677,0.249,1.109,0.994,-0.0,0.7688,0.346,0.0993,0.7671,0.346,0.0933,0.7467,0.7893,0.7354,0.7934,0.318,0.378

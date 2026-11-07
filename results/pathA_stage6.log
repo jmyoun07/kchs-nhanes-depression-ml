@@ -1,0 +1,15 @@
+D90_ORACLE_nhanes_pooled_logit_C1        int=  nan  pre=0.7703 post=0.7622 ok=False ★비준수 상한진단: NHANES pre+post 통합 5-fold 자체적합(n=13098), all=0.7654
+D90_ORACLE_nhanes_pooled_logit_C0.1      int=  nan  pre=0.7700 post=0.7628 ok=False ★비준수 상한진단: NHANES pre+post 통합 5-fold 자체적합(n=13098), all=0.7655
+D90_ORACLE_nhanes_pooled_logit_C0.01     int=  nan  pre=0.7652 post=0.7637 ok=False ★비준수 상한진단: NHANES pre+post 통합 5-fold 자체적합(n=13098), all=0.7637
+D90_ORACLE_nhanes_pooled_lgbm_add        int=  nan  pre=0.7700 post=0.7675 ok=False ★비준수 상한진단: NHANES pre+post 통합 5-fold 자체적합(n=13098), all=0.7726
+D90_ORACLE_nhanes_pooled_lgbm_d3_reg     int=  nan  pre=0.7621 post=0.7693 ok=False ★비준수 상한진단: NHANES pre+post 통합 5-fold 자체적합(n=13098), all=0.7704
+D91_ORACLE_learncurve_frac0.25           int=  nan  pre=0.7593 post=  nan  ok=False ★비준수: NHANES 자체적합 학습표본 25% (pre+post 통합 AUROC), sd=0.0006
+D91_ORACLE_learncurve_frac0.5            int=  nan  pre=0.7635 post=  nan  ok=False ★비준수: NHANES 자체적합 학습표본 50% (pre+post 통합 AUROC), sd=0.0008
+D91_ORACLE_learncurve_frac1.0            int=  nan  pre=0.7651 post=  nan  ok=False ★비준수: NHANES 자체적합 학습표본 100% (pre+post 통합 AUROC), sd=0.0007
+D92_DIAG_drop_age                        int=0.8226 pre=0.7616 post=0.7358 ok=False ★선택근거가 외부성능이면 비준수. age 제외 시 외부 변화 진단용(개념이동 검증)
+D93_DIAG_srh_oh_only                     int=0.8069 pre=0.7648 post=0.7371 ok=False ★진단: 연속형 중 srh/oral_health만 사용(개념이동 큰 age/sleep/bmi 제외)
+Traceback (most recent call last):
+  File "C:\Users\rudtn\Desktop\claude code\지역사회건강\experiments\pathA_06_ceiling2.py", line 101, in <module>
+    print("\n[내부 CV 기반 선택 \u2014 NHANES 미접촉]", flush=True)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'cp949' codec can't encode character '\u2014' in position 15: illegal multibyte sequence

@@ -1,0 +1,25 @@
+    [histgb] fold0 42s
+    [histgb] fold1 73s
+    [histgb] fold2 110s
+    [histgb] fold3 143s
+    [histgb] fold4 176s
+histgb                         OOF=0.8299 郴何=0.8300 pre=0.7692 post=0.7653
+    [histgb_d3] fold0 29s
+    [histgb_d3] fold1 52s
+    [histgb_d3] fold2 80s
+    [histgb_d3] fold3 100s
+    [histgb_d3] fold4 133s
+histgb_d3                      OOF=0.8314 郴何=0.8312 pre=0.7693 post=0.7701
+    [lda] fold0 3s
+    [lda] fold1 6s
+    [lda] fold2 9s
+    [lda] fold3 12s
+    [lda] fold4 15s
+lda                            OOF=0.8073 郴何=0.8075 pre=0.7521 post=0.7608
+    [sgd_huber] fold0 11s
+    [sgd_huber] fold1 22s
+    [sgd_huber] fold2 32s
+    [sgd_huber] fold3 43s
+    [sgd_huber] fold4 54s
+sgd_huber                      OOF=0.7822 郴何=0.8035 pre=0.7432 post=0.7306
+DONE

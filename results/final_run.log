@@ -1,0 +1,13 @@
+==============================================================================
+STEP 1) 기준선 재현 + PRIMARY(사전지정 앙상블) 구축 (seed=42)
+==============================================================================
+    seed42 lgbm_base          5s
+    seed42 xgb_base          14s
+    seed42 cat_base          29s
+    seed42 histgb            35s
+    seed42 rf                69s
+    seed42 et               101s
+    seed42 logit_l2         103s
+    seed42 logit_spline     105s
+    seed42 mlp32            112s
+    seed42 OOF fold0   200s

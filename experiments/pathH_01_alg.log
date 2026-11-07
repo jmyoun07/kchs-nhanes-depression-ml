@@ -1,0 +1,133 @@
+    [lgbm_base] fold0 19s
+    [lgbm_base] fold1 37s
+    [lgbm_base] fold2 52s
+    [lgbm_base] fold3 68s
+    [lgbm_base] fold4 84s
+lgbm_base                      OOF=0.8303 내부=0.8310 pre=0.7740 post=0.7653
+    [lgbm_d2] fold0 15s
+    [lgbm_d2] fold1 30s
+    [lgbm_d2] fold2 45s
+    [lgbm_d2] fold3 84s
+    [lgbm_d2] fold4 111s
+lgbm_d2                        OOF=0.8313 내부=0.8317 pre=0.7657 post=0.7689
+    [lgbm_d3] fold0 50s
+    [lgbm_d3] fold1 83s
+    [lgbm_d3] fold2 108s
+    [lgbm_d3] fold3 158s
+    [lgbm_d3] fold4 199s
+lgbm_d3                        OOF=0.8308 내부=0.8309 pre=0.7712 post=0.7644
+    [lgbm_stump] fold0 40s
+    [lgbm_stump] fold1 75s
+    [lgbm_stump] fold2 115s
+    [lgbm_stump] fold3 141s
+    [lgbm_stump] fold4 171s
+lgbm_stump                     OOF=0.8276 내부=0.8275 pre=0.7686 post=0.7710
+    [lgbm_d4] fold0 29s
+    [lgbm_d4] fold1 56s
+    [lgbm_d4] fold2 82s
+    [lgbm_d4] fold3 108s
+    [lgbm_d4] fold4 139s
+lgbm_d4                        OOF=0.8306 내부=0.8308 pre=0.7688 post=0.7630
+    [lgbm_deep] fold0 129s
+    [lgbm_deep] fold1 250s
+    [lgbm_deep] fold2 364s
+    [lgbm_deep] fold3 492s
+    [lgbm_deep] fold4 625s
+lgbm_deep                      OOF=0.8260 내부=0.8259 pre=0.7674 post=0.7580
+    [lgbm_goss] fold0 44s
+    [lgbm_goss] fold1 83s
+    [lgbm_goss] fold2 125s
+    [lgbm_goss] fold3 165s
+    [lgbm_goss] fold4 207s
+lgbm_goss                      OOF=0.8306 내부=0.8309 pre=0.7738 post=0.7667
+    [lgbm_reg] fold0 40s
+    [lgbm_reg] fold1 74s
+    [lgbm_reg] fold2 118s
+    [lgbm_reg] fold3 157s
+    [lgbm_reg] fold4 203s
+lgbm_reg                       OOF=0.8311 내부=0.8309 pre=0.7721 post=0.7682
+    [xgb_base] fold0 28s
+    [xgb_base] fold1 61s
+    [xgb_base] fold2 90s
+    [xgb_base] fold3 128s
+    [xgb_base] fold4 159s
+xgb_base                       OOF=0.8308 내부=0.8314 pre=0.7771 post=0.7652
+    [xgb_d3] fold0 38s
+    [xgb_d3] fold1 84s
+    [xgb_d3] fold2 122s
+    [xgb_d3] fold3 174s
+    [xgb_d3] fold4 226s
+xgb_d3                         OOF=0.8312 내부=0.8316 pre=0.7715 post=0.7674
+    [xgb_d8] fold0 33s
+    [xgb_d8] fold1 70s
+    [xgb_d8] fold2 106s
+    [xgb_d8] fold3 140s
+    [xgb_d8] fold4 184s
+xgb_d8                         OOF=0.8302 내부=0.8308 pre=0.7753 post=0.7702
+    [cat_base] fold0 30s
+    [cat_base] fold1 63s
+    [cat_base] fold2 95s
+    [cat_base] fold3 128s
+    [cat_base] fold4 161s
+cat_base                       OOF=0.8319 내부=0.8323 pre=0.7696 post=0.7694
+    [cat_d4] fold0 43s
+    [cat_d4] fold1 84s
+    [cat_d4] fold2 124s
+    [cat_d4] fold3 168s
+    [cat_d4] fold4 209s
+cat_d4                         OOF=0.8318 내부=0.8320 pre=0.7691 post=0.7712
+    [histgb] fold0 36s
+    [histgb] fold1 71s
+    [histgb] fold2 108s
+    [histgb] fold3 157s
+    [histgb] fold4 216s
+[FAIL] histgb: MemoryError: unable to allocate array data.
+    [rf] fold0 36s
+    [rf] fold1 71s
+    [rf] fold2 109s
+    [rf] fold3 145s
+    [rf] fold4 181s
+rf                             OOF=0.8279 내부=0.8301 pre=0.7712 post=0.7634
+    [et] fold0 35s
+    [et] fold1 70s
+    [et] fold2 104s
+    [et] fold3 139s
+    [et] fold4 175s
+et                             OOF=0.8224 내부=0.8252 pre=0.7776 post=0.7538
+    [logit_l2] fold0 3s
+    [logit_l2] fold1 6s
+    [logit_l2] fold2 9s
+    [logit_l2] fold3 13s
+    [logit_l2] fold4 16s
+logit_l2                       OOF=0.8124 내부=0.8105 pre=0.7585 post=0.7595
+    [logit_l2_strong] fold0 3s
+    [logit_l2_strong] fold1 6s
+    [logit_l2_strong] fold2 9s
+    [logit_l2_strong] fold3 12s
+    [logit_l2_strong] fold4 16s
+logit_l2_strong                OOF=0.8124 내부=0.8104 pre=0.7582 post=0.7595
+    [logit_spline] fold0 5s
+    [logit_spline] fold1 10s
+    [logit_spline] fold2 15s
+    [logit_spline] fold3 20s
+    [logit_spline] fold4 24s
+logit_spline                   OOF=0.8263 내부=0.8274 pre=0.7672 post=0.7715
+    [mlp32] fold0 17s
+    [mlp32] fold1 30s
+    [mlp32] fold2 46s
+    [mlp32] fold3 64s
+    [mlp32] fold4 83s
+mlp32                          OOF=0.8269 내부=0.8295 pre=0.7641 post=0.7681
+    [mlp64_32] fold0 22s
+    [mlp64_32] fold1 48s
+    [mlp64_32] fold2 69s
+    [mlp64_32] fold3 92s
+    [mlp64_32] fold4 118s
+mlp64_32                       OOF=0.8252 내부=0.8286 pre=0.7601 post=0.7764
+    [gnb] fold0 3s
+    [gnb] fold1 5s
+    [gnb] fold2 8s
+    [gnb] fold3 11s
+    [gnb] fold4 13s
+gnb                            OOF=0.7602 내부=0.7689 pre=0.7286 post=0.7235
+SAVED C:/Users/rudtn/Desktop/claude code/지역사회건강\results\pathH_01_alg.csv

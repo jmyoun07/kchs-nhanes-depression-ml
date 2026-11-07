@@ -1,0 +1,37 @@
+[분할] 전체 2,048,510 → 학습 500,000 / hold-out 100,000 (미사용 1,448,510)
+[재현 확인] 내부 0.8315 / pre 0.7718 / post 0.7688
+
+==============================================================================
+[B3] CITL 재계산 — 정식(offset, slope=1 고정) vs 기존(slope 자유추정 절편)
+==============================================================================
+  Internal(hold-out)   slope=1.004  절편(기존)=+0.115  CITL(정식)=+0.103   │ 재보정후 slope=0.999 CITL=-0.000
+  NHANES pre           slope=0.664  절편(기존)=-0.302  CITL(정식)=+0.490   │ 재보정후 slope=0.988 CITL=-0.001
+  NHANES post          slope=0.677  절편(기존)=+0.249  CITL(정식)=+1.109   │ 재보정후 slope=0.994 CITL=-0.000
+
+==============================================================================
+[B8] 부트스트랩 재계산 — 층 내 PSU 복원추출(Rao-Wu) vs 기존(층 무시 풀링)
+==============================================================================
+  Internal(hold-out)   AUROC 층별CI [0.8222,0.8406]   (기존 풀링CI [0.8222,0.8409])   AUPRC 층별CI [0.216,0.250]
+  NHANES pre           AUROC 층별CI [0.7449,0.7966]   (기존 풀링CI [0.7329,0.8079])   AUPRC 층별CI [0.228,0.315]
+  NHANES post          AUROC 층별CI [0.7467,0.7893]   (기존 풀링CI [0.7354,0.7934])   AUPRC 층별CI [0.318,0.378]
+
+==============================================================================
+[B6] 경량모델 — shap_importance.csv 기반 순서로 재계산
+==============================================================================
+  SHAP 순서: ['srh', 'age', 'sex', 'sleep_hrs', 'oral_health', 'partnered', 'employed', 'smoking', 'bmi', 'income_q', 'food_insecure', 'current_drinker', 'edu', 'active', 'living_alone', 'htn', 'dm']
+   3문항 내부 0.7817  pre 0.7131  post 0.7257   ['srh', 'age', 'sex']
+   4문항 내부 0.8017  pre 0.7244  post 0.7378   ['srh', 'age', 'sex', 'sleep_hrs']
+   5문항 내부 0.8092  pre 0.7413  post 0.7452   ['srh', 'age', 'sex', 'sleep_hrs', 'oral_health']
+   8문항 내부 0.8245  pre 0.7703  post 0.7532   ['srh', 'age', 'sex', 'sleep_hrs', 'oral_health', 'partnered', 'employed', 'smoking']
+  12문항 내부 0.8307  pre 0.7712  post 0.7674   ['srh', 'age', 'sex', 'sleep_hrs', 'oral_health', 'partnered', 'employed', 'smoking', 'bmi', 'income_q', 'food_insecure', 'current_drinker']
+  17문항 내부 0.8315  pre 0.7718  post 0.7688   ['srh', 'age', 'sex', 'sleep_hrs', 'oral_health', 'partnered', 'employed', 'smoking', 'bmi', 'income_q', 'food_insecure', 'current_drinker', 'edu', 'active', 'living_alone', 'htn', 'dm']
+
+==============================================================================
+[B9] 컷오프 ≥5 — 내부·외부 전부 산출 / [B4] 연령≥30 정식 민감도
+==============================================================================
+  컷오프≥5   내부 0.7587  pre 0.7360  post 0.7392   (가중 유병률 0.161/0.250/0.321)
+  연령≥30(학습·평가 모두 제한)  내부 0.8395  pre 0.7840  post 0.7878   [n: 90,841/6691/4637]
+  연령≥30(학습만 제한, 기존값)  내부 0.8306  pre 0.7740  post 0.7698
+
+저장: results/audit_recompute_{metrics,parsimonious,sensitivity}.csv
+완료.

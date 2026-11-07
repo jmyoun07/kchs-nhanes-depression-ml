@@ -1,0 +1,16 @@
+﻿name,scope,model,n,wauc,sd,protocol_compliant,note
+CEIL_oracle_pre_logit_C1,pre,logit_C1,7888,0.77331,0.00193,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_pre_logit_C0.1,pre,logit_C0.1,7888,0.77258,0.00173,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_pre_lgb_small,pre,lgb_small,7888,0.76172,0.00271,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_pre_lgb_base,pre,lgb_base,7888,0.7392,0.00236,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_pre_rf,pre,rf,7888,0.76475,0.00164,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_post_logit_C1,post,logit_C1,5210,0.76842,0.00242,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_post_logit_C0.1,post,logit_C0.1,5210,0.76964,0.00223,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_post_lgb_small,post,lgb_small,5210,0.76433,0.00066,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_post_lgb_base,post,lgb_base,5210,0.72937,0.0026,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_post_rf,post,rf,5210,0.76867,0.0014,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_pooled_logit_C1,pooled,logit_C1,13098,0.76499,0.00071,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_pooled_logit_C0.1,pooled,logit_C0.1,13098,0.76512,0.00068,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_pooled_lgb_small,pooled,lgb_small,13098,0.77368,0.00187,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_pooled_lgb_base,pooled,lgb_base,13098,0.76031,0.001,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단
+CEIL_oracle_pooled_rf,pooled,rf,13098,0.76577,0.00145,False,NHANES 라벨로 자체 5-fold CV(3회 반복) → in-domain 상한 진단

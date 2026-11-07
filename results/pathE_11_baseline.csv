@@ -1,0 +1,4 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,note
+baseline_A_500k100k,0.830969,0.774013,0.765262,True,과제 명세 그대로. 목표 0.8336/0.7681/0.7682와 불일치
+baseline_B_8020,0.833483,0.768298,0.766845,True,80/20 split
+baseline_C_8020_incomeq_trainonly,0.833535,0.768199,0.768007,True,저장소 pathE_baseline_repro의 spec C = 목표값 재현본

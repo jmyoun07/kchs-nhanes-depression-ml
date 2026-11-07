@@ -1,0 +1,8 @@
+{'name': 'H1_gam_depth1', 'internal': 0.827455, 'ext_pre': 0.768755, 'ext_post': 0.770948, 'protocol_compliant': True, 'seconds': None, 'note': "KCHS OOF=0.82696 | {'max_depth': 1, 'num_leaves': 2, 'n_estimators': 3000, 'learning_rate': 0.05}"}
+{'name': 'H2_depth2', 'internal': 0.83161, 'ext_pre': 0.765794, 'ext_post': 0.768135, 'protocol_compliant': True, 'seconds': None, 'note': "KCHS OOF=0.83072 | {'max_depth': 2, 'num_leaves': 4, 'n_estimators': 2000, 'learning_rate': 0.05}"}
+{'name': 'H2_depth3', 'internal': 0.83056, 'ext_pre': 0.771447, 'ext_post': 0.762987, 'protocol_compliant': True, 'seconds': None, 'note': "KCHS OOF=0.82985 | {'max_depth': 3, 'num_leaves': 8, 'n_estimators': 1500, 'learning_rate': 0.05}"}
+{'name': 'H2_depth4', 'internal': 0.830527, 'ext_pre': 0.769502, 'ext_post': 0.762886, 'protocol_compliant': True, 'seconds': None, 'note': "KCHS OOF=0.82971 | {'max_depth': 4, 'num_leaves': 16, 'n_estimators': 1000, 'learning_rate': 0.04}"}
+{'name': 'H0_baseline', 'internal': 0.830969, 'ext_pre': 0.774013, 'ext_post': 0.765262, 'protocol_compliant': True, 'seconds': None, 'note': 'KCHS OOF=0.82992 | {}'}
+H 계열 KCHS OOF 최우수: H2_depth2 0.83072
+{'name': 'H3_softMoE_age_tau8', 'internal': 0.828866, 'ext_pre': 0.774495, 'ext_post': 0.767676, 'protocol_compliant': True, 'seconds': None, 'note': '연령 soft-gating 전문가혼합 (하드 층화의 부드러운 판)'}
+{'name': 'H3_softMoE_age_tau12', 'internal': 0.829585, 'ext_pre': 0.769248, 'ext_post': 0.764545, 'protocol_compliant': True, 'seconds': None, 'note': '연령 soft-gating 전문가혼합 (하드 층화의 부드러운 판)'}

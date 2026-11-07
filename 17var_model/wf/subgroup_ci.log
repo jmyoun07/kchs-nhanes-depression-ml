@@ -1,0 +1,27 @@
+============================================================================================
+[하위군] 단일 PSU 층 통합 적용 · 재척도 부트스트랩 CI
+============================================================================================
+  KCHS hold-out Sex: female                  n=54,588  AUROC 0.822  CI [0.810,0.834]  (단일층 0개, 미통합시 [0.811,0.834])
+  KCHS hold-out Sex: male                    n=45,412  AUROC 0.831  CI [0.814,0.847]  (단일층 0개, 미통합시 [0.813,0.846])
+  KCHS hold-out Age 20-39                    n=20,508  AUROC 0.785  CI [0.764,0.805]  (단일층 0개, 미통합시 [0.764,0.806])
+  KCHS hold-out Age 40-59                    n=34,520  AUROC 0.828  CI [0.811,0.845]  (단일층 0개, 미통합시 [0.811,0.844])
+  KCHS hold-out Age 60+                      n=44,972  AUROC 0.859  CI [0.847,0.872]  (단일층 0개, 미통합시 [0.848,0.871])
+  KCHS hold-out Education: college           n=37,939  AUROC 0.813  CI [0.796,0.829]  (단일층 0개, 미통합시 [0.795,0.829])
+  KCHS hold-out Education: high school       n=28,973  AUROC 0.829  CI [0.811,0.847]  (단일층 0개, 미통합시 [0.812,0.847])
+  KCHS hold-out Education: middle            n=11,329  AUROC 0.830  CI [0.803,0.856]  (단일층 0개, 미통합시 [0.804,0.854])
+  KCHS hold-out Education: <=elementary      n=21,682  AUROC 0.816  CI [0.799,0.833]  (단일층 0개, 미통합시 [0.800,0.832])
+  NHANES pre   Race: Mexican American       n=   914  AUROC 0.697  CI [0.622,0.779]  (단일층 0개, 미통합시 [0.625,0.776])
+  NHANES post  Race: Mexican American       n=   330  AUROC 0.689  CI [0.606,0.789]  (단일층 1개, 미통합시 [0.609,0.792])
+  NHANES pre   Race: Other Hispanic         n=   813  AUROC 0.777  CI [0.733,0.818]  (단일층 0개, 미통합시 [0.733,0.818])
+  NHANES post  Race: Other Hispanic         n=   499  AUROC 0.790  CI [0.750,0.842]  (단일층 0개, 미통합시 [0.750,0.842])
+  NHANES pre   Race: Non-Hispanic White     n= 2,798  AUROC 0.778  CI [0.727,0.824]  (단일층 0개, 미통합시 [0.727,0.824])
+  NHANES post  Race: Non-Hispanic White     n= 3,215  AUROC 0.770  CI [0.722,0.811]  (단일층 0개, 미통합시 [0.722,0.811])
+  NHANES pre   Race: Non-Hispanic Black     n= 2,096  AUROC 0.762  CI [0.727,0.800]  (단일층 0개, 미통합시 [0.727,0.800])
+  NHANES post  Race: Non-Hispanic Black     n=   598  AUROC 0.727  CI [0.646,0.792]  (단일층 0개, 미통합시 [0.646,0.792])
+  NHANES pre   Race: Non-Hispanic Asian     n=   886  AUROC 0.810  CI [0.713,0.877]  (단일층 0개, 미통합시 [0.725,0.875])
+  NHANES post  Race: Non-Hispanic Asian     n=   228  AUROC 0.841  CI [0.642,0.988]  (단일층 0개, 미통합시 [0.638,0.988])
+  NHANES pre   Race: Other/multiracial      n=   381  AUROC 0.772  CI [0.670,0.866]  (단일층 0개, 미통합시 [0.670,0.866])
+  NHANES post  Race: Other/multiracial      n=   340  AUROC 0.786  CI [0.708,0.869]  (단일층 0개, 미통합시 [0.708,0.869])
+
+저장: results/review3_fairness.csv
+완료.

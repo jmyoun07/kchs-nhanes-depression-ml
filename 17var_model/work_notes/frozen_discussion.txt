@@ -1,0 +1,4 @@
+to slope 1.00 (0.95-1.00) and 1.00 (0.97-1.00), with the update refitted inside every replicate
+gives visibly wider slope intervals (0.82-1.19 pre and 0.88-1.13 post
+the difference is +0.006 (95% CI -0.045 to +0.056; bootstrap P=.86)
+(Spearman ρ=0.97 pre-pandemic and 0.99 post-pandemic)

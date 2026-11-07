@@ -1,0 +1,15 @@
+[0_REF] REF_pool500k_s42                   n=  500,000 int=0.8291 pre=0.7694 post=0.7587  D=+0.0000/+0.0000/+0.0000
+[O_outlier] O_implausible_to_nan               n=  500,000 int=0.8277 pre=0.7678 post=0.7577  D=-0.0014/-0.0016/-0.0010
+[O_outlier] O_drop_implausible_rows            n=  499,292 int=0.8300 pre=0.7660 post=0.7586  D=+0.0009/-0.0034/-0.0001
+
+########## G) 밀도비(공변량 이동) 가중 진단 ##########
+  domain_auc_oof       = 1.0000000000000002
+  kchs_p_max           = 3.543556439283107e-08
+  kchs_p_median        = 3.5430615806424336e-08
+  kchs_p_q99           = 3.543556439277958e-08
+  frac_kchs_p_lt_1e2   = 1.0
+  ess                  = 59999.99971912125
+  n_kchs               = 60000
+  ess_ratio            = 0.9999999953186876
+
+완료: C:/Users/rudtn/Desktop/claude code/지역사회건강\results\path3_02c_tail.csv

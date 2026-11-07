@@ -1,0 +1,3 @@
+﻿setting,AUROC_lo,AUROC_hi,AUPRC_lo,AUPRC_hi
+strata only (superseded),0.8223,0.8413,0.215,0.252
+year|strata (correct),0.8222,0.8408,0.215,0.251

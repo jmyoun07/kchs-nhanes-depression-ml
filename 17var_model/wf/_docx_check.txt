@@ -1,0 +1,293 @@
+
+Original Paper
+A Machine Learning Depression Screener Developed in the Korea Community Health Survey and Externally Validated in the US National Health and Nutrition Examination Survey Across the COVID-19 Period: Development and External Validation Study
+Authors: [to be completed]
+Corresponding author: [to be completed]
+Structured Abstract
+Background. Depression is a leading cause of disability, and scalable, low-cost screening is needed. Most machine learning (ML) depression models from national surveys report internal validation only; whether they transport to another country and remain stable across the COVID-19 shift is rarely tested.
+Objective. To develop an ML model for current depression (Patient Health Questionnaire-9 [PHQ-9] ≥10) in the Korea Community Health Survey (KCHS) and externally validate it in the US National Health and Nutrition Examination Survey (NHANES) across the pre- and post-COVID-19 periods, as the engine for a deployable digital triage tool.
+Methods. Penalized logistic regression, random forest, and gradient boosting were developed in KCHS (2017–2025; pooled n=2,048,510; outcome-stratified 500,000-record training set and 100,000-record hold-out) using a harmonized 17-predictor set shared with NHANES—14 protocol-specified predictors plus employment, oral health, and food insecurity added by a documented amendment locked before analysis. All algorithm, feature-representation and hyperparameter selection used KCHS-internal cross-validation only; the trained model was applied to NHANES without refitting. Evaluation was complex-survey–weighted with stratified cluster bootstrap CIs, plus SHAP interpretation and subgroup fairness. Temporal validation contrasted the NCHS-defined pre-pandemic (2017–March 2020; n=7,888) and post-pandemic (2021–2023; n=5,210) cycles, with intercept/slope recalibration.
+Results. Gradient boosting (LightGBM) was the primary model. Internal AUROC was 0.832 (95% CI 0.822–0.841), meeting the ≥0.80 target (H1). External discrimination remained clinically useful but lower (pre 0.772, 95% CI 0.745–0.797; post 0.769, 0.747–0.789); calibration deteriorated (slope 0.66–0.68; calibration-in-the-large +0.49 and +1.11, ie, systematic under-prediction) and was fully restored by recalibration (slope→0.99, CITL→0.00; H2, H3 supported). Against an independently tuned 14-predictor model, the three added predictors improved external discrimination (pre 0.749→0.772, Δ+0.023; post 0.753→0.769, Δ+0.016; both P&lt;.001). An 8-item model retained near-full external discrimination pre-pandemic (0.770 vs 0.772) but lost 0.016 post-pandemic (0.753 vs 0.769), partially supporting H4. Extensive leakage-controlled optimization (&gt;450 experiments) did not exceed ~0.77 externally; an in-domain oracle (fitting NHANES on its own labels) capped at ~0.77, whereas the same predictors reached ~0.83 within Korea, indicating concept shift rather than sample size or model choice.
+Conclusions. A Korea-developed depression screener transported to the US and across the pandemic with clinically useful discrimination and recoverable calibration. The cross-national ceiling (~0.77) is a concept-shift limit intrinsic to transportable survey predictors, not a modeling failure. A low-burden 8-item version, paired with local recalibration, is a plausible scalable digital triage aid.
+Keywords: depression; mass screening; machine learning; supervised machine learning; models, statistical; external validation; transportability; concept shift; COVID-19; mobile health; Patient Health Questionnaire; Republic of Korea.
+1. Introduction
+Depression is among the leading causes of years lived with disability worldwide [1], and its detection at the community and primary-care level remains incomplete. Brief self-report instruments such as the PHQ-9 enable population-scale screening [3], yet applying a fixed cut-off uniformly across heterogeneous populations does not prioritize those at highest risk. Risk-stratification tools that combine routinely available sociodemographic and behavioral information could support more efficient triage and, when delivered through web or mobile interfaces, could scale at low marginal cost—an application squarely within the scope of internet-based health services.
+ML models for depression have been developed repeatedly from large national surveys, including the KCHS and the Korea National Health and Nutrition Examination Survey [11,12], typically reporting strong internal discrimination. However, most published models are assessed only through internal validation. Internal performance is an optimistic indicator of real-world behavior: it does not establish that a model transports to a different sampling frame, health system, or population, and it does not test stability under temporal distribution shift.
+The COVID-19 pandemic constitutes a natural distribution shift for mental-health prediction [2,10]. Population distributions of depressive symptoms and of their behavioral correlates changed during the pandemic, and a model trained before 2020 may show degraded calibration afterward even if discrimination is preserved. Whether recalibration—updating only the intercept and slope without re-estimating predictor effects [6,7]—restores clinical usefulness is a practically important, under-studied question for deployed screening tools.
+This study addresses these gaps with a development-and-external-validation design well suited to the outcome. Depression is operationalized identically in both surveys (nine-item PHQ-9, 0–3 scoring, sum ≥10), minimizing outcome-harmonization error, while the surveys differ in country, health system, racial/ethnic composition, and survey mode, making NHANES a substantively external validation set. NHANES additionally provides NCHS-defined pre- and post-pandemic data, enabling temporal validation within the same external population.
+We pursued four aims: (1) develop an ML depression-screening model in KCHS; (2) externally validate it in US NHANES (geographic transportability); (3) validate it separately pre/post-COVID-19 and quantify recalibration (temporal transportability); and (4) derive a parsimonious model for a low-burden digital tool. We hypothesized: H1 the full model achieves internal AUROC ≥0.80; H2 external discrimination remains clinically useful while calibration may deteriorate; H3 recalibration substantially improves calibration; H4 the parsimonious model incurs only a small performance loss.
+2. Methods
+2.1 Study design and reporting standards
+Retrospective secondary-data study developing a clinical prediction model with external validation; reported per TRIPOD+AI (2024) [4], risk of bias self-assessed with PROBAST [5]. The study protocol and statistical analysis plan were written and dated before the analysis, and the predictor-set expansion described in §2.5 is a documented amendment that was likewise locked before any model was fitted (§2.5.1); both documents are provided unmodified as Multimedia Appendix 2. All preprocessing code, hyperparameter grids, and a model card are released publicly.
+2.2 Data sources
+Development — KCHS. Nationwide KDCA survey of community-dwelling adults, annual in-person household interviews (~230,000/year), stratified/clustered/weighted complex-sample design. Pooled development sample: KCHS 2017–2025 with PHQ-9 administered; n=2,048,510. From this pooled sample, an outcome-stratified random split created a 500,000-record training set and a 100,000-record internal hold-out set used for all internal performance estimates; the remaining 1,448,510 records were not used. The training-set size was fixed for computational tractability before any external evaluation, and a subsequent check confirmed that expanding it toward the full pooled sample did not improve—and slightly reduced—external discrimination (§3.5).
+External validation — US NHANES. NCHS survey combining household interview and mobile examination center assessment; depression via the DPQ (PHQ-9) module. Two periods used as separate validation sets: pre-pandemic (2017–March 2020, "P_" files; n=7,888) and post-pandemic (August 2021–August 2023, "_L" files; n=5,210).
+2.3 Participants
+Adults ≥20 years with all nine PHQ-9 items answered. Pregnant respondents were retained in the main analysis. A prior physician diagnosis of depression is not recorded in the KCHS 2017–2025 questionnaires and therefore could not be used for exclusion or sensitivity analysis; this is noted as a limitation.
+2.4 Outcome
+Current depression = PHQ-9 total ≥10, computed identically in both surveys (nine items, 0–3). KCHS items recoded 1–4→0–3 to match NHANES. Sensitivity: ≥5 cut-off.
+2.5 Candidate predictors and harmonization
+Only variables definable identically in both surveys entered the harmonized model. The final harmonized set comprised 17 predictors (Table 1): the 14 protocol-specified predictors—age, sex, education, household income (within-survey quintiles), self-rated health, partnership, living alone, smoking, alcohol, physical activity, sleep duration, BMI, hypertension, diabetes—plus three added predictors: employment (KCHS soa_01z1 ↔ NHANES OCD150), self-rated oral health (ora_01z1 ↔ OHQ845), and household food insecurity (nue_01z1 ↔ FSDAD). Concept-level harmonization used a label-based per-year crosswalk on the KCHS side and cycle-specific code branching on the NHANES side; self-rated health was harmonized to NHANES HUQ010 (correcting a Table 1 file-code error for HSD010/HSQ).
+2.5.1 Predictor-set amendment and selection provenance. The three added predictors were identified by an exhaustive crosswalk of all 616 KCHS concepts against all 265 both-cycle-common NHANES variables. The amendment was written and locked before any model was fitted (Multimedia Appendix 2) and specified three eligibility criteria: a candidate had to be (i) available in both NHANES cycles, (ii) collected in at least 5 of the 9 KCHS survey years, and (iii) not circular with the PHQ-9 outcome. Employment, self-rated oral health, and household food insecurity were the only candidates meeting all three; other KCHS concepts failed on single-year collection (e.g., dyslipidemia, osteoporosis, arthritis), concept mismatch (KCHS records only awareness of early warning signs for stroke and myocardial infarction, not physician diagnosis), or absence from the NHANES pre-pandemic cycle (functional limitation). Criteria (i)–(iii) use survey documentation and variable availability only; no NHANES outcome data entered the amendment. Each added predictor has an established association with depression in the epidemiological literature—food insecurity (pooled odds ratio ≈1.4) [13], unemployment (≈1.9–2.1) [14], and poor oral health (a bidirectional relationship) [15]—supporting biological and social plausibility rather than data-driven selection. Circular/outcome-contaminated variables (PHQ items, suicidal ideation, EQ-5D anxiety/depression, happiness, perceived stress, mental-health service use including NHANES HUQ090) were pre-specified for exclusion.
+Post-hoc candidate screening (reported for completeness). After the primary analysis was complete, we screened the remaining harmonizable-but-unused items (public-assistance receipt, alcohol frequency, alcohol quantity, binge drinking, weekend sleep duration) by comparing the direction of their adjusted odds ratios with depression across KCHS, NHANES-pre, and NHANES-post. Alcohol quantity, binge drinking, and weekend sleep reversed direction between countries; public-assistance receipt was directionally consistent but added no external discrimination when included (ΔAUROC &lt;0.001; §3.5). No item was added, so the predictor set is unchanged from the locked amendment. Because this screening inspected NHANES outcome associations, it is reported as a post-hoc diagnostic and was not used for selection. Two robustness analyses further bound the amendment's contribution: the 14-predictor protocol-specified model is reported alongside the 17-predictor model throughout, and a food-insecurity leave-out (16-predictor) shows the incremental gain does not rest on the most weakly harmonized predictor (§3.4). Model fitting, hyperparameter tuning, and primary-model selection used KCHS-internal cross-validation only, with no NHANES data.
+Harmonization cautions. Alcohol, physical activity, and income use different instruments and were reduced to conservatively comparable definitions (residuals quantified in sensitivity). BMI is self-reported in KCHS, measured in NHANES. Living-alone is unavailable in the NHANES pre-pandemic DEMO file (100% missing) and is retained as missing (not imputed to a constant) to avoid fabricating a constant. Food insecurity uses a single KCHS item versus the 10-item NHANES module and is unmeasured in KCHS 2020–2021 (structural missingness); its influence is quantified by a leave-out sensitivity analysis.
+2.6 Missing data
+All missing-data handling was performed by a preprocessing pipeline fitted in the development training set and applied unchanged to the internal hold-out and to each external set (no leakage). In the gradient-boosting primary model, binary predictors were passed through with missingness preserved and handled natively by the tree learner—so structurally missing binary items such as living-alone in NHANES pre are never imputed to a constant—while continuous predictors were median-imputed and categorical predictors mode-imputed within the same pipeline. For the linear comparator, all predictor types were imputed (median for continuous, most frequent for binary/categorical) with missing indicators. Alternative strategies (missing indicators for all predictor types; multiple imputation by chained equations for continuous predictors) were examined in sensitivity analysis (§2.12). A silent-column-omission check was added after a data-integrity audit (see §2.13).
+2.7 Sample size
+Development is not power-limiting given KCHS size: the 500,000-record training set contains approximately 18,000 events (about 1,000 events per candidate predictor) and the 100,000-record hold-out approximately 3,600 events. NHANES event counts (728 pre, 661 post; weighted prevalence 8.4% and 12.2%) govern external calibration and decision-curve precision.
+2.8 Model development
+Algorithms: penalized logistic regression (elastic net), random forest, and gradient boosting (LightGBM). Development proceeded in two selection steps, both confined to the KCHS training set. First, the gradient-boosting hyperparameters and the feature representation were chosen by a randomized search over 24 LightGBM configurations crossed with two representations—main effects only, versus main effects plus four pre-specified interaction terms (age×self-rated health, self-rated health×oral health, age×employment, income×employment)—evaluated by 4-fold survey-weighted cross-validation in a 300,000-record subsample of the training set; the main-effects-only representation won, and adding interaction terms did not improve cross-validated discrimination. Second, all three algorithms were tuned over comparable 5-configuration grids under an identical protocol (5-fold stratified cross-validation in a 200,000-record subsample of the training set) and compared at each algorithm's best configuration, so that no algorithm was advantaged by differential tuning effort. The primary model was selected a priori by cross-validated AUROC, then |calibration slope − 1|, then parsimony. No NHANES data were used in any selection or tuning step. Complex-survey weights were handled by unweighted training with weighted evaluation (probed in sensitivity). LightGBM was selected (best internal CV-AUROC 0.840 vs random forest 0.835 and elastic net 0.822) and refitted on the full 500,000-record training set; the selected hyperparameters and the full search grids are reported in the model card and released with the code.
+2.9 Performance evaluation
+Discrimination (AUROC, AUPRC), calibration, and operating characteristics, all complex-survey–weighted. Calibration was summarized by the calibration slope and by calibration-in-the-large (CITL), the latter estimated as the intercept of a weighted logistic model with the linear predictor entered as an offset (ie, with the slope fixed at 1), together with the Brier score and expected calibration error (ECE); a positive CITL indicates that observed risk exceeds predicted risk. Ninety-five percent CIs were obtained by a stratified cluster bootstrap resampling primary sampling units with replacement within design strata (1000 replicates) [16]. Clinical utility by decision-curve analysis [8].
+2.10 External validation strategy
+Geographic: KCHS-trained model applied to NHANES without refitting. Temporal/COVID: evaluated separately in pre and post cycles. Recalibration: intercept/slope recalibration applied out-of-sample (cross-fit) and recovery quantified—updating calibration only, without re-estimating predictor effects [6,7].
+2.11 Interpretability, fairness, deployment
+SHAP global importance [9] (Figure 1) and cross-survey rank concordance of predictor importance (Spearman correlation between KCHS and each NHANES cycle) as a mechanistic view of transportability; fairness by weighted subgroup AUROC and calibration slope across sex, age, education, and (NHANES) race/ethnicity; and a parsimonious model for a low-burden self-administered form, formed by entering predictors in descending order of global SHAP importance and refitting at each item count. The deployment item count was chosen on internal discrimination and item burden alone, with external performance reported afterwards rather than used for selection (§3.6). Positioned as a screening/triage aid, not a diagnostic.
+2.12 Sensitivity analyses
+Pre-specified and additional analyses (Figure 7; exact values in Multimedia Appendix 3, Table S7): outcome cut-off (≥5 as well as ≥10, evaluated internally and in both external cohorts), removal of the three added predictors (→14), removal of food insecurity only (→16), weighting approach (weighted vs unweighted training), alternative imputation (missing indicators; multiple imputation by chained equations), and an age lower bound of 30 years applied to the training and evaluation samples. The self-report (KCHS) versus measured (NHANES) difference in BMI is inherent to the data sources and is addressed under harmonization cautions (§2.5) and Limitations rather than by swapping measurements. Software: Python (scikit-learn, lightgbm, shap), R (rms, dcurves, survey).
+2.13 Data-integrity audit
+An adversarial audit corrected three silent data-processing defects before final analysis: (1) living-alone fabricated to a constant in NHANES pre (DMDHHSIZ absent → constant imputation) — corrected to preserve missingness; (2) NHANES post physical-activity coded 0 for all respondents due to string-typed unit fields mis-parsed to NaN — corrected with explicit unit mapping; (3) an income refusal code (77777) not treated as missing, placing non-respondents in the top income quintile — corrected. These affected data integrity but not the substantive conclusions.
+2.14 Ethical Considerations
+KCHS and NHANES are public, de-identified secondary datasets. NHANES data collection was approved by the NCHS Research Ethics Review Board, and KCHS is conducted under the authority of the KDCA. The present secondary analysis was reviewed by the Institutional Review Board of Daejeon University, which granted an exemption from review (approval number [to be inserted]) on the grounds that the study uses publicly available and de-identified data, collects and records no personal identifiers, and poses no more than minimal risk (no participant contact, intervention, or biological sampling). No re-identification was attempted, no compensation was involved, and no individually identifiable information is reported.
+3. Results
+3.1 Participant characteristics
+Weighted depression prevalence (PHQ-9 ≥10): KCHS 3.6%, NHANES pre 8.4%, post 12.2% (Figure 6). The surveys differed markedly on measured covariates—e.g., mean BMI 23.7 (KCHS) vs 29.8 (NHANES), and weighted food-insecurity prevalence 2.9% vs ~16%—consistent with genuinely distinct populations and, for food insecurity, with the single-item-vs-module measurement difference. NHANES post had substantial DPQ item non-response (~33%); post results are complete-case and interpreted with caution. Exact values are tabulated in Multimedia Appendix 3, Table S6.
+3.2 Model development and internal performance
+LightGBM was the primary model selected a priori by internal cross-validated AUROC (§2.8). Internal hold-out AUROC was 0.832 (95% CI 0.822–0.841), AUPRC 0.233, Brier 0.031, calibration slope 1.00, CITL +0.10 — H1 met.
+3.3 Geographic and temporal (COVID) external validation
+See Table 2 and Figure 4. Discrimination remained clinically useful but lower: pre 0.772 (0.745–0.797), post 0.769 (0.747–0.789). Calibration deteriorated in both directions of the calibration line: the slope fell to 0.66 (pre) and 0.68 (post), and CITL rose to +0.49 and +1.11, indicating that the Korea-trained model systematically under-predicted absolute risk in the US—as expected from the large prevalence difference (KCHS 3.6% vs NHANES 8.4% and 12.2%). Out-of-sample intercept/slope recalibration restored calibration (slope→0.99, CITL→0.00) with discrimination essentially unchanged — H2 and H3 supported.
+Table 2. Discrimination and calibration (primary model, LightGBM, 17 predictors, weighted).
+Metric
+Internal
+NHANES pre
+pre (recal.)
+NHANES post
+post (recal.)
+AUROC
+0.832
+0.772
+0.769
+0.769
+0.767
+95% CI
+0.822–0.841
+0.745–0.797
+—
+0.747–0.789
+—
+AUPRC
+0.233
+0.267
+0.262
+0.346
+0.346
+95% CI
+0.216–0.250
+0.228–0.315
+—
+0.318–0.378
+—
+Brier
+0.031
+0.071
+0.070
+0.099
+0.093
+ECE
+0.004
+0.032
+—
+0.067
+—
+Calibration slope
+1.00
+0.66
+0.99
+0.68
+0.99
+CITL
++0.10
++0.49
+0.00
++1.11
+0.00
+CIs are from a stratified cluster bootstrap (1000 replicates; §2.9). CITL is the offset-model calibration intercept, so positive values denote under-prediction of observed risk. Expected calibration error (ECE) confirms excellent internal calibration (0.004) with drift on external application (0.032 pre, 0.067 post), consistent with the calibration pattern and recoverable by recalibration.
+Recalibration is intercept/slope updating applied out-of-sample (5-fold cross-fit); because each fold uses a separate monotone calibration map, the recalibrated AUROC may differ trivially (±0.002) from the original and is not the target of recalibration (calibration slope/CITL are). Internal calibration uses the original probabilities. Race/ethnicity is used only for the NHANES fairness analysis, not as a predictor.
+3.4 Effect of the added predictors
+To avoid advantaging the larger predictor set through tuning, the 14-predictor comparator was given its own hyperparameter search under the identical internal protocol (§2.8; best internal CV-AUROC 0.824). The three added predictors improved external discrimination over this independently tuned 14-predictor model: pre 0.749→0.772 (Δ+0.023, 95% CI +0.015 to +0.030; P&lt;.001 by stratified cluster paired bootstrap), post 0.753→0.769 (Δ+0.016, 95% CI +0.010 to +0.021; P&lt;.001), with internal AUROC rising 0.822→0.832. Independent tuning did not help the 14-predictor model—running it with the 17-predictor configuration gave nearly identical results (pre 0.750, post 0.754)—so the gain reflects predictor content rather than modeling strategy. Removing food insecurity alone (16-predictor model) retained most of the gain (pre 0.767, post 0.760), confirming the improvement does not depend on the single most weakly harmonized predictor.
+3.5 Why external discrimination plateaus at ~0.77: concept shift
+Extensive leakage-controlled optimization (&gt;450 experiments: feature engineering, hyperparameter search, heterogeneous ensembling, transfer-robust internal selection, domain adaptation, alternative losses, and structural variants) did not exceed external AUROC ~0.77 when model selection was restricted to KCHS-internal criteria. Apparent gains from externally-tuned variants (e.g., specific interaction terms, ensemble weights) did not survive leakage control.
+We localized the ceiling with an in-domain oracle: fitting NHANES on its own labels (a deliberate §2.10 violation, for diagnosis only) under cross-validation. Across logistic, penalized-logistic, histogram- and tree-gradient-boosting learners, the honest 5-fold cross-validated oracle reached only ~0.77 (approximately 0.765–0.775 depending on learner; pooled bootstrap 95% CI ≈0.75–0.79), and even the optimistic in-sample (apparent) bound was 0.773. The KCHS-transferred model (pre 0.772, post 0.769) therefore already sits within the maximum discrimination extractable from these predictors within NHANES itself—the transported model is at, not below, its achievable ceiling—whereas the same 17 predictors reached ~0.83 in a same-sized Korean sample. Three further pre-specified checks converged on the same conclusion: (i) covariate-shift correction by density-ratio reweighting of the KCHS training sample toward the NHANES covariate distribution (labels unused) reduced external AUROC (to 0.766/0.758), indicating the gap is not covariate shift; (ii) increasing the KCHS training set from 0.5M to 2M examples did not raise—and slightly lowered—external discrimination, consistent with source-specific overfitting rather than an estimation-limited ceiling; and (iii) adding every remaining harmonized-but-unused survey item (public-assistance receipt, alcohol-consumption detail, weekend sleep) left external AUROC unchanged (Δ&lt;0.001). Deep tabular learners (a multilayer perceptron, TabNet, and an FT-Transformer) were additionally trained and transferred; all fell below gradient boosting internally and none exceeded it on both external cohorts (Multimedia Appendix 4), consistent with the model-agnostic ceiling. The residual gap thus reflects concept shift (predictor–outcome relationships differ between populations), not sample size, model choice, covariate imbalance, or omitted harmonized information, and is not closable by recalibration (which corrects calibration, not rank ordering).
+3.6 Parsimonious deployment model
+Predictors were entered in descending order of global SHAP importance and the model refitted at each item count (internal / external-pre / external-post): 3 items 0.782/0.713/0.726; 5 items 0.809/0.741/0.745; 6 items 0.815/0.752/0.754; 7 items 0.819/0.761/0.758; 8 items 0.825/0.770/0.753; 12 items 0.831/0.771/0.767; 17 items 0.832/0.772/0.769. Eight items was the smallest count whose internal discrimination came within 0.01 AUROC of the full model (0.825 vs 0.832; 7 items fell short at 0.819), and this criterion used internal data only. The resulting 8-item model (self-rated health, age, sex, sleep duration, oral health, partnership, employment, smoking) retained essentially all external discrimination in the pre-pandemic cohort (0.770 vs 0.772) but lost 0.016 in the post-pandemic cohort (0.753 vs 0.769); H4 is therefore supported for the pre-pandemic cohort and only partially for the post-pandemic cohort, where a 12-item version recovers the difference (0.767). The 8-item version remains suitable for a low-burden self-administered form, with the post-pandemic shortfall reported as a deployment caveat. The full item-count trajectory is tabulated in Multimedia Appendix 3, Table S8.
+3.7 Sensitivity analyses
+Discrimination was stable across specifications that alter modeling choices rather than the target condition (Figure 7): weighted training (0.831/0.773/0.764 internal/pre/post), missing-indicator imputation (0.833/0.770/0.767), multiple imputation by chained equations (0.833/0.770/0.767), and the 16- and 14-predictor variants (§3.4) all lay within 0.01 of the primary model internally. Restricting both training and evaluation to respondents aged ≥30 years improved discrimination (0.840/0.784/0.788), consistent with the lower subgroup performance observed at ages 20–39 (§3.8). Changing the outcome definition to PHQ-9 ≥5 lowered discrimination throughout (0.759/0.736/0.739) at a much higher weighted prevalence (16.1%/25.0%/32.1%), as expected when the target shifts from moderate-or-worse symptoms to any symptom burden; notably, the Korea–US gap almost disappears at this cut-off (0.759 vs 0.736–0.739), indicating that the transportability loss is concentrated in the more severe end of the symptom distribution. Data-integrity fixes (§2.13) did not alter substantive conclusions. Exact values are tabulated in Multimedia Appendix 3, Table S7.
+3.8 Interpretability, fairness, and clinical utility
+Global SHAP importance was dominated by self-rated health (mean |SHAP| 0.58), followed by age (0.38), sex (0.30), sleep duration (0.26), self-rated oral health (0.24), partnership (0.17), and employment (0.17); food insecurity contributed modestly (0.06, ranked 11th). Two of the three added predictors (oral health, employment) thus rank within the top seven, consistent with their measured incremental value (Figure 1). The rank ordering of predictor importance was highly concordant between KCHS and both NHANES cycles (Spearman ρ=0.97 pre, 0.99 post), indicating that the two populations use the predictors in a similar order; this suggests the transportability limit lies in the strength, not the structure, of predictor–outcome associations. The clearest exception was food insecurity, which ranked 11th in KCHS but 7th in NHANES pre, consistent with its different measurement (single item vs 10-item module) and much higher prevalence in the US.
+Subgroup discrimination in KCHS was fairly uniform (weighted AUROC 0.79–0.86): sex (female 0.82, male 0.83), education (0.81–0.83), and age (20–39 years 0.79 &lt; 40–59 0.83 &lt; ≥60 0.86). In NHANES, discrimination was lower and more variable across race/ethnicity: Mexican American 0.70, non-Hispanic White 0.78, non-Hispanic Black 0.76, non-Hispanic Asian 0.81, other Hispanic 0.78, other/multiracial 0.77 (small subgroup sizes, wide CIs), indicating reduced performance in some minority groups that should be reported as an equity caveat (Figure 5). Internal subgroup calibration was excellent (calibration slope 0.97–1.01 across sex and age strata).
+On decision-curve analysis (weighted, cohort-specific treat-all reference), the model provided positive net benefit across a clinically relevant threshold-probability range in all three datasets (Figure 3). At the Youden-optimal threshold, sensitivity/specificity were 0.75/0.76 (internal), 0.76/0.65 (NHANES pre), and 0.71/0.68 (NHANES post); positive predictive value was low (0.10–0.24) and negative predictive value high (0.95–0.99), as expected for population screening at low prevalence (full operating characteristics across thresholds in Multimedia Appendix 3, Table S1). Tuned to a triage-appropriate 85% sensitivity, the model flagged roughly half of the external population (pre 51%, post 55%) at a PPV of 0.14 (pre) and 0.19 (post)—a number needed to screen of 7.1 and 5.4—and the 8-item deployment model performed comparably (PPV 0.13/0.18; number needed to screen 7.6/5.6). After local intercept/slope recalibration, net benefit remained positive and exceeded the screen-all strategy at threshold probabilities of 0.10–0.15 in every dataset (eg, +0.033 over screen-all at a 0.10 threshold in NHANES post; Multimedia Appendix 3, Tables S4–S5). Clinical utility remains provisional pending prospective evaluation.
+4. Discussion
+4.1 Principal Findings
+A depression-screening ML model developed in Korea and externally validated in the US met its internal target (AUROC 0.832) and retained clinically useful—though lower—discrimination (~0.77) on genuinely external US data and across the COVID-19 shift, with calibration recoverable by lightweight recalibration. Expanding the transportable predictor set from 14 to 17 produced a real, cross-validated external gain; further modeling did not, and the external plateau at ~0.77 is explained by concept shift rather than sample size or algorithm.
+4.2 Comparison With Prior Work
+Prior ML depression models built on Korean national surveys report strong internal performance but no external validation. Using KNHANES, Kim et al [12] classified PHQ-9 ≥10 with internal AUROC up to 0.90; using the KCHS, Kim et al [11] predicted the continuous PHQ-9 score with R²≈0.33—both identifying perceived stress and subjective health as dominant predictors. Two deliberate design choices explain why our internal discrimination is lower (0.83): we excluded outcome-proximal predictors such as perceived stress and single-item depressed-mood questions, which inflate apparent performance but are near-tautological with the outcome; and we restricted the predictor set to variables transportable to a second country. In exchange, this study provides what prior work did not—genuine cross-national and cross-pandemic external validation, an explicit transportability ceiling characterized by an in-domain oracle and &gt;450 leakage-controlled experiments, and a recalibration analysis. That the same predictors carry substantially more signal within Korea (~0.83) than in the US (~0.77) is a concrete instance of the dataset-shift problem described for deployed clinical AI [10], and underscores that high internally-reported AUROCs do not guarantee cross-population usefulness.
+4.3 Strengths
+Identical PHQ-9 outcome; genuinely external validation across country, health system, race/ethnicity, and survey mode; temporal validation with recalibration; complex-survey–weighted evaluation with cluster CIs; a documented predictor-set amendment with pre-specified transfer criteria; a data-integrity audit; and leakage-controlled optimization that rules out overfitting-driven optimism.
+4.4 Limitations
+Cross-sectional (screens current symptoms, not future onset); differing measurement of alcohol, physical activity, income, BMI, and food insecurity; NHANES post DPQ non-response (~33%, complete-case); living-alone unavailable in NHANES pre; food insecurity single-item and unmeasured in KCHS 2020–2021; reduced discrimination in some racial/ethnic subgroups (wide CIs); low PPV at population prevalence (triage aid, not diagnostic); and prior depression diagnosis not recorded in KCHS 2017–2025 (precluding a diagnosis-exclusion sensitivity analysis). Model development used a 500,000-record training set and a 100,000-record hold-out drawn from the 2,048,510 pooled records rather than the full pooled sample (§2.2); a training-set size experiment showed this did not cost external discrimination (§3.5), but internal estimates are hold-out rather than fully cross-validated. The 14-predictor comparator was trained with the same algorithm and a separately tuned configuration (§3.4), yet both models share a single preprocessing and evaluation pipeline, so the 14→17 comparison isolates predictor content rather than modeling strategy. Finally, the 8-item deployment model lost 0.016 AUROC relative to the full model in the post-pandemic cohort (§3.6), so item reduction should be re-evaluated whenever the deployment population differs materially from the development population.
+The transportable predictor set is also bounded by the development survey's content. In a coverage analysis we extracted candidate domains available in NHANES but not harmonizable to KCHS—physician-diagnosed multimorbidity (asthma, arthritis, thyroid, chronic obstructive pulmonary disease, liver disease, and cancer, excluding circulatory conditions) and healthcare utilization—and found that adding them raised the NHANES in-domain oracle from 0.765 to 0.778. KCHS, however, records only hypertension and diabetes among physician-diagnosed conditions (both already included) and does not collect a broader chronic-disease inventory, hospitalization, or visit counts; these domains therefore cannot enter a KCHS-developed transportable model. Part of the residual external gap is thus attributable to development-survey coverage rather than concept shift alone, and a development survey that captured multimorbidity and utilization could plausibly lift the transportable ceiling by ~0.01 AUROC.
+4.5 Conclusions
+A survey-derived depression screener transports across country and pandemic with clinically useful discrimination and recoverable calibration. The cross-national discrimination ceiling (~0.77) is a concept-shift limit intrinsic to transportable survey predictors, not a modeling failure. A low-burden 8-item version, paired with local recalibration, is a plausible scalable digital triage aid.
+Table 1. Harmonized 17-predictor set (KCHS ↔ NHANES). Predictors 1–14 are the protocol-specified set; 15–17 are the amendment additions (§2.5.1).
+#
+Concept
+KCHS (example var)
+NHANES (var)
+Harmonized definition
+1
+Age
+age
+RIDAGEYR
+Continuous
+2
+Sex
+sex
+RIAGENDR
+Male/female
+3
+Education
+sob_01z1
+DMDEDUC2
+4 levels
+4
+Household income
+fma_14z1
+INDFMPIR
+Within-survey quintiles
+5
+Self-rated health
+qoa_01z1
+HUQ010
+5-level ordinal (1 best–5 worst)
+6
+Partnered
+sod_02z3
+DMDMARTZ
+Partnered vs not
+7
+Living alone
+mbhld_co
+DMDHHSIZ
+Yes/no (absent in NHANES pre)
+8
+Smoking
+sma_03z2
+SMQ020/040
+Never/former/current
+9
+Alcohol
+dra_01z1
+ALQ111/121/130
+Current drinker
+10
+Physical activity
+pha_07z1
+PAQ650/665; PAD790/810
+Meets aerobic recommendation
+11
+Sleep duration
+mtc_17z1
+SLD012
+Hours (continuous)
+12
+BMI
+oba_bmi
+BMXBMI
+Continuous (self-report vs measured)
+13
+Hypertension
+hya_04z1
+BPQ020
+Diagnosed y/n
+14
+Diabetes
+dia_04z1
+DIQ010
+Diagnosed y/n
+15
+Employment
+soa_01z1
+OCD150
+Currently working/with job vs not
+16
+Self-rated oral health
+ora_01z1
+OHQ845
+5-level ordinal (1 best–5 worst)
+17
+Food insecurity
+nue_01z1
+FSDAD
+Insecure vs secure (single-item vs 10-item module; see cautions)
+—
+Outcome: depression
+mtb_07a1–i1
+DPQ010–090
+PHQ-9 sum ≥10
+—
+Race/ethnicity (fairness only)
+—
+RIDRETH3
+NHANES subgroup analysis only
+The full year-specific harmonization crosswalk is provided as Multimedia Appendix 2.
+Figure legends. Figure 1: Global SHAP importance of the 17 predictors (KCHS). Figure 2: Calibration plots (internal, NHANES pre, NHANES post; original probabilities). Figure 3: Decision curves (net benefit) for the three datasets. Figure 4: Receiver operating characteristic curves (weighted) for internal, NHANES pre, and NHANES post. Figure 5: Subgroup discrimination (weighted AUROC) by sex, age, and education (KCHS) and race/ethnicity (NHANES pre). Figure 6: Weighted sample characteristics across cohorts—panel A, prevalence/proportion; panel B, means (exact values in Multimedia Appendix 3, Table S6). Figure 7: Sensitivity analyses—weighted AUROC across specifications for internal, NHANES pre, and NHANES post (exact values in Multimedia Appendix 3, Table S7). Tables: Table 1 (harmonized predictor set) and Table 2 (discrimination and calibration).
+Acknowledgments
+The authors thank the Korea Disease Control and Prevention Agency (KDCA) and the US National Center for Health Statistics (NCHS) for making the KCHS and NHANES data available. Generative artificial intelligence tools were used to assist with analysis code and manuscript drafting; all data processing, analyses, results, and interpretations were verified by the authors, who take full responsibility for the content.
+Funding
+This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+Data Availability
+NHANES data are openly available from the NCHS (https://wwwn.cdc.gov/nchs/nhanes/). KCHS microdata are access-controlled and were obtained through the KDCA raw-data request-and-review process (https://chs.kdca.go.kr); under the data-use agreement they cannot be redistributed. To support reproducibility, the analysis code, the variable-harmonization dictionary, and the pre-specification/amendment document are released publicly; derived result tables are provided as Multimedia Appendices.
+Authors' Contributions
+[Author contributions, described per the CRediT taxonomy.]
+Conflicts of Interest
+The authors declare no conflicts of interest.
+Abbreviations
+AMA: American Medical Association; AUPRC: area under the precision-recall curve; AUROC: area under the receiver operating characteristic curve; BMI: body mass index; CI: confidence interval; CITL: calibration-in-the-large; CV: cross-validation; DCA: decision curve analysis; DPQ: depression screener module (NHANES); KCHS: Korea Community Health Survey; KDCA: Korea Disease Control and Prevention Agency; LightGBM: light gradient-boosting machine; ML: machine learning; NCHS: National Center for Health Statistics; NHANES: National Health and Nutrition Examination Survey; OSF: Open Science Framework; PHQ-9: Patient Health Questionnaire-9; PPV: positive predictive value; PROBAST: Prediction model Risk Of Bias Assessment Tool; PSU: primary sampling unit; SHAP: Shapley additive explanations; TRIPOD+AI: Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis, artificial intelligence extension.
+Multimedia Appendices
+Multimedia Appendix 1. TRIPOD+AI reporting checklist.
+Multimedia Appendix 2. Year-specific KCHS↔NHANES variable-harmonization crosswalk and predictor-set amendment/pre-specification document.
+Multimedia Appendix 3. Clinical utility, characteristics, and sensitivity analyses: reference-threshold operating characteristics (Table S1), triage-oriented high-sensitivity operating points (Table S4), decision-curve net benefit (Table S5), weighted sample characteristics (Table S6), full sensitivity-analysis table (Table S7), and the parsimonious-model item-count trajectory (Table S8); SHAP, calibration, decision-curve, ROC, and subgroup figures.
+Multimedia Appendix 4. Transportability-ceiling analyses: leakage-controlled optimization attempts and deep tabular learners (Tables S2–S3) and the NHANES in-domain oracle by predictor set.
+References
+GBD 2019 Diseases and Injuries Collaborators. Global burden of 369 diseases and injuries in 204 countries and territories, 1990-2019: a systematic analysis for the Global Burden of Disease Study 2019. Lancet. 2020;396(10258):1204-1222.
+COVID-19 Mental Disorders Collaborators. Global prevalence and burden of depressive and anxiety disorders in 204 countries and territories in 2020 due to the COVID-19 pandemic. Lancet. 2021;398(10312):1700-1712.
+Kroenke K, Spitzer RL, Williams JBW. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-613.
+Collins GS, Moons KGM, Dhiman P, et al. TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods. BMJ. 2024;385:e078378.
+Moons KGM, Wolff RF, Riley RD, et al. PROBAST: a tool to assess risk of bias and applicability of prediction model studies: explanation and elaboration. Ann Intern Med. 2019;170(1):W1-W33.
+Steyerberg EW, Vergouwe Y. Towards better clinical prediction models: seven steps for development and an ABCD for validation. Eur Heart J. 2014;35(29):1925-1931.
+Van Calster B, McLernon DJ, van Smeden M, Wynants L, Steyerberg EW. Calibration: the Achilles heel of predictive analytics. BMC Med. 2019;17(1):230.
+Vickers AJ, Elkin EB. Decision curve analysis: a novel method for evaluating prediction models. Med Decis Making. 2006;26(6):565-574.
+Lundberg SM, Lee SI. A unified approach to interpreting model predictions. Adv Neural Inf Process Syst. 2017;30:4765-4774.
+Finlayson SG, Subbaswamy A, Singh K, et al. The clinician and dataset shift in artificial intelligence. N Engl J Med. 2021;385(3):283-286.
+Kim GM, Cha S, Jung M, Kim SK. Machine learning prediction of depression in culturally diverse families: findings from the Korea Community Health Survey. Front Public Health. 2025;13:1666084.
+Kim NH, Kim M, Han JS, et al. Machine-learning model for predicting depression in second-hand smokers in cross-sectional data using the Korea National Health and Nutrition Examination Survey. Digit Health. 2024;10:20552076241257046.
+Pourmotabbed A, Moradi S, Babaei A, et al. Food insecurity and mental health: a systematic review and meta-analysis. Public Health Nutr. 2020;23(10):1778-1790.
+Amiri S. Unemployment associated with major depression disorder and depressive symptoms: a systematic review and meta-analysis. Int J Occup Saf Ergon. 2022;28(4):2080-2092.
+Karimi S, et al. The impact of oral health on depression: a systematic review. Spec Care Dentist. 2025;45(1). doi:10.1111/scd.13079
+Lumley T. Analysis of complex survey samples. J Stat Softw. 2004;9(8):1-19.
+
+Figures
+
+Figure 1. Global SHAP importance of the 17 predictors (KCHS).
+
+Figure 2. Calibration plots (internal, NHANES pre, NHANES post; original probabilities).
+
+Figure 3. Decision curves (net benefit) for the three datasets.
+
+Figure 4. Receiver operating characteristic curves (weighted) for internal, NHANES pre, and NHANES post.
+
+Figure 5. Subgroup discrimination (weighted AUROC) by sex, age, and education (KCHS) and race/ethnicity (NHANES pre).
+
+Figure 6. Weighted sample characteristics across cohorts: panel A, prevalence/proportion; panel B, means.
+
+Figure 7. Sensitivity analyses: weighted AUROC across specifications for internal, NHANES pre, and NHANES post.

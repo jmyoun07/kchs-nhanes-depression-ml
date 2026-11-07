@@ -1,0 +1,11 @@
+﻿name,internal,ext_pre,ext_post,seconds,protocol_compliant,note
+D90_ORACLE_nhanes_pooled_logit_C1,,0.7703262018929296,0.7621679173584894,,False,"★비준수 상한진단: NHANES pre+post 통합 5-fold 자체적합(n=13098), all=0.7654"
+D90_ORACLE_nhanes_pooled_logit_C0.1,,0.7699730558322154,0.7627670332180656,,False,"★비준수 상한진단: NHANES pre+post 통합 5-fold 자체적합(n=13098), all=0.7655"
+D90_ORACLE_nhanes_pooled_logit_C0.01,,0.765241965288828,0.7637238381523543,,False,"★비준수 상한진단: NHANES pre+post 통합 5-fold 자체적합(n=13098), all=0.7637"
+D90_ORACLE_nhanes_pooled_lgbm_add,,0.7699998989139497,0.767482829117524,,False,"★비준수 상한진단: NHANES pre+post 통합 5-fold 자체적합(n=13098), all=0.7726"
+D90_ORACLE_nhanes_pooled_lgbm_d3_reg,,0.7621234086930896,0.76932401466438,,False,"★비준수 상한진단: NHANES pre+post 통합 5-fold 자체적합(n=13098), all=0.7704"
+D91_ORACLE_learncurve_frac0.25,,0.7592635836849628,,,False,"★비준수: NHANES 자체적합 학습표본 25% (pre+post 통합 AUROC), sd=0.0006"
+D91_ORACLE_learncurve_frac0.5,,0.7634544561589852,,,False,"★비준수: NHANES 자체적합 학습표본 50% (pre+post 통합 AUROC), sd=0.0008"
+D91_ORACLE_learncurve_frac1.0,,0.7651228710082978,,,False,"★비준수: NHANES 자체적합 학습표본 100% (pre+post 통합 AUROC), sd=0.0007"
+D92_DIAG_drop_age,0.8226231918203949,0.7616415946215955,0.7357533801351648,96.7,False,★선택근거가 외부성능이면 비준수. age 제외 시 외부 변화 진단용(개념이동 검증)
+D93_DIAG_srh_oh_only,0.8069237597251948,0.7647570627151016,0.7371321559344524,82.8,False,★진단: 연속형 중 srh/oral_health만 사용(개념이동 큰 age/sleep/bmi 제외)

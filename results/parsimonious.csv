@@ -1,0 +1,8 @@
+K,features,AUROC,AUPRC,Brier,cal_slope,ΔAUROC_vs_full10
+3,"srh, age, sex",0.7951,0.1574,0.0323,0.998,-0.0379
+4,"srh, age, sex, sleep_hrs",0.8169,0.197,0.0316,0.988,-0.016
+5,"srh, age, sex, sleep_hrs, smoking",0.8234,0.206,0.0314,0.992,-0.0095
+6,"srh, age, sex, sleep_hrs, smoking, partnered",0.828,0.2111,0.0313,0.994,-0.0049
+8,"srh, age, sex, sleep_hrs, smoking, partnered, income_q, bmi",0.8315,0.2164,0.0312,0.998,-0.0014
+10,"srh, age, sex, sleep_hrs, smoking, partnered, income_q, bmi, edu, current_drinker",0.8325,0.2178,0.0311,0.999,-0.0005
+14,"srh, age, sex, sleep_hrs, smoking, partnered, income_q, bmi, edu, current_drinker, active, living_alone, htn, dm",0.833,0.2186,0.0311,0.999,0.0001

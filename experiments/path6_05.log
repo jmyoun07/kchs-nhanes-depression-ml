@@ -1,0 +1,21 @@
+Mahalanobis  KCHS med=4.28 p90=5.49 | pre med=5.78 p90=8.30 | post med=5.61
+NHANES pre 의 KCHS 분위수 위치: 0.932 / post 0.915
+core 400000 tail 100000
+proxy tail: lgbm=0.80783  logit=0.80084
+proxy fixed-α curve: [(np.float64(0.0), 0.807825), (np.float64(0.1), 0.810306), (np.float64(0.2), 0.812062), (np.float64(0.3), 0.813068), (np.float64(0.4), 0.813322), (np.float64(0.5), 0.81284), (np.float64(0.6), 0.81165), (np.float64(0.7), 0.809809), (np.float64(0.8), 0.807342), (np.float64(0.9), 0.804321), (np.float64(1.0), 0.800838)]
+           c    s  amax  proxy_wauc
+0   4.284533  0.5   0.3    0.812711
+13  4.284533  4.0   0.5    0.812623
+1   4.284533  0.5   0.5    0.812616
+46  5.026158  4.0   0.7    0.812584
+62  5.488276  4.0   0.7    0.812575
+30  4.736275  4.0   0.7    0.812573
+14  4.284533  4.0   0.7    0.812548
+78  6.089378  4.0   0.7    0.812532
+selected gate c=4.28 s=0.50 amax=0.30 (proxy=0.81271)
+{'name': 'G1_gate_c4.3_s0.5_a0.3', 'internal': 0.830229, 'ext_pre': 0.775776, 'ext_post': 0.769713, 'protocol_compliant': True, 'seconds': None, 'note': '밀도게이트 개별화 α (KCHS 꼬리홀드아웃 프록시 선택, proxy=0.81271)'}
+{'name': 'G2_fixed_a0.4', 'internal': 0.828331, 'ext_pre': 0.774494, 'ext_post': 0.770766, 'protocol_compliant': True, 'seconds': None, 'note': '고정 α=0.4 (KCHS 꼬리홀드아웃 프록시 선택)'}
+[LightGBM] [Fatal] Number of rows 500000 exceeds upper limit of 10000 for a query
+lambdarank failed: Number of rows 500000 exceeds upper limit of 10000 for a query
+saved -> C:/Users/rudtn/Desktop/claude code/지역사회건강\results\path6_05_gate.csv
+TOTAL 96.4 s

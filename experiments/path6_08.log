@@ -1,0 +1,23 @@
+core/tail 400000 100000
+  proxy[C0_tree_all] = 0.80990
+  proxy[C1_no_bmi] = 0.80915
+  proxy[C2_no_bmi_sleep] = 0.79943
+  proxy[C3_no_highshift] = 0.79736
+  proxy[C4_tree_only_srh_oh] = 0.79427
+  proxy[C5_tree_none_pureLR] = 0.80084
+프록시 최우수 구조: C0_tree_all 0.8099
+{'name': 'P8_C0_tree_all', 'internal': 0.83134, 'ext_pre': 0.772255, 'ext_post': 0.765308, 'protocol_compliant': True, 'seconds': None, 'note': '★KCHS 꼬리프록시 선택 구조 (proxy=0.80990) | tree_feats=17'}
+{'name': 'P8_C1_no_bmi', 'internal': 0.830674, 'ext_pre': 0.773029, 'ext_post': 0.76557, 'protocol_compliant': False, 'seconds': None, 'note': '★진단전용: 구조 외부선택은 §2.10 위반 (proxy=0.80915) | tree_feats=16'}
+{'name': 'P8_C2_no_bmi_sleep', 'internal': 0.822587, 'ext_pre': 0.761209, 'ext_post': 0.76701, 'protocol_compliant': False, 'seconds': None, 'note': '★진단전용: 구조 외부선택은 §2.10 위반 (proxy=0.79943) | tree_feats=15'}
+{'name': 'P8_C3_no_highshift', 'internal': 0.819502, 'ext_pre': 0.763116, 'ext_post': 0.760416, 'protocol_compliant': False, 'seconds': None, 'note': '★진단전용: 구조 외부선택은 §2.10 위반 (proxy=0.79736) | tree_feats=14'}
+{'name': 'P8_C4_tree_only_srh_oh', 'internal': 0.818602, 'ext_pre': 0.763779, 'ext_post': 0.756628, 'protocol_compliant': False, 'seconds': None, 'note': '★진단전용: 구조 외부선택은 §2.10 위반 (proxy=0.79427) | tree_feats=7'}
+{'name': 'P8_C5_tree_none_pureLR', 'internal': 0.81046, 'ext_pre': 0.758511, 'ext_post': 0.759478, 'protocol_compliant': False, 'seconds': None, 'note': '★진단전용: 구조 외부선택은 §2.10 위반 (proxy=0.80084) | tree_feats=0'}
+       c   s  amax  proxy_wauc
+4.284533 0.5   0.3    0.813620
+4.284533 4.0   0.5    0.813467
+4.736275 4.0   0.5    0.813397
+5.026158 4.0   0.5    0.813346
+5.488276 4.0   0.7    0.813278
+{'name': 'P8_C0_tree_all_GATED', 'internal': 0.830381, 'ext_pre': 0.773717, 'ext_post': 0.76922, 'protocol_compliant': True, 'seconds': None, 'note': '???? ????? + ?????(c=4.28,s=0.5,amax=0.3) ??? KCHS ??? ?? (proxy=0.81362)'}
+saved -> C:/Users/rudtn/Desktop/claude code/지역사회건강\results\path6_08_partlin.csv
+TOTAL 11.4 s

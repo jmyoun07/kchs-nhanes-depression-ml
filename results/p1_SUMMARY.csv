@@ -1,0 +1,9 @@
+﻿step,name,internal,ext_pre,ext_post,rule,compliant,note
+baseline,baseline_literal_500k_100k,0.830969,0.774013,0.765262,,True,명세 그대로 재현. 목표 0.831/0.774/0.7653 일치(소수3자리).
+path1_primary,C09,0.832166,0.770868,0.770985,"R5_worst_all(=R2,R3,R6)",True,"전이강건 주선택: KCHS 연도+지역 worst-case CV 최대화. post +0.0057 유의(p<0.001, CI[+0.0026,+0.0088]); pre -0.0031 비유의(p=0.32)."
+path1_alt,B16,0.831826,0.770682,0.769341,R1_loyo_mean,True,pre-0.0033 post+0.0041
+path1_alt,B03,0.831527,0.76987,0.768806,R4_mean_m_std,True,pre-0.0041 post+0.0035
+path1_alt,C02,0.831875,0.771044,0.767813,R7_avg_means,True,pre-0.0030 post+0.0026
+path1_alt,C05,0.831579,0.767802,0.769508,R8_cvar3,True,pre-0.0062 post+0.0042
+path1_ensemble,top5_worst_rankavg,0.832276,0.770373,0.769611,R9,True,pre-0.0036 post+0.0043
+ceiling_oracle,ORACLE_selffit_5foldCV,,0.772438,0.774304,,False,"★비준수(§2.10) 진단: NHANES 자체 라벨로 적합한 최상 모델의 5-fold CV. 17변수 정보 상한. pre=logitC1, post=lgb_stump."

@@ -1,0 +1,5 @@
+﻿learner,oracle_AUROC,CI_lo,CI_hi
+Logistic regression,0.7654,0.741,0.789
+"Penalized logistic (L2, C=0.1)",0.7655,0.741,0.79
+Histogram gradient boosting,0.7672,0.743,0.792
+LightGBM (small),0.7721,0.749,0.795

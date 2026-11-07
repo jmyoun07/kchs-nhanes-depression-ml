@@ -1,0 +1,2 @@
+﻿name,train_n,internal,ext_pre,ext_post,secs,note,block,protocol_compliant,d_internal,d_pre,d_post
+BASE_spec_500k,500000,0.8309685808790941,0.7740130223968016,0.765262430372477,7.8,과제지정 기준선 코드 그대로,0_BASE,True,0.0,0.0,0.0

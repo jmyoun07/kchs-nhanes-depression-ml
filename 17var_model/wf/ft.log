@@ -1,0 +1,4 @@
+[BASE-GBM] pre=0.7694 post=0.7685
+[FT-Transformer] best_val=0.8359 internal=0.8356 pre=0.7628 post=0.7722  판정=down  (1218s, ep=19)
+
+베이스라인 GBM pre=0.7694 post=0.7685. 완료.

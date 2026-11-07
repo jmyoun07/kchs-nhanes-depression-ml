@@ -1,0 +1,6 @@
+﻿learner,oracle_AUROC,CI_lo,CI_hi,method
+Logistic regression,0.7638,0.739,0.788,"grouped CV, fixed-OOF bootstrap"
+"Penalized logistic (L2, C=0.1)",0.764,0.74,0.788,"grouped CV, fixed-OOF bootstrap"
+Histogram gradient boosting,0.7724,0.746,0.798,"grouped CV, fixed-OOF bootstrap"
+LightGBM (small),0.7762,0.753,0.799,"grouped CV, fixed-OOF bootstrap"
+LightGBM (small) (refit within each replicate),0.7762,0.745,0.794,"grouped CV, nested bootstrap with refit"

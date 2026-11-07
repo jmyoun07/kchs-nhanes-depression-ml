@@ -1,0 +1,346 @@
+{
+ "confirmed": [
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Results, Testing Whether External Discrimination Can Be Raised Above ~0.77",
+   "quote": "changed external AUROC by at most 0.003 in either direction, a check evaluated on external data and therefore reported as a diagnostic rather than as leakage-controlled evidence (Multimedia Appendix 1, Table S11).003 in either direction. Deep tabular learners",
+   "problem": "The sentence is corrupted: a fragment of an earlier draft (\".003 in either direction.\") survives after the closing parenthesis, leaving an unparseable string between two sentences of the Results. This is a condensation artifact and makes the file unsubmittable as it stands.",
+   "evidence": "Manuscript line 163. The intended sentence ends at \"(Multimedia Appendix 1, Table S11)\"; results/ceiling_experiments.csv confirms the welfare/sleep rows move the baseline 0.772/0.769 by at most 0.001, and the alcohol rows in appendix3_utility.md give the 0.003 figure, so the number is right and only the duplicated tail is spurious.",
+   "severity": "major",
+   "fix": "and adding the remaining harmonized-but-unused survey items (public-assistance receipt, weekend sleep duration, alcohol frequency, alcohol quantity in two codings and binge drinking) changed external AUROC by at most 0.003 in either direction, a check evaluated on external data and therefore reported as a diagnostic rather than as leakage-controlled evidence (Multimedia Appendix 1, Table S11). Deep tabular learners",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced verbatim at manuscript line 163. The orphan fragment \".003 in either direction.\" sits after the closing citation with no subject; the intact clause already appears earlier in the same sentence. ceiling_experiments.csv and the alcohol rows confirm the 0.003 value itself is right, so only the tail is spurious."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Results, Parsimonious Deployment Model",
+   "quote": " The five-item set falls 0.0002 below the threshold and the six-item set clears it by 0.0044; the five-versus-six boundary is therefore decided at the fourth decimal and should not be read as robust, and the five-item model reaches 0.737 pre-pandemic and 0.751 post-pandemic externally.",
+   "problem": "This entire sentence duplicates the one already ending the preceding paragraph (which reads \"...should not be read as robust, the five-item model reaching 0.737 pre-pandemic and 0.751 post-pandemic externally.\"). It sits on its own line, with a leading space, immediately before the Sensitivity Analyses heading and with no blank line separating it.",
+   "evidence": "Duplicate-sentence scan flags \"The five-item set falls 0.0002 below the threshold and the six-item set clears it by 0.0044;\" as occurring twice. Both instances derive from primary2_parsimonious.csv (k=5 selection 0.812995 vs threshold 0.833235-0.02=0.813235; k=6 0.81761), so the second adds no information.",
+   "severity": "major",
+   "fix": "Delete line 168 in full and restore a blank line before \"### Sensitivity Analyses\"; the paragraph correctly ends \"...The stricter-margin seven-item variant is exploratory only, and no external information entered the item-count decision (Multimedia Appendix 1, Tables S2, S3 and S6).\"",
+   "reviewer": "editor",
+   "skeptic": "Reproduced at manuscript line 168: a space-indented stray line duplicating a sentence already inside the line-167 paragraph, with no blank line before the \"### Sensitivity Analyses\" heading at line 169. Both versions match primary2_parsimonious.csv (k=5 selection 0.812995, ext_pre 0.737231, ext_post 0.750909; k=6 0.817610), so the second adds nothing."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Results, Sensitivity Analyses",
+   "quote": " Under the common configuration of Multimedia Appendix 1, Table S5, where the 17-, 16- and 14-predictor models share one setting and the 14-predictor value is 0.758 post-pandemic, removing food insecurity alone accounts for 28% of the 17-versus-14 gap pre-pandemic and 50% post-pandemic.",
+   "problem": "Stray un-integrated sentence. It sits on its own line after \"Data-integrity fixes did not alter substantive conclusions.\" closes the preceding paragraph, with no blank line before the next heading, and it belongs with the 17-versus-14 ablation two paragraphs earlier. It is also unverifiable from the manuscript: the 16-predictor AUROCs it depends on are never reported in the body, so the reader cannot reconstruct 28% or 50%.",
+   "evidence": "results/primary2_sensitivity.csv gives 17=0.765028/0.770591, 16=0.759495/0.764047, 14=0.745047/0.757501, so 0.005533/0.019981=27.7% and 0.006544/0.013090=50.0%. Only the 17- and 14-predictor values appear in the Results text. The sentence is also reproduced verbatim in appendix3_utility.md under \"Results detail relocated from the manuscript\", which states \"No new result is introduced\".",
+   "severity": "major",
+   "fix": "Fold the line into the end of the preceding paragraph, immediately after \"...(P<.001 for both; paired rescaled cluster bootstrap).\", reading \"Under the common configuration of Multimedia Appendix 1, Table S5, in which the 17-, 16- and 14-predictor models share one setting and the 14-predictor value is 0.758 post-pandemic, removing food insecurity alone accounts for 28% of the 17-versus-14 gap pre-pandemic and 50% post-pandemic.\", and restore the blank line before the next heading.",
+   "reviewer": "editor",
+   "skeptic": "Reproduced at manuscript line 176: space-indented stray line with no blank line before the \"### Interpretability, Fairness, and Clinical Utility\" heading at line 177, and reproduced verbatim in appendix3_utility.md line 310 under \"Results detail relocated from the manuscript\". The arithmetic checks out in primary2_sensitivity.csv (17: 0.765028/0.770591; 16: 0.759495/0.764047; 14: 0.745047/0.757501), so the defect is placement, not content."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Results, Participant Characteristics",
+   "quote": "Non-response was differential, higher among respondents with less than high-school education and among Asian and Black respondents; hence the external cohorts, and particularly the post-pandemic fairness estimates, should be read as complete-case results (Multimedia Appendix 1, Table S8). Non-response was differential: higher among respondents with less than high-school education (12.9% pre, 26.6% post, MEC frame) and among Asian and Black respondents; hence the external cohorts, and particularly the post-pandemic fairness estimates, should be read as complete-case results.",
+   "problem": "Two defects in one place. First, the sentence is printed twice, the second copy adding numbers and dropping the appendix pointer. Second, the added figures 12.9% and 26.6% are computed under a different non-response definition from the 7.7% and 14.1% given in the immediately preceding sentence, and the text offers no cue that the denominators differ, inviting the reader to conclude that the less-than-high-school rate is roughly 1.7 times the overall rate when the two are not on the same scale.",
+   "evidence": "results/primary2_dpq_nonresponse.csv: for education <HS, nr3_mec_pct = 12.9 (pre) and 26.6 (post), a three-or-more-items-missing rate; the overall nr3_mec_pct is 7.4 and 13.3, not 7.7 and 14.1. The 7.7%/14.1% figures are the any-item-missing loss (8544-7888=656, 656/8544=7.68%; 6064-5210=854, 854/6064=14.08%). Table S8 in appendix3_utility.md lists these as separate rows and states \"Non-response is defined here as three or more of the nine PHQ-9 items unanswered.\"",
+   "severity": "major",
+   "fix": "Retain a single sentence: \"Non-response was differential: on the same examination-center frame, three or more items were unanswered by 12.9% of respondents with less than high-school education pre-pandemic and 26.6% post-pandemic against 7.4% and 13.3% overall on that definition, and rates were also higher among Asian and Black respondents; hence the external cohorts, and particularly the post-pandemic fairness estimates, should be read as complete-case results (Multimedia Appendix 1, Table S8).\"",
+   "reviewer": "editor",
+   "skeptic": "Reproduced verbatim at manuscript line 129: the sentence is printed twice back to back, the first copy carrying the Table S8 pointer without percentages, the second carrying percentages without the pointer."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Results, Participant Characteristics",
+   "quote": "higher among respondents with less than high-school education (12.9% pre, 26.6% post, MEC frame)",
+   "problem": "The education-specific rates 12.9% and 26.6% are three-or-more-item non-response rates, whereas the overall figures given one sentence earlier (7.7% and 14.1%) are any-item rates. The sentence invites a comparison across two different definitions of non-response without saying so, and the correct overall comparators for the quoted definition (7.4% and 13.3%) never appear in the manuscript.",
+   "evidence": "primary2_dpq_nonresponse.csv column nr3_mec_pct: overall 7.4 (pre) and 13.3 (post); <HS 12.9 and 26.6. Table S8 states \"Non-response is defined here as three or more of the nine PHQ-9 items unanswered\" and lists \"Lost to any item non-response within the MEC frame\" separately as 7.7% and 14.1%. Part B's relocated text supplies the 7.4/13.3 anchor before quoting 12.9/26.6; the manuscript lost it in condensation.",
+   "severity": "minor",
+   "fix": "Label both definitions: \"...7.7% of 8,544 pre-pandemic and 14.1% of 6,064 post-pandemic examined adults aged >=20 years were lost to PHQ-9 item non-response counting any unanswered item, yielding the complete-case analytic samples of 7,888 and 5,210. Non-response was differential: on the same examination-center frame, three or more items were unanswered by 12.9% of respondents with less than high-school education pre-pandemic and 26.6% post-pandemic against 7.4% and 13.3% overall on that definition, and rates were also higher among Asian and Black respondents; hence the external cohorts, and particularly the post-pandemic fairness estimates, should be read as complete-case results (Multimedia Appendix 1, Table S8).\"",
+   "reviewer": "stats",
+   "skeptic": "Confirmed against primary2_dpq_nonresponse.csv (nr3_mec_pct: overall 7.4/13.3, <HS 12.9/26.6) and appendix3_utility.md Table S8, which states \"Non-response is defined here as three or more of the nine PHQ-9 items unanswered\" and lists \"any item non-response within the MEC frame\" separately as 7.7%/14.1%. The manuscript places the two definitions in adjacent sentences with no cue, and the like-for-like comparators 7.4%/13.3% appear only in Part B (line 294). This is a distinct defect from the duplication in finding 4."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Methods, Model Development and Evaluation",
+   "quote": "ECE, operating characteristics and net benefit are point estimates, ECE for the reason given with Table S16, and two-sided bootstrap P values reach P<.001 at the smallest attainable value. ECE, operating characteristics and net benefit are point estimates, and two-sided bootstrap P values reach P<.001 at the smallest attainable value (Table S16).",
+   "problem": "The same statement is made twice in consecutive sentences. The second copy drops the qualifying clause \"ECE for the reason given with Table S16\", which is the only thing that tells the reader why ECE alone is unintervalled, and moves the pointer to the end so that it now appears to cover the P value convention rather than ECE.",
+   "evidence": "Table S16 in docs/appendix4_ceiling.md carries exactly one relevant statement: \"Expected calibration error (ECE) is given as a point estimate only: it is a non-negative absolute-deviation statistic that this replicate scheme biases upward, and its percentile interval failed to contain its own point estimate in one cell.\" That is a reason for ECE, not for the P value floor, which appendix5_methods.md line 60 attributes instead to 1000 replicates.",
+   "severity": "major",
+   "fix": "Retain one sentence: \"ECE, operating characteristics and net benefit are point estimates, ECE for the reason given with Multimedia Appendix 1, Table S16, and two-sided bootstrap P values reach P<.001 at the smallest attainable value.\"",
+   "reviewer": "editor",
+   "skeptic": "Reproduced verbatim at manuscript line 105: the same statement in two consecutive drafting variants, one carrying the ECE rationale and the other the table pointer. Table S16 in appendix4_ceiling.md supplies the reason (upward-biased absolute-deviation statistic under this replicate scheme), which the second copy drops."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Methods, Study Design and Data Sources",
+   "quote": "External validation used NHANES, an NCHS survey combining household interview and mobile examination center assessment, with depression measured by the Depression Screener (DPQ; PHQ-9) module under the 2015-2018 sample design and estimation procedures [18]. External validation used NHANES, an NCHS survey combining household interview and mobile examination center assessment, with depression measured by the Depression Screener (DPQ; PHQ-9) module; NCHS documents the 2015-2018 sample design and estimation procedures [18].",
+   "problem": "The same sentence is printed twice, in two slightly different revisions. A condensation artifact: the rewritten version was inserted without deleting the original. It also introduces the abbreviation DPQ twice and, in the first version, mis-states reference 18 as governing the whole validation rather than documenting the sample design.",
+   "evidence": "Automated duplicate-sentence scan of docs/manuscript_17var.md returns this as an exact repeated string (60+ characters). No other manuscript sentence repeats except line 168, reported separately.",
+   "severity": "major",
+   "fix": "Retain the second form only: \"External validation used NHANES, an NCHS survey combining household interview and mobile examination center assessment, with depression measured by the Depression Screener (DPQ; PHQ-9) module; NCHS documents the 2015-2018 sample design and estimation procedures [18].\"",
+   "reviewer": "editor",
+   "skeptic": "Reproduced verbatim at manuscript line 47: the sentence is printed twice in two variants, DPQ is introduced twice, and reference 18 is cited twice for one statement. The first variant also attaches the 2015-2018 design to the analytic cycles, which the next sentence names as 2017-March 2020 and August 2021-August 2023."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Discussion, Strengths and Limitations",
+   "quote": "Adding multimorbidity and healthcare utilization domains available in NHANES but not harmonizable to KCHS raised the in-domain oracle from 0.765 to 0.778, a 0.013 gain that is not itself evidence of signal transportable from Korea (Multimedia Appendix 1, Table S14 and Part C).",
+   "problem": "The 0.765 baseline is the Table S14 oracle fitted with a fixed penalized-logistic and gradient-boosting pair, whereas the ceiling the Results establish is the Table S15 best-learner oracle of 0.776 with PSU-grouped folds. The main text never distinguishes the two, so the \"0.013 gain\" reads as clearing the stated ceiling of 0.764-0.776 by a wide margin when, benchmarked against the best-learner 17-predictor oracle, the coverage domains add only about 0.002.",
+   "evidence": "Table S14's own note states these values \"are not the learner maximum, which is reported separately in Table S15 (0.776 for the 17-predictor set against 0.765 here)\", and Table S15's note warns that \"the two should not be read as one sequence\" - precisely the reading the manuscript sentence produces. review4_oracle_grouped.csv gives the best-learner oracle as 0.7762.",
+   "severity": "minor",
+   "fix": "Adding multimorbidity and healthcare utilization domains available in NHANES but not harmonizable to KCHS raised the in-domain oracle from 0.765 to 0.778 on the fixed penalized-logistic and gradient-boosting pair used to compare predictor sets, a 0.013 gain on that common footing and about 0.002 above the best-learner 17-predictor oracle of 0.776, and not itself evidence of signal transportable from Korea (Multimedia Appendix 1, Table S14 and Part C).",
+   "reviewer": "stats",
+   "skeptic": "Reproduced at manuscript line 223. The body uses \"the in-domain oracle\" for two different quantities without distinguishing: the Results give 0.764-0.776 (best learner 0.776, review4_oracle_grouped.csv 0.7762) while the Discussion baselines at 0.765. appendix4_ceiling.md line 59 states the Table S14 values \"are not the learner maximum, which is reported separately in Table S15 (0.776 for the 17-predictor set against 0.765 here)\" and line 73 warns \"the two should not be read as one sequence\", which is exactly the reading the body invites."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Methods, Model Development and Evaluation",
+   "quote": "Clinical utility was assessed by weighted decision-curve analysis [35] over threshold probabilities of 0.02 to 0.30 (Table S3).",
+   "problem": "The pointer's target does not carry the stated range. Table S3 tabulates net benefit at two threshold probabilities only, 0.10 and 0.15; the 0.02 to 0.30 range is shown in Figure 7. A reader sent to Table S3 to check the range cannot verify the claim there.",
+   "evidence": "Table S3 is captioned \"Net benefit at threshold probabilities of 0.10 and 0.15\" and its 18 rows contain only those two thresholds; primary2_netbenefit_models.csv likewise stores only pt=0.10 and pt=0.15. The Figure 7 legend gives \"the range 0.02 to 0.30\".",
+   "severity": "minor",
+   "fix": "Clinical utility was assessed by weighted decision-curve analysis [35] over threshold probabilities of 0.02 to 0.30 (Figure 7), with net benefit at 0.10 and 0.15 tabulated in Multimedia Appendix 1, Table S3.",
+   "reviewer": "stats",
+   "skeptic": "Reproduced at manuscript line 107. appendix3_utility.md line 54-56 captions Table S3 \"Decision-curve net benefit\" with \"Net benefit at threshold probabilities of 0.10 and 0.15\", and primary2_netbenefit_models.csv stores only pt=0.10 and pt=0.15. The 0.02 to 0.30 range appears in the Figure 7 legend, not in Table S3, so the pointer sends the reader to a target that cannot verify the claim."
+  },
+  {
+   "file": "docs/appendix3_utility.md",
+   "section": "Table S3. Decision-curve net benefit (caption)",
+   "quote": "the internal hold-out uses the original probabilities, since recalibrating on its own labels would be optimistic",
+   "problem": "The stated reason for the asymmetry is self-contradictory: the two external cohorts were also recalibrated on their own labels, and the same caption says the optimism is removed by 5-fold cross-fitting. If cross-fitting removes optimism externally it removes it internally too, so the given justification does not explain why the internal hold-out was left untouched.",
+   "evidence": "Same caption, preceding clause: \"The two external cohorts use intercept/slope-recalibrated probabilities, with recalibration applied out-of-sample by 5-fold cross-fitting grouped by primary sampling unit.\" The real reason is visible in primary2_metrics.csv: the internal hold-out is already calibrated (cal_slope 1.030893, CITL 0.102306), so no update is called for. Figure 2 does apply recalibration to all three cohorts, which the Table S3 rationale would forbid.",
+   "severity": "minor",
+   "fix": "the internal hold-out uses the original probabilities, being the deployed model in its own data and already well calibrated there (calibration slope 1.03, CITL +0.10), so no update is called for",
+   "reviewer": "stats",
+   "skeptic": "Reproduced in the Table S3 caption, appendix3_utility.md line 56. The preceding clause of the same caption says the external cohorts were recalibrated on their own labels with optimism removed by 5-fold cross-fitting grouped by primary sampling unit, so the stated reason does not distinguish the internal case. The Figure 7 legend and Figure 2 legend confirm the inconsistency: Figure 2 applies recalibration to all three cohorts. primary2_metrics.csv shows the real reason (internal cal_slope 1.030893, CITL 0.102306, already calibrated)."
+  },
+  {
+   "file": "docs/appendix4_ceiling.md",
+   "section": "Results detail relocated from the manuscript (the third recalibration step)",
+   "quote": "sat between intercept-only and intercept-plus-slope updating: it left the calibration slope at 0.83 pre-pandemic and 1.17 post-pandemic, with calibration-in-the-large +0.02 and -0.02",
+   "problem": "The post-pandemic value is not between the other two updates: intercept-only leaves the slope at 0.68 and intercept-plus-slope restores it to 1.00, whereas temperature scaling overshoots to 1.17. The word \"between\", and the manuscript's matching \"temperature scaling was intermediate\", describe the pre-pandemic case only.",
+   "evidence": "primary2_metrics.csv, NHANES post: recal_int_slope 0.681035, recal_is_slope 0.996365, recal_platt_slope 1.171646. The overshoot is on the far side of 1, not between 0.68 and 1.00.",
+   "severity": "minor",
+   "fix": "Temperature scaling, the third of the three pre-specified recalibration steps applied out-of-sample, left less residual miscalibration than intercept-only updating: the calibration slope was 0.83 pre-pandemic and 1.17 post-pandemic, the post-pandemic value overshooting 1 rather than lying between the intercept-only (0.68) and intercept-plus-slope (1.00) results, with calibration-in-the-large +0.02 and -0.02. Amend the manuscript to \"temperature scaling fell short of intercept-plus-slope updating in both cycles (Multimedia Appendix 1, Part C)\".",
+   "reviewer": "stats",
+   "skeptic": "Reproduced at appendix4_ceiling.md line 132. primary2_metrics.csv, NHANES post: recal_int_slope 0.681035, recal_is_slope 0.996365, recal_platt_slope 1.171646. 1.17 is not between 0.68 and 1.00; it overshoots past 1. The manuscript's matching \"temperature scaling was intermediate\" (line 137) carries the same error and should be corrected with it."
+  },
+  {
+   "severity": "major",
+   "fix": "At the single development-fixed operating point, positive predictive value was 0.147 pre-pandemic and 0.214 post-pandemic, ie, 6.8 and 4.7 flagged respondents required confirmatory assessment per case confirmed, corresponding to about 15 and 10 respondents screened per case detected, and 47% and 45% of the population were flagged for confirmatory assessment. Apply the same correction at Results, Interpretability, Fairness, and Clinical Utility and at Discussion, Principal Findings.",
+   "skeptic": "Reproduced at manuscript line 207, with the same mislabel at line 183 (\"number needed to screen 6.8 and 4.7\") and line 191. primary2_operating.csv records NNS as exactly 1/PPV (1/0.146926=6.81; 1/0.213924=4.67), which counts flagged respondents per case confirmed, not respondents screened. With weighted prevalence 8.449% and 12.200% (primary2_characteristics.csv) and sensitivity 0.809596 and 0.790619, respondents screened per case detected is 14.6 and 10.4. The flag rates in the same CSV (0.465586, 0.450890) close the arithmetic: 6.8/0.466=14.6. As written the screening workload is understated by a factor of about 2.2."
+  },
+  {
+   "file": "docs/appendix3_utility.md",
+   "section": "Table S2 note and the Interpretation paragraph following Table S3",
+   "quote": "At sensitivity fixed to 0.85 and 0.90, the table gives specificity, positive and negative predictive value, the share of the population flagged, and the number needed to screen (NNS = 1/PPV).",
+   "problem": "The appendix defines number needed to screen as 1/PPV, which is the number needed to assess among those flagged, not the number needed to screen. The definition is self-refuting inside this table: sensitivity is held fixed at 0.85 across all three model sizes, so the true number needed to screen is identical for the 17-predictor, 6-item and 7-item models within a cohort, yet the tabulated 'NNS' varies from 7.7 to 7.9 and 5.3 to 5.7. The Interpretation paragraph ('a number needed to screen of 7.7 and 5.3') and the relocated Results detail ('required 7.9 pre-pandemic and 5.7 post-pandemic respondents screened per case detected') repeat the error.",
+   "evidence": "results/primary2_triage.csv column NNS equals 1/PPV throughout (e.g. 17-predictor NHANES pre sens 0.85: PPV 0.13033, NNS 7.7). With sensitivity fixed at 0.85 and weighted prevalence 8.449% and 12.200% (results/primary2_characteristics.csv), the number needed to screen is 1/(0.08449 x 0.85) = 13.9 pre and 1/(0.12200 x 0.85) = 9.6 post for every model in the table.",
+   "severity": "minor",
+   "fix": "At sensitivity fixed to 0.85 and 0.90, the table gives specificity, positive and negative predictive value, the share of the population flagged, and the number needed to assess (NNA = 1/PPV, the flagged respondents requiring confirmatory assessment per case confirmed); at a fixed sensitivity target the number needed to screen depends on prevalence and sensitivity alone and is 13.9 pre-pandemic and 9.6 post-pandemic at the 0.85 target for every model shown. Correct the glosses at lines 82 and 306 to \"flagged respondents assessed per case confirmed\".",
+   "reviewer": "clinical",
+   "skeptic": "Reproduced at appendix3_utility.md line 27, with the mislabel repeated at line 82 (\"a number needed to screen of 7.7 and 5.3\") and line 306 (\"required 7.9 pre-pandemic and 5.7 post-pandemic respondents screened per case detected\"). primary2_triage.csv sets NNS = 1/PPV throughout. The internal check the reviewer gives holds: with sensitivity fixed at 0.85 and weighted prevalence 8.449% and 12.200%, respondents screened per case detected is 13.9 and 9.6 for every model in the table, yet the tabulated \"NNS\" varies by model size, which a genuine number needed to screen cannot do. The formula is at least stated explicitly, which limits the damage relative to the manuscript instance."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Item 19, Patient and public involvement",
+   "quote": "Methods, Ethical Considerations: explicit statement that patients and the public were not involved in the design, conduct, reporting or dissemination of this secondary analysis of already-collected survey data.",
+   "problem": "The location is false. The manuscript contains no patient-and-public-involvement statement anywhere; the Ethical Considerations paragraph covers ethics approval, exemption grounds and consent only. A journal that requires a PPI statement will find the checklist claiming one that does not exist in the paper.",
+   "evidence": "grep for \"involv\" across docs/manuscript_17var.md returns a single hit, \"judging those two 'supported' therefore involves interpretation\" (Discussion). The PPI sentence exists only in docs/appendix5_methods.md: \"Patients and members of the public were not involved in the design, conduct, reporting or dissemination plans of this secondary analysis of existing survey data.\"",
+   "severity": "major",
+   "fix": "Add to Methods, Ethical Considerations: \"Patients and members of the public were not involved in the design, conduct, reporting or dissemination plans of this secondary analysis of existing survey data.\" (or, if the statement stays in the appendix, change the checklist location to \"Multimedia Appendix 1, Part D\").",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 55. Grep for \"involv\" across manuscript_17var.md returns exactly one hit, \"judging those two 'supported' therefore involves interpretation\" (line 221). The Ethical Considerations paragraph (line 121) covers ethics approval, exemption grounds and consent only. The patient-and-public-involvement sentence exists solely in appendix5_methods.md, so the checklist claims a manuscript statement that does not exist."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Item 18c, Protocol",
+   "quote": "Methods, Study Design and Data Sources and Data Availability: dated protocol, statistical analysis plan and amendment written before analysis, released with the analysis code and available from the corresponding author on request; amendment rendered in Multimedia Appendix 1.",
+   "problem": "The row states that the amendment was \"written before analysis\", which is the one claim the manuscript deliberately does not make. Everywhere else the paper is explicit that the amendment postdates the 14-predictor external result. The checklist, the document a reviewer reads to audit exactly this, contradicts the manuscript on the paper's most sensitive provenance point.",
+   "evidence": "Manuscript Methods: \"added by an amendment written and dated before any model using those items was fitted, though after the external result for the 14-predictor set was known.\" docs/appendix2_crosswalk.md §B: \"written 2026-07-15 and locked before any 17-predictor model was fitted ... It was, however, written after the 14-predictor model had been developed and applied to NHANES.\"",
+   "severity": "major",
+   "fix": "Methods, Study Design and Data Sources and Data Availability: dated protocol and statistical analysis plan written before any analysis, plus a dated predictor-set amendment written after the 14-predictor external result was known but locked before any model using the amended set was fitted; all three released with the analysis code and available from the corresponding author on request; the amendment is rendered in Multimedia Appendix 1, Part A.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 50. The row folds the amendment into \"written before analysis\", contradicting the manuscript at line 87 (\"an amendment written and dated before any model using those items was fitted, though after the external result for the 14-predictor set was known\") and Part A. This is not the settled item: the settled item protects the manuscript's amendment text, whereas the checklist here makes the pre-specification claim the manuscript deliberately avoids, in the very document a reviewer uses to audit provenance."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Item 11, Missing data",
+   "quote": "Methods, Predictors and Harmonization: tree-native missing for binary predictors, median/mode imputation otherwise, two alternative schemes in sensitivity analysis; respondents missing any PHQ-9 item were excluded, quantified in Multimedia Appendix 1, Tables S4 and S8.",
+   "problem": "The named Methods subsection no longer describes any missing-data method. After the cut it says only that a preprocessing pipeline was fitted in training and applied unchanged. TRIPOD item 11 is therefore recorded as addressed in the main text when the entire content sits in an appendix.",
+   "evidence": "Manuscript Predictors and Harmonization now reads in full on this point: \"The preprocessing pipeline handling missing data was fitted in the development training set and applied unchanged to the internal hold-out and to each external set, with no leakage.\" grep for \"median\", \"mode-imputed\" and \"tree-native\" in manuscript_17var.md returns nothing; the imputation scheme is in docs/appendix5_methods.md.",
+   "severity": "major",
+   "fix": "Methods, Predictors and Harmonization (one preprocessing pipeline fitted in the training set and applied unchanged, the income quintile excepted), with the imputation scheme in Multimedia Appendix 1, Part D (tree-native missing at prediction time, median imputation for continuous and ordinal predictors, mode imputation for categorical and binary predictors in the linear comparator, and two alternative schemes in sensitivity analysis); respondents missing any PHQ-9 item were excluded, quantified in Multimedia Appendix 1, Tables S4 and S8.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 34. Grep for \"median\", \"mode\" and \"tree-native\" in manuscript_17var.md returns nothing. The named subsection now says only \"The preprocessing pipeline handling missing data was fitted in the development training set and applied unchanged to the internal hold-out and to each external set, with no leakage\" (line 93). The imputation scheme sits only in appendix5_methods.md, so item 11 is recorded at a location that does not carry it."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Item 12b, Analytical methods (handling of predictors)",
+   "quote": "Methods, Predictors and Harmonization and Model Development and Evaluation: ordinal scores modeled as numeric and standardized, continuous predictors median-imputed, age top-coded at 80 years, income as a within-cohort rank quintile; main-effects-only representation beat four candidate interaction terms.",
+   "problem": "Two of the four items named are absent from both cited Methods subsections, and a third appears only in a table cell. The row overstates what the main text now reports about predictor handling.",
+   "evidence": "grep for \"standardi\" and \"median\" in manuscript_17var.md returns nothing. \"Ordinal scores modeled as numeric variables rather than as unordered categories\" and \"median-imputed and standardized\" appear only in docs/appendix5_methods.md. Age top-coding at 80 years appears only in the Table 1 row for age, not in Methods prose.",
+   "severity": "major",
+   "fix": "Table 1 (age top-coded at 80 years) and Methods, Predictors and Harmonization (income recomputed as a within-cohort rank quintile) and Model Development and Evaluation (main-effects representation selected over four candidate interaction terms); ordinal scores modeled as numeric and standardized, and continuous predictors median-imputed, in Multimedia Appendix 1, Part D.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 36. Grep confirms \"standardi\" and \"median\" appear nowhere in manuscript_17var.md, and \"top-coded\" appears only in the Table 1 age row (line 63), not in either named Methods subsection. Three of the five items in the row are therefore not at the location claimed. Distinct row and distinct claim from finding 33."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Item 21, Model development (participants and events per analysis)",
+   "quote": "Methods, Model Development and Evaluation: training 500,000 (~18,000 events), hold-out 100,001 (~3,600), tuning subsamples 300,000 and 200,000, external cohorts 7,888 (728 events) and 5,210 (661); parsimony split 450,000/50,000 in External Validation and Sensitivity Analyses.",
+   "problem": "The tuning subsample sizes and the parsimony fitting/selection split are not in the manuscript at all, and the second location named (External Validation and Sensitivity Analyses) does not carry the 450,000/50,000 split. Item 21 is the item that asks for the n in each analysis, so the failure is not cosmetic.",
+   "evidence": "grep for \"300,000\", \"450,000\" and \"50,000\" in manuscript_17var.md returns nothing; the only \"200,000\" is \"0.830 only at n=200,000\" in the Results ceiling section, an unrelated KCHS sample-size experiment. The tuning subsamples (300,000 and 200,000) and the 450,000/50,000 parsimony split appear only in docs/appendix5_methods.md.",
+   "severity": "major",
+   "fix": "Methods, Model Development and Evaluation: training 500,000 (~18,000 events), hold-out 100,001 (~3,600), external cohorts 7,888 (728 events) and 5,210 (661); the 300,000-record and 200,000-record tuning subsamples and the 450,000/50,000 parsimony fitting-and-selection split are in Multimedia Appendix 1, Part D.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 60. Grep for \"300,000\", \"450,000\" and \"50,000\" in manuscript_17var.md returns nothing; the only \"200,000\" is the unrelated KCHS sample-size experiment at line 163. Both figures live only in appendix5_methods.md line 122. Item 21 is the item asking for n in each analysis, so the false location is material."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Item 22, Model specification",
+   "quote": "Methods, Model Development and Evaluation: full LightGBM hyperparameter configuration; Results, Parsimonious Deployment Model: the six items; Data Availability: preprocessing specification, model card and refitting code from the corresponding author on request, no public model object.",
+   "problem": "The manuscript states no hyperparameter value anywhere. Item 22 asks for enough model detail to allow third-party prediction, so recording it as satisfied in the Methods is the single most consequential broken pointer for reproducibility.",
+   "evidence": "grep for \"num_leaves\" in manuscript_17var.md returns nothing. The configuration (num_leaves 31, min_child_samples 1000, learning_rate 0.01, n_estimators 900, reg_alpha 1.0, reg_lambda 20, colsample_bytree 0.6, subsample 0.6 with subsample_freq 0) appears only in docs/appendix5_methods.md and docs/model_card_17var.md.",
+   "severity": "major",
+   "fix": "Methods, Model Development and Evaluation (algorithm, search and selection rule), with the full LightGBM hyperparameter configuration in Multimedia Appendix 1, Part D and in the model card; Results, Parsimonious Deployment Model: the six items; Data Availability: preprocessing specification, model card and refitting code from the corresponding author on request, no public model object.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 61. Grep for \"num_leaves\" in manuscript_17var.md returns nothing, and the Methods state no hyperparameter value anywhere; the configuration appears only in appendix5_methods.md and model_card_17var.md. Item 22 asks for detail sufficient for third-party prediction, so this is the most consequential of the false pointers."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Items 3b and 27b, intended purpose and intended users",
+   "quote": "Introduction (triage rationale for community and primary-care detection) and Methods, External Validation and Sensitivity Analyses: a triage aid for population screening programs and web or mobile self-assessment, operated by public-health and primary-care services.",
+   "problem": "The intended-user statement is not in the Methods subsection named, nor anywhere in the manuscript. Item 3b asks specifically for intended users, and item 27b repeats the same false location, so the checklist claims twice that the paper identifies its users when it does not.",
+   "evidence": "grep for \"primary-care services\" in manuscript_17var.md returns nothing. The sentence \"operated by public-health and primary-care services rather than by individuals acting alone\" appears only in docs/appendix5_methods.md; docs/model_card_17var.md gives \"Intended users: public-health and primary-care screening programs; researchers.\" The manuscript's External Validation and Sensitivity Analyses names only \"a parsimonious model for a low-burden self-administered form\".",
+   "severity": "major",
+   "fix": "Introduction (triage rationale for community and primary-care detection), Discussion, Clinical and Policy Implications (intended use is triage, not diagnosis), and Multimedia Appendix 1, Part D: a triage aid for population screening programs and web or mobile self-assessment, operated by public-health and primary-care services rather than by individuals acting alone. Apply the same correction to item 27b.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 17, with the same location repeated at line 69 for item 27b. Grep for \"primary-care services\" in manuscript_17var.md returns nothing; the sentence exists only in appendix5_methods.md. The named Methods subsection (line 113) says only \"a parsimonious model for a low-burden self-administered form\". Item 3b asks specifically for intended users, so both rows record an intended-user statement the manuscript does not contain."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Methods, Ethical Considerations",
+   "quote": "granted an exemption from review (approval number [to be inserted]) on the grounds that the study uses publicly available de-identified data, records no personal identifiers, and poses no more than minimal risk",
+   "problem": "The stated exemption ground contradicts the paper's own Data Availability statement. Only NHANES is publicly available; KCHS microdata, the development source and 99.4% of the analyzed records, are access-controlled and non-redistributable.",
+   "evidence": "Manuscript Data Availability: \"KCHS microdata are access-controlled and were obtained through the KDCA raw-data request-and-review process (https://chs.kdca.go.kr); under the data-use agreement the microdata cannot be redistributed.\" The same wording is repeated in docs/appendix5_methods.md (\"publicly available and de-identified data\"), so the contradiction is carried in both documents.",
+   "severity": "minor",
+   "fix": "granted an exemption from review (approval number [to be inserted]) on the grounds that the study analyzes de-identified secondary survey data obtained under the data-collecting agencies' release conditions, records no personal identifiers, and poses no more than minimal risk. Confirm the wording against the IRB determination letter before substituting, and apply the same correction in Part D.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at manuscript line 121. Data Availability at line 240 states \"KCHS microdata are access-controlled and were obtained through the KDCA raw-data request-and-review process... under the data-use agreement the microdata cannot be redistributed.\" KCHS supplies the development sample and 99.4% of analyzed records, so \"publicly available\" is contradicted within the manuscript. The same wording is repeated in appendix5_methods.md. The IRB number itself is intentionally blank and is not at issue here."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Item 14, Fairness",
+   "quote": "Methods, External Validation and Sensitivity Analyses: weighted subgroup AUROC and calibration slope across sex, age, education and NHANES race/ethnicity, with rationale; income subgroups, the 0.05 flag rule and error rates appear in Results, Interpretability, Fairness, and Clinical Utility.",
+   "problem": "Item 14 asks for the fairness approach and its rationale. The Methods sentence gives no rationale, and it also omits household income quintile, which the analysis plan required and on which the paper's only development-population fairness flag trips. The rationale exists only in Part D.",
+   "evidence": "Manuscript Methods reads \"fairness, through weighted subgroup AUROC and calibration slope across sex, age, education and, in NHANES, race and ethnicity [38]\". Table S7 in appendix3_utility.md states \"Income quintiles and error rates are included as the analysis plan requires\"; docs/appendix5_methods.md carries the rationale (\"The fairness analysis was undertaken since algorithmic performance can differ systematically across groups even when overall accuracy is high\"). results/primary2_fairness.csv gives income quintile 5 AUROC 0.780543, -0.056 against the cohort 0.836454.",
+   "severity": "minor",
+   "fix": "Amend the manuscript Methods to read: \"fairness, through weighted subgroup AUROC and calibration slope across sex, age, education, household income quintile and, in NHANES, race and ethnicity, undertaken since algorithmic performance can differ systematically across groups even where overall accuracy is high [38], with any subgroup AUROC differing from the cohort value by more than 0.05 flagged as the analysis plan requires.\"",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 43. The manuscript Methods sentence (line 113) reads \"fairness, through weighted subgroup AUROC and calibration slope across sex, age, education and, in NHANES, race and ethnicity [38]\" and gives no rationale, which item 14 explicitly requires; the rationale exists only in appendix5_methods.md. Household income quintile is also omitted from the Methods list although Table S7 states income quintiles are included \"as the analysis plan requires\" and primary2_fairness.csv shows quintile 5 (AUROC 0.780543) is the single development-population subgroup that trips the 0.05 flag."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Item 1, Title (versus Item 2, Abstract)",
+   "quote": "PHQ-9 >=10 and the adult age range are specified in the Abstract and Methods.",
+   "problem": "The claim is false and is contradicted by the very next row of the same checklist. The Abstract states the PHQ-9 >=10 outcome but never gives the >=20-year age range.",
+   "evidence": "Item 2 of the same checklist: \"the registration statement and adult eligibility appear in Methods rather than in the abstract.\" The Abstract's only eligibility wording is \"pooled n=2,048,510\" and the cohort sizes; the age range \"aged 20 years or older\" appears first in Methods, Participants and Outcome.",
+   "severity": "minor",
+   "fix": "PHQ-9 >=10 is specified in the Abstract and Methods; the adult age range (20 years or older) is specified in Methods, Participants and Outcome.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 12 and contradicted by line 13, item 2 of the same checklist: \"the registration statement and adult eligibility appear in Methods rather than in the abstract.\" The Abstract gives PHQ-9 >=10 but no age range; \"aged 20 years or older\" first appears at Methods, Participants and Outcome (line 51)."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Item 6c, Participants (treatments)",
+   "quote": "Not applicable; no treatments were administered in these observational surveys and no treatment variable was modeled; Methods notes that prior physician diagnosis of depression is not recorded in KCHS, precluding a diagnosis-based exclusion.",
+   "problem": "The \"not applicable\" judgment is honest, but the supporting pointer is not: the Methods say nothing about prior depression diagnosis. The statement is in the Discussion.",
+   "evidence": "Manuscript Discussion, Strengths and Limitations: \"prior depression diagnosis is unrecorded in KCHS, precluding a diagnosis-exclusion sensitivity analysis.\" The same point appears in docs/appendix5_methods.md and Table S9; the Methods contain no equivalent sentence.",
+   "severity": "minor",
+   "fix": "Not applicable; no treatments were administered in these observational surveys and no treatment variable was modeled; Discussion, Strengths and Limitations, and Multimedia Appendix 1, Part D note that prior physician diagnosis of depression is not recorded in KCHS, precluding a diagnosis-based exclusion.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 25. The only manuscript statement on prior depression diagnosis is at line 219, in Discussion, Strengths and Limitations (\"prior depression diagnosis is unrecorded in KCHS, precluding a diagnosis-exclusion sensitivity analysis\"); the Methods contain no equivalent sentence. The location named is wrong."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Methods, Model Development and Evaluation",
+   "quote": "that departure and single-pass rather than repeated 5-fold cross-validation are recorded in Table S9.",
+   "problem": "The deviation is understated. Only the algorithm comparison used 5 folds; the hyperparameter and feature-representation search used 4 folds, so the departure from the plan's \"5-fold repeated 5 times\" is both a loss of repetition and a change of fold count. As written, a reader auditing against Table S9 finds a fold count the manuscript never mentions.",
+   "evidence": "Table S9 in docs/appendix3_utility.md: \"single-pass 4-fold survey-weighted CV for the hyperparameter and feature-representation search, single-pass 5-fold CV for the algorithm comparison (Model Development and Evaluation)\". docs/appendix5_methods.md and docs/model_card_17var.md agree (\"4-fold survey-weighted CV (300,000-record subsample)\"). Note also that Table S9's pointer back to \"Model Development and Evaluation\" fails for the same reason.",
+   "severity": "minor",
+   "fix": "that departure, and the use of single-pass 4-fold cross-validation for the hyperparameter and feature-representation search and single-pass 5-fold cross-validation for the algorithm comparison in place of 5-fold cross-validation repeated five times, are recorded in Multimedia Appendix 1, Table S9.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at manuscript line 101. Table S9 in appendix3_utility.md line 249 records the executed procedure as \"single-pass 4-fold survey-weighted CV for the hyperparameter and feature-representation search, single-pass 5-fold CV for the algorithm comparison\", and appendix5_methods.md and model_card_17var.md agree on the 4-fold figure. The manuscript describes the departure as loss of repetition only, so a reader auditing against Table S9 meets a fold count the manuscript never mentions. The missing \"Multimedia Appendix 1\" prefix on the pointer is a second, smaller inconsistency."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Results, Model Development and Internal Performance",
+   "quote": "Under the identical tuning protocol, cross-validated AUROC in the training set was 0.840 for LightGBM, 0.835 for random forest and 0.822 for elastic net.",
+   "problem": "These three values are unweighted, but the Methods state that performance was summarized \"all complex-survey weighted\", and every other AUROC in the paper is weighted. The one place the reader would need the exception flagged is where the primary model is chosen.",
+   "evidence": "docs/appendix3_utility.md header: \"the depression-module non-response counts and the algorithm-selection cross-validated AUROCs are unweighted.\" docs/appendix5_methods.md: the algorithm comparison was \"single-pass 5-fold stratified cross-validation in a 200,000-record subsample of the training set scored by unweighted cross-validated AUROC\". Manuscript Methods: \"Performance was summarized, all complex-survey weighted, by discrimination (AUROC and area under the precision-recall curve [AUPRC])\".",
+   "severity": "minor",
+   "fix": "Under the identical tuning protocol, unweighted cross-validated AUROC in the training set was 0.840 for LightGBM, 0.835 for random forest and 0.822 for elastic net.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at manuscript line 133. appendix3_utility.md line 3 states \"the depression-module non-response counts and the algorithm-selection cross-validated AUROCs are unweighted\", and appendix5_methods.md records the comparison as scored by unweighted cross-validated AUROC, while manuscript Methods line 105 states \"Performance was summarized, all complex-survey weighted\". The exception is flagged in the appendix but not at the one point where the primary model is chosen."
+  },
+  {
+   "file": "docs/model_card_17var.md",
+   "section": "Factors",
+   "quote": "Evaluated across sex, age band, education (KCHS) and race/ethnicity (NHANES). Performance is lower in younger adults (20-39 y) and in some US minority subgroups (see Interpretability, Fairness, and Clinical Utility).",
+   "problem": "The model card omits the household income quintile dimension entirely, including the single development-population subgroup that trips the pre-specified 0.05 fairness flag and carries the lowest KCHS subgroup AUROC. A deployer reading only the model card would not know to monitor it.",
+   "evidence": "results/primary2_fairness.csv: KCHS income quintile 5 AUROC 0.780543 (95% CI 0.744179-0.817564), -0.056 against the cohort 0.836454, lower than the 20-39 year band (0.807933). Manuscript Discussion: \"within the development population, in the highest income quintile, the one development subgroup that trips the analysis plan's 0.05 flag\".",
+   "severity": "minor",
+   "fix": "Evaluated across sex, age band, education, household income quintile (KCHS) and race/ethnicity (NHANES). Performance is lowest in the highest KCHS income quintile (AUROC 0.781, the one development subgroup that trips the pre-specified 0.05 fairness flag), lower in younger adults (20-39 y), and lower in some US minority subgroups (see Interpretability, Fairness, and Clinical Utility).",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at model_card_17var.md line 16. Household income quintile was evaluated as a fairness dimension (primary2_fairness.csv, Table S7, and the manuscript Results and Discussion), and quintile 5 gives AUROC 0.780543 against the cohort 0.836454, a gap of -0.056 that trips the pre-specified 0.05 flag and is lower than the 20-39 year band (0.807933). The card's list of evaluated factors is therefore incomplete, and its claim about where performance is lowest is inaccurate."
+  },
+  {
+   "file": "docs/TRIPOD_AI_checklist.md",
+   "section": "Abbreviations header",
+   "quote": "Abbreviations: TRIPOD+AI, Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis + Artificial Intelligence; AUPRC, area under the precision-recall curve;",
+   "problem": "TRIPOD+AI is defined twice in the same list, with two different expansions, one of which also disagrees with the manuscript's Abbreviations section. The rule is one expansion at first use. The list also carries KNHANES, which the checklist never uses, while PSU is used in item 12d without ever being expanded or listed.",
+   "evidence": "The same header line ends \"...SHAP, Shapley additive explanations; TRIPOD+AI, Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis, artificial intelligence extension.\" Manuscript Abbreviations gives only the second form. Item 12d: \"PSU-resampled bootstrap, PSU-grouped recalibration folds\", with \"primary sampling unit\" first spelled out only later, in item 23b.",
+   "severity": "minor",
+   "fix": "Delete the leading \"TRIPOD+AI, Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis + Artificial Intelligence; \" so the list opens at \"AUPRC\", keep the trailing TRIPOD+AI entry that matches the manuscript, keep KNHANES, and insert \"PSU, primary sampling unit;\" in alphabetical order.",
+   "reviewer": "reporting",
+   "skeptic": "Reproduced at TRIPOD_AI_checklist.md line 3: TRIPOD+AI is defined at the head of the list and again at its tail as \"Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis, artificial intelligence extension\", two different expansions in one list, only the second matching the manuscript Abbreviations section. PSU is used in item 12d and expanded only later, in item 23b, and is absent from the list. The reviewer's further claim that KNHANES is unused is wrong: it occurs twice in the file."
+  },
+  {
+   "file": "docs/manuscript_17var.md",
+   "section": "Results, Parsimonious Deployment Model",
+   "quote": "The stricter-margin seven-item variant is exploratory only, and no external information entered the item-count decision (Multimedia Appendix 1, Tables S2, S3 and S6).",
+   "problem": "Orphan reference. \"The stricter-margin seven-item variant\" has no antecedent anywhere in the manuscript: the only margin the body defines is the plan's 0.02, the stricter 0.01 margin was cut, no seven-item model is otherwise mentioned, and the reader is not told what the seventh item is or why the variant is exploratory. Table S6, one of the three cited tables, bolds only the six-item row and never labels a seven-item variant.",
+   "evidence": "The 0.01 margin exists only in the appendices: appendix5_methods.md (\"the variant using a stricter 0.01 margin is flagged as post hoc\") and appendix3_utility.md Table S9 (\"a stricter 0.01 margin giving 7 items is reported as an exploratory variant\"). results/primary2_parsimonious.csv gives k=7 as adding smoking (selection 0.824222, above the 0.01 threshold of 0.823235 but below the level that the 0.02 rule requires).",
+   "severity": "major",
+   "fix": "A variant selected under a stricter 0.01 margin adds smoking as a seventh item and is exploratory only, that margin being post hoc while the plan fixed 0.02; on external data the seventh item does not help consistently, raising pre-pandemic AUROC to 0.757 while lowering post-pandemic AUROC to 0.752. No external information entered the item-count decision (Multimedia Appendix 1, Tables S2, S3, S6 and S9).",
+   "reviewer": "editor",
+   "skeptic": "Reproduced at the end of manuscript line 167. Grep confirms \"stricter\" and \"seven-item\" occur nowhere else in the manuscript, and the only margin the body defines is the plan's 0.02. The 0.01 margin exists solely in appendix5_methods.md lines 73 and 122 and appendix3_utility.md line 242, and primary2_parsimonious.csv shows the seventh item is smoking (k=7 selection 0.824222, ext_pre 0.756988, ext_post 0.752339). The definite article therefore points at a variant the reader has never met, and Table S6 does not label one."
+  }
+ ],
+ "refuted": 40,
+ "raw": 69,
+ "by_severity": {
+  "reject": 0,
+  "major": 15,
+  "minor": 14
+ },
+ "verdicts": [
+  {
+   "reviewer": "stats",
+   "found": 14,
+   "verdict": "Recommend acceptance after minor-to-moderate revision. The statistical substance holds up under direct audit: every estimate I traced reproduces from results/primary2_*.csv in a single rounding step, including the derived quantities most exposed to double rounding (the 0.071/0.066 to 0.058/0.051 age-restriction gaps, the 0.015/0.018/0.012 parsimony losses, the 28%/50% food-insecurity shares, the four fairness flag deltas, and the 0.0002/0.0044 five-versus-six margin). All confidence intervals bracket their estimates with plausible widths for 728 and 661 events, and the between-cycle interval (-0.045 to +0.056) is exactly what the two cohort intervals imply for a difference of independent samples, which is a real internal-consistency check passed. The rescaled cluster bootstrap is documented to reproduction standard in Part D, singleton-stratum pooling and domain-estimate construction included, and validated against a linearized design-based standard error. The oracle is correctly labeled an empirical benchmark over the learners evaluated at every appearance in the Results, Discussion and Conclusions, and the AUPRC reversal is given its prevalence explanation where the comparison is drawn. What remains is almost entirely damage from the 39% cut: six passages where a sentence was overwritten in place rather than replaced, leaving verbatim duplicates in the Methods, the Participant Characteristics paragraph, the parsimony paragraph and the ceiling paragraph, one of which (\\\".003 in either direction.\\\") is outright garbled text in the Results. Two substantive items need attention beyond that. The Discussion's coverage argument compares 0.765 to 0.778 across two different oracle estimators, producing exactly the \\\"one sequence\\\" reading that Table S15's own note warns against and inflating an approximately 0.002 increment over the best-learner ceiling into a 0.013 gain. And the Results describe the two pandemic cycles as having \\\"differed little\\\" when the post-hoc interval admits change of up to 0.05, a claim the Discussion states correctly and the Results should match. None of these threatens a conclusion; all are fixable in one editing pass."
+  },
+  {
+   "reviewer": "clinical",
+   "found": 15,
+   "verdict": "Revision, and the science underneath it is sound. Every number I checked against results/primary2_*.csv reconciles, including Table 2 in full, the fairness table, the parsimony trajectory, the SHAP values, the net-benefit table, the operating characteristics and the 17-versus-14 gain; the outcome is defined identically in both surveys and the design is correctly and repeatedly described as cross-sectional, with no sentence anywhere implying the model forecasts a future state. The deployment claim is properly bounded to triage, and the Discussion explicitly disclaims any outcome benefit that was not tested. The defects that matter are clinical-reading defects rather than analytic ones. Most consequential is that 1/PPV is labelled the number needed to screen in three places in the manuscript and in the Table S2 definition, glossed as \"respondents screened per case identified\"; the true figures are about 15 and 10 rather than 6.8 and 4.7, and the appendix table refutes its own definition since a fixed 0.85 sensitivity target must give the same number needed to screen for all three model sizes. Second, the largest subgroup disparity in the study, a false-positive rate of 0.68 in Mexican American against 0.36 in non-Hispanic White respondents pre-pandemic, is tabulated in Table S7 but appears nowhere in the text, and the false-positive rate is omitted from the recommended equity-monitoring set for a tool that flags nearly half the population. Third, differential module non-response is described as affecting Asian and Black respondents while the Hispanic categories, including the very subgroup the fairness rule flags, are omitted from both the sentence and Table S8. Alongside these, the 39% cut has left five verbatim duplications and one truncated fragment in the body, one of which asserts that both validation cycles were collected under the 2015-2018 NHANES design, contradicting Part D. All of this is fixable in a revision without any new analysis, since the required numbers are already in the result files."
+  },
+  {
+   "reviewer": "reporting",
+   "found": 24,
+   "verdict": "Revision, and the manuscript file as it stands should not be sent to a journal. The science reconciles: I opened every primary CSV behind a reported number and found no discrepancy that survives inspection. Internal and external AUROC, the +0.006 between-cycle difference and its interval and P value, both recalibration interval regimes, the fairness flags and their -0.056/-0.072/-0.078/+0.074 magnitudes, the full parsimony trajectory including the 0.0002/0.0044 five-versus-six boundary, operating characteristics, net benefit, the 28%/50% food-insecurity decomposition, the 2,199 runs across 117 experiment files, the oracle range 0.764-0.776 and the 0.765 to 0.778 coverage gain all match the authoritative files to the digit, and the 39% cut did not corrupt a single number I could check. The three \"not applicable\" rows and the one \"not specifically addressed\" row are honest rather than convenient. The paper trail, however, has not kept up with the cut. Seven TRIPOD+AI rows point at Methods text that now lives in Parts B-D (items 11, 12b, 19, 21, 22, and both intended-user rows 3b and 27b), so a reviewer auditing the checklist against the paper will repeatedly find nothing at the named location; item 19 is the worst, since the manuscript carries no patient-and-public-involvement statement at all. Item 18c compresses the amendment's provenance into \"written before analysis\", which is precisely the claim the manuscript, Part A and the cover letter all take care not to make. Two pairs of rows contradict each other (1 versus 2 on the abstract, 12d versus 23b on cluster heterogeneity). Independently, condensation left one corrupted Results sentence, four verbatim duplicated sentences, two orphaned paragraphs, and one place where any-item and three-or-more-item non-response rates are presented as if comparable. None of this touches a conclusion; all of it is repairable in one editing pass, after which the checklist should be re-walked row by row against the final text rather than against the pre-cut draft."
+  },
+  {
+   "reviewer": "editor",
+   "found": 16,
+   "verdict": "Revision, and the revision is mechanical rather than scientific. The science holds together after the 39% cut: I checked every number in the Abstract, Table 2, the parsimony ladder, the sensitivity panel, the fairness panel, the operating point and the net-benefit figures against results/primary2_*.csv and every one reproduces to the digit, including the ones I expected to fail (the 0.823/0.810/0.830 matched-sample-size trio, which is not in 17var_model/results but verifies exactly against results/pathG_02b_kchs_samesize.csv as best-of-three-learners; the 28%/50% food-insecurity share; the -0.056/-0.072/-0.078/+0.074 fairness flags; the 0.0002/0.0044 five-versus-six margin). All five aims are answered in Results, all four hypothesis verdicts are stated and justified, the pronoun and dash bans are clean across the manuscript and Parts A-D, and no cross-reference points at a section the cut removed. What the cut did leave behind is a set of seam defects that a copy editor cannot fix without the authors: four places where a rewritten sentence was inserted without deleting the sentence it replaced (Methods NHANES description, Methods ECE, Results non-response, Results five-versus-six), one corrupted fragment mid-sentence (\\\".003 in either direction.\\\"), one promise in Methods that the Results no longer keeps (temperature scaling), one orphan with no antecedent left in the body (\\\"the stricter-margin seven-item variant\\\"), one stray sentence stranded outside its paragraph, and two claims that lost the qualifier that made them true (the Abstract's ceiling claim, which its own Tables S11 and S13 contradict on the post-pandemic cohort, and the non-response comparison that silently switches definitions mid-paragraph). The one substantive gap is in Clinical and Policy Implications, where the deployment contrast between the six-item and 17-predictor forms omits that the full model cannot be scored from an individual's answers at all, a point the paper makes in Part D and in Data Availability but not where a reader deciding what to deploy will look. None of these is a reason to reject; all of them are reasons not to send it out in this state."
+  }
+ ]
+}

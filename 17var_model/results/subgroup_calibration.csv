@@ -1,0 +1,10 @@
+﻿subgroup,n,cal_slope
+Sex: female,54588,1.007
+Sex: male,45412,0.998
+Age 20-39,20508,0.973
+Age 40-59,34520,1.018
+Age 60+,44972,1.008
+Education: college,37939,1.029
+Education: high school,28973,0.978
+Education: middle,11329,0.929
+Education: <=elementary,21682,0.94

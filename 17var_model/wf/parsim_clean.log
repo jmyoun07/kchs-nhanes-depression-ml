@@ -1,0 +1,42 @@
+[분할] 학습 500,000 → 적합 450,000 / 선택검증 50,000 · hold-out 100,000(평가 전용)
+[SHAP 순서, 적합셋 기준] ['srh', 'age', 'sex', 'sleep_hrs', 'oral_health', 'employed', 'partnered', 'smoking', 'bmi', 'food_insecure', 'income_q', 'current_drinker', 'edu', 'living_alone', 'active', 'htn', 'dm']
+   k= 1  선택검증 0.7531 | hold-out 0.7488  pre 0.6966  post 0.6815   +srh
+   k= 2  선택검증 0.7808 | hold-out 0.7749  pre 0.7095  post 0.7257   +age
+   k= 3  선택검증 0.7899 | hold-out 0.7818  pre 0.7133  post 0.7254   +sex
+   k= 4  선택검증 0.8081 | hold-out 0.8018  pre 0.7250  post 0.7366   +sleep_hrs
+   k= 5  선택검증 0.8198 | hold-out 0.8093  pre 0.7421  post 0.7455   +oral_health
+   k= 6  선택검증 0.8224 | hold-out 0.8138  pre 0.7528  post 0.7524   +employed
+   k= 7  선택검증 0.8289 | hold-out 0.8188  pre 0.7603  post 0.7584   +partnered
+   k= 8  선택검증 0.8317 | hold-out 0.8244  pre 0.7698  post 0.7532   +smoking
+   k= 9  선택검증 0.8323 | hold-out 0.8257  pre 0.7688  post 0.7545   +bmi
+   k=10  선택검증 0.8324 | hold-out 0.8287  pre 0.7730  post 0.7646   +food_insecure
+   k=11  선택검증 0.8334 | hold-out 0.8301  pre 0.7725  post 0.7662   +income_q
+   k=12  선택검증 0.8341 | hold-out 0.8307  pre 0.7715  post 0.7672   +current_drinker
+   k=13  선택검증 0.8348 | hold-out 0.8315  pre 0.7728  post 0.7678   +edu
+   k=14  선택검증 0.8344 | hold-out 0.8314  pre 0.7723  post 0.7683   +living_alone
+   k=15  선택검증 0.8346 | hold-out 0.8311  pre 0.7729  post 0.7675   +active
+   k=16  선택검증 0.8350 | hold-out 0.8314  pre 0.7732  post 0.7683   +htn
+   k=17  선택검증 0.8350 | hold-out 0.8315  pre 0.7725  post 0.7688   +dm
+
+[선택] 전체모델 선택검증 0.8350 · 0.01 이내 최소 문항수 k*=7
+ k           added                                                                                                                                   vars  selection_AUROC  holdout_AUROC  ext_pre  ext_post
+ 1             srh                                                                                                                                    srh           0.7531         0.7488   0.6966    0.6815
+ 2             age                                                                                                                                srh;age           0.7808         0.7749   0.7095    0.7257
+ 3             sex                                                                                                                            srh;age;sex           0.7899         0.7818   0.7133    0.7254
+ 4       sleep_hrs                                                                                                                  srh;age;sex;sleep_hrs           0.8081         0.8018   0.7250    0.7366
+ 5     oral_health                                                                                                      srh;age;sex;sleep_hrs;oral_health           0.8198         0.8093   0.7421    0.7455
+ 6        employed                                                                                             srh;age;sex;sleep_hrs;oral_health;employed           0.8224         0.8138   0.7528    0.7524
+ 7       partnered                                                                                   srh;age;sex;sleep_hrs;oral_health;employed;partnered           0.8289         0.8188   0.7603    0.7584
+ 8         smoking                                                                           srh;age;sex;sleep_hrs;oral_health;employed;partnered;smoking           0.8317         0.8244   0.7698    0.7532
+ 9             bmi                                                                       srh;age;sex;sleep_hrs;oral_health;employed;partnered;smoking;bmi           0.8323         0.8257   0.7688    0.7545
+10   food_insecure                                                         srh;age;sex;sleep_hrs;oral_health;employed;partnered;smoking;bmi;food_insecure           0.8324         0.8287   0.7730    0.7646
+11        income_q                                                srh;age;sex;sleep_hrs;oral_health;employed;partnered;smoking;bmi;food_insecure;income_q           0.8334         0.8301   0.7725    0.7662
+12 current_drinker                                srh;age;sex;sleep_hrs;oral_health;employed;partnered;smoking;bmi;food_insecure;income_q;current_drinker           0.8341         0.8307   0.7715    0.7672
+13             edu                            srh;age;sex;sleep_hrs;oral_health;employed;partnered;smoking;bmi;food_insecure;income_q;current_drinker;edu           0.8348         0.8315   0.7728    0.7678
+14    living_alone               srh;age;sex;sleep_hrs;oral_health;employed;partnered;smoking;bmi;food_insecure;income_q;current_drinker;edu;living_alone           0.8344         0.8314   0.7723    0.7683
+15          active        srh;age;sex;sleep_hrs;oral_health;employed;partnered;smoking;bmi;food_insecure;income_q;current_drinker;edu;living_alone;active           0.8346         0.8311   0.7729    0.7675
+16             htn    srh;age;sex;sleep_hrs;oral_health;employed;partnered;smoking;bmi;food_insecure;income_q;current_drinker;edu;living_alone;active;htn           0.8350         0.8314   0.7732    0.7683
+17              dm srh;age;sex;sleep_hrs;oral_health;employed;partnered;smoking;bmi;food_insecure;income_q;current_drinker;edu;living_alone;active;htn;dm           0.8350         0.8315   0.7725    0.7688
+
+저장: results/parsimonious_clean.csv, shap_importance_train.csv
+완료.

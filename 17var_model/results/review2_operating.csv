@@ -1,0 +1,7 @@
+﻿set,threshold,value,sens,spec,PPV,NPV
+Internal,Youden (exact),0.03327,0.73,0.78,0.11,0.987
+Internal,prevalence,0.036,0.706,0.797,0.115,0.986
+NHANES pre,Youden (exact),0.03547,0.733,0.687,0.178,0.965
+NHANES pre,prevalence,0.08449,0.529,0.841,0.234,0.951
+NHANES post,Youden (exact),0.02821,0.739,0.667,0.236,0.948
+NHANES post,prevalence,0.122,0.407,0.912,0.392,0.917

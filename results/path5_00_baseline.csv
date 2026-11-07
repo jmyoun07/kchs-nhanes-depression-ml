@@ -1,0 +1,5 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,note,d_internal,d_pre,d_post
+A_baseline_spec_sklearn,0.830969,0.774013,0.765262,True,과제 명세 코드 그대로(sklearn LGBMClassifier pipeline),,,
+B_baseline_native_binary,0.830969,0.774013,0.765262,True,lgb.train(objective='binary') — 동일 설계행렬/파라미터. A와 동치여야 함,-0.0,0.0,0.0
+C_custom_logloss_noinit,0.830567,0.770716,0.765277,True,커스텀 objective=logloss (init=0). 커스텀 경로 sanity check,-0.000402,-0.003297,1.5e-05
+C2_custom_logloss_priorinit,0.830588,0.772075,0.763515,True,커스텀 objective=logloss + prior logit init. B와 동치여야 함,-0.000381,-0.001938,-0.001747

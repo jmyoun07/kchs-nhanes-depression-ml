@@ -1,0 +1,4 @@
+set,AUROC_weighted,CI95_low,CI95_high,method,n_strata,lonely_PSU_strata
+Internal,0.8237,0.8207,0.8291,PSU군집(설계),5729,1
+NHANES pre,0.7453,0.7196,0.7685,PSU군집(설계),24,0
+NHANES post,0.7539,0.73,0.7762,PSU군집(설계),15,0

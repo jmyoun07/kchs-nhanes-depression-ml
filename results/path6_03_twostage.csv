@@ -1,0 +1,20 @@
+﻿name,internal,ext_pre,ext_post,protocol_compliant,seconds,note
+T0_stage1_only,0.830969,0.774013,0.765262,True,,1단계 전역모델 = 기준선
+T_2strata_T1_stage2only,0.830329,0.76242,0.760765,True,249.4,2개 위험층 전문모델 확률 그대로
+T_2strata_T2_coarsefine_b0.1,0.831207,0.77333,0.765499,True,,"전역로짓 + β×층내중심화 stage2, β=0.1 (KCHS OOF)"
+DIAG_T_2strata_T2_b0.3,0.830444,0.769655,0.76417,False,,★진단전용 β곡선
+DIAG_T_2strata_T2_b0.6,0.826046,0.762454,0.758549,False,,★진단전용 β곡선
+DIAG_T_2strata_T2_b1.0,0.817093,0.752708,0.74928,False,,★진단전용 β곡선
+T_2strata_T3_blend_a0.7,0.831725,0.771854,0.765119,True,,stage1·stage2 로짓혼합 α=0.7 (KCHS OOF)
+T_3strata_T1_stage2only,0.827298,0.768336,0.762046,True,422.2,3개 위험층 전문모델 확률 그대로
+T_3strata_T2_coarsefine_b0.1,0.831199,0.774765,0.765311,True,,"전역로짓 + β×층내중심화 stage2, β=0.1 (KCHS OOF)"
+DIAG_T_3strata_T2_b0.3,0.830264,0.77558,0.76417,False,,★진단전용 β곡선
+DIAG_T_3strata_T2_b0.6,0.825838,0.773331,0.75878,False,,★진단전용 β곡선
+DIAG_T_3strata_T2_b1.0,0.815344,0.763951,0.746767,False,,★진단전용 β곡선
+T_3strata_T3_blend_a0.8,0.831059,0.77518,0.765942,True,,stage1·stage2 로짓혼합 α=0.8 (KCHS OOF)
+T_5strata_T1_stage2only,0.824418,0.765344,0.759081,True,1051.8,5개 위험층 전문모델 확률 그대로
+T_5strata_T2_coarsefine_b0.0,0.830969,0.774013,0.765262,True,,"전역로짓 + β×층내중심화 stage2, β=0.0 (KCHS OOF)"
+DIAG_T_5strata_T2_b0.3,0.829823,0.774903,0.764033,False,,★진단전용 β곡선
+DIAG_T_5strata_T2_b0.6,0.825081,0.771092,0.758362,False,,★진단전용 β곡선
+DIAG_T_5strata_T2_b1.0,0.814046,0.760507,0.744977,False,,★진단전용 β곡선
+T_5strata_T3_blend_a0.9,0.831034,0.774212,0.765678,True,,stage1·stage2 로짓혼합 α=0.9 (KCHS OOF)

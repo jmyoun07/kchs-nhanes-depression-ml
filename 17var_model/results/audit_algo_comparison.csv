@@ -1,0 +1,16 @@
+﻿algorithm,cfg,params,cv_auroc
+lightgbm,0,"{'num_leaves': 31, 'min_child_samples': 1000, 'learning_rate': 0.01, 'n_estimators': 900, 'reg_alpha': 1.0, 'reg_lambda': 20.0, 'subsample': 0.6, 'colsample_bytree': 0.6}",0.8396
+lightgbm,1,"{'num_leaves': 63, 'min_child_samples': 500, 'learning_rate': 0.02, 'n_estimators': 600, 'reg_alpha': 0.5, 'reg_lambda': 5.0, 'subsample': 0.8, 'colsample_bytree': 0.8}",0.836
+lightgbm,2,"{'num_leaves': 15, 'min_child_samples': 200, 'learning_rate': 0.03, 'n_estimators': 900, 'reg_alpha': 0.0, 'reg_lambda': 1.0, 'subsample': 1.0, 'colsample_bytree': 0.8}",0.8376
+lightgbm,3,"{'num_leaves': 31, 'min_child_samples': 3000, 'learning_rate': 0.02, 'n_estimators': 1500, 'reg_alpha': 5.0, 'reg_lambda': 20.0, 'subsample': 0.6, 'colsample_bytree': 1.0}",0.8355
+lightgbm,4,"{'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05, 'n_estimators': 400, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'colsample_bytree': 0.6}",0.8396
+randomforest,0,"{'n_estimators': 300, 'max_depth': 14, 'min_samples_leaf': 100}",0.835
+randomforest,1,"{'n_estimators': 300, 'max_depth': 10, 'min_samples_leaf': 100}",0.833
+randomforest,2,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 200}",0.8334
+randomforest,3,"{'n_estimators': 300, 'max_depth': None, 'min_samples_leaf': 500}",0.8301
+randomforest,4,"{'n_estimators': 300, 'max_depth': 25, 'min_samples_leaf': 50}",0.8346
+elasticnet,0,"{'C': 1.0, 'l1_ratio': 0.5}",0.822
+elasticnet,1,"{'C': 0.1, 'l1_ratio': 0.1}",0.822
+elasticnet,2,"{'C': 0.1, 'l1_ratio': 0.9}",0.822
+elasticnet,3,"{'C': 0.01, 'l1_ratio': 0.5}",0.8211
+elasticnet,4,"{'C': 10.0, 'l1_ratio': 0.5}",0.8219

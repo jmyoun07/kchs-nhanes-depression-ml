@@ -1,0 +1,63 @@
+====================================================================================
+[B2] 알고리즘 비교 대등화 — 세 알고리즘 모두 동일한 내부 CV로 탐색
+====================================================================================
+   lightgbm      cfg0  CV-AUROC=0.8396  (28s)  {'num_leaves': 31, 'min_child_samples': 1000, 'learning_rate': 0.01, 'n_estimators': 900, 'reg_alpha': 1.0, 'reg_lambda': 20.0, 'subsample': 0.6, 'colsample_bytree': 0.6}
+   lightgbm      cfg1  CV-AUROC=0.8360  (25s)  {'num_leaves': 63, 'min_child_samples': 500, 'learning_rate': 0.02, 'n_estimators': 600, 'reg_alpha': 0.5, 'reg_lambda': 5.0, 'subsample': 0.8, 'colsample_bytree': 0.8}
+   lightgbm      cfg2  CV-AUROC=0.8376  (18s)  {'num_leaves': 15, 'min_child_samples': 200, 'learning_rate': 0.03, 'n_estimators': 900, 'reg_alpha': 0.0, 'reg_lambda': 1.0, 'subsample': 1.0, 'colsample_bytree': 0.8}
+   lightgbm      cfg3  CV-AUROC=0.8355  (46s)  {'num_leaves': 31, 'min_child_samples': 3000, 'learning_rate': 0.02, 'n_estimators': 1500, 'reg_alpha': 5.0, 'reg_lambda': 20.0, 'subsample': 0.6, 'colsample_bytree': 1.0}
+   lightgbm      cfg4  CV-AUROC=0.8396  (9s)  {'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05, 'n_estimators': 400, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'colsample_bytree': 0.6}
+   ★ lightgbm: 최고 CV-AUROC=0.8396  {'num_leaves': 7, 'min_child_samples': 50, 'learning_rate': 0.05, 'n_estimators': 400, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'colsample_bytree': 0.6}
+
+   randomforest  cfg0  CV-AUROC=0.8350  (26s)  {'n_estimators': 300, 'max_depth': 14, 'min_samples_leaf': 100}
+   randomforest  cfg1  CV-AUROC=0.8330  (24s)  {'n_estimators': 300, 'max_depth': 10, 'min_samples_leaf': 100}
+   randomforest  cfg2  CV-AUROC=0.8334  (28s)  {'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 200}
+   randomforest  cfg3  CV-AUROC=0.8301  (27s)  {'n_estimators': 300, 'max_depth': None, 'min_samples_leaf': 500}
+   randomforest  cfg4  CV-AUROC=0.8346  (30s)  {'n_estimators': 300, 'max_depth': 25, 'min_samples_leaf': 50}
+   ★ randomforest: 최고 CV-AUROC=0.8350  {'n_estimators': 300, 'max_depth': 14, 'min_samples_leaf': 100}
+
+   elasticnet    cfg0  CV-AUROC=0.8220  (61s)  {'C': 1.0, 'l1_ratio': 0.5}
+   elasticnet    cfg1  CV-AUROC=0.8220  (12s)  {'C': 0.1, 'l1_ratio': 0.1}
+   elasticnet    cfg2  CV-AUROC=0.8220  (3s)  {'C': 0.1, 'l1_ratio': 0.9}
+   elasticnet    cfg3  CV-AUROC=0.8211  (3s)  {'C': 0.01, 'l1_ratio': 0.5}
+   elasticnet    cfg4  CV-AUROC=0.8219  (39s)  {'C': 10.0, 'l1_ratio': 0.5}
+   ★ elasticnet: 최고 CV-AUROC=0.8220  {'C': 1.0, 'l1_ratio': 0.5}
+
+[B2 결론] 동일 프로토콜 최고 CV-AUROC: {'lightgbm': 0.8396, 'randomforest': 0.835, 'elasticnet': 0.822}
+
+====================================================================================
+[B5] 14변수 모델 자체 튜닝 — roundF와 동일한 랜덤서치(24조합·4-fold 가중 CV·30만)
+====================================================================================
+   14var cfg 0  CV-AUROC=0.8240  (39s)
+   14var cfg 1  CV-AUROC=0.8204  (22s)
+   14var cfg 2  CV-AUROC=0.8224  (27s)
+   14var cfg 3  CV-AUROC=0.8225  (15s)
+   14var cfg 4  CV-AUROC=0.8219  (29s)
+   14var cfg 5  CV-AUROC=0.8225  (14s)
+   14var cfg 6  CV-AUROC=0.8232  (8s)
+   14var cfg 7  CV-AUROC=0.8214  (14s)
+   14var cfg 8  CV-AUROC=0.8214  (52s)
+   14var cfg 9  CV-AUROC=0.8006  (39s)
+   14var cfg10  CV-AUROC=0.8234  (9s)
+   14var cfg11  CV-AUROC=0.8234  (15s)
+   14var cfg12  CV-AUROC=0.8184  (43s)
+   14var cfg13  CV-AUROC=0.8214  (17s)
+   14var cfg14  CV-AUROC=0.8176  (7s)
+   14var cfg15  CV-AUROC=0.8222  (36s)
+   14var cfg16  CV-AUROC=0.8235  (12s)
+   14var cfg17  CV-AUROC=0.8227  (19s)
+   14var cfg18  CV-AUROC=0.8156  (58s)
+   14var cfg19  CV-AUROC=0.8224  (26s)
+   14var cfg20  CV-AUROC=0.8242  (29s)
+   14var cfg21  CV-AUROC=0.8239  (28s)
+   14var cfg22  CV-AUROC=0.8197  (27s)
+   14var cfg23  CV-AUROC=0.8202  (35s)
+
+   ★ 14변수 최적: cfg20  CV-AUROC=0.8242  {'num_leaves': 15, 'min_child_samples': 500, 'learning_rate': 0.01, 'n_estimators': 900, 'reg_alpha': 1.0, 'reg_lambda': 1.0, 'subsample': 0.8, 'colsample_bytree': 0.6}
+
+   [14→17 이득 재추정 — 14변수도 자체 최적 설정 사용, 층별 군집 짝지음 부트스트랩]
+   내부: 14(자체튜닝) 0.8222 / 14(17설정) 0.8227 → 17 0.8315
+   NHANES pre: 14(자체튜닝) 0.7493 / 14(17설정) 0.7497 → 17 0.7718  Δ=+0.0225 95%CI[+0.0154,+0.0300] p≈0.0000
+   NHANES post: 14(자체튜닝) 0.7530 / 14(17설정) 0.7543 → 17 0.7688  Δ=+0.0158 95%CI[+0.0102,+0.0210] p≈0.0000
+
+저장: results/audit_algo_comparison.csv, audit_gain_retuned.csv, audit_14var_tuning.csv
+완료.

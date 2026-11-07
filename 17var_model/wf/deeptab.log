@@ -1,0 +1,6 @@
+[BASE-GBM] pre=0.7694 post=0.7685
+Stop training because you reached max_epochs = 50 with best_epoch = 48 and best_val_0_auc = 0.83241
+[TabNet] internal=0.8291 pre=0.7554 post=0.7656  판정=down  (290s)
+[torch-MLP] best_val=0.8366 internal=0.8346 pre=0.7647 post=0.7756  판정=down  (60s)
+
+베이스라인 GBM pre=0.7694 post=0.7685. 완료.

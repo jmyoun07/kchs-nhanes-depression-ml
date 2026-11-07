@@ -1,0 +1,27 @@
+# ── 데이터 처리 ──────────────────────────────
+pandas>=2.2
+numpy>=1.26
+pyreadstat>=1.2          # NHANES .XPT 읽기 (pandas.read_sas 대안)
+openpyxl>=3.1            # 엑셀 입출력(변수사전 등)
+
+# ── 모델링 ──────────────────────────────────
+scikit-learn>=1.4        # elastic net, RF, CV, 지표
+xgboost>=2.0
+lightgbm>=4.3
+imbalanced-learn>=0.12   # SMOTE 등 (학습 fold 내부에서만)
+statsmodels>=0.14        # 보정(로지스틱 재보정), 통계
+
+# ── 해석 ────────────────────────────────────
+shap>=0.45
+
+# ── 의사결정곡선(DCA) ────────────────────────
+dcurves>=1.0             # net benefit (R dcurves의 파이썬 포트)
+
+# ── 시각화 ──────────────────────────────────
+matplotlib>=3.8
+seaborn>=0.13
+
+# ── 재현성/유틸 ──────────────────────────────
+joblib>=1.4              # 모델 직렬화
+pyyaml>=6.0              # 설정 파일
+tqdm>=4.66

@@ -1,0 +1,10 @@
+﻿set,threshold,sensitivity,specificity,PPV,NPV
+Internal,prevalence(0.036),0.706,0.797,0.115,0.986
+Internal,Youden(0.03),0.748,0.756,0.103,0.988
+Internal,fixed 0.10,0.441,0.939,0.213,0.978
+NHANES pre,prevalence(0.084),0.529,0.841,0.234,0.951
+NHANES pre,Youden(0.03),0.762,0.651,0.168,0.967
+NHANES pre,fixed 0.10,0.485,0.864,0.248,0.948
+NHANES post,prevalence(0.122),0.407,0.912,0.392,0.917
+NHANES post,Youden(0.03),0.714,0.678,0.236,0.945
+NHANES post,fixed 0.10,0.448,0.89,0.361,0.921

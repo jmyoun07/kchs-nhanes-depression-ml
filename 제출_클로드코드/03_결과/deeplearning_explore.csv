@@ -1,0 +1,6 @@
+﻿model,internal,pre,post,verdict
+GBM baseline,0.837,0.7694,0.7685,reference
+"sklearn MLP (internal-sel 128,64)",0.833,0.7677,0.7725,not better
+TabNet,0.829,0.7554,0.7656,lower
+torch deep-MLP,0.835,0.7647,0.7756,offsetting
+FT-Transformer,0.836,0.7628,0.7722,offsetting

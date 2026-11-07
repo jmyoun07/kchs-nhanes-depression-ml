@@ -1,0 +1,34 @@
+{
+  "data_path": "data\\processed\\kchs_dev.parquet",
+  "original_n": 2048510,
+  "analytic_n": 2048510,
+  "train_n": 1638808,
+  "test_n": 409702,
+  "train_events": 59106,
+  "test_events": 14777,
+  "train_weight_sum": 7.196235797282806,
+  "test_weight_sum": 1.8037642027171938,
+  "random_state": 42,
+  "test_size": 0.2,
+  "stratify": "dep",
+  "weighted_training": false,
+  "weighted_evaluation": true,
+  "best_tuning_config": "g02_more_trees_regularized",
+  "best_tuning_params": {
+    "n_estimators": 600,
+    "learning_rate": 0.03,
+    "num_leaves": 31,
+    "min_child_samples": 200,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_alpha": 0.0,
+    "reg_lambda": 2.0
+  },
+  "engineered_definitions": {
+    "age_band_10y": "floor(age / 10) * 10 decade labels, with 90+ top code",
+    "sleep_cat": "short <7 hours, normal 7-9 hours, long >9 hours",
+    "bmi_cat": "WHO-style categories: <18.5, 18.5-<25, 25-<30, >=30"
+  },
+  "elapsed_seconds": 690.598,
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]"
+}

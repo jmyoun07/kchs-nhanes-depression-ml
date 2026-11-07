@@ -1,0 +1,13 @@
+﻿name,internal,ext_pre,ext_post,seconds,protocol_compliant,note
+A00_baseline_literal,0.8303870445389117,0.7728242744684943,0.7641629374254882,22.3,True,프롬프트 문자그대로 spec(500k/100k)
+A01_rank_srh_oh,0.8303870445389117,0.7666493595658951,0.7655362127830975,38.6,True,"cols=srh,oral_health; weighted=True;normal=False | NHANES 공변량분포만 사용(라벨 미사용)"
+A02_rank_srh_oh_inc,0.8303870445389117,0.7658802548780033,0.7655362127830975,51.4,True,"cols=srh,oral_health,income_q; weighted=True;normal=False | NHANES 공변량분포만 사용(라벨 미사용)"
+A03_rank_all6,0.8303635074744706,0.7607043015520124,0.7750689342312646,48.2,True,"cols=age,sleep_hrs,bmi,income_q,srh,oral_health; weighted=True;normal=False | NHANES 공변량분포만 사용(라벨 미사용)"
+A04_rank_phys3,0.8303635074744706,0.7672130870516014,0.772684731930372,47.7,True,"cols=age,sleep_hrs,bmi; weighted=True;normal=False | NHANES 공변량분포만 사용(라벨 미사용)"
+A05_rank_srh_only,0.8303870445389117,0.7728242744684943,0.7641629374254882,40.0,True,cols=srh; weighted=True;normal=False | NHANES 공변량분포만 사용(라벨 미사용)
+A06_rank_srh_oh_unw,0.8303870445389117,0.7728242744684943,0.7655362127830975,23.2,True,"cols=srh,oral_health; weighted=False;normal=False | NHANES 공변량분포만 사용(라벨 미사용)"
+A07_rank_all6_unw,0.8309884208660592,0.7633521906578116,0.7698730432286514,51.3,True,"cols=age,sleep_hrs,bmi,income_q,srh,oral_health; weighted=False;normal=False | NHANES 공변량분포만 사용(라벨 미사용)"
+A08_rankN_srh_oh,0.8303870445389117,0.7666493595658951,0.7648690375668101,76.9,True,"cols=srh,oral_health; weighted=True;normal=True | NHANES 공변량분포만 사용(라벨 미사용)"
+A09_rankN_all6,0.8303635074744706,0.7619245809466035,0.7754004311340764,77.8,True,"cols=age,sleep_hrs,bmi,income_q,srh,oral_health; weighted=True;normal=True | NHANES 공변량분포만 사용(라벨 미사용)"
+A10_rank_all6_postref_pre,0.8303635074744706,0.7607043015520124,0.7765124068772661,115.0,True,"cols=age,sleep_hrs,bmi,income_q,srh,oral_health; weighted=True;normal=False;post_ref=pre | NHANES 공변량분포만 사용(라벨 미사용)"
+A11_rank_srh_oh_postref_pre,0.8303870445389117,0.7666493595658951,0.7655362127830975,74.8,True,"cols=srh,oral_health; weighted=True;normal=False;post_ref=pre | NHANES 공변량분포만 사용(라벨 미사용)"

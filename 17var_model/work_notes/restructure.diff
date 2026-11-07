@@ -1,0 +1,946 @@
+--- BEFORE/manuscript_17var.md
++++ AFTER/manuscript_17var.md
+@@ -50,3 +50,3 @@
+ 
+-Eligible respondents in both surveys were adults aged 20 years or older with all nine PHQ-9 items answered; pregnant respondents were retained. Pooling KCHS 2017-2025 gave 2,048,510 eligible records, and among examined NHANES adults 7,888 pre-pandemic and 5,210 post-pandemic answered all nine items. Frame counts and item-level non-response are tabulated in Table S8 in Multimedia Appendix 1. Predictors and outcome were recorded in the same survey contact, and blinding does not apply to already-collected responses.
++Eligible respondents in both surveys were adults aged 20 years or older with all nine PHQ-9 items answered; pregnant respondents were retained. Pooling KCHS 2017-2025 gave 2,048,510 eligible records, and among examined NHANES adults 7,888 pre-pandemic and 5,210 post-pandemic answered all nine items. Frame counts and item-level non-response are tabulated in Table S1 in Multimedia Appendix 1. Predictors and outcome were recorded in the same survey contact, and blinding does not apply to already-collected responses.
+ 
+@@ -100,3 +100,3 @@
+ 
+-The analysis plan fixed the primary-model rule in advance: highest cross-validated AUROC, differences below 0.005 treated as ties and broken by proximity of the calibration slope to 1, then by parsimony. The pipeline as executed omitted the tie band, though the plan's rule checked retrospectively reproduces the selected model. No imbalance correction was applied, the learner being fitted on the natural 3.6% event rate; that departure, and the use of single-pass 4-fold cross-validation for the hyperparameter and feature-representation search and single-pass 5-fold cross-validation for the algorithm comparison in place of 5-fold cross-validation repeated five times, are recorded in Table S9 in Multimedia Appendix 1.
++The analysis plan fixed the primary-model rule in advance: highest cross-validated AUROC, differences below 0.005 treated as ties and broken by proximity of the calibration slope to 1, then by parsimony. The pipeline as executed omitted the tie band, though the plan's rule checked retrospectively reproduces the selected model. No imbalance correction was applied, the learner being fitted on the natural 3.6% event rate; that departure, and the use of single-pass 4-fold cross-validation for the hyperparameter and feature-representation search and single-pass 5-fold cross-validation for the algorithm comparison in place of 5-fold cross-validation repeated five times, are recorded in Table S2 in Multimedia Appendix 1.
+ 
+@@ -104,5 +104,5 @@
+ 
+-Performance was summarized, all complex-survey weighted, by discrimination (AUROC and area under the precision-recall curve [AUPRC]), operating characteristics, and calibration, assessed at the moderate level of the calibration hierarchy [33] through the calibration slope, calibration-in-the-large (CITL), the Brier score and expected calibration error (ECE). Ninety-five percent CIs came from a rescaled stratified cluster bootstrap with 1000 replicates [34], for cohort-level and subgroup estimates alike; ECE, operating characteristics and net benefit are point estimates, ECE for the reason given with Table S16, and two-sided bootstrap P values reach P<.001 at the smallest attainable value. ECE, operating characteristics and net benefit are point estimates, and two-sided bootstrap P values reach P<.001 at the smallest attainable value (Table S16).
+-
+-A single operating threshold, the predicted probability giving 85% sensitivity (0.02051), was fixed once in the development data and applied unchanged to the hold-out and both external cohorts; the Youden and prevalence-matched reference points are given for comparison in Table S1 in Multimedia Appendix 1, hence the external operating characteristics are transported rather than locally selected. Clinical utility was assessed by weighted decision-curve analysis [35] over threshold probabilities of 0.02 to 0.30, with net benefit at 0.10 and 0.15 tabulated in Table S3 in Multimedia Appendix 1.
++Performance was summarized, all complex-survey weighted, by discrimination (AUROC and area under the precision-recall curve [AUPRC]), operating characteristics, and calibration, assessed at the moderate level of the calibration hierarchy [33] through the calibration slope, calibration-in-the-large (CITL), the Brier score and expected calibration error (ECE). Ninety-five percent CIs came from a rescaled stratified cluster bootstrap with 1000 replicates [34], for cohort-level and subgroup estimates alike; ECE, operating characteristics and net benefit are point estimates, ECE for the reason given with Table S3, and two-sided bootstrap P values reach P<.001 at the smallest attainable value. ECE, operating characteristics and net benefit are point estimates, and two-sided bootstrap P values reach P<.001 at the smallest attainable value (Table S3).
++
++A single operating threshold, the predicted probability giving 85% sensitivity (0.02051), was fixed once in the development data and applied unchanged to the hold-out and both external cohorts; the Youden and prevalence-matched reference points are given for comparison in Table S4 in Multimedia Appendix 1, hence the external operating characteristics are transported rather than locally selected. Clinical utility was assessed by weighted decision-curve analysis [35] over threshold probabilities of 0.02 to 0.30, with net benefit at 0.10 and 0.15 tabulated in Table S5 in Multimedia Appendix 1.
+ 
+@@ -114,5 +114,5 @@
+ 
+-Sensitivity analyses, pre-specified with further analyses added afterwards, varied the outcome cut-off (≥5 as well as ≥10), the predictor set (→14 without the three added predictors, →16 without food insecurity), weighting, imputation, three alternative alcohol definitions and an age lower bound of 30 years applied to training and evaluation, and included a protocol-specified continuous-score analysis of the untransformed PHQ-9 total; weighted AUROC is tabulated in Table S5 in Multimedia Appendix 1 apart from the continuous-score and alcohol analyses, reported in the Results text. Analyses used Python 3.14 with package versions in the model card; net benefit is reported without intervals, since inference on a decision-analytic quantity answers a different question from the decision itself [39].
+-
+-An adversarial data-integrity audit corrected three silent data-processing defects before final analysis: a fabricated living-alone constant in NHANES pre-pandemic, a post-pandemic physical-activity parsing error, and an income refusal code (77777) not treated as missing. Peer review identified four further defects (post-pandemic income quintile, 2017 income refusal codes, post-2020 drinking classification, 2018 physical-activity indicator), all corrected in the primary analysis rather than carried as limitations; defects, remedies and six singly quantified corrections are in Multimedia Appendix 1 and Table S10.
++Sensitivity analyses, pre-specified with further analyses added afterwards, varied the outcome cut-off (≥5 as well as ≥10), the predictor set (→14 without the three added predictors, →16 without food insecurity), weighting, imputation, three alternative alcohol definitions and an age lower bound of 30 years applied to training and evaluation, and included a protocol-specified continuous-score analysis of the untransformed PHQ-9 total; weighted AUROC is tabulated in Table S6 in Multimedia Appendix 1 apart from the continuous-score and alcohol analyses, reported in the Results text. Analyses used Python 3.14 with package versions in the model card; net benefit is reported without intervals, since inference on a decision-analytic quantity answers a different question from the decision itself [39].
++
++An adversarial data-integrity audit corrected three silent data-processing defects before final analysis: a fabricated living-alone constant in NHANES pre-pandemic, a post-pandemic physical-activity parsing error, and an income refusal code (77777) not treated as missing. Peer review identified four further defects (post-pandemic income quintile, 2017 income refusal codes, post-2020 drinking classification, 2018 physical-activity indicator), all corrected in the primary analysis rather than carried as limitations; defects, remedies and six singly quantified corrections are in Multimedia Appendix 1 and Table S7.
+ 
+@@ -126,5 +126,5 @@
+ 
+-The pooled KCHS development sample comprised 2,048,510 adults and the external cohorts 7,888 pre-pandemic and 5,210 post-pandemic NHANES adults, similar in mean age (49.4, 48.4 and 48.8 years) and in proportion female (50.5%, 51.5% and 50.8%) but not in outcome frequency. Weighted depression prevalence (PHQ-9 ≥10) was 3.6% in KCHS against 8.4% and 12.2% in the two NHANES cycles (Figure 1). Measured covariates differed as sharply: mean BMI 23.7 against 29.8 and 29.7, and weighted food-insecurity prevalence 3.7% in KCHS vs 16.4% and 17.2% in the NHANES cycles among respondents with the item recorded (missing 22.1%, 6.0% and 6.3%; Table S4 in Multimedia Appendix 1 uses available-case denominators throughout).
+-
+-On the mobile examination center (MEC) frame, which supplies the depression module and the weights used throughout, 7.7% of 8,544 pre-pandemic and 14.1% of 6,064 post-pandemic examined adults aged ≥20 years were lost to PHQ-9 item non-response, yielding the complete-case analytic samples of 7,888 and 5,210. Non-response was differential: on the same examination-center frame, three or more items were unanswered by 12.9% of respondents with less than high-school education pre-pandemic and 26.6% post-pandemic, against 7.4% and 13.3% overall on that definition, and rates were also higher among Asian and Black respondents; hence the external cohorts, and particularly the post-pandemic fairness estimates, should be read as complete-case results (Table S8 in Multimedia Appendix 1).
++The pooled KCHS development sample comprised 2,048,510 adults and the external cohorts 7,888 pre-pandemic and 5,210 post-pandemic NHANES adults, similar in mean age (49.4, 48.4 and 48.8 years) and in proportion female (50.5%, 51.5% and 50.8%) but not in outcome frequency. Weighted depression prevalence (PHQ-9 ≥10) was 3.6% in KCHS against 8.4% and 12.2% in the two NHANES cycles (Figure 1). Measured covariates differed as sharply: mean BMI 23.7 against 29.8 and 29.7, and weighted food-insecurity prevalence 3.7% in KCHS vs 16.4% and 17.2% in the NHANES cycles among respondents with the item recorded (missing 22.1%, 6.0% and 6.3%; Table S8 in Multimedia Appendix 1 uses available-case denominators throughout).
++
++On the mobile examination center (MEC) frame, which supplies the depression module and the weights used throughout, 7.7% of 8,544 pre-pandemic and 14.1% of 6,064 post-pandemic examined adults aged ≥20 years were lost to PHQ-9 item non-response, yielding the complete-case analytic samples of 7,888 and 5,210. Non-response was differential: on the same examination-center frame, three or more items were unanswered by 12.9% of respondents with less than high-school education pre-pandemic and 26.6% post-pandemic, against 7.4% and 13.3% overall on that definition, and rates were also higher among Asian and Black respondents; hence the external cohorts, and particularly the post-pandemic fairness estimates, should be read as complete-case results (Table S1 in Multimedia Appendix 1).
+ 
+@@ -132,3 +132,3 @@
+ 
+-Under the identical tuning protocol, unweighted cross-validated AUROC in the training set was 0.840 for LightGBM, 0.835 for random forest and 0.822 for elastic net. The two leading algorithms fell inside the analysis plan's 0.005 tie band, which the calibration-slope tie-break resolves in favor of LightGBM (cross-validated slope 1.00 against 1.20), while elastic net lay outside it (Table S9 in Multimedia Appendix 1). Internal hold-out AUROC was 0.836 (95% CI 0.827-0.846), AUPRC 0.246, Brier 0.030, calibration slope 1.03, CITL +0.10; H1 met. The split being at cluster level, this is an estimate for clusters the model never saw.
++Under the identical tuning protocol, unweighted cross-validated AUROC in the training set was 0.840 for LightGBM, 0.835 for random forest and 0.822 for elastic net. The two leading algorithms fell inside the analysis plan's 0.005 tie band, which the calibration-slope tie-break resolves in favor of LightGBM (cross-validated slope 1.00 against 1.20), while elastic net lay outside it (Table S2 in Multimedia Appendix 1). Internal hold-out AUROC was 0.836 (95% CI 0.827-0.846), AUPRC 0.246, Brier 0.030, calibration slope 1.03, CITL +0.10; H1 met. The split being at cluster level, this is an estimate for clusters the model never saw.
+ 
+@@ -157,7 +157,7 @@
+ 
+-Leakage-controlled optimization, whose pre-specified method search was additionally re-run independently (Table S12 in Multimedia Appendix 1), covered 2,199 recorded runs across 117 experiment files spanning feature engineering, hyperparameter search, ensembling, transfer-robust internal selection, domain adaptation, alternative losses and structural variants) did not exceed external AUROC ~0.77 when model selection was restricted to KCHS-internal criteria; apparent gains from externally tuned variants did not survive leakage control (Tables S11 and S12 in Multimedia Appendix 1).
+-
+-The ceiling was localized with an in-domain oracle, a diagnostic upper bound rather than a candidate model: NHANES was fitted on its own labels, cross-validated with folds split by primary sampling unit within each cycle. Across logistic, penalized-logistic, histogram-gradient-boosting and LightGBM learners the oracle reached only 0.764-0.776 (best learner 0.776, 95% CI 0.753-0.799; widening to 0.745-0.794 when the oracle is refitted inside each bootstrap replicate; Table S15 in Multimedia Appendix 1). The KCHS-transferred model (pre 0.765, post 0.771) therefore sits inside the confidence interval of the best in-domain performance any of these learners reached on NHANES itself, an empirical benchmark over the learners evaluated rather than a proof of a maximum, and one estimated on the pooled pre-plus-post sample against cycle-specific transported figures; the comparison is therefore approximate and cannot exclude a modest true gap.
+-
+-Matching sample size did not close the gap: reduced to the NHANES sample size and cross-validated within Korea, the same 17 predictors still yielded 0.823 at n=7,888 and 0.810 at n=13,098 (the pooled oracle size), ie, 0.81-0.82 against an NHANES ceiling of ~0.77, and 0.830 only at n=200,000 (best of three learners, 5-fold weighted AUROC, in a separate KCHS-internal sample-size experiment). Three further checks agreed: density-ratio reweighting of the KCHS training sample toward the NHANES covariate distribution (labels unused) *reduced* external AUROC, to 0.766 and 0.758 against the in-run baseline of 0.772 pre and 0.769 post (Table S11 in Multimedia Appendix 1); increasing the KCHS training set from 0.5 million to 2 million records did not raise external discrimination; and adding the remaining harmonized-but-unused survey items (public-assistance receipt, weekend sleep duration, alcohol frequency, alcohol quantity in two codings and binge drinking) changed external AUROC by at most 0.003 in either direction, a check evaluated on external data and therefore reported as a diagnostic rather than as leakage-controlled evidence (Table S11 in Multimedia Appendix 1). Deep tabular learners (two multilayer perceptrons, TabNet and an FT-Transformer) all fell below gradient boosting internally, and none exceeded it on both external cohorts (Table S13 in Multimedia Appendix 1). None of these closed the gap, which recalibration cannot close either, correcting calibration rather than rank ordering.
++Leakage-controlled optimization, whose pre-specified method search was additionally re-run independently (Table S9 in Multimedia Appendix 1), covered 2,199 recorded runs across 117 experiment files spanning feature engineering, hyperparameter search, ensembling, transfer-robust internal selection, domain adaptation, alternative losses and structural variants) did not exceed external AUROC ~0.77 when model selection was restricted to KCHS-internal criteria; apparent gains from externally tuned variants did not survive leakage control (Tables S2 and S11 in Multimedia Appendix 1).
++
++The ceiling was localized with an in-domain oracle, a diagnostic upper bound rather than a candidate model: NHANES was fitted on its own labels, cross-validated with folds split by primary sampling unit within each cycle. Across logistic, penalized-logistic, histogram-gradient-boosting and LightGBM learners the oracle reached only 0.764-0.776 (best learner 0.776, 95% CI 0.753-0.799; widening to 0.745-0.794 when the oracle is refitted inside each bootstrap replicate; Table S10 in Multimedia Appendix 1). The KCHS-transferred model (pre 0.765, post 0.771) therefore sits inside the confidence interval of the best in-domain performance any of these learners reached on NHANES itself, an empirical benchmark over the learners evaluated rather than a proof of a maximum, and one estimated on the pooled pre-plus-post sample against cycle-specific transported figures; the comparison is therefore approximate and cannot exclude a modest true gap.
++
++Matching sample size did not close the gap: reduced to the NHANES sample size and cross-validated within Korea, the same 17 predictors still yielded 0.823 at n=7,888 and 0.810 at n=13,098 (the pooled oracle size), ie, 0.81-0.82 against an NHANES ceiling of ~0.77, and 0.830 only at n=200,000 (best of three learners, 5-fold weighted AUROC, in a separate KCHS-internal sample-size experiment). Three further checks agreed: density-ratio reweighting of the KCHS training sample toward the NHANES covariate distribution (labels unused) *reduced* external AUROC, to 0.766 and 0.758 against the in-run baseline of 0.772 pre and 0.769 post (Table S11 in Multimedia Appendix 1); increasing the KCHS training set from 0.5 million to 2 million records did not raise external discrimination; and adding the remaining harmonized-but-unused survey items (public-assistance receipt, weekend sleep duration, alcohol frequency, alcohol quantity in two codings and binge drinking) changed external AUROC by at most 0.003 in either direction, a check evaluated on external data and therefore reported as a diagnostic rather than as leakage-controlled evidence (Table S11 in Multimedia Appendix 1). Deep tabular learners (two multilayer perceptrons, TabNet and an FT-Transformer) all fell below gradient boosting internally, and none exceeded it on both external cohorts (Table S12 in Multimedia Appendix 1). None of these closed the gap, which recalibration cannot close either, correcting calibration rather than rank ordering.
+ 
+@@ -165,6 +165,6 @@
+ 
+-Predictor order and item count were both fixed inside the training set, the full item-count trajectory being given in Table S6 in Multimedia Appendix 1, and the analysis plan's margin (the smallest set within 0.02 AUROC of the full model) selected six items: self-rated health, age, sex, sleep duration, self-rated oral health, partnership. Evaluated afterwards on data that played no part in selection, this six-item form achieved hold-out AUROC 0.822, NHANES pre 0.748 and NHANES post 0.757, against 0.837/0.766/0.769 for the full 17-predictor model fitted on the same data (a loss of 0.015 internally, 0.018 pre-pandemic and 0.012 post-pandemic, each within the plan's 0.02 tolerance); H4 supported. On the selection set, discrimination rose steeply and then flattened (1 item 0.741; 3 items 0.781; 5 items 0.813; 6 items 0.818; 8 items 0.825; 12 items 0.832; 17 items 0.833), the margin being applied over every count below 17 without imposing the plan's preferred 5-10 item range. The five-item set falls 0.0002 below the threshold and the six-item set clears it by 0.0044; the five-versus-six boundary is therefore decided at the fourth decimal and should not be read as robust, the five-item model reaching 0.737 pre-pandemic and 0.751 post-pandemic externally. A variant selected under a stricter 0.01 margin adds smoking as a seventh item and is exploratory only, that margin being post hoc while the plan fixed 0.02; on external data the seventh item does not help consistently, raising pre-pandemic AUROC to 0.757 while lowering post-pandemic AUROC to 0.752. No external information entered the item-count decision (Tables S2, S3 and S6 in Multimedia Appendix 1).
++Predictor order and item count were both fixed inside the training set, the full item-count trajectory being given in Table S13 in Multimedia Appendix 1, and the analysis plan's margin (the smallest set within 0.02 AUROC of the full model) selected six items: self-rated health, age, sex, sleep duration, self-rated oral health, partnership. Evaluated afterwards on data that played no part in selection, this six-item form achieved hold-out AUROC 0.822, NHANES pre 0.748 and NHANES post 0.757, against 0.837/0.766/0.769 for the full 17-predictor model fitted on the same data (a loss of 0.015 internally, 0.018 pre-pandemic and 0.012 post-pandemic, each within the plan's 0.02 tolerance); H4 supported. On the selection set, discrimination rose steeply and then flattened (1 item 0.741; 3 items 0.781; 5 items 0.813; 6 items 0.818; 8 items 0.825; 12 items 0.832; 17 items 0.833), the margin being applied over every count below 17 without imposing the plan's preferred 5-10 item range. The five-item set falls 0.0002 below the threshold and the six-item set clears it by 0.0044; the five-versus-six boundary is therefore decided at the fourth decimal and should not be read as robust, the five-item model reaching 0.737 pre-pandemic and 0.751 post-pandemic externally. A variant selected under a stricter 0.01 margin adds smoking as a seventh item and is exploratory only, that margin being post hoc while the plan fixed 0.02; on external data the seventh item does not help consistently, raising pre-pandemic AUROC to 0.757 while lowering post-pandemic AUROC to 0.752. No external information entered the item-count decision (Tables S6, S12 and S10 in Multimedia Appendix 1).
+ ### Sensitivity Analyses
+ 
+-Discrimination was stable across specifications that alter modeling choices rather than the target condition (Figure 4): weighted training (0.836/0.764/0.768 internal/pre/post), missing-indicator imputation (0.837/0.764/0.772) and single chained-equations imputation of the continuous predictors (0.837/0.763/0.770) all lay close to the primary model. Restricting both training and evaluation to respondents aged ≥30 years *improved* discrimination (0.838/0.781/0.787); restricting training alone gave 0.836/0.770/0.769, placing most of that improvement in the evaluation case mix rather than in what the model learned. Changing the outcome definition to PHQ-9 ≥5 lowered discrimination throughout (0.761/0.735/0.740) at a much higher weighted prevalence (15.6%/25.0%/32.1%); notably, the Korea-US gap narrows from about 0.07 AUROC at the ≥10 threshold to about 0.02 at ≥5 (0.761 vs 0.735-0.740). Alternative alcohol definitions changed weighted AUROC by at most 0.003 externally, and each harmonization correction applied singly against the uncorrected baseline changed it by at most 0.003 in any cohort (Tables S5 and S10 in Multimedia Appendix 1).
++Discrimination was stable across specifications that alter modeling choices rather than the target condition (Figure 4): weighted training (0.836/0.764/0.768 internal/pre/post), missing-indicator imputation (0.837/0.764/0.772) and single chained-equations imputation of the continuous predictors (0.837/0.763/0.770) all lay close to the primary model. Restricting both training and evaluation to respondents aged ≥30 years *improved* discrimination (0.838/0.781/0.787); restricting training alone gave 0.836/0.770/0.769, placing most of that improvement in the evaluation case mix rather than in what the model learned. Changing the outcome definition to PHQ-9 ≥5 lowered discrimination throughout (0.761/0.735/0.740) at a much higher weighted prevalence (15.6%/25.0%/32.1%); notably, the Korea-US gap narrows from about 0.07 AUROC at the ≥10 threshold to about 0.02 at ≥5 (0.761 vs 0.735-0.740). Alternative alcohol definitions changed weighted AUROC by at most 0.003 externally, and each harmonization correction applied singly against the uncorrected baseline changed it by at most 0.003 in any cohort (Tables S13 to S14 in Multimedia Appendix 1).
+ 
+@@ -172,3 +172,3 @@
+ 
+-Living alone is absent from the pre-pandemic NHANES file, hence that cohort is scored as if no respondent lived alone, and the pandemic-period contrast mixes a period difference with a predictor-availability difference. Refitting on the 16 predictors observed in both cycles leaves the contrast unchanged: external AUROC 0.765 pre-pandemic and 0.771 post-pandemic, a difference of +0.006 (95% CI -0.044 to +0.056) against +0.006 (-0.045 to +0.056) for the 17-predictor model, with internal discrimination 0.836 against 0.836. Response-propensity weighting by the inverse of each cohort's education-specific module response rate moved external AUROC by at most 0.002 (0.765 vs 0.765 pre-pandemic, 0.769 vs 0.771 post-pandemic). Data-integrity fixes did not alter substantive conclusions. Under the common configuration of Table S5 in Multimedia Appendix 1, where the 17-, 16- and 14-predictor models share one setting and the 14-predictor value is 0.758 post-pandemic, removing food insecurity alone accounts for 28% of the 17-versus-14 gap pre-pandemic and 50% post-pandemic.
++Living alone is absent from the pre-pandemic NHANES file, hence that cohort is scored as if no respondent lived alone, and the pandemic-period contrast mixes a period difference with a predictor-availability difference. Refitting on the 16 predictors observed in both cycles leaves the contrast unchanged: external AUROC 0.765 pre-pandemic and 0.771 post-pandemic, a difference of +0.006 (95% CI -0.044 to +0.056) against +0.006 (-0.045 to +0.056) for the 17-predictor model, with internal discrimination 0.836 against 0.836. Response-propensity weighting by the inverse of each cohort's education-specific module response rate moved external AUROC by at most 0.002 (0.765 vs 0.765 pre-pandemic, 0.769 vs 0.771 post-pandemic). Data-integrity fixes did not alter substantive conclusions. Under the common configuration of Table S6 in Multimedia Appendix 1, where the 17-, 16- and 14-predictor models share one setting and the 14-predictor value is 0.758 post-pandemic, removing food insecurity alone accounts for 28% of the 17-versus-14 gap pre-pandemic and 50% post-pandemic.
+ ### Interpretability, Fairness, and Clinical Utility
+@@ -178,6 +178,6 @@
+ 
+-Subgroup discrimination in KCHS spanned 0.781-0.882 (weighted AUROC): sex (female 0.826, 95% CI 0.814-0.837; male 0.838, 0.822-0.854), education (0.811-0.882), age (20-39 years 0.808, 0.790-0.827 < 40-59 years 0.822, 0.801-0.842 < ≥60 years 0.860, 0.850-0.870), and household income quintile (0.781-0.835, lowest in the highest-income quintile). In NHANES, discrimination was lower and far less precisely estimated. Pre-pandemic: Mexican American 0.693 (0.633-0.763; n=914), non-Hispanic Black 0.762 (0.727-0.805; n=2,096), other/multiracial 0.764 (0.665-0.865; n=381), non-Hispanic White 0.769 (0.715-0.818; n=2,798), other Hispanic 0.773 (0.725-0.820; n=813), non-Hispanic Asian 0.807 (0.716-0.874; n=886). Post-pandemic: Mexican American 0.692 (0.533-0.802; n=330), non-Hispanic Black 0.726 (0.642-0.791; n=598), non-Hispanic White 0.773 (0.726-0.815; n=3,215), other/multiracial 0.782 (0.701-0.853; n=340), other Hispanic 0.789 (0.751-0.845; n=499), non-Hispanic Asian 0.845 (0.656-0.987; n=228). Applying the fairness flag set in the analysis plan (a subgroup AUROC differing from the cohort value by more than 0.05) flags the highest income quintile in KCHS (-0.056); Mexican American in NHANES pre-pandemic (-0.072); Mexican American in NHANES post-pandemic (-0.078); non-Hispanic Asian in NHANES post-pandemic (+0.074). Within KCHS a few intervals sit clear of the cohort interval: higher in adults aged ≥60 years (0.850-0.870), middle-school-educated respondents (0.861-0.902); lower in income quintile 4 (0.772-0.822), the highest income quintile (0.744-0.818). Subgroup discrimination is therefore not uniform in the development population. In NHANES, by contrast, the intervals are wide and mutually overlapping, and every one overlaps the cohort-level interval; hence the race/ethnicity ordering should not be read as established differential performance; that the lowest point estimate falls in Mexican American respondents in both cycles nonetheless warrants monitoring as an equity caveat (Figure 6). Internal subgroup calibration was good (slope 0.96-1.13 across sex, age, education and income strata; subgroup CITL -0.03 to +0.20). In NHANES the subgroup calibration slopes were below 1 in all but one subgroup (0.57-0.79; non-Hispanic Asian post-pandemic 1.19), and subgroup CITL was positive in every group except Mexican American pre-pandemic (up to +1.32), confirming that the external miscalibration is under-prediction of absolute risk and not only over-extreme ranking. Exact subgroup values with CIs are tabulated in Table S7 in Multimedia Appendix 1. 
+-
+-
+-On decision-curve analysis the model gave positive net benefit exceeding both defaults across a clinically relevant threshold-probability range in all three datasets (Figure 7). At a threshold probability of 0.10, net benefit was +0.028 pre-pandemic and +0.058 post-pandemic after intercept/slope updating, against +0.010 internally, in each case above screen-all (-0.017, +0.024 and -0.072). The operating threshold was fixed once in the development data at 85% sensitivity and applied unchanged thereafter, hence the external operating characteristics are transported rather than guaranteed by construction. At that single threshold, sensitivity/specificity were 0.833/0.665 internally, 0.810/0.566 in NHANES pre and 0.791/0.596 in NHANES post, with positive predictive value 0.147 and 0.214 externally (number needed to screen 6.8 and 4.7) and negative predictive value 0.970 and 0.953; the model flagged 47% of the pre-pandemic and 45% of the post-pandemic population; operating points tuned to fixed sensitivity targets of 0.85 and 0.90 are tabulated in Table S2 in Multimedia Appendix 1. The flagged share follows from where the threshold is set: at 0.10 and 0.15 it falls to 27% and 16% pre-pandemic and to 40% and 26% post-pandemic (Tables S1, S2 and S3 in Multimedia Appendix 1). Clinical utility remains provisional pending prospective evaluation.
++Subgroup discrimination in KCHS spanned 0.781-0.882 (weighted AUROC): sex (female 0.826, 95% CI 0.814-0.837; male 0.838, 0.822-0.854), education (0.811-0.882), age (20-39 years 0.808, 0.790-0.827 < 40-59 years 0.822, 0.801-0.842 < ≥60 years 0.860, 0.850-0.870), and household income quintile (0.781-0.835, lowest in the highest-income quintile). In NHANES, discrimination was lower and far less precisely estimated. Pre-pandemic: Mexican American 0.693 (0.633-0.763; n=914), non-Hispanic Black 0.762 (0.727-0.805; n=2,096), other/multiracial 0.764 (0.665-0.865; n=381), non-Hispanic White 0.769 (0.715-0.818; n=2,798), other Hispanic 0.773 (0.725-0.820; n=813), non-Hispanic Asian 0.807 (0.716-0.874; n=886). Post-pandemic: Mexican American 0.692 (0.533-0.802; n=330), non-Hispanic Black 0.726 (0.642-0.791; n=598), non-Hispanic White 0.773 (0.726-0.815; n=3,215), other/multiracial 0.782 (0.701-0.853; n=340), other Hispanic 0.789 (0.751-0.845; n=499), non-Hispanic Asian 0.845 (0.656-0.987; n=228). Applying the fairness flag set in the analysis plan (a subgroup AUROC differing from the cohort value by more than 0.05) flags the highest income quintile in KCHS (-0.056); Mexican American in NHANES pre-pandemic (-0.072); Mexican American in NHANES post-pandemic (-0.078); non-Hispanic Asian in NHANES post-pandemic (+0.074). Within KCHS a few intervals sit clear of the cohort interval: higher in adults aged ≥60 years (0.850-0.870), middle-school-educated respondents (0.861-0.902); lower in income quintile 4 (0.772-0.822), the highest income quintile (0.744-0.818). Subgroup discrimination is therefore not uniform in the development population. In NHANES, by contrast, the intervals are wide and mutually overlapping, and every one overlaps the cohort-level interval; hence the race/ethnicity ordering should not be read as established differential performance; that the lowest point estimate falls in Mexican American respondents in both cycles nonetheless warrants monitoring as an equity caveat (Figure 6). Internal subgroup calibration was good (slope 0.96-1.13 across sex, age, education and income strata; subgroup CITL -0.03 to +0.20). In NHANES the subgroup calibration slopes were below 1 in all but one subgroup (0.57-0.79; non-Hispanic Asian post-pandemic 1.19), and subgroup CITL was positive in every group except Mexican American pre-pandemic (up to +1.32), confirming that the external miscalibration is under-prediction of absolute risk and not only over-extreme ranking. Exact subgroup values with CIs are tabulated in Table S14 in Multimedia Appendix 1. 
++
++
++On decision-curve analysis the model gave positive net benefit exceeding both defaults across a clinically relevant threshold-probability range in all three datasets (Figure 7). At a threshold probability of 0.10, net benefit was +0.028 pre-pandemic and +0.058 post-pandemic after intercept/slope updating, against +0.010 internally, in each case above screen-all (-0.017, +0.024 and -0.072). The operating threshold was fixed once in the development data at 85% sensitivity and applied unchanged thereafter, hence the external operating characteristics are transported rather than guaranteed by construction. At that single threshold, sensitivity/specificity were 0.833/0.665 internally, 0.810/0.566 in NHANES pre and 0.791/0.596 in NHANES post, with positive predictive value 0.147 and 0.214 externally (number needed to screen 6.8 and 4.7) and negative predictive value 0.970 and 0.953; the model flagged 47% of the pre-pandemic and 45% of the post-pandemic population; operating points tuned to fixed sensitivity targets of 0.85 and 0.90 are tabulated in Table S15 in Multimedia Appendix 1. The flagged share follows from where the threshold is set: at 0.10 and 0.15 it falls to 27% and 16% pre-pandemic and to 40% and 26% post-pandemic (Tables S8, S6 and S10 in Multimedia Appendix 1). Clinical utility remains provisional pending prospective evaluation.
+ 
+@@ -211,3 +211,3 @@
+ 
+-Subgroup discrimination was lowest in Mexican American respondents in both NHANES cycles and, within the development population, in the highest income quintile, the one development subgroup that trips the analysis plan's 0.05 flag; the NHANES race and ethnicity intervals are wide and overlapping, leaving those differences unestablished. A deployed screener should report subgroup performance continuously [45]: the subgroup AUROC, the subgroup calibration slope, and the false-negative rate at the operating threshold, which spans 0.03 to 0.31 here (Table S7 in Multimedia Appendix 1).
++Subgroup discrimination was lowest in Mexican American respondents in both NHANES cycles and, within the development population, in the highest income quintile, the one development subgroup that trips the analysis plan's 0.05 flag; the NHANES race and ethnicity intervals are wide and overlapping, leaving those differences unestablished. A deployed screener should report subgroup performance continuously [45]: the subgroup AUROC, the subgroup calibration slope, and the false-negative rate at the operating threshold, which spans 0.03 to 0.31 here (Table S14 in Multimedia Appendix 1).
+ 
+@@ -217,7 +217,7 @@
+ 
+-Depression-module non-response is substantial and differential, costing 7.7% of the pre-pandemic and 14.1% of the post-pandemic sample on the mobile examination center frame, counting any unanswered item (14.6% and 33.3% on the wider interview frame; Table S8 in Multimedia Appendix 1), and varying by education and by race and ethnicity; the external cohorts are therefore complete-case results, and the external estimates, particularly post-pandemic subgroup results, may be biased in an unknown direction. Alcohol, physical activity, income, body mass index and food insecurity are measured differently in the two surveys and were harmonized conservatively. Every predictor value was collected by interviewer administration or in an examination center; a web or mobile form changes the mode of administration for all 17 items, an untested change. The design is cross-sectional; the model screens current symptoms rather than predicting onset. Living alone is absent from the pre-pandemic NHANES file, hence that cohort is scored as if no respondent lived alone; food insecurity is a single item in KCHS, unmeasured there in 2020 and 2021; and prior depression diagnosis is unrecorded in KCHS, precluding a diagnosis-exclusion sensitivity analysis.
+-
+-Internal estimates are hold-out rather than fully cross-validated (Multimedia Appendix 1). The external cohorts carry 728 and 661 events, modest for a validation study and most limiting for calibration [44]; conditioning on a single fitted update rather than refitting it gives visibly wider slope intervals (0.82-1.19 pre and 0.88-1.13 post, Table S16 in Multimedia Appendix 1), and a deployment that fits its update once on a modest local sample is in that wider regime. The predictor-set amendment was written while the study was under way, after an earlier external result was known but before any model using the amended set was fitted, and contributes a robustness analysis rather than a primary result (Multimedia Appendix 1). Two of the four hypotheses, H2 and H3, were stated qualitatively, without numeric decision margins; judging those two "supported" therefore involves interpretation.
+-
+-A competing contributor is partly quantified, and it is not concept shift: the transportable predictor set is bounded by the development survey's content. Adding multimorbidity and healthcare utilization domains available in NHANES but not harmonizable to KCHS raised the in-domain oracle from 0.765 to 0.778, a 0.013 gain that is not itself evidence of signal transportable from Korea (Table S14 in Multimedia Appendix 1).
++Depression-module non-response is substantial and differential, costing 7.7% of the pre-pandemic and 14.1% of the post-pandemic sample on the mobile examination center frame, counting any unanswered item (14.6% and 33.3% on the wider interview frame; Table S1 in Multimedia Appendix 1), and varying by education and by race and ethnicity; the external cohorts are therefore complete-case results, and the external estimates, particularly post-pandemic subgroup results, may be biased in an unknown direction. Alcohol, physical activity, income, body mass index and food insecurity are measured differently in the two surveys and were harmonized conservatively. Every predictor value was collected by interviewer administration or in an examination center; a web or mobile form changes the mode of administration for all 17 items, an untested change. The design is cross-sectional; the model screens current symptoms rather than predicting onset. Living alone is absent from the pre-pandemic NHANES file, hence that cohort is scored as if no respondent lived alone; food insecurity is a single item in KCHS, unmeasured there in 2020 and 2021; and prior depression diagnosis is unrecorded in KCHS, precluding a diagnosis-exclusion sensitivity analysis.
++
++Internal estimates are hold-out rather than fully cross-validated (Multimedia Appendix 1). The external cohorts carry 728 and 661 events, modest for a validation study and most limiting for calibration [44]; conditioning on a single fitted update rather than refitting it gives visibly wider slope intervals (0.82-1.19 pre and 0.88-1.13 post, Table S3 in Multimedia Appendix 1), and a deployment that fits its update once on a modest local sample is in that wider regime. The predictor-set amendment was written while the study was under way, after an earlier external result was known but before any model using the amended set was fitted, and contributes a robustness analysis rather than a primary result (Multimedia Appendix 1). Two of the four hypotheses, H2 and H3, were stated qualitatively, without numeric decision margins; judging those two "supported" therefore involves interpretation.
++
++A competing contributor is partly quantified, and it is not concept shift: the transportable predictor set is bounded by the development survey's content. Adding multimorbidity and healthcare utilization domains available in NHANES but not harmonizable to KCHS raised the in-domain oracle from 0.765 to 0.778, a 0.013 gain that is not itself evidence of signal transportable from Korea (Table S16 in Multimedia Appendix 1).
+ 
+@@ -229,3 +229,3 @@
+ 
+-Figure 1: Weighted sample characteristics across the three cohorts. Estimates are complex-survey weighted and computed on available cases, that is, respondents with the item recorded; the accompanying missing shares are unweighted record proportions, and both are tabulated in Table S4 in Multimedia Appendix 1. Self-rated health and self-rated oral health are scored 1 (best) to 5 (worst). Figure 2: Calibration of the primary model in the internal KCHS hold-out and the two NHANES cycles, shown as transported and after intercept-and-slope recalibration applied out-of-sample by 5-fold cross-fitting; the recalibration is applied to all three cohorts so that the panels are comparable. Points are deciles of predicted risk, plotted as weighted mean predicted probability against weighted observed proportion; the dashed line is perfect calibration, and points above it indicate under-prediction of absolute risk. The deployed internal model is the one shown as transported. Figure 3: Weighted receiver operating characteristic curves for the internal KCHS hold-out and the two NHANES cycles, using the transported model without refitting or recalibration. The area under each curve is given in the legend; the diagonal is chance performance. Figure 4: Weighted area under the receiver operating characteristic curve (AUROC) for the internal hold-out and both NHANES cycles across specifications that alter modeling choices, the predictor set, the analytic population, or the outcome definition. The dotted vertical line marks the 0.80 internal target set in the protocol; exact values are given in Table S5 in Multimedia Appendix 1. Figure 5: Global predictor importance of the 17-predictor model, measured as mean absolute Shapley additive explanations (SHAP) value and computed on a random subsample of the development fitting partition. Larger values indicate a greater average contribution to the predicted risk; the measure is unsigned and does not indicate direction of effect. Figure 6: Weighted AUROC and 95% CI by sex, age band, education and household income quintile in the KCHS hold-out, and by race and ethnicity in the two NHANES cycles. Intervals are domain estimates computed from replicate weights generated on the full cohort design; dotted vertical lines mark the corresponding cohort-level AUROC. Figure 7: Weighted net benefit plotted against threshold probability over the range 0.02 to 0.30, with each dataset carrying its own screen-all and screen-none default strategies. The internal KCHS hold-out is scored with the original probabilities, and the two external cohorts with probabilities recalibrated out-of-sample by 5-fold cross-fitting grouped by primary sampling unit. The model is clinically useful over the range in which its curve lies above both defaults. Tables: Table 1 (harmonized predictor set) and Table 2 (discrimination and calibration).
++Figure 1: Weighted sample characteristics across the three cohorts. Estimates are complex-survey weighted and computed on available cases, that is, respondents with the item recorded; the accompanying missing shares are unweighted record proportions, and both are tabulated in Table S8 in Multimedia Appendix 1. Self-rated health and self-rated oral health are scored 1 (best) to 5 (worst). Figure 2: Calibration of the primary model in the internal KCHS hold-out and the two NHANES cycles, shown as transported and after intercept-and-slope recalibration applied out-of-sample by 5-fold cross-fitting; the recalibration is applied to all three cohorts so that the panels are comparable. Points are deciles of predicted risk, plotted as weighted mean predicted probability against weighted observed proportion; the dashed line is perfect calibration, and points above it indicate under-prediction of absolute risk. The deployed internal model is the one shown as transported. Figure 3: Weighted receiver operating characteristic curves for the internal KCHS hold-out and the two NHANES cycles, using the transported model without refitting or recalibration. The area under each curve is given in the legend; the diagonal is chance performance. Figure 4: Weighted area under the receiver operating characteristic curve (AUROC) for the internal hold-out and both NHANES cycles across specifications that alter modeling choices, the predictor set, the analytic population, or the outcome definition. The dotted vertical line marks the 0.80 internal target set in the protocol; exact values are given in Table S6 in Multimedia Appendix 1. Figure 5: Global predictor importance of the 17-predictor model, measured as mean absolute Shapley additive explanations (SHAP) value and computed on a random subsample of the development fitting partition. Larger values indicate a greater average contribution to the predicted risk; the measure is unsigned and does not indicate direction of effect. Figure 6: Weighted AUROC and 95% CI by sex, age band, education and household income quintile in the KCHS hold-out, and by race and ethnicity in the two NHANES cycles. Intervals are domain estimates computed from replicate weights generated on the full cohort design; dotted vertical lines mark the corresponding cohort-level AUROC. Figure 7: Weighted net benefit plotted against threshold probability over the range 0.02 to 0.30, with each dataset carrying its own screen-all and screen-none default strategies. The internal KCHS hold-out is scored with the original probabilities, and the two external cohorts with probabilities recalibrated out-of-sample by 5-fold cross-fitting grouped by primary sampling unit. The model is clinically useful over the range in which its curve lies above both defaults. Tables: Table 1 (harmonized predictor set) and Table 2 (discrimination and calibration).
+ 
+@@ -250,3 +250,3 @@
+ ## Multimedia Appendix 1
+-Supplementary methods and results: the year-specific KCHS↔NHANES harmonization crosswalk, the predictor-set amendment, and the study-design, participant, harmonization, model-development, external-validation and ethics detail relocated from the Methods, followed by Tables S1 to S16 giving the clinical-utility, sample-characteristic, sensitivity, transportability-ceiling and calibration-interval results.
++Supplementary methods and results: the year-specific KCHS↔NHANES harmonization crosswalk, the predictor-set amendment, and the study-design, participant, harmonization, model-development, external-validation and ethics detail supporting the Methods, followed by Tables S1 to S16 giving the clinical-utility, sample-characteristic, sensitivity, transportability-ceiling and calibration-interval results.
+ 
+
+--- BEFORE/TRIPOD_AI_checklist.md
++++ AFTER/TRIPOD_AI_checklist.md
+@@ -25,3 +25,3 @@
+ | Participants | 6c | D;E | Give details of any treatments received, and how they were handled during model development or evaluation, if relevant | Not applicable; no treatments were administered in these observational surveys and no treatment variable was modeled. Discussion, Strengths and Limitations, and Multimedia Appendix 1 note that a prior physician diagnosis of depression is not recorded in KCHS, precluding a diagnosis-based exclusion. |
+-| Data preparation | 7 | D;E | Describe any data pre-processing and quality checking, including whether this was similar across relevant sociodemographic groups | Methods, Predictors and Harmonization (one preprocessing pipeline fitted in training, applied unchanged everywhere) and External Validation and Sensitivity Analyses (adversarial audit plus peer review correcting seven defects); group-differential module non-response in Table S8 in Multimedia Appendix 1. |
++| Data preparation | 7 | D;E | Describe any data pre-processing and quality checking, including whether this was similar across relevant sociodemographic groups | Methods, Predictors and Harmonization (one preprocessing pipeline fitted in training, applied unchanged everywhere) and External Validation and Sensitivity Analyses (adversarial audit plus peer review correcting seven defects); group-differential module non-response in Table S1 in Multimedia Appendix 1. |
+ | Outcome | 8a | D;E | Clearly define the outcome that is being predicted and the time horizon, including how and when assessed, the rationale for choosing this outcome, and whether the method of outcome assessment is consistent across sociodemographic groups | Methods, Participants and Outcome: PHQ-9 total ≥10, nine items scored 0-3, computed identically in both surveys, with the cut-off rationale; the design is cross-sectional, and the outcome is current symptoms rather than a future horizon (Discussion, Strengths and Limitations). |
+@@ -33,3 +33,3 @@
+ | Sample size | 10 | D;E | Explain how the study size was arrived at (separately for development and evaluation), and justify that the study size was sufficient to answer the research question. Include details of any sample size calculation | Methods, Model Development and Evaluation: no a priori calculation; 500,000 training records (~18,000 events, ~1,000 per predictor), 100,001 hold-out (~3,600 events), and all eligible external respondents (728 and 661 events, the binding precision constraint). |
+-| Missing data | 11 | D;E | Describe how missing data were handled. Provide reasons for omitting any data | Methods, Predictors and Harmonization: one preprocessing pipeline fitted in the training set and applied unchanged, the income quintile excepted; the imputation scheme and the two alternative schemes tested in sensitivity analysis are in Multimedia Appendix 1 and Table S5. |
++| Missing data | 11 | D;E | Describe how missing data were handled. Provide reasons for omitting any data | Methods, Predictors and Harmonization: one preprocessing pipeline fitted in the training set and applied unchanged, the income quintile excepted; the imputation scheme and the two alternative schemes tested in sensitivity analysis are in Multimedia Appendix 1 and Table S6. |
+ | Analytical methods | 12a | D | Describe how the data were used (eg, for development and evaluation of model performance) in the analysis, including whether the data were partitioned, considering any sample size requirements | Methods, Study Design and Data Sources and Model Development and Evaluation: 2,048,510 KCHS records split at cluster level into a 500,000-record training set and a 100,001-record hold-out sharing no cluster; no a priori sample-size calculation, ~18,000 training events reported instead. |
+@@ -37,3 +37,3 @@
+ | Analytical methods | 12c | D | Specify the type of model, rationale, all model building steps, including any hyperparameter tuning, and method for internal validation | Methods, Model Development and Evaluation: elastic net, random forest and LightGBM; 24-configuration randomized search plus identical 5-fold cross-validated grids inside the training set; pre-specified AUROC then calibration-slope tie-break selected LightGBM; internal validation in the cluster-disjoint hold-out. |
+-| Analytical methods | 12d | D;E | Describe if and how any heterogeneity in estimates of model parameter values and model performance was handled and quantified across clusters (eg, hospitals, countries). See TRIPOD-Cluster for additional considerations | Methods, Study Design and Data Sources and Model Development and Evaluation: cluster-level split with 0 shared clusters, PSU-resampled bootstrap, PSU-grouped recalibration folds; performance quantified separately by country and pandemic period; leave-one-year-out check in Table S12 in Multimedia Appendix 1. |
++| Analytical methods | 12d | D;E | Describe if and how any heterogeneity in estimates of model parameter values and model performance was handled and quantified across clusters (eg, hospitals, countries). See TRIPOD-Cluster for additional considerations | Methods, Study Design and Data Sources and Model Development and Evaluation: cluster-level split with 0 shared clusters, PSU-resampled bootstrap, PSU-grouped recalibration folds; performance quantified separately by country and pandemic period; leave-one-year-out check in Table S9 in Multimedia Appendix 1. |
+ | Analytical methods | 12e | D;E | Specify all measures and plots used (and their rationale) to evaluate model performance (eg, discrimination, calibration, clinical utility) and, if relevant, to compare multiple models | Methods, Model Development and Evaluation: weighted AUROC, AUPRC, calibration slope, CITL, Brier, ECE, operating characteristics and decision-curve net benefit over thresholds 0.02-0.30; calibration assessed at the moderate level of the calibration hierarchy; ROC, calibration and decision-curve plots. |
+@@ -41,5 +41,5 @@
+ | Analytical methods | 12g | E | For model evaluation, describe how the model predictions were calculated (eg, formula, code, object, application programming interface) | Methods, External Validation and Sensitivity Analyses and Data Availability: the KCHS-trained model scored NHANES without refitting through the development-fitted pipeline; fixed seed and hyperparameters, preprocessing specification, model card and code available from the corresponding author on request. |
+-| Class imbalance | 13 | D;E | If class imbalance methods were used, state why and how this was done, and any subsequent methods to recalibrate the model or the model predictions | Methods, Model Development and Evaluation: no class weighting, resampling or other imbalance correction; the learner was fitted on the natural 3.6% event rate, a departure from the plan documented in Table S9 in Multimedia Appendix 1. |
+-| Fairness | 14 | D;E | Describe any approaches that were used to address model fairness and their rationale | Methods, External Validation and Sensitivity Analyses: weighted subgroup AUROC and calibration slope across sex, age, education, household income quintile and, in NHANES, race and ethnicity, with the rationale stated and a 0.05 AUROC deviation from the cohort value pre-specified as the flag; results in Results, Interpretability, Fairness, and Clinical Utility and Table S7. |
+-| Model output | 15 | D | Specify the output of the prediction model (eg, probabilities, classification). Provide details and rationale for any classification and how the thresholds were identified | Methods, Model Development and Evaluation: output is a predicted probability; one triage threshold fixed in development at 85% sensitivity (0.02051) and transported unchanged; Youden and prevalence reference thresholds in Table S1 in Multimedia Appendix 1. |
++| Class imbalance | 13 | D;E | If class imbalance methods were used, state why and how this was done, and any subsequent methods to recalibrate the model or the model predictions | Methods, Model Development and Evaluation: no class weighting, resampling or other imbalance correction; the learner was fitted on the natural 3.6% event rate, a departure from the plan documented in Table S2 in Multimedia Appendix 1. |
++| Fairness | 14 | D;E | Describe any approaches that were used to address model fairness and their rationale | Methods, External Validation and Sensitivity Analyses: weighted subgroup AUROC and calibration slope across sex, age, education, household income quintile and, in NHANES, race and ethnicity, with the rationale stated and a 0.05 AUROC deviation from the cohort value pre-specified as the flag; results in Results, Interpretability, Fairness, and Clinical Utility and Table S14. |
++| Model output | 15 | D | Specify the output of the prediction model (eg, probabilities, classification). Provide details and rationale for any classification and how the thresholds were identified | Methods, Model Development and Evaluation: output is a predicted probability; one triage threshold fixed in development at 85% sensitivity (0.02051) and transported unchanged; Youden and prevalence reference thresholds in Table S4 in Multimedia Appendix 1. |
+ | Training versus evaluation | 16 | D;E | Identify any differences between the development and evaluation data in healthcare setting, eligibility criteria, outcome, and predictors | Methods, Participants and Outcome and Predictors and Harmonization: identical PHQ-9 ≥10 outcome and ≥20-year eligibility; NHANES adds a mobile examination center frame; alcohol, activity, income and BMI instruments differ; living alone absent pre-pandemic. |
+@@ -50,3 +50,3 @@
+ | Protocol | 18c | D;E | Indicate where the study protocol can be accessed or state that a protocol was not prepared | Methods, Study Design and Data Sources and Data Availability: dated protocol and statistical analysis plan written before any analysis, plus a dated predictor-set amendment written after the 14-predictor external result was known but locked before any model using the amended set was fitted; all released with the analysis code. |
+-| Registration | 18d | D;E | Provide registration information for the study, including register name and registration number, or state that the study was not registered | Methods, Study Design and Data Sources: states that the study was not registered in a public registry; Table S9 in Multimedia Appendix 1 records non-registration as a departure from the analysis plan's intention. |
++| Registration | 18d | D;E | Provide registration information for the study, including register name and registration number, or state that the study was not registered | Methods, Study Design and Data Sources: states that the study was not registered in a public registry; Table S2 in Multimedia Appendix 1 records non-registration as a departure from the analysis plan's intention. |
+ | Data sharing | 18e | D;E | Provide details of the availability of the study data | Back matter, Data Availability: NHANES openly available from NCHS; KCHS microdata access-controlled through the KDCA raw-data request-and-review process and non-redistributable under the data-use agreement; derived result tables provided as Multimedia Appendices. |
+@@ -56,10 +56,10 @@
+ | **RESULT** | | | | |
+-| Participants | 20a | D;E | Describe the flow of participants through the study, including the number of participants with and without the outcome and, if applicable, a summary of the follow-up time. A diagram may be helpful | Methods, Participants and Outcome; Results, Participant Characteristics: NHANES flow 9,232→8,544→7,888 and 7,809→6,064→5,210, with Multimedia Appendix 1 Tables A.4 and S8; described in text, no diagram; cross-sectional, with no follow-up time. |
+-| Participants | 20b | D;E | Report the characteristics overall and, where applicable, for each data source or setting, including the key dates, key predictors (including demographics), treatments received, sample size, number of outcome events, follow-up time, and amount of missing data. A table may be helpful. Report any differences across key demographic groups | Results, Participant Characteristics: per-cohort age, sex, BMI, food insecurity and weighted depression prevalence; Figure 1 and Multimedia Appendix 1 Table S4 add every characteristic with missing shares; non-response differed by education and race/ethnicity. |
+-| Participants | 20c | E | For model evaluation, show a comparison with the development data of the distribution of important predictors (demographics, predictors, and outcome) | Results, Participant Characteristics: development-versus-validation comparison of BMI (23.7 vs 29.8/29.7), food insecurity (3.7% vs 16.4%/17.2%) and outcome prevalence (3.6% vs 8.4%/12.2%); Multimedia Appendix 1 Table S4 tabulates all predictors side by side. |
++| Participants | 20a | D;E | Describe the flow of participants through the study, including the number of participants with and without the outcome and, if applicable, a summary of the follow-up time. A diagram may be helpful | Methods, Participants and Outcome; Results, Participant Characteristics: NHANES flow 9,232→8,544→7,888 and 7,809→6,064→5,210, with Multimedia Appendix 1 Tables A.4 and S1; described in text, no diagram; cross-sectional, with no follow-up time. |
++| Participants | 20b | D;E | Report the characteristics overall and, where applicable, for each data source or setting, including the key dates, key predictors (including demographics), treatments received, sample size, number of outcome events, follow-up time, and amount of missing data. A table may be helpful. Report any differences across key demographic groups | Results, Participant Characteristics: per-cohort age, sex, BMI, food insecurity and weighted depression prevalence; Figure 1 and Multimedia Appendix 1 Table S8 add every characteristic with missing shares; non-response differed by education and race/ethnicity. |
++| Participants | 20c | E | For model evaluation, show a comparison with the development data of the distribution of important predictors (demographics, predictors, and outcome) | Results, Participant Characteristics: development-versus-validation comparison of BMI (23.7 vs 29.8/29.7), food insecurity (3.7% vs 16.4%/17.2%) and outcome prevalence (3.6% vs 8.4%/12.2%); Multimedia Appendix 1 Table S8 tabulates all predictors side by side. |
+ | Model development | 21 | D;E | Specify the number of participants and outcome events in each analysis (eg, for model development, hyperparameter tuning, model evaluation) | Methods, Model Development and Evaluation: training 500,000 (~18,000 events), hold-out 100,001 (~3,600), external cohorts 7,888 (728 events) and 5,210 (661); the 300,000-record and 200,000-record tuning subsamples and the 450,000/50,000 parsimony split are in Multimedia Appendix 1. |
+ | Model specification | 22 | D | Provide details of the full-feature and shared-feature prediction models (eg, formula, code, object, application programming interface) to allow predictions in new individuals and to enable third party evaluation and implementation, including any restrictions to access or reuse (eg, freely available, proprietary) | Methods, Model Development and Evaluation (algorithm, search and selection rule), with the full LightGBM hyperparameter configuration in Multimedia Appendix 1 and in the model card; Results, Parsimonious Deployment Model: the six items; Data Availability: preprocessing specification and refitting code, no public model object. |
+-| Model performance | 23a | D;E | Report model performance estimates with confidence intervals, including for any key subgroups (eg, sociodemographic). Consider plots to aid presentation | Results, External Validation Across Country and Pandemic Period: Table 2 gives AUROC, AUPRC and calibration with bootstrap CIs; subgroup AUROCs with CIs in Interpretability, Fairness, and Clinical Utility and Multimedia Appendix 1 Table S7 (Figures 2, 3, 6). |
++| Model performance | 23a | D;E | Report model performance estimates with confidence intervals, including for any key subgroups (eg, sociodemographic). Consider plots to aid presentation | Results, External Validation Across Country and Pandemic Period: Table 2 gives AUROC, AUPRC and calibration with bootstrap CIs; subgroup AUROCs with CIs in Interpretability, Fairness, and Clinical Utility and Multimedia Appendix 1 Table S14 (Figures 2, 3, 6). |
+ | Model performance | 23b | D;E | If examined, report results of any heterogeneity in model performance across clusters. See TRIPOD-Cluster for additional details | Results, External Validation Across Country and Pandemic Period: performance reported separately by country and pandemic cycle with a formal between-cycle difference; heterogeneity across within-survey clusters (year, stratum, primary sampling unit) was not itself estimated. |
+-| Model updating | 24 | E | Report the results from any model updating, including the updated model and subsequent performance | Results, External Validation Across Country and Pandemic Period, and Table 2: intercept-only, intercept-plus-slope and temperature-scaling updates applied out-of-sample by cross-fitting; recalibrated slope 1.00 and CITL 0.00 in both cycles (Table S16 in Multimedia Appendix 1). |
++| Model updating | 24 | E | Report the results from any model updating, including the updated model and subsequent performance | Results, External Validation Across Country and Pandemic Period, and Table 2: intercept-only, intercept-plus-slope and temperature-scaling updates applied out-of-sample by cross-fitting; recalibrated slope 1.00 and CITL 0.00 in both cycles (Table S3 in Multimedia Appendix 1). |
+ | **DISCUSSION** | | | | |
+
+--- BEFORE/appendix2_crosswalk.md
++++ AFTER/appendix2_crosswalk.md
+@@ -2,3 +2,3 @@
+ 
+-This appendix carries the material needed to reproduce and interpret the analysis but too detailed for the main text: the year-specific KCHS-NHANES harmonization crosswalk, the predictor-set amendment, the study-design and model-development detail relocated from the Methods, and the supplementary results tabulated as Tables S1 to S16. Estimates are complex-survey weighted unless a row or column is labeled unweighted.
++This appendix carries the material needed to reproduce and interpret the analysis but too detailed for the main text: the year-specific KCHS-NHANES harmonization crosswalk, the predictor-set amendment, the study-design and model-development detail supporting the Methods, and the supplementary results tabulated as Tables S1 to S16. Estimates are complex-survey weighted unless a row or column is labeled unweighted.
+ 
+@@ -102,3 +102,3 @@
+ 
+-Deviations from the locked document and the parent protocol are reported here and, rule by rule, in Multimedia Appendix 1 Table S9. These comprise: the post-hoc candidate screening described below and reported under Predictors and Harmonization in the Methods; a parsimony margin reported at both the planned 0.02 and a stricter 0.01; an alcohol variable operationalized as current drinking alone rather than current plus at-risk drinking; the planned BMI self-report-versus-measured comparison, prior-diagnosis exclusion and alternative physical-activity definition, none of which the data support; the planned R components, which were not used; and public registration, which was not completed. After the primary analysis was complete, the remaining harmonizable-but-unused items (public-assistance receipt, alcohol frequency and quantity, binge drinking, weekend sleep duration) were screened by comparing the direction of the adjusted associations with depression across the three cohorts. This screening inspected NHANES outcome associations and thus lies outside the locked plan; it is reported under Predictors and Harmonization in the Methods as a post-hoc diagnostic. It did not change the predictor set: alcohol quantity, binge drinking and weekend sleep duration reversed direction between countries; alcohol frequency and public-assistance receipt were directionally consistent and added no external discrimination, public-assistance receipt leaving external AUROC unchanged (Table S11 in Multimedia Appendix 1). No item was added.
++Deviations from the locked document and the parent protocol are reported here and, rule by rule, in Multimedia Appendix 1 Table S2. These comprise: the post-hoc candidate screening described below and reported under Predictors and Harmonization in the Methods; a parsimony margin reported at both the planned 0.02 and a stricter 0.01; an alcohol variable operationalized as current drinking alone rather than current plus at-risk drinking; the planned BMI self-report-versus-measured comparison, prior-diagnosis exclusion and alternative physical-activity definition, none of which the data support; the planned R components, which were not used; and public registration, which was not completed. After the primary analysis was complete, the remaining harmonizable-but-unused items (public-assistance receipt, alcohol frequency and quantity, binge drinking, weekend sleep duration) were screened by comparing the direction of the adjusted associations with depression across the three cohorts. This screening inspected NHANES outcome associations and thus lies outside the locked plan; it is reported under Predictors and Harmonization in the Methods as a post-hoc diagnostic. It did not change the predictor set: alcohol quantity, binge drinking and weekend sleep duration reversed direction between countries; alcohol frequency and public-assistance receipt were directionally consistent and added no external discrimination, public-assistance receipt leaving external AUROC unchanged (Table S11 in Multimedia Appendix 1). No item was added.
+ 
+
+--- BEFORE/appendix3_utility.md
++++ AFTER/appendix3_utility.md
+@@ -2,5 +2,79 @@
+ 
+-Tables S1 to S16 give the exact values behind the figures and the analyses summarized in the main text. Estimates are complex-survey weighted unless a row or column is labeled unweighted; the depression-module non-response counts and the algorithm-selection cross-validated AUROCs are unweighted. Supports Results Participant Characteristics (sample characteristics in Table S4 and depression-module non-response in Table S8), Parsimonious Deployment Model (Table S6), Sensitivity Analyses (Table S5), and Interpretability, Fairness, and Clinical Utility (subgroup discrimination and calibration in Table S7; operating characteristics and net benefit in Tables S1 to S3). The model is positioned as a screening/triage aid, not a diagnostic instrument.
+-
+-## Table S1. Operating characteristics at reference thresholds.
++Tables S1 to S16 give the exact values behind the figures and the analyses summarized in the main text. Estimates are complex-survey weighted unless a row or column is labeled unweighted; the depression-module non-response counts and the algorithm-selection cross-validated AUROCs are unweighted. Supports Results Participant Characteristics (sample characteristics in Table S8 and depression-module non-response in Table S1), Parsimonious Deployment Model (Table S13), Sensitivity Analyses (Table S6), and Interpretability, Fairness, and Clinical Utility (subgroup discrimination and calibration in Table S14; operating characteristics and net benefit in Tables S13, S1 and S7). The model is positioned as a screening/triage aid, not a diagnostic instrument.
++
++## Table S1. Depression-module (DPQ) non-response in NHANES.
++
++The depression module is administered in the mobile examination center (MEC), and every weighted estimate in this study uses MEC weights; the MEC-examined sample is therefore the estimation frame and is the denominator used here. Rates over all interviewed adults are given alongside for comparison, but that denominator conflates module non-response with never having been examined, which the MEC weights already account for. Non-response is defined here as three or more of the nine PHQ-9 items unanswered.
++
++| Stage | NHANES pre | NHANES post |
++|---|---|---|
++| Interviewed adults ≥20 y | 9,232 | 7,809 |
++| MEC-examined adults ≥20 y (estimation frame) | 8,544 | 6,064 |
++| Complete PHQ-9 within the MEC frame (analytic sample) | 7,888 (92.3%) | 5,210 (85.9%) |
++| Lost to **any** item non-response within the MEC frame (the complete-case exclusion) | 7.7% | 14.1% |
++| ≥3 items missing, MEC frame | 7.4% | 13.3% |
++| ≥3 items missing, MEC frame, weighted | 5.6% | 13.2% |
++| ≥3 items missing, all interviewed adults | 14.3% | 32.7% |
++| Lost to **any** item non-response, all interviewed adults | 14.6% | 33.3% |
++| Non-response (MEC frame), less than high school | 12.9% | 26.6% |
++| Non-response (MEC frame), high school | 6.9% | 16.1% |
++| Non-response (MEC frame), college or more | 5.7% | 9.8% |
++| Non-response (MEC frame), non-Hispanic Asian | 14.3% | 31.6% |
++| Non-response (MEC frame), non-Hispanic Black | 8.2% | 19.1% |
++| Non-response (MEC frame), non-Hispanic White | 4.3% | 9.4% |
++| Prevalence, complete case (unweighted) | 9.23% | 12.69% |
++| Prevalence including 1-2 missing by person-mean | 9.27% | 12.78% |
++
++Of respondents counted as non-respondents on the interview frame, 52.0% (pre-pandemic) and 68.4% (post-pandemic) were never MEC-examined and therefore carry zero MEC weight, lying outside the frame of every weighted estimate reported in this study. These figures are computed from the NHANES DEMO and DPQ files, and the derivation is released with the analysis code.
++NHANES: National Health and Nutrition Examination Survey.
++MEC: mobile examination center.
++PHQ-9: 9-item Patient Health Questionnaire.
++
++## Table S2. Disposition of the pre-specified selection rules.
++
++The statistical analysis plan fixed the primary-model rule before analysis: highest cross-validated AUROC, ties (ΔAUROC < 0.005) broken by proximity of the calibration slope to 1, then parsimony. LightGBM and random forest fell inside the tie band, to which the tie-break applies. The pipeline as executed ranked the algorithms on cross-validated AUROC and then on the calibration slope without constructing the band; the plan's rule was therefore verified retrospectively, and it reproduces the model the pipeline selected.
++
++| Algorithm | CV-AUROC | Calibration slope | \|slope - 1\| | Inside 0.005 tie band | Selected |
++|---|---|---|---|---|---|
++| LightGBM | 0.8396 | 1.0033 | 0.0033 | yes | **yes** |
++| Random forest | 0.8350 | 1.2034 | 0.2034 | yes |  |
++| Elastic net | 0.8220 | 0.9983 | 0.0017 | no |  |
++
++CV-AUROC: cross-validated area under the receiver operating characteristic curve.
++AUROC: area under the receiver operating characteristic curve.
++LightGBM: light gradient-boosting machine.
++
++Other pre-specified rules were applied as follows: the parsimony margin follows the plan's recommended 0.02, giving a 6-item deployment model; a stricter 0.01 margin giving 7 items is reported as an exploratory variant rather than the deployed model; on external data the seventh item does not help consistently, raising pre-pandemic AUROC from 0.748 to 0.757 while lowering post-pandemic AUROC from 0.757 to 0.752 (Parsimonious Deployment Model). The operating point is reported both at the recommended sensitivity ≥0.85 (Table S15) and at the alternative Youden point (Table S4). Unweighted training with weighted evaluation was used as the primary approach with weighted training as sensitivity, as recommended. The alcohol predictor was specified in the protocol as current drinking **plus at-risk drinking**, but the harmonized variable uses current drinking alone, given that the NHANES quantity item was not carried through harmonization; three alternative alcohol definitions are reported in the Results text and change external discrimination by ≤0.003. The planned self-reported-versus-measured BMI comparison and the prior-depression-diagnosis exclusion could not be run, given that KCHS records only self-reported BMI and no prior diagnosis (Strengths and Limitations). An alternative physical-activity definition was not available in the harmonized data, which carries only the binary aerobic-recommendation indicator, and income exists only as a within-survey quintile. The four interaction terms evaluated in the feature-representation search were specified when that search was written, not in any earlier dated document. The planned R components were not used; all analyses ran in Python (External Validation and Sensitivity Analyses).
++
++Further points where the analysis departed from, or fully met, the plan's recommended defaults are recorded here for completeness; those also stated in the manuscript are repeated so that the disposition of every rule can be read in one place:
++
++| Pre-specified default | What was done | Note |
++|---|---|---|
++| 80/20 stratified development / hold-out split (D4) | 500,000 training and 100,001 hold-out drawn from the 2,048,510 pooled records, the remainder unused (Study Design and Data Sources) | Training size fixed for tractability; a size experiment showed no external cost (Testing Whether External Discrimination Can Be Raised Above ~0.77) |
++| 5-fold cross-validation repeated 5 times (D5) | single-pass 4-fold survey-weighted CV for the hyperparameter and feature-representation search, single-pass 5-fold CV for the algorithm comparison (Model Development and Evaluation) | Repeats were not run. This is a deviation, and the margin between the two leading algorithms (0.0046 AUROC) lies inside the plan's 0.005 tie band; repetition could therefore have changed which algorithm led on AUROC alone, whereas the tie-break on calibration slope, which decides the choice inside that band, separates the two by 0.20 and is not close |
++| Class weighting for outcome imbalance, with synthetic minority oversampling technique (SMOTE) as sensitivity (D6) | no imbalance handling; the learner was fitted on the natural 3.6% event rate | Tree-based boosting with a large event count (~18,000) trained stably without reweighting; not tested against the planned alternatives |
++| Recalibration in three steps - intercept only, then intercept+slope, then Platt/temperature comparison (Methods) | all three variants run and reported, each cross-fitted by primary sampling unit (External Validation and Sensitivity Analyses) | Plan followed in full; no deviation |
++| Fairness flag when a subgroup AUROC differs from the overall by more than 0.05 (D13) | rule applied post hoc in Interpretability, Fairness, and Clinical Utility | the highest income quintile in KCHS (-0.056); Mexican American in NHANES pre-pandemic (-0.072); Mexican American in NHANES post-pandemic (-0.078); non-Hispanic Asian in NHANES post-pandemic (+0.074) |
++
++The analysis was not registered in a public registry, contrary to the plan's intention; the protocol, plan and amendment are dated documents released with the code (Study Design and Data Sources).
++
++## Table S3. Calibration with cluster-bootstrap intervals (external cohorts).
++
++Intervals are the 2.5th and 97.5th percentiles of 1000 rescaled stratified cluster-bootstrap replicates, the same replicates used for discrimination. Recalibration is intercept/slope updating applied out-of-sample by 5-fold cross-fitting grouped by primary sampling unit. Two recalibrated rows are given per cohort. The **nested** row refits the update inside every replicate; its interval therefore carries the uncertainty of the update itself and answers whether the procedure restores calibration when the whole analysis is repeated. The other row holds the update fixed at the one estimated on the full cohort, which is the position of a deployment that fits its update once; that interval is wider, since no refitting absorbs the replicate's own miscalibration. Slopes are given to three decimals here. Out-of-fold recalibration shrinks the slope marginally below 1 by construction, since each fold's map is estimated without the observations it is applied to; the nested pre-pandemic interval accordingly sits just under 1 (upper bound 0.998) rather than centered on it, and this reflects the cross-fitting rather than residual miscalibration. Expected calibration error (ECE) is given as a point estimate only: it is a non-negative absolute-deviation statistic that this replicate scheme biases upward, and its percentile interval failed to contain its own point estimate in one cell.
++
++| Cohort | Probabilities | Calibration slope (95% CI) | CITL (95% CI) | ECE |
++|---|---|---|---|---|
++| NHANES pre | as transported | 0.651 (0.533-0.774) | +0.51 (+0.37 to +0.64) | 0.030 |
++| NHANES pre | after intercept/slope recalibration | 0.998 (0.817-1.188) | 0.00 (-0.12 to +0.11) | 0.010 |
++| NHANES pre | after intercept/slope recalibration (nested) | 0.998 (0.950-0.998) | 0.00 (-0.01 to +0.02) | 0.010 |
++| NHANES post | as transported | 0.681 (0.603-0.764) | +1.13 (+0.98 to +1.26) | 0.068 |
++| NHANES post | after intercept/slope recalibration | 0.996 (0.878-1.126) | 0.00 (-0.13 to +0.12) | 0.014 |
++| NHANES post | after intercept/slope recalibration (nested) | 0.996 (0.965-1.005) | 0.00 (-0.02 to +0.01) | 0.014 |
++
++External AUROC differed between cycles by +0.006 (95% CI -0.045 to +0.056; bootstrap P=.86); the interval was formed by differencing independently drawn replicate statistics from the two cohorts, the cycles being disjoint samples.
++CITL: calibration-in-the-large.
++ECE: expected calibration error.
++NHANES: National Health and Nutrition Examination Survey.
++
++## Table S4. Operating characteristics at reference thresholds.
+ 
+@@ -25,33 +99,3 @@
+ 
+-## Table S2. Triage-oriented high-sensitivity operating points.
+-
+-At sensitivity fixed to 0.85 and 0.90, the table gives specificity, positive and negative predictive value, the share of the population flagged, and the number needed to screen (NNS = 1/PPV). Thresholds are chosen and evaluated in the same cohort; hence these are apparent operating characteristics. The 6-item deployment model and the 7-item post hoc variant are both shown alongside the full 17-predictor model.
+-
+-| Model | Set | Target | Specificity | PPV | NPV | Flag rate | NNS |
+-|---|---|---|---|---|---|---|---|
+-| 17-predictor | Internal | sens 0.85 | 0.625 | 0.077 | 0.991 | 0.392 | 13.0 |
+-| 17-predictor | Internal | sens 0.90 | 0.525 | 0.065 | 0.993 | 0.490 | 15.4 |
+-| 17-predictor | NHANES pre | sens 0.85 | 0.476 | 0.130 | 0.972 | 0.552 | 7.7 |
+-| 17-predictor | NHANES pre | sens 0.90 | 0.395 | 0.121 | 0.978 | 0.631 | 8.2 |
+-| 17-predictor | NHANES post | sens 0.85 | 0.490 | 0.188 | 0.959 | 0.551 | 5.3 |
+-| 17-predictor | NHANES post | sens 0.90 | 0.394 | 0.171 | 0.966 | 0.642 | 5.8 |
+-| 6-item | Internal | sens 0.85 | 0.603 | 0.073 | 0.991 | 0.413 | 13.7 |
+-| 6-item | Internal | sens 0.90 | 0.486 | 0.060 | 0.993 | 0.528 | 16.6 |
+-| 6-item | NHANES pre | sens 0.85 | 0.456 | 0.126 | 0.971 | 0.570 | 7.9 |
+-| 6-item | NHANES pre | sens 0.90 | 0.368 | 0.116 | 0.976 | 0.655 | 8.6 |
+-| 6-item | NHANES post | sens 0.85 | 0.448 | 0.176 | 0.956 | 0.588 | 5.7 |
+-| 6-item | NHANES post | sens 0.90 | 0.377 | 0.167 | 0.965 | 0.657 | 6.0 |
+-| 7-item | Internal | sens 0.85 | 0.615 | 0.075 | 0.991 | 0.401 | 13.3 |
+-| 7-item | Internal | sens 0.90 | 0.514 | 0.064 | 0.993 | 0.501 | 15.7 |
+-| 7-item | NHANES pre | sens 0.85 | 0.473 | 0.130 | 0.972 | 0.554 | 7.7 |
+-| 7-item | NHANES pre | sens 0.90 | 0.391 | 0.120 | 0.977 | 0.634 | 8.3 |
+-| 7-item | NHANES post | sens 0.85 | 0.448 | 0.176 | 0.956 | 0.589 | 5.7 |
+-| 7-item | NHANES post | sens 0.90 | 0.341 | 0.160 | 0.961 | 0.689 | 6.3 |
+-
+-PPV: positive predictive value; NPV: negative predictive value; NNS: number needed to screen; NHANES: National Health and Nutrition Examination Survey.
+-NPV: negative predictive value.
+-NNS: number needed to screen.
+-NHANES: National Health and Nutrition Examination Survey.
+-
+-## Table S3. Decision-curve net benefit.
++## Table S5. Decision-curve net benefit.
+ 
+@@ -82,6 +126,39 @@
+ 
+-### Interpretation
+-Tuned to a triage-appropriate 85% sensitivity, the full model flags roughly half of the external population (pre 55%, post 55%) at a PPV of 0.130 (pre) and 0.188 (post), ie, a number needed to screen of 7.7 and 5.3. The 6-item deployment model is close behind (PPV 0.126 and 0.176; NNS 7.9 and 5.7), as is the 7-item variant (NNS 7.7 and 5.7). For the two external cohorts after local recalibration, and for the internal hold-out on its original probabilities, net benefit is positive and exceeds both default strategies at threshold probabilities of 0.10-0.15 in every dataset and for every model size, supporting use as a low-burden digital triage aid rather than a diagnostic test.
+-
+-## Table S4. Weighted sample characteristics (exact values for Figure 1).
++## Table S6. Sensitivity analyses - weighted AUROC (exact values for Figure 4).
++
++All rows use the corrected primary data and the cluster-level split (Predictors and Harmonization, External Validation and Sensitivity Analyses). Every row also shares the primary model's hyperparameter configuration, so that the specifications are compared at one setting rather than at each variant's own optimum. The paired 17-versus-14-predictor comparison reported in the Results gives each model its own hyperparameter search and therefore returns marginally different values (0.745 pre-pandemic and 0.757 post-pandemic, against 0.745 and 0.758 here); the two answer different questions and should not be differenced.
++
++| Specification | Internal | NHANES pre | NHANES post |
++|---|---|---|---|
++| Primary (17 predictors, corrected) | 0.836 | 0.765 | 0.771 |
++| Food insecurity excluded (16) | 0.834 | 0.759 | 0.764 |
++| Three added predictors excluded (14) | 0.827 | 0.745 | 0.758 |
++| Weighted training | 0.836 | 0.764 | 0.768 |
++| Missing-indicator imputation | 0.837 | 0.764 | 0.772 |
++| Single chained-equations imputation | 0.837 | 0.763 | 0.770 |
++| Age ≥30 (train and evaluate) | 0.838 | 0.781 | 0.787 |
++| Age ≥30 (train only) | 0.836 | 0.770 | 0.769 |
++| Outcome PHQ-9 ≥5 | 0.761 | 0.735 | 0.740 |
++
++NHANES: National Health and Nutrition Examination Survey; PHQ-9: 9-item Patient Health Questionnaire.
++PHQ-9: 9-item Patient Health Questionnaire.
++
++## Table S7. Harmonization-correction sensitivity.
++
++Each row applies **one** correction to the analytic data and refits the primary model; all other settings are unchanged. Three corrections are not tabulated separately: living alone fabricated to a constant and post-pandemic physical activity parsed to zero, both NHANES-side, since in the uncorrected data the affected variable is constant rather than merely mismeasured; and the KCHS 77777 income refusal code, which is a missing-value declaration rather than a change of definition. The six rows shown address the questionnaire-driven discontinuities inside KCHS (2020 drinking recode, 2018 activity fallback, weekday-versus-seven-day sleep), the NHANES age top-code, unmasked 2017 income refusal codes, and the income-quintile collapse in the post-pandemic cohort (Predictors and Harmonization, External Validation and Sensitivity Analyses). No correction changes weighted AUROC by more than 0.003 in any cohort.
++
++| Specification | Internal | NHANES pre | NHANES post | Δ internal | Δ pre | Δ post |
++|---|---|---|---|---|---|---|
++| Baseline (uncorrected data, before the six corrections below) | 0.8315 | 0.7718 | 0.7688 | +0.0000 | +0.0000 | +0.0000 |
++| KCHS current drinking: 2020+ code change reconciled | 0.8309 | 0.7710 | 0.7687 | -0.0006 | -0.0008 | -0.0001 |
++| KCHS 2018 physical activity set to missing (fallback definition) | 0.8321 | 0.7706 | 0.7692 | +0.0006 | -0.0012 | +0.0003 |
++| KCHS sleep aligned to weekday-only, as in NHANES | 0.8310 | 0.7707 | 0.7716 | -0.0005 | -0.0011 | +0.0027 |
++| Age top-code aligned (all cohorts capped at 80) | 0.8315 | 0.7710 | 0.7688 | -0.0000 | -0.0008 | -0.0000 |
++| KCHS 2017 income refusal codes (77/99) set to missing | 0.8315 | 0.7713 | 0.7688 | -0.0001 | -0.0005 | -0.0001 |
++| Income quintile recomputed as rank-based five levels | 0.8317 | 0.7722 | 0.7692 | +0.0002 | +0.0004 | +0.0003 |
++
++NHANES: National Health and Nutrition Examination Survey.
++KCHS: Korea Community Health Survey.
++
++## Table S8. Weighted sample characteristics (exact values for Figure 1).
+ 
+@@ -119,22 +196,71 @@
+ 
+-## Table S5. Sensitivity analyses - weighted AUROC (exact values for Figure 4).
+-
+-All rows use the corrected primary data and the cluster-level split (Predictors and Harmonization, External Validation and Sensitivity Analyses). Every row also shares the primary model's hyperparameter configuration, so that the specifications are compared at one setting rather than at each variant's own optimum. The paired 17-versus-14-predictor comparison reported in the Results gives each model its own hyperparameter search and therefore returns marginally different values (0.745 pre-pandemic and 0.757 post-pandemic, against 0.745 and 0.758 here); the two answer different questions and should not be differenced.
+-
+-| Specification | Internal | NHANES pre | NHANES post |
++## Table S9. Pre-specified method search (independent re-run, 300k KCHS training).
++
++An additional eight leakage-free strategies were run with an in-run same-sample baseline (pre 0.7694, post 0.7685). Values in this table and in Table S12 are given to four decimals, the precision recorded in the exploration run log, avoiding a second rounding. None improved both external cohorts. Notably, a leave-one-year-out (LOYO) transfer-robustness search re-selected the primary hyperparameters, and a transport-stability feature search retained all predictors, independent confirmations that the deployed model is already well specified. Maximizing internal cross-validation (the internal-CV-tuned configuration) raised pre but lowered post, illustrating that internal optimization does not transfer consistently.
++
++| Method | External pre | External post | Verdict |
+ |---|---|---|---|
+-| Primary (17 predictors, corrected) | 0.836 | 0.765 | 0.771 |
+-| Food insecurity excluded (16) | 0.834 | 0.759 | 0.764 |
+-| Three added predictors excluded (14) | 0.827 | 0.745 | 0.758 |
+-| Weighted training | 0.836 | 0.764 | 0.768 |
+-| Missing-indicator imputation | 0.837 | 0.764 | 0.772 |
+-| Single chained-equations imputation | 0.837 | 0.763 | 0.770 |
+-| Age ≥30 (train and evaluate) | 0.838 | 0.781 | 0.787 |
+-| Age ≥30 (train only) | 0.836 | 0.770 | 0.769 |
+-| Outcome PHQ-9 ≥5 | 0.761 | 0.735 | 0.740 |
+-
+-NHANES: National Health and Nutrition Examination Survey; PHQ-9: 9-item Patient Health Questionnaire.
+-PHQ-9: 9-item Patient Health Questionnaire.
+-
+-## Table S6. Parsimonious model trajectory - weighted AUROC by item count.
++| Baseline (300k) | 0.7694 | 0.7685 | reference |
++| Monotonic constraints (clinical direction) | 0.7610 | 0.7461 | lower |
++| Transport-stable feature selection (PSI; internal-selected k=0) | 0.7694 | 0.7685 | no change |
++| LOYO transfer-robust hyperparameters (re-selected baseline) | 0.7694 | 0.7685 | no change |
++| KCHS per-year model ensemble | 0.7652 | 0.7658 | lower |
++| Out-of-fold weight-of-evidence target encoding | 0.7686 | 0.7695 | no change |
++| Missing-indicator augmentation | 0.7675 | 0.7685 | no change |
++| Explicit imputation (no tree-native missing) | 0.7693 | 0.7684 | no change |
++| Internal-CV-tuned configuration | 0.7719 | 0.7674 | offsetting (pre↑ post↓) |
++
++KCHS: Korea Community Health Survey.
++
++## Table S10. Oracle by learner, with confidence intervals.
++
++Pooled pre+post NHANES, fitted and cross-validated on its own labels with folds split by primary sampling unit (PSU) within each cycle so that no cluster appears in both training and validation; 95% CIs from the rescaled stratified cluster bootstrap (1000 replicates, PSUs resampled within period-specific design strata). The final row refits the oracle inside each replicate so that model-fitting variability is included. An in-sample (apparent) bound is not reported, given that it is strongly learner-dependent and carries no information about the ceiling. Table S16 above uses a fixed penalized-logistic/gradient-boosting pair to compare *predictor sets* on a common footing; it is not the learner maximum reported here, and the two should not be read as one sequence.
++
++| Learner | Oracle AUROC (5-fold CV) | 95% CI |
++|---|---|---|
++| Logistic regression | 0.764 | 0.739-0.788 |
++| Penalized logistic (L2, C=0.1) | 0.764 | 0.740-0.788 |
++| Histogram gradient boosting | 0.772 | 0.746-0.798 |
++| LightGBM (small) | 0.776 | 0.753-0.799 |
++| LightGBM (small), refitted inside each bootstrap replicate | 0.776 | 0.745-0.794 |
++
++AUROC: area under the receiver operating characteristic curve.
++LightGBM: light gradient-boosting machine.
++
++## Table S11. Attempts to exceed the external ceiling.
++
++Except where a row is marked as externally screened, every learner and adaptation was trained on KCHS and applied to NHANES without refitting (unless noted). None improved both external cohorts once selection was restricted to KCHS-internal information. The baseline row is the exploration run in which these strategies were executed, not the primary model: its external values (0.772 pre-pandemic, 0.769 post-pandemic) therefore differ from the primary estimates of 0.765 and 0.771 reported in Table 2, and the comparisons in this table are internally consistent within the run rather than comparable in level with the main results. The same caution applies to Tables S2 and S9, which are anchored on a separate in-run baseline (0.7694 pre-pandemic, 0.7685 post-pandemic).
++
++| Strategy | External pre | External post | Verdict |
++|---|---|---|---|
++| **LightGBM baseline (17 predictors, exploration run)** | **0.772** | **0.769** | reference |
++| Add public-assistance receipt (welfare), externally screened | 0.772 | 0.769 | no change |
++| Add welfare + 12-mo welfare, externally screened | 0.772 | 0.769 | no change |
++| Add welfare + weekend sleep, externally screened | 0.771 | 0.769 | no change |
++| Increase KCHS training 0.5M → 1.0M | 0.768 | 0.768 | lower |
++| Increase KCHS training 0.5M → 2.0M | 0.767 | 0.767 | lower |
++| 5-seed probability ensemble | 0.769 | 0.768 | ≈ |
++| Logistic-regression transfer | 0.759 | 0.760 | lower |
++| Elastic-net transfer | 0.759 | 0.760 | lower |
++| LightGBM + logistic blend (w=0.5) | 0.768 | 0.771 | offsetting |
++| Covariate-shift density-ratio reweighting | 0.766 | 0.758 | lower |
++| Within-survey quantile normalization | 0.762 | 0.773 | offsetting |
++
++Two adaptations moved pre and post in opposite directions (blend, quantile normalization); neither yields a net gain selectable without external labels.
++LightGBM: light gradient-boosting machine.
++KCHS: Korea Community Health Survey.
++
++## Table S12. Deep tabular learners.
++
++Four neural architectures were trained on KCHS and transferred without refitting, with model/architecture selection by KCHS-internal validation only. The gradient-boosting reference row is the 300,000-record baseline that anchors Table S9, and the caution stated under Table S11 applies to the values in this table. All fell below the gradient-boosting reference internally (0.8370) and none exceeded it on both external cohorts, consistent with the model-agnostic in-domain ceiling and with the established advantage of gradient boosting on modest-signal tabular data.
++
++| Deep model | Internal | External pre | External post | Verdict |
++|---|---|---|---|---|
++| **Gradient boosting (exploration-run reference)** | 0.8370 | 0.7694 | 0.7685 | reference |
++| Multilayer perceptron (internal-selected) | 0.8330 | 0.7677 | 0.7725 | not better |
++| TabNet | 0.8290 | 0.7554 | 0.7656 | lower |
++| Deep MLP (BatchNorm+Dropout, PyTorch) | 0.8350 | 0.7647 | 0.7756 | offsetting |
++| FT-Transformer | 0.8360 | 0.7628 | 0.7722 | offsetting |
++
++## Table S13. Parsimonious model trajectory - weighted AUROC by item count.
+ 
+@@ -165,3 +291,3 @@
+ 
+-## Table S7. Subgroup discrimination, calibration and error rates.
++## Table S14. Subgroup discrimination, calibration and error rates.
+ 
+@@ -205,125 +331,78 @@
+ 
+-## Table S8. Depression-module (DPQ) non-response in NHANES.
+-
+-The depression module is administered in the mobile examination center (MEC), and every weighted estimate in this study uses MEC weights; the MEC-examined sample is therefore the estimation frame and is the denominator used here. Rates over all interviewed adults are given alongside for comparison, but that denominator conflates module non-response with never having been examined, which the MEC weights already account for. Non-response is defined here as three or more of the nine PHQ-9 items unanswered.
+-
+-| Stage | NHANES pre | NHANES post |
++## Table S15. Triage-oriented high-sensitivity operating points.
++
++At sensitivity fixed to 0.85 and 0.90, the table gives specificity, positive and negative predictive value, the share of the population flagged, and the number needed to screen (NNS = 1/PPV). Thresholds are chosen and evaluated in the same cohort; hence these are apparent operating characteristics. The 6-item deployment model and the 7-item post hoc variant are both shown alongside the full 17-predictor model.
++
++| Model | Set | Target | Specificity | PPV | NPV | Flag rate | NNS |
++|---|---|---|---|---|---|---|---|
++| 17-predictor | Internal | sens 0.85 | 0.625 | 0.077 | 0.991 | 0.392 | 13.0 |
++| 17-predictor | Internal | sens 0.90 | 0.525 | 0.065 | 0.993 | 0.490 | 15.4 |
++| 17-predictor | NHANES pre | sens 0.85 | 0.476 | 0.130 | 0.972 | 0.552 | 7.7 |
++| 17-predictor | NHANES pre | sens 0.90 | 0.395 | 0.121 | 0.978 | 0.631 | 8.2 |
++| 17-predictor | NHANES post | sens 0.85 | 0.490 | 0.188 | 0.959 | 0.551 | 5.3 |
++| 17-predictor | NHANES post | sens 0.90 | 0.394 | 0.171 | 0.966 | 0.642 | 5.8 |
++| 6-item | Internal | sens 0.85 | 0.603 | 0.073 | 0.991 | 0.413 | 13.7 |
++| 6-item | Internal | sens 0.90 | 0.486 | 0.060 | 0.993 | 0.528 | 16.6 |
++| 6-item | NHANES pre | sens 0.85 | 0.456 | 0.126 | 0.971 | 0.570 | 7.9 |
++| 6-item | NHANES pre | sens 0.90 | 0.368 | 0.116 | 0.976 | 0.655 | 8.6 |
++| 6-item | NHANES post | sens 0.85 | 0.448 | 0.176 | 0.956 | 0.588 | 5.7 |
++| 6-item | NHANES post | sens 0.90 | 0.377 | 0.167 | 0.965 | 0.657 | 6.0 |
++| 7-item | Internal | sens 0.85 | 0.615 | 0.075 | 0.991 | 0.401 | 13.3 |
++| 7-item | Internal | sens 0.90 | 0.514 | 0.064 | 0.993 | 0.501 | 15.7 |
++| 7-item | NHANES pre | sens 0.85 | 0.473 | 0.130 | 0.972 | 0.554 | 7.7 |
++| 7-item | NHANES pre | sens 0.90 | 0.391 | 0.120 | 0.977 | 0.634 | 8.3 |
++| 7-item | NHANES post | sens 0.85 | 0.448 | 0.176 | 0.956 | 0.589 | 5.7 |
++| 7-item | NHANES post | sens 0.90 | 0.341 | 0.160 | 0.961 | 0.689 | 6.3 |
++
++PPV: positive predictive value; NPV: negative predictive value; NNS: number needed to screen; NHANES: National Health and Nutrition Examination Survey.
++NPV: negative predictive value.
++NNS: number needed to screen.
++NHANES: National Health and Nutrition Examination Survey.
++
++## Table S16. NHANES in-domain oracle by predictor set.
++
++Fitted and cross-validated within NHANES on its own labels (5-fold, pooled pre+post) using a fixed penalized-logistic and gradient-boosting pair so that predictor sets are compared on a common footing; these values are not the learner maximum, which is reported separately in Table S10 (0.776 for the 17-predictor set against 0.765 here). Both are empirical benchmarks over the learners run, not proofs of a maximum.
++
++| Predictor set | Pooled oracle AUROC | Δ vs 17 |
+ |---|---|---|
+-| Interviewed adults ≥20 y | 9,232 | 7,809 |
+-| MEC-examined adults ≥20 y (estimation frame) | 8,544 | 6,064 |
+-| Complete PHQ-9 within the MEC frame (analytic sample) | 7,888 (92.3%) | 5,210 (85.9%) |
+-| Lost to **any** item non-response within the MEC frame (the complete-case exclusion) | 7.7% | 14.1% |
+-| ≥3 items missing, MEC frame | 7.4% | 13.3% |
+-| ≥3 items missing, MEC frame, weighted | 5.6% | 13.2% |
+-| ≥3 items missing, all interviewed adults | 14.3% | 32.7% |
+-| Lost to **any** item non-response, all interviewed adults | 14.6% | 33.3% |
+-| Non-response (MEC frame), less than high school | 12.9% | 26.6% |
+-| Non-response (MEC frame), high school | 6.9% | 16.1% |
+-| Non-response (MEC frame), college or more | 5.7% | 9.8% |
+-| Non-response (MEC frame), non-Hispanic Asian | 14.3% | 31.6% |
+-| Non-response (MEC frame), non-Hispanic Black | 8.2% | 19.1% |
+-| Non-response (MEC frame), non-Hispanic White | 4.3% | 9.4% |
+-| Prevalence, complete case (unweighted) | 9.23% | 12.69% |
+-| Prevalence including 1-2 missing by person-mean | 9.27% | 12.78% |
+-
+-Of respondents counted as non-respondents on the interview frame, 52.0% (pre-pandemic) and 68.4% (post-pandemic) were never MEC-examined and therefore carry zero MEC weight, lying outside the frame of every weighted estimate reported in this study. These figures are computed from the NHANES DEMO and DPQ files, and the derivation is released with the analysis code.
+-NHANES: National Health and Nutrition Examination Survey.
+-MEC: mobile examination center.
+-PHQ-9: 9-item Patient Health Questionnaire.
+-
+-## Table S9. Disposition of the pre-specified selection rules.
+-
+-The statistical analysis plan fixed the primary-model rule before analysis: highest cross-validated AUROC, ties (ΔAUROC < 0.005) broken by proximity of the calibration slope to 1, then parsimony. LightGBM and random forest fell inside the tie band, to which the tie-break applies. The pipeline as executed ranked the algorithms on cross-validated AUROC and then on the calibration slope without constructing the band; the plan's rule was therefore verified retrospectively, and it reproduces the model the pipeline selected.
+-
+-| Algorithm | CV-AUROC | Calibration slope | \|slope - 1\| | Inside 0.005 tie band | Selected |
+-|---|---|---|---|---|---|
+-| LightGBM | 0.8396 | 1.0033 | 0.0033 | yes | **yes** |
+-| Random forest | 0.8350 | 1.2034 | 0.2034 | yes |  |
+-| Elastic net | 0.8220 | 0.9983 | 0.0017 | no |  |
+-
+-CV-AUROC: cross-validated area under the receiver operating characteristic curve.
++| 17 harmonized predictors | 0.765 |  |
++| 17 + multimorbidity count | 0.774 | +0.009 |
++| 17 + healthcare utilization (visits, hospitalization) | 0.771 | +0.006 |
++| 17 + multimorbidity + utilization | **0.778** | **+0.013** |
++
++The transported LightGBM model (pre 0.765, post 0.771) is at the level of the 17-predictor oracle, indicating the external number is not obviously below what these predictors support within NHANES itself.
+ AUROC: area under the receiver operating characteristic curve.
+-LightGBM: light gradient-boosting machine.
+-
+-Other pre-specified rules were applied as follows: the parsimony margin follows the plan's recommended 0.02, giving a 6-item deployment model; a stricter 0.01 margin giving 7 items is reported as an exploratory variant rather than the deployed model; on external data the seventh item does not help consistently, raising pre-pandemic AUROC from 0.748 to 0.757 while lowering post-pandemic AUROC from 0.757 to 0.752 (Parsimonious Deployment Model). The operating point is reported both at the recommended sensitivity ≥0.85 (Table S2) and at the alternative Youden point (Table S1). Unweighted training with weighted evaluation was used as the primary approach with weighted training as sensitivity, as recommended. The alcohol predictor was specified in the protocol as current drinking **plus at-risk drinking**, but the harmonized variable uses current drinking alone, given that the NHANES quantity item was not carried through harmonization; three alternative alcohol definitions are reported in the Results text and change external discrimination by ≤0.003. The planned self-reported-versus-measured BMI comparison and the prior-depression-diagnosis exclusion could not be run, given that KCHS records only self-reported BMI and no prior diagnosis (Strengths and Limitations). An alternative physical-activity definition was not available in the harmonized data, which carries only the binary aerobic-recommendation indicator, and income exists only as a within-survey quintile. The four interaction terms evaluated in the feature-representation search were specified when that search was written, not in any earlier dated document. The planned R components were not used; all analyses ran in Python (External Validation and Sensitivity Analyses).
+-
+-Further points where the analysis departed from, or fully met, the plan's recommended defaults are recorded here for completeness; those also stated in the manuscript are repeated so that the disposition of every rule can be read in one place:
+-
+-| Pre-specified default | What was done | Note |
+-|---|---|---|
+-| 80/20 stratified development / hold-out split (D4) | 500,000 training and 100,001 hold-out drawn from the 2,048,510 pooled records, the remainder unused (Study Design and Data Sources) | Training size fixed for tractability; a size experiment showed no external cost (Testing Whether External Discrimination Can Be Raised Above ~0.77) |
+-| 5-fold cross-validation repeated 5 times (D5) | single-pass 4-fold survey-weighted CV for the hyperparameter and feature-representation search, single-pass 5-fold CV for the algorithm comparison (Model Development and Evaluation) | Repeats were not run. This is a deviation, and the margin between the two leading algorithms (0.0046 AUROC) lies inside the plan's 0.005 tie band; repetition could therefore have changed which algorithm led on AUROC alone, whereas the tie-break on calibration slope, which decides the choice inside that band, separates the two by 0.20 and is not close |
+-| Class weighting for outcome imbalance, with synthetic minority oversampling technique (SMOTE) as sensitivity (D6) | no imbalance handling; the learner was fitted on the natural 3.6% event rate | Tree-based boosting with a large event count (~18,000) trained stably without reweighting; not tested against the planned alternatives |
+-| Recalibration in three steps - intercept only, then intercept+slope, then Platt/temperature comparison (Methods) | all three variants run and reported, each cross-fitted by primary sampling unit (External Validation and Sensitivity Analyses) | Plan followed in full; no deviation |
+-| Fairness flag when a subgroup AUROC differs from the overall by more than 0.05 (D13) | rule applied post hoc in Interpretability, Fairness, and Clinical Utility | the highest income quintile in KCHS (-0.056); Mexican American in NHANES pre-pandemic (-0.072); Mexican American in NHANES post-pandemic (-0.078); non-Hispanic Asian in NHANES post-pandemic (+0.074) |
+-
+-The analysis was not registered in a public registry, contrary to the plan's intention; the protocol, plan and amendment are dated documents released with the code (Study Design and Data Sources).
+-
+-## Table S10. Harmonization-correction sensitivity.
+-
+-Each row applies **one** correction to the analytic data and refits the primary model; all other settings are unchanged. Three corrections are not tabulated separately: living alone fabricated to a constant and post-pandemic physical activity parsed to zero, both NHANES-side, since in the uncorrected data the affected variable is constant rather than merely mismeasured; and the KCHS 77777 income refusal code, which is a missing-value declaration rather than a change of definition. The six rows shown address the questionnaire-driven discontinuities inside KCHS (2020 drinking recode, 2018 activity fallback, weekday-versus-seven-day sleep), the NHANES age top-code, unmasked 2017 income refusal codes, and the income-quintile collapse in the post-pandemic cohort (Predictors and Harmonization, External Validation and Sensitivity Analyses). No correction changes weighted AUROC by more than 0.003 in any cohort.
+-
+-| Specification | Internal | NHANES pre | NHANES post | Δ internal | Δ pre | Δ post |
+-|---|---|---|---|---|---|---|
+-| Baseline (uncorrected data, before the six corrections below) | 0.8315 | 0.7718 | 0.7688 | +0.0000 | +0.0000 | +0.0000 |
+-| KCHS current drinking: 2020+ code change reconciled | 0.8309 | 0.7710 | 0.7687 | -0.0006 | -0.0008 | -0.0001 |
+-| KCHS 2018 physical activity set to missing (fallback definition) | 0.8321 | 0.7706 | 0.7692 | +0.0006 | -0.0012 | +0.0003 |
+-| KCHS sleep aligned to weekday-only, as in NHANES | 0.8310 | 0.7707 | 0.7716 | -0.0005 | -0.0011 | +0.0027 |
+-| Age top-code aligned (all cohorts capped at 80) | 0.8315 | 0.7710 | 0.7688 | -0.0000 | -0.0008 | -0.0000 |
+-| KCHS 2017 income refusal codes (77/99) set to missing | 0.8315 | 0.7713 | 0.7688 | -0.0001 | -0.0005 | -0.0001 |
+-| Income quintile recomputed as rank-based five levels | 0.8317 | 0.7722 | 0.7692 | +0.0002 | +0.0004 | +0.0003 |
+-
+-NHANES: National Health and Nutrition Examination Survey.
+-KCHS: Korea Community Health Survey.
+-### Discussion detail relocated from the manuscript (utility, deployment, and limitations)
+-
+-Explanatory prose condensed out of the Discussion is preserved here in full. No new result is introduced.
+-
+-Operating characteristics support the usefulness claim, which rests on a decision-analytic criterion rather than on a nominal AUROC cut-off. At population prevalence the positive predictive value is low, and the appropriate reading of a positive score is a prompt for confirmatory assessment rather than an action in itself.
+-
+-The mobile-delivery evidence base cited in Principal Findings concerns intervention delivery to defined patient groups rather than the delivery of screening, and no equivalent trial evidence exists for a transported screening algorithm.
+-
+-The six items of the deployment model are self-rated health, age, sex, sleep duration, self-rated oral health, and partnership. All six require no examination, no laboratory value and no clinician; none is a symptom item, which keeps the triage step distinct from the full PHQ-9 it is meant to prioritize. Item reduction should also be re-evaluated whenever the deployment population differs materially from the development population, given that the ranking of predictors that supports a six-item form is itself population-dependent.
+-
+-Intercept-plus-slope updating restored calibration in both external cohorts, each using that cohort's full sample, and is the recommended update; the local sample size needed for a stable update was not examined here.
+-
+-Equity requires explicit monitoring rather than a single fairness statement. Among the subgroup estimates, the highest-income KCHS estimate sits clear of the cohort interval (Table S7).
+-
+-The limitations set out in Strengths and Limitations are given in descending order of consequence. Depression-module non-response is also the reason the PROBAST analysis domain is rated unclear for the external cohorts (Table S8). The amendment that added three of the seventeen predictors was written while the study was under way; it is dated and summarized in English in Multimedia Appendix 1, with the unmodified Korean original released alongside the code.
+-
+-### Results detail relocated from the manuscript (sample composition, module non-response, predictor attribution, subgroup detail, and the six-item operating point)
+-
+-Explanatory prose condensed out of the Results is preserved here in full. No new result is introduced.
+-
+-The contrast between the development and external samples in body-mass index, food insecurity and outcome frequency is consistent with genuinely distinct populations and, for food insecurity, with the single-item-versus-module measurement difference set out in Multimedia Appendix 1.
+-
+-Denominator choice governs the apparent size of depression-module non-response. Counted on the mobile examination center frame, which is where the module is administered and on which every weighted estimate in this study is computed, the three-or-more-item non-response rates are 7.4% pre-pandemic and 13.3% post-pandemic. Counted over all interviewed adults the same rates are 14.3% and 32.7%; that second denominator conflates module non-response with never having been examined, which the examination-center weights already account for. Non-response was higher among respondents with less than high-school education, at 12.9% pre-pandemic and 26.6% post-pandemic on the examination-center frame.
+-
+-Respondents missing only one or two depression items can be recovered by filling the missing items with the person-mean. That change moved the observed prevalence by no more than 0.1 percentage points in either cycle (unweighted: 9.23% to 9.27% pre-pandemic, 12.69% to 12.78% post-pandemic), indicating that the complete-case restriction does not itself shift the observed outcome frequency. Item-level counts are in Table S8.
+-
+-Mean absolute SHAP values for the predictors ranked immediately below self-rated health in the development fitting partition were age 0.37, sex 0.28, sleep duration 0.26, self-rated oral health 0.23, partnership 0.19 and smoking 0.17. Food insecurity ranked 10th in KCHS but 8th in NHANES pre-pandemic; the item is a single question in KCHS against the 10-item module in NHANES.
+-
+-Analytic subgroup sizes for the external race and ethnicity estimates were, pre-pandemic, Mexican American n=914, non-Hispanic Black n=2,096, other or multiracial n=381, non-Hispanic White n=2,798, other Hispanic n=813 and non-Hispanic Asian n=886; and post-pandemic, Mexican American n=330, non-Hispanic Black n=598, non-Hispanic White n=3,215, other or multiracial n=340, other Hispanic n=499 and non-Hispanic Asian n=228.
+-
+-Within KCHS a few subgroup intervals sit clear of the cohort interval: higher in adults aged ≥60 years (0.850-0.870) and in middle-school-educated respondents (0.861-0.902); lower in income quintile 4 (0.772-0.822) and in the highest income quintile (0.744-0.818). Subgroup discrimination is therefore not uniform in the development population. That the lowest external point estimate falls in Mexican American respondents in both cycles warrants monitoring as an equity caveat even though the external intervals are mutually overlapping.
+-
+-Internal subgroup calibration slopes ran 0.96-1.13 across sex, age, education and income strata, with subgroup calibration-in-the-large from -0.03 to +0.20. External subgroup slopes were below 1 in every subgroup except non-Hispanic Asian respondents post-pandemic (0.57-0.79; 1.19 in that subgroup), and external subgroup calibration-in-the-large was positive in every group except Mexican American respondents pre-pandemic, reaching +1.32. Exact values with intervals are in Table S7.
+-
+-At a within-cohort operating point fixed to 85% sensitivity (apparent values, Table S2), the six-item deployment form required 7.9 pre-pandemic and 5.7 post-pandemic respondents screened per case detected, against 7.7 and 5.3 for the 17-predictor model, and its net benefit exceeded both default strategies in every cohort at threshold probabilities of 0.10 and 0.15 (Table S3).
+-
+-Replacing current drinking with drinking at least twice weekly, with binge drinking, or with all three indicators together reached 0.769-0.771 pre-pandemic and 0.770 post-pandemic against an in-run baseline of 0.772 and 0.769; that run predates the data-integrity corrections and the cluster-level split, hence its levels are not comparable with the primary estimates or with Table S5. No single tabulated harmonization correction, the age top-code alignment and the rank-based income-quintile rebuild included, changed weighted AUROC by more than 0.003 in any cohort (Table S10).
+-
+-Under the common configuration of Table S5, in which the 17-, 16- and 14-predictor models share one setting and the 14-predictor value is 0.758 post-pandemic, removing food insecurity alone accounts for 28% of the 17-versus-14 gap pre-pandemic and 50% post-pandemic.
+-
+-### Discussion detail relocated in revision (utility, deployment, and internal split)
+-
+-Explanatory prose condensed out of the Discussion during revision is preserved here. No new result is introduced.
+-
+-The parsimonious form places a low-burden self-report instrument within reach for digital triage. Whether triage delivered this way improves depression outcomes was not evaluated here; the mobile-delivery evidence base cited in Principal Findings [40] concerns intervention delivery to defined patient groups rather than the delivery of screening, and no equivalent trial evidence exists for a transported screening algorithm.
+-
+-At the development-fixed operating point, weighted net benefit exceeded both the screen-all and the screen-none default strategy across the clinically relevant threshold range in every cohort (Table S3).
+-
+-Development used a 500,000-record training set and a 100,001-record hold-out drawn from the 2,048,510 pooled records rather than the full pooled sample; a training-set size experiment showed this did not cost external discrimination, and internal estimates are therefore hold-out rather than fully cross-validated.
+-
+-Equity requires explicit and continuing monitoring rather than an assumption that the development-time estimate holds, as recommended for machine learning intended to advance rather than erode health equity [45]. Three quantities warrant tracking: the subgroup AUROC, the subgroup calibration slope, and the false-negative rate at the operating threshold (Table S7).
+-
++
++### Interpretation
++Tuned to a triage-appropriate 85% sensitivity, the full model flags roughly half of the external population (pre 55%, post 55%) at a PPV of 0.130 (pre) and 0.188 (post), ie, a number needed to screen of 7.7 and 5.3. The 6-item deployment model is close behind (PPV 0.126 and 0.176; NNS 7.9 and 5.7), as is the 7-item variant (NNS 7.7 and 5.7). For the two external cohorts after local recalibration, and for the internal hold-out on its original probabilities, net benefit is positive and exceeds both default strategies at threshold probabilities of 0.10-0.15 in every dataset and for every model size, supporting use as a low-burden digital triage aid rather than a diagnostic test.
++
++### Sample composition and the complete-case restriction
++
++Supports Results Participant Characteristics.
++
++The contrast between the development and external samples in body mass index, food insecurity and outcome frequency is consistent with genuinely distinct populations and, for food insecurity, with the single-item-versus-module measurement difference recorded in the harmonization crosswalk in Multimedia Appendix 1.
++
++Respondents missing only one or two depression items can be recovered by filling the missing items with the person-mean. That change moved the observed prevalence by no more than 0.1 percentage points in either cycle (unweighted: 9.23% to 9.27% pre-pandemic, 12.69% to 12.78% post-pandemic), indicating that the complete-case restriction does not itself shift the observed outcome frequency. Item-level counts are in Table S1 in Multimedia Appendix 1.
++
++### Predictor attribution and the alcohol-definition sensitivity analysis
++
++Supports Results Interpretability, Fairness, and Clinical Utility and Results Sensitivity Analyses.
++
++Food insecurity ranked 10th by mean absolute SHAP value in KCHS but 8th in NHANES pre-pandemic; the item is a single question in KCHS against the 10-item module in NHANES.
++
++Replacing current drinking with drinking at least twice weekly, with binge drinking, or with all three indicators together reached 0.769-0.771 pre-pandemic and 0.770 post-pandemic against an in-run baseline of 0.772 and 0.769; that run predates the data-integrity corrections and the cluster-level split, hence its levels are not comparable with the primary estimates or with Table S6 in Multimedia Appendix 1.
++
++### Clinical utility of the six-item form and the conditions on its use
++
++Supports Discussion Clinical and Policy Implications and Discussion Strengths and Limitations.
++
++Operating characteristics support the usefulness claim, which rests on a decision-analytic criterion rather than on a nominal AUROC cut-off.
++
++The mobile-delivery evidence cited in Principal Findings [40] concerns intervention delivery to defined patient groups, and no equivalent trial evidence exists for a transported screening algorithm.
++
++Item reduction should be re-evaluated whenever the deployment population differs materially from the development population, given that the ranking of predictors that supports a six-item form is itself population-dependent.
++
++Equity requires explicit and continuing monitoring rather than an assumption that the development-time estimate holds [45].
++
++The limitations set out in Strengths and Limitations are given in descending order of consequence.
++
+
+--- BEFORE/appendix4_ceiling.md
++++ AFTER/appendix4_ceiling.md
+@@ -2,94 +2,7 @@
+ 
+-Supports Results Testing Whether External Discrimination Can Be Raised Above ~0.77 (concept-shift ceiling) and Discussion Strengths and Limitations (development-survey coverage). Tables S11 to S15 concern the ceiling; Table S16, placed last so that the appendix tables run in numerical order, gives the calibration intervals that support External Validation Across Country and Pandemic Period. Selection of the primary model, and of every strategy not explicitly marked as externally screened, used KCHS-internal criteria only. NHANES labels are used throughout for evaluation, as in any external validation; what is quarantined to the oracle rows is the use of those labels for model *fitting* (a deliberate departure from the external-validation rule set out under External Validation and Sensitivity Analyses, for diagnosis only). Weighted AUROC throughout.
++Supports Results Testing Whether External Discrimination Can Be Raised Above ~0.77 (concept-shift ceiling) and Discussion Strengths and Limitations (development-survey coverage). Tables S2, S7, S11, S9 and S3 concern the ceiling; Table S3, placed last so that the appendix tables run in numerical order, gives the calibration intervals that support External Validation Across Country and Pandemic Period. Selection of the primary model, and of every strategy not explicitly marked as externally screened, used KCHS-internal criteria only. NHANES labels are used throughout for evaluation, as in any external validation; what is quarantined to the oracle rows is the use of those labels for model *fitting* (a deliberate departure from the external-validation rule set out under External Validation and Sensitivity Analyses, for diagnosis only). Weighted AUROC throughout.
+ 
+-## Table S11. Attempts to exceed the external ceiling.
+-
+-Except where a row is marked as externally screened, every learner and adaptation was trained on KCHS and applied to NHANES without refitting (unless noted). None improved both external cohorts once selection was restricted to KCHS-internal information. The baseline row is the exploration run in which these strategies were executed, not the primary model: its external values (0.772 pre-pandemic, 0.769 post-pandemic) therefore differ from the primary estimates of 0.765 and 0.771 reported in Table 2, and the comparisons in this table are internally consistent within the run rather than comparable in level with the main results. The same caution applies to Tables S12 and S13, which are anchored on a separate in-run baseline (0.7694 pre-pandemic, 0.7685 post-pandemic).
+-
+-| Strategy | External pre | External post | Verdict |
+-|---|---|---|---|
+-| **LightGBM baseline (17 predictors, exploration run)** | **0.772** | **0.769** | reference |
+-| Add public-assistance receipt (welfare), externally screened | 0.772 | 0.769 | no change |
+-| Add welfare + 12-mo welfare, externally screened | 0.772 | 0.769 | no change |
+-| Add welfare + weekend sleep, externally screened | 0.771 | 0.769 | no change |
+-| Increase KCHS training 0.5M → 1.0M | 0.768 | 0.768 | lower |
+-| Increase KCHS training 0.5M → 2.0M | 0.767 | 0.767 | lower |
+-| 5-seed probability ensemble | 0.769 | 0.768 | ≈ |
+-| Logistic-regression transfer | 0.759 | 0.760 | lower |
+-| Elastic-net transfer | 0.759 | 0.760 | lower |
+-| LightGBM + logistic blend (w=0.5) | 0.768 | 0.771 | offsetting |
+-| Covariate-shift density-ratio reweighting | 0.766 | 0.758 | lower |
+-| Within-survey quantile normalization | 0.762 | 0.773 | offsetting |
+-
+-Two adaptations moved pre and post in opposite directions (blend, quantile normalization); neither yields a net gain selectable without external labels.
+-LightGBM: light gradient-boosting machine.
+-KCHS: Korea Community Health Survey.
+-
+-## Table S12. Pre-specified method search (independent re-run, 300k KCHS training).
+-
+-An additional eight leakage-free strategies were run with an in-run same-sample baseline (pre 0.7694, post 0.7685). Values in this table and in Table S13 are given to four decimals, the precision recorded in the exploration run log, avoiding a second rounding. None improved both external cohorts. Notably, a leave-one-year-out (LOYO) transfer-robustness search re-selected the primary hyperparameters, and a transport-stability feature search retained all predictors, independent confirmations that the deployed model is already well specified. Maximizing internal cross-validation (the internal-CV-tuned configuration) raised pre but lowered post, illustrating that internal optimization does not transfer consistently.
+-
+-| Method | External pre | External post | Verdict |
+-|---|---|---|---|
+-| Baseline (300k) | 0.7694 | 0.7685 | reference |
+-| Monotonic constraints (clinical direction) | 0.7610 | 0.7461 | lower |
+-| Transport-stable feature selection (PSI; internal-selected k=0) | 0.7694 | 0.7685 | no change |
+-| LOYO transfer-robust hyperparameters (re-selected baseline) | 0.7694 | 0.7685 | no change |
+-| KCHS per-year model ensemble | 0.7652 | 0.7658 | lower |
+-| Out-of-fold weight-of-evidence target encoding | 0.7686 | 0.7695 | no change |
+-| Missing-indicator augmentation | 0.7675 | 0.7685 | no change |
+-| Explicit imputation (no tree-native missing) | 0.7693 | 0.7684 | no change |
+-| Internal-CV-tuned configuration | 0.7719 | 0.7674 | offsetting (pre↑ post↓) |
+-
+-KCHS: Korea Community Health Survey.
+-## Table S13. Deep tabular learners.
+-
+-Four neural architectures were trained on KCHS and transferred without refitting, with model/architecture selection by KCHS-internal validation only. The gradient-boosting reference row is the 300,000-record baseline that anchors Table S12, and the caution stated under Table S11 applies to the values in this table. All fell below the gradient-boosting reference internally (0.8370) and none exceeded it on both external cohorts, consistent with the model-agnostic in-domain ceiling and with the established advantage of gradient boosting on modest-signal tabular data.
+-
+-| Deep model | Internal | External pre | External post | Verdict |
+-|---|---|---|---|---|
+-| **Gradient boosting (exploration-run reference)** | 0.8370 | 0.7694 | 0.7685 | reference |
+-| Multilayer perceptron (internal-selected) | 0.8330 | 0.7677 | 0.7725 | not better |
+-| TabNet | 0.8290 | 0.7554 | 0.7656 | lower |
+-| Deep MLP (BatchNorm+Dropout, PyTorch) | 0.8350 | 0.7647 | 0.7756 | offsetting |
+-| FT-Transformer | 0.8360 | 0.7628 | 0.7722 | offsetting |
+-
+-## Table S14. NHANES in-domain oracle by predictor set.
+-
+-Fitted and cross-validated within NHANES on its own labels (5-fold, pooled pre+post) using a fixed penalized-logistic and gradient-boosting pair so that predictor sets are compared on a common footing; these values are not the learner maximum, which is reported separately in Table S15 (0.776 for the 17-predictor set against 0.765 here). Both are empirical benchmarks over the learners run, not proofs of a maximum.
+-
+-| Predictor set | Pooled oracle AUROC | Δ vs 17 |
+-|---|---|---|
+-| 17 harmonized predictors | 0.765 |  |
+-| 17 + multimorbidity count | 0.774 | +0.009 |
+-| 17 + healthcare utilization (visits, hospitalization) | 0.771 | +0.006 |
+-| 17 + multimorbidity + utilization | **0.778** | **+0.013** |
+-
+-The transported LightGBM model (pre 0.765, post 0.771) is at the level of the 17-predictor oracle, indicating the external number is not obviously below what these predictors support within NHANES itself.
+-AUROC: area under the receiver operating characteristic curve.
+-
+-## Table S15. Oracle by learner, with confidence intervals.
+-
+-Pooled pre+post NHANES, fitted and cross-validated on its own labels with folds split by primary sampling unit (PSU) within each cycle so that no cluster appears in both training and validation; 95% CIs from the rescaled stratified cluster bootstrap (1000 replicates, PSUs resampled within period-specific design strata). The final row refits the oracle inside each replicate so that model-fitting variability is included. An in-sample (apparent) bound is not reported, given that it is strongly learner-dependent and carries no information about the ceiling. Table S14 above uses a fixed penalized-logistic/gradient-boosting pair to compare *predictor sets* on a common footing; it is not the learner maximum reported here, and the two should not be read as one sequence.
+-
+-| Learner | Oracle AUROC (5-fold CV) | 95% CI |
+-|---|---|---|
+-| Logistic regression | 0.764 | 0.739-0.788 |
+-| Penalized logistic (L2, C=0.1) | 0.764 | 0.740-0.788 |
+-| Histogram gradient boosting | 0.772 | 0.746-0.798 |
+-| LightGBM (small) | 0.776 | 0.753-0.799 |
+-| LightGBM (small), refitted inside each bootstrap replicate | 0.776 | 0.745-0.794 |
+-
+-
+-
+-
+-
+-
+-
+-
+-AUROC: area under the receiver operating characteristic curve.
+-LightGBM: light gradient-boosting machine.
+ ### Interpretation
+ - The 17-predictor external ceiling (~0.77) held against every leakage-controlled attempt made, and the transported model already matches the best in-domain performance among the learners tested. Concept shift is the most consistent explanation, but it cannot be separated here from differences in how several predictors are measured, from development-survey coverage, or from complete-case selection; the single density-ratio correction applied shows only that the procedure did not help.
+-- Multimorbidity and healthcare utilization carry additional in-domain signal in NHANES (oracle 0.765→0.778). Table S14 is fitted and cross-validated entirely within pooled NHANES; this is therefore incremental discrimination inside that population rather than evidence that the signal would transport. The healthcare-visit item is carried as pre-cycle only, and its contribution cannot be separated from cycle differences. These domains are not collected by KCHS (only hypertension and diabetes are recorded as physician-diagnosed conditions across all survey years, both already included); hence those domains cannot enter a KCHS-developed transportable model. Part of the residual ceiling is therefore development-survey coverage, not concept shift alone.
++- Multimorbidity and healthcare utilization carry additional in-domain signal in NHANES (oracle 0.765→0.778). Table S16 is fitted and cross-validated entirely within pooled NHANES; this is therefore incremental discrimination inside that population rather than evidence that the signal would transport. The healthcare-visit item is carried as pre-cycle only, and its contribution cannot be separated from cycle differences. These domains are not collected by KCHS (only hypertension and diabetes are recorded as physician-diagnosed conditions across all survey years, both already included); hence those domains cannot enter a KCHS-developed transportable model. Part of the residual ceiling is therefore development-survey coverage, not concept shift alone.
+ 
+@@ -97,25 +10,31 @@
+ 
+-## Table S16. Calibration with cluster-bootstrap intervals (external cohorts).
++### Between-cycle stability and the in-domain oracle comparison
+ 
+-Intervals are the 2.5th and 97.5th percentiles of 1000 rescaled stratified cluster-bootstrap replicates, the same replicates used for discrimination. Recalibration is intercept/slope updating applied out-of-sample by 5-fold cross-fitting grouped by primary sampling unit. Two recalibrated rows are given per cohort. The **nested** row refits the update inside every replicate; its interval therefore carries the uncertainty of the update itself and answers whether the procedure restores calibration when the whole analysis is repeated. The other row holds the update fixed at the one estimated on the full cohort, which is the position of a deployment that fits its update once; that interval is wider, since no refitting absorbs the replicate's own miscalibration. Slopes are given to three decimals here. Out-of-fold recalibration shrinks the slope marginally below 1 by construction, since each fold's map is estimated without the observations it is applied to; the nested pre-pandemic interval accordingly sits just under 1 (upper bound 0.998) rather than centered on it, and this reflects the cross-fitting rather than residual miscalibration. Expected calibration error (ECE) is given as a point estimate only: it is a non-negative absolute-deviation statistic that this replicate scheme biases upward, and its percentile interval failed to contain its own point estimate in one cell.
++Supports Discussion Principal Findings and Discussion Plausible Mechanisms for the External Ceiling.
+ 
+-| Cohort | Probabilities | Calibration slope (95% CI) | CITL (95% CI) | ECE |
+-|---|---|---|---|---|
+-| NHANES pre | as transported | 0.651 (0.533-0.774) | +0.51 (+0.37 to +0.64) | 0.030 |
+-| NHANES pre | after intercept/slope recalibration | 0.998 (0.817-1.188) | 0.00 (-0.12 to +0.11) | 0.010 |
+-| NHANES pre | after intercept/slope recalibration (nested) | 0.998 (0.950-0.998) | 0.00 (-0.01 to +0.02) | 0.010 |
+-| NHANES post | as transported | 0.681 (0.603-0.764) | +1.13 (+0.98 to +1.26) | 0.068 |
+-| NHANES post | after intercept/slope recalibration | 0.996 (0.878-1.126) | 0.00 (-0.13 to +0.12) | 0.014 |
+-| NHANES post | after intercept/slope recalibration (nested) | 0.996 (0.965-1.005) | 0.00 (-0.02 to +0.01) | 0.014 |
++The width of the between-cycle difference interval leaves moderate change in either direction admissible; within that limit the data are consistent with no decay across the population-wide shock that motivated the analysis.
+ 
+-External AUROC differed between cycles by +0.006 (95% CI -0.045 to +0.056; bootstrap P=.86); the interval was formed by differencing independently drawn replicate statistics from the two cohorts, the cycles being disjoint samples.
+-CITL: calibration-in-the-large.
+-ECE: expected calibration error.
+-NHANES: National Health and Nutrition Examination Survey.
++The oracle comparison is pooled across cycles while the transported estimates are cycle-specific, and the intervals overlap; it therefore locates the limit in the predictors rather than in the transfer only to the extent that the oracle is a fair upper bound.
+ 
+-### Discussion detail relocated from the manuscript (ceiling, oracle, and calibration)
++Each of the two specification analyses that locate the shortfall alters the target condition or the population as well as the gap, hence the pattern is suggestive rather than confirmatory.
+ 
+-Explanatory prose condensed out of the Discussion is preserved here in full. No new result is introduced.
++The interpretability comparison is a statement about the fixed model's attribution and not about the external predictor-outcome associations, which the attribution never observes.
+ 
+-The between-cycle difference interval was computed after the fact, no between-cycle test having been pre-specified, and its width leaves moderate change in either direction admissible; within that limit the data are consistent with no decay across the population-wide shock that motivated the analysis. The plateau is most consistent with shift in how the same predictors relate to the outcome, with residual contributions from differing measurement, development-survey coverage and complete-case selection.
++### Leakage control and the training-set size result
++
++Supports Results Testing Whether External Discrimination Can Be Raised Above ~0.77.
++
++Leakage is the failure mode that has driven reproducibility problems across machine-learning-based science [42]; runs screened on external labels are identified as such in Table S11 in Multimedia Appendix 1.
++
++That increasing the training set from 0.5 to 2 million records slightly lowered external discrimination is a pattern consistent with source-specific overfitting rather than with an estimation-limited ceiling.
++
++### Development-survey coverage of multimorbidity and healthcare utilization
++
++Supports Discussion Strengths and Limitations.
++
++Beyond hypertension and diabetes, dyslipidemia, osteoporosis, cataract and arthritis are fielded in a single KCHS year and therefore cannot enter a model pooled over 2017-2025. KCHS collects no broader chronic-disease inventory, no hospitalization record and no visit counts, and a development survey that captured multimorbidity and utilization might raise the attainable ceiling.
++
++### Prior Korean models and the contribution of the present study
++
++Supports Discussion Comparison With Prior Work.
+ 
+@@ -123,15 +42,7 @@
+ 
+-The in-domain oracle is a deliberate departure from the external-validation rule, made for diagnosis only. That comparison is pooled across cycles while the transported estimates are cycle-specific, and the intervals overlap; it therefore locates the limit in the predictors rather than in the transfer only to the extent that the oracle is a fair upper bound.
++### Recalibration of the transported probabilities
+ 
+-Two specification analyses locate where the shortfall sits. Each analysis alters the target condition or the population as well as the gap; hence the pattern is suggestive rather than confirmatory.
++Supports Results External Validation Across Country and Pandemic Period.
+ 
+-The interpretability comparison is a statement about the fixed model's attribution and not about the external predictor-outcome associations, which the attribution never observes. Two caveats bound that conclusion. Several predictors are measured differently in the two surveys, and the external cohorts are complete-case samples with differential depression-module non-response; hence measurement and selection effects cannot be separated from concept shift with these data.
+-
+-Local recalibration is required outside the development population since discrimination transported but absolute risk did not.
+-
+-Further methodological strengths condensed out of the Discussion: validation covered two target periods as well as a second country, and recalibration was quantified rather than asserted; intervals came from a rescaled stratified cluster bootstrap validated against a closed-form design-based standard error; the predictor set was restricted to items both surveys measure in a form harmonizable to a common definition, with every inclusion decision documented and dated; and the three candidate algorithms were compared at each one's tuned best under one identical protocol, after a preceding gradient-boosting-only search that is reported in full.
+-
+-### Results detail relocated from the manuscript (the third recalibration step)
+-
+-Explanatory prose condensed out of the Results is preserved here in full. No new result is introduced.
++Each intercept-plus-slope update used the full sample of the cohort it was fitted in, and the local sample size needed for a stable update was not examined here.
+ 
+@@ -139,11 +50 @@
+ 
+-### Discussion detail relocated in revision (optimization search and predictor coverage)
+-
+-Explanatory prose condensed out of the Discussion during revision is preserved here. No new result is introduced.
+-
+-The catalogued search also covered alternative loss functions. Leakage is the failure mode that has driven reproducibility problems across machine-learning-based science; runs screened on external labels are identified as such in Table S11. That increasing the training set from 0.5 to 2 million records slightly lowered external discrimination is a pattern consistent with source-specific overfitting rather than with an estimation-limited ceiling.
+-
+-The interpretability comparison is at least consistent with the shift-stability framing of deployment failure in health artificial intelligence.
+-
+-The coverage analysis extracted candidate domains available in NHANES but not harmonizable to KCHS: physician-diagnosed multimorbidity (asthma, arthritis, thyroid, chronic obstructive pulmonary disease, liver disease, and cancer, excluding circulatory conditions) and healthcare utilization. KCHS records only hypertension and diabetes among physician-diagnosed conditions across more than one survey year, both already included; dyslipidemia, osteoporosis, cataract and arthritis are fielded in a single year and therefore cannot enter a model pooled over 2017-2025. KCHS collects no broader chronic-disease inventory, no hospitalization record and no visit counts, and these domains therefore cannot enter a KCHS-developed transportable model. Part of the residual external gap is thus attributable to development-survey coverage rather than to concept shift alone, and a development survey that captured multimorbidity and utilization might raise the attainable ceiling.
+-
+
+--- BEFORE/appendix5_methods.md
++++ AFTER/appendix5_methods.md
+@@ -2,3 +2,3 @@
+ 
+-Detail relocated from the manuscript Methods so that the main text states what a reader needs in order to judge the study and this section states what a reader needs in order to reproduce it. Estimates are complex-survey weighted unless a row or column is labeled unweighted; nothing here restates a result reported in the manuscript, and where a number appears in both, the manuscript is the reporting site and this section gives the derivation.
++This section states what a reader needs in order to reproduce the analysis, the main text stating what a reader needs in order to judge it. Estimates are complex-survey weighted unless a row or column is labeled unweighted; nothing here restates a result reported in the manuscript, and where a number appears in both, the manuscript is the reporting site and this section gives the derivation.
+ 
+@@ -13,3 +13,3 @@
+ 
+-The PROBAST self-assessment rated the participants, predictors and outcome domains at low risk of bias in both the development and the validation data, and the analysis domain at low risk for the development data. The analysis domain was rated unclear for the external cohorts, given that depression-module non-response was substantial and differential and was handled as complete-case (Table S8), which gives an overall low-to-unclear rating driven by that non-response.
++The PROBAST self-assessment rated the participants, predictors and outcome domains at low risk of bias in both the development and the validation data, and the analysis domain at low risk for the development data. The analysis domain was rated unclear for the external cohorts, given that depression-module non-response was substantial and differential and was handled as complete-case (Table S1), which gives an overall low-to-unclear rating driven by that non-response.
+ 
+@@ -24,7 +24,7 @@
+ 
+-This section carries detail relocated from the Methods subsection Participants and Outcome and supports Table S8. Eligibility in both surveys was restricted to adults aged 20 years or older with all nine PHQ-9 items answered.
++This section supports the Methods subsection Participants and Outcome and Table S1. Eligibility in both surveys was restricted to adults aged 20 years or older with all nine PHQ-9 items answered.
+ 
+-In NHANES the depression module is administered in the mobile examination center, and the estimation frame is therefore the examined sample. Of 9,232 interviewed adults aged 20 years or older in the pre-pandemic file, 8,544 were examined and 7,888 answered all nine items; the corresponding post-pandemic counts were 7,809, 6,064 and 5,210. Table S8 gives the same three stages together with item-level non-response and its education-specific and race-specific rates.
++In NHANES the depression module is administered in the mobile examination center, and the estimation frame is therefore the examined sample. Of 9,232 interviewed adults aged 20 years or older in the pre-pandemic file, 8,544 were examined and 7,888 answered all nine items; the corresponding post-pandemic counts were 7,809, 6,064 and 5,210. Table S1 gives the same three stages together with item-level non-response and its education-specific and race-specific rates.
+ 
+-A prior physician diagnosis of depression is not recorded in the KCHS 2017-2025 questionnaires and therefore could not be used for exclusion or sensitivity analysis; this is noted as a limitation (Strengths and Limitations, and Table S9).
++A prior physician diagnosis of depression is not recorded in the KCHS 2017-2025 questionnaires and therefore could not be used for exclusion or sensitivity analysis; this is noted as a limitation (Strengths and Limitations, and Table S2).
+ 
+@@ -40,3 +40,3 @@
+ 
+-Of the three predictors reduced to conservatively comparable definitions, only alcohol could be varied in sensitivity analysis: the harmonized data carry a single binary physical-activity indicator and a within-survey income quintile, hence no alternative definition of those two was available. The protocol specified alcohol as current drinking plus at-risk drinking, whereas the harmonized variable uses current drinking alone, given that the NHANES quantity item was not carried through harmonization; this is recorded as a definition-level deviation in Table S9. Body mass index is self-reported in KCHS and measured in NHANES.
++Of the three predictors reduced to conservatively comparable definitions, only alcohol could be varied in sensitivity analysis: the harmonized data carry a single binary physical-activity indicator and a within-survey income quintile, hence no alternative definition of those two was available. The protocol specified alcohol as current drinking plus at-risk drinking, whereas the harmonized variable uses current drinking alone, given that the NHANES quantity item was not carried through harmonization; this is recorded as a definition-level deviation in Table S2. Body mass index is self-reported in KCHS and measured in NHANES.
+ 
+@@ -44,5 +44,5 @@
+ 
+-Three further discontinuities are internal to KCHS. The current-drinking items were recoded in 2020, and the weighted prevalence rises from 72.5-75.4% before that year to 81.8-86.8% after it. The 2018 physical-activity module lacks the moderate-activity day count. Sleep duration is a weekday-only figure in 2017-2019 but a weekday-weighted seven-day average from 2020, whereas NHANES asks about weekdays. These three, together with the age top-code, the 2017 income refusal codes and the income quintile, were corrected in the analytic data before the primary analysis rather than carried as limitations; Table S10 quantifies singly each of the six tabulated corrections.
++Three further discontinuities are internal to KCHS. The current-drinking items were recoded in 2020, and the weighted prevalence rises from 72.5-75.4% before that year to 81.8-86.8% after it. The 2018 physical-activity module lacks the moderate-activity day count. Sleep duration is a weekday-only figure in 2017-2019 but a weekday-weighted seven-day average from 2020, whereas NHANES asks about weekdays. These three, together with the age top-code, the 2017 income refusal codes and the income quintile, were corrected in the analytic data before the primary analysis rather than carried as limitations; Table S7 quantifies singly each of the six tabulated corrections.
+ 
+-The preprocessing pipeline was fitted in the development training set and applied unchanged to the internal hold-out and to each external set. For the linear comparator, continuous predictors were median-imputed, categorical predictors mode-imputed, and binary predictors mode-imputed with an added missing indicator. The three ordinal scores (household income quintile, self-rated health and self-rated oral health) were median-imputed and standardized. In the post-pandemic cohort the income-to-poverty ratio is top-coded at 5.00 for 23.8% of respondents, hence the income quintile would collapse to four levels if the raw ratio were binned directly; the primary analysis instead recomputes a rank-based five-level score within each cohort, which restores five levels. The two alternative strategies examined in sensitivity analysis were missing indicators added for the continuous predictors, and single chained-equations imputation of the continuous predictors; weighted AUROC for both is given in Table S5. A check for silently omitted predictor columns was added to the pipeline after the data-integrity audit.
++The preprocessing pipeline was fitted in the development training set and applied unchanged to the internal hold-out and to each external set. For the linear comparator, continuous predictors were median-imputed, categorical predictors mode-imputed, and binary predictors mode-imputed with an added missing indicator. The three ordinal scores (household income quintile, self-rated health and self-rated oral health) were median-imputed and standardized. In the post-pandemic cohort the income-to-poverty ratio is top-coded at 5.00 for 23.8% of respondents, hence the income quintile would collapse to four levels if the raw ratio were binned directly; the primary analysis instead recomputes a rank-based five-level score within each cohort, which restores five levels. The two alternative strategies examined in sensitivity analysis were missing indicators added for the continuous predictors, and single chained-equations imputation of the continuous predictors; weighted AUROC for both is given in Table S6. A check for silently omitted predictor columns was added to the pipeline after the data-integrity audit.
+ 
+@@ -55,3 +55,3 @@
+ 
+-The feature-representation and hyperparameter search compared 24 LightGBM configurations under single-pass 4-fold survey-weighted cross-validation in a 300,000-record subsample of the training set, crossed with two representations: main effects only, and main effects plus four candidate interaction terms (age×self-rated health, self-rated health×oral health, age×employment, income×employment). Those four terms were specified when the search was written and are not named in any earlier document (Table S9). The algorithm comparison then tuned elastic net, random forest and LightGBM over comparable 5-configuration grids under one protocol, single-pass 5-fold stratified cross-validation in a 200,000-record subsample of the training set scored by unweighted cross-validated AUROC, and compared each algorithm at its best configuration. Inside the plan's tie band the decision passes to the calibration slope, and the parsimony level of the rule is therefore never reached; the cross-validated values, the tie-band membership of each algorithm and the retrospective reconstruction of the rule are given in Table S9.
++The feature-representation and hyperparameter search compared 24 LightGBM configurations under single-pass 4-fold survey-weighted cross-validation in a 300,000-record subsample of the training set, crossed with two representations: main effects only, and main effects plus four candidate interaction terms (age×self-rated health, self-rated health×oral health, age×employment, income×employment). Those four terms were specified when the search was written and are not named in any earlier document (Table S2). The algorithm comparison then tuned elastic net, random forest and LightGBM over comparable 5-configuration grids under one protocol, single-pass 5-fold stratified cross-validation in a 200,000-record subsample of the training set scored by unweighted cross-validated AUROC, and compared each algorithm at its best configuration. Inside the plan's tie band the decision passes to the calibration slope, and the parsimony level of the rule is therefore never reached; the cross-validated values, the tie-band membership of each algorithm and the retrospective reconstruction of the rule are given in Table S2.
+ 
+@@ -59,3 +59,3 @@
+ 
+-Calibration-in-the-large is estimated as the intercept of a weighted logistic model with the linear predictor entered as an offset, ie, with the slope fixed at 1; a positive value indicates that observed risk exceeds predicted risk. For the recalibrated columns of Table 2 the interval is obtained by refitting the intercept and slope inside every bootstrap replicate, so that the uncertainty of the update itself is carried; the wider fixed-update alternative is tabulated alongside it in Table S16. The interval for the difference in external AUROC between the two cycles is formed by differencing independently drawn replicate statistics rather than by pairing replicate indices, since the two cycles are disjoint samples. Bootstrap P values are read off the replicate distribution as twice the smaller tail proportion, and with 1000 replicates the smallest attainable value is reported as P<.001 rather than as an equality.
++Calibration-in-the-large is estimated as the intercept of a weighted logistic model with the linear predictor entered as an offset, ie, with the slope fixed at 1; a positive value indicates that observed risk exceeds predicted risk. For the recalibrated columns of Table 2 the interval is obtained by refitting the intercept and slope inside every bootstrap replicate, so that the uncertainty of the update itself is carried; the wider fixed-update alternative is tabulated alongside it in Table S3. The interval for the difference in external AUROC between the two cycles is formed by differencing independently drawn replicate statistics rather than by pairing replicate indices, since the two cycles are disjoint samples. Bootstrap P values are read off the replicate distribution as twice the smaller tail proportion, and with 1000 replicates the smallest attainable value is reported as P<.001 rather than as an equality.
+ 
+@@ -72,3 +72,3 @@
+ 
+-For the parsimonious model, global Shapley additive explanations (SHAP) importance was computed on a random 20,000-record subsample of the 450,000-record fitting set. The search ran over every item count below 17 and did not impose the analysis plan's preferred 5-10 item range, which the selected count nonetheless satisfies. A variant using a stricter 0.01 margin is reported alongside the primary selection and is flagged as post hoc. Table S6 gives the full item-count trajectory.
++For the parsimonious model, global Shapley additive explanations (SHAP) importance was computed on a random 20,000-record subsample of the 450,000-record fitting set. The search ran over every item count below 17 and did not impose the analysis plan's preferred 5-10 item range, which the selected count nonetheless satisfies. A variant using a stricter 0.01 margin is reported alongside the primary selection and is flagged as post hoc. Table S13 gives the full item-count trajectory.
+ 
+@@ -86,3 +86,3 @@
+ 
+-Table S10 quantifies six of these corrections one at a time: the three questionnaire-driven KCHS discontinuities (the 2020 drinking recode, the 2018 activity fallback and the sleep alignment), the age alignment, the 2017 KCHS income refusal codes, and the income-quintile rebuild, the last of which also removes the four-level collapse in the post-pandemic cohort. Three corrections are not tabulated separately: the living-alone and physical-activity audit corrections, since in the uncorrected data the affected variable is constant rather than mismeasured, and the KCHS 77777 income refusal code, which is a missing-value declaration rather than a change of definition.
++Table S7 quantifies six of these corrections one at a time: the three questionnaire-driven KCHS discontinuities (the 2020 drinking recode, the 2018 activity fallback and the sleep alignment), the age alignment, the 2017 KCHS income refusal codes, and the income-quintile rebuild, the last of which also removes the four-level collapse in the post-pandemic cohort. Three corrections are not tabulated separately: the living-alone and physical-activity audit corrections, since in the uncorrected data the affected variable is constant rather than mismeasured, and the KCHS 77777 income refusal code, which is a missing-value declaration rather than a change of definition.
+ 
+@@ -99,9 +99,17 @@
+ 
+-### Additional detail relocated from the Methods
++### Crosswalk coverage, the food-insecurity measure, and predictor coding
+ 
+-Supports the Methods subsections Predictors and Harmonization, Model Development and Evaluation, and External Validation and Sensitivity Analyses, and extends the corresponding sections above. Nothing here alters any reported estimate.
++Supports the Methods section Predictors and Harmonization.
+ 
+-The predictor set is exhaustive with respect to the extract available at the time of the amendment rather than with respect to the full crosswalk, the remainder of which was surfaced only by the later exhaustive extraction.
++The crosswalk available when the protocol amendment was written and locked held a 175-variable extract, of which the seventeen predictors are every eligible concept; the predictor set is thus exhaustive with respect to that extract rather than with respect to the full crosswalk. A later exhaustive extraction identified 265 variables common to both NHANES cycles, and the five further harmonizable items screened post hoc against NHANES outcome associations came from that extraction.
+ 
+-The three ordinal scores were modeled as numeric variables rather than as unordered categories, an ordinal coding rather than a set of indicator columns. Recomputation of the income quintile within each dataset and, inside KCHS, within each survey year is the one preprocessing step not carried over from the development training set unchanged; the underlying income instruments are not on a common scale across the two surveys or across KCHS years.
++A direct Korea-US comparison using the same 18-item household food-security module found food insecurity associated with higher odds of PHQ-9 depression in both countries, with a larger association in Korea [31]. The single-item KCHS measure used here is therefore the weakest link in the harmonized set rather than a difference in the underlying construct.
++
++The three ordinal scores were modeled as numeric variables rather than as unordered categories, an ordinal coding rather than a set of indicator columns. Recomputation of the income quintile within each dataset and, inside KCHS, within each survey year is the one preprocessing step not carried over from the development training set unchanged, the underlying income instruments not being on a common scale across the two surveys or across KCHS years.
++
++### Comparability of the two algorithm searches and the parsimony procedure
++
++Supports the Methods sections Model Development and Evaluation and External Validation and Sensitivity Analyses.
++
++The training set's approximately 1,000 events per candidate predictor is far above conventional events-per-predictor requirements. Only gradient boosting received the preceding feature-representation and hyperparameter search, hence the algorithm comparison is like-for-like at each algorithm's tuned best configuration rather than equal in cumulative search effort. The four candidate interaction terms did not improve cross-validated discrimination.
+ 
+@@ -109,17 +117,13 @@
+ 
++Predictor order and item count were both fixed inside the development training set, split into a 450,000-record fitting set and a 50,000-record selection set. Predictors were entered in descending order of global SHAP importance, the model was refitted at every item count from 1 to 17, and the count was chosen on selection-set AUROC by the analysis plan's margin, the smallest set within 0.02 AUROC of the full model.
++
++### Decision-curve construction, intended use, and deployment requirements
++
++Supports the Methods section External Validation and Sensitivity Analyses.
++
++Each dataset carries its own screen-all and screen-none default strategies in the decision-curve analysis, and the reported net benefit is therefore internal to each cohort (Table S5 in Multimedia Appendix 1).
++
++The model is intended as a triage aid for population-level screening programs and web or mobile self-assessment services, operated by public-health and primary-care services rather than by individuals acting alone, to prioritize who receives a full PHQ-9 and clinical follow-up.
++
+ Deployment presupposes local recalibration and, the household income predictor being a within-cohort rank, a local income distribution to rank against.
+ 
+-### Detail relocated from the trimmed Methods
+-
+-Supports the Methods subsections Predictors and Harmonization, Model Development and Evaluation, and External Validation and Sensitivity Analyses, and complements the sections above. Nothing here alters any reported estimate; where a value appears both here and in the manuscript, the manuscript is the reporting site.
+-
+-Crosswalk extract sizes and the post-hoc screen. The crosswalk available when the protocol amendment was written and locked held a 175-variable extract, of which the seventeen predictors are every eligible concept. A later exhaustive extraction identified 265 variables common to both NHANES cycles, and five further harmonizable items from that extraction were screened post hoc against NHANES outcome associations. None was added, and the predictor set is unchanged (crosswalk above).
+-
+-Food insecurity across the two countries. A direct Korea-US comparison using the same 18-item household food-security module found food insecurity associated with higher odds of PHQ-9 depression in both countries, with a larger association in Korea [31]. The single-item KCHS measure used here is therefore the weakest link in the harmonized set rather than a difference in the underlying construct. Scale differences between the surveys and questionnaire discontinuities within KCHS were corrected in the analytic data before the primary analysis rather than carried as limitations, as itemized above and quantified singly in Table S10.
+-
+-Sample size and comparability of the two algorithm searches. The training set supplies about 1,000 events per candidate predictor, far above conventional events-per-predictor requirements. Only gradient boosting received the preceding feature-representation and hyperparameter search, hence the algorithm comparison is like-for-like at each algorithm's tuned best configuration rather than equal in cumulative search effort. The four candidate interaction terms did not improve cross-validated discrimination, and the main-effects representation was selected. Running the searches single-pass rather than as 5-fold cross-validation repeated five times matters here, given that the two leading algorithms differ by less than the tie band of the pre-specified selection rule (Table S9).
+-
+-Parsimony selection. Predictor order and item count were both fixed inside the development training set, split into a 450,000-record fitting set and a 50,000-record selection set. Predictors were entered in descending order of global SHAP importance, the model was refitted at every item count from 1 to 17, and the count was chosen on selection-set AUROC by the analysis plan's margin, the smallest set within 0.02 AUROC of the full model; the variant using a stricter 0.01 margin is flagged as post hoc. Table S6 gives the full item-count trajectory.
+-
+-Decision-curve construction and intended use. Each dataset carries its own screen-all and screen-none default strategies in the decision-curve analysis, and the reported net benefit is therefore internal to each cohort (Table S3). The model is intended as a triage aid for population-level screening programs and web or mobile self-assessment services, operated by public-health and primary-care services rather than by individuals acting alone, to prioritize who receives a full PHQ-9 and clinical follow-up; it is not a diagnostic instrument.
+-
+
+--- BEFORE/model_card_17var.md
++++ AFTER/model_card_17var.md
+@@ -37,2 +37,9 @@
+ - Parsimonious variant selected by the analysis plan's margin, entirely inside the training data: **6 items** (self-rated health, age, sex, sleep duration, self-rated oral health, partnership): hold-out 0.822, external 0.748 (pre) and 0.757 (post). A 7-item variant chosen under a stricter margin helps the pre-pandemic cohort (0.757) but not the post-pandemic one (0.752); that comparison inspected the external cohorts and is therefore reported as exploratory.
++- Parsimonious variant selected by the analysis plan's margin, entirely inside the training data: **6 items** (self-rated health, age, sex, sleep duration, self-rated oral health, partnership): hold-out 0.822, external 0.748 (pre) and 0.757 (post). A 7-item variant chosen under a stricter margin helps the pre-pandemic cohort (0.757) but not the post-pandemic one (0.752); that comparison inspected the external cohorts and is therefore reported as exploratory.
++- Parsimonious variant selected by the analysis plan's margin, entirely inside the training data: **6 items** (self-rated health, age, sex, sleep duration, self-rated oral health, partnership): hold-out 0.822, external 0.748 (pre) and 0.757 (post). A 7-item variant chosen under a stricter margin helps the pre-pandemic cohort (0.757) but not the post-pandemic one (0.752); that comparison inspected the external cohorts and is therefore reported as exploratory.
++- Parsimonious variant selected by the analysis plan's margin, entirely inside the training data: **6 items** (self-rated health, age, sex, sleep duration, self-rated oral health, partnership): hold-out 0.822, external 0.748 (pre) and 0.757 (post). A 7-item variant chosen under a stricter margin helps the pre-pandemic cohort (0.757) but not the post-pandemic one (0.752); that comparison inspected the external cohorts and is therefore reported as exploratory.
++- Parsimonious variant selected by the analysis plan's margin, entirely inside the training data: **6 items** (self-rated health, age, sex, sleep duration, self-rated oral health, partnership): hold-out 0.822, external 0.748 (pre) and 0.757 (post). A 7-item variant chosen under a stricter margin helps the pre-pandemic cohort (0.757) but not the post-pandemic one (0.752); that comparison inspected the external cohorts and is therefore reported as exploratory.
++- Parsimonious variant selected by the analysis plan's margin, entirely inside the training data: **6 items** (self-rated health, age, sex, sleep duration, self-rated oral health, partnership): hold-out 0.822, external 0.748 (pre) and 0.757 (post). A 7-item variant chosen under a stricter margin helps the pre-pandemic cohort (0.757) but not the post-pandemic one (0.752); that comparison inspected the external cohorts and is therefore reported as exploratory.
++- Parsimonious variant selected by the analysis plan's margin, entirely inside the training data: **6 items** (self-rated health, age, sex, sleep duration, self-rated oral health, partnership): hold-out 0.822, external 0.748 (pre) and 0.757 (post). A 7-item variant chosen under a stricter margin helps the pre-pandemic cohort (0.757) but not the post-pandemic one (0.752); that comparison inspected the external cohorts and is therefore reported as exploratory.
++- Parsimonious variant selected by the analysis plan's margin, entirely inside the training data: **6 items** (self-rated health, age, sex, sleep duration, self-rated oral health, partnership): hold-out 0.822, external 0.748 (pre) and 0.757 (post). A 7-item variant chosen under a stricter margin helps the pre-pandemic cohort (0.757) but not the post-pandemic one (0.752); that comparison inspected the external cohorts and is therefore reported as exploratory.
+ - CIs from a rescaled stratified cluster bootstrap (n_h-1 PSUs resampled within each design stratum with weight rescaling, 1000 replicates). CITL is the offset-model intercept; positive = under-prediction of observed risk.
+@@ -56,3 +63,3 @@
+ - Software: Python 3.14 with scikit-learn 1.9.0, lightgbm 4.6.0, shap 0.52.0, numpy 2.4.5, pandas 3.0.3, scipy 1.18.0, pyreadstat 1.3.5 and matplotlib 3.10.9. Complex-survey weighting, the stratified cluster bootstrap, calibration measures and decision-curve net benefit are implemented directly rather than through a survey-analysis package.
+-- Reproducibility: `17var_model/70_primary_corrected.py` (primary analysis: harmonization corrections, cluster-level split, bootstrap CIs, three-step recalibration, parsimony, fairness), `71_utility_primary2.py` (operating points and decision-curve net benefit), `55_oracle_grouped.py` (in-domain oracle), `61_sync_numbers.py` (the primary-analysis numbers in the manuscript and appendices are injected from `results/primary2_*.csv` by `61_sync_numbers.py` and checked by `60_verify_manuscript.py`; the separate exploration-run tables (Tables S11 in Multimedia Appendix 1 to S13) are transcribed from the corresponding run logs at the precision recorded there) and `60_verify_manuscript.py` (mechanical verification). Current results are `results/primary2_*.csv` together with `review4_oracle_grouped.csv`; earlier generations remain in `results/` but are listed in `results/_SUPERSEDED.md` and must not be quoted.
++- Reproducibility: `17var_model/70_primary_corrected.py` (primary analysis: harmonization corrections, cluster-level split, bootstrap CIs, three-step recalibration, parsimony, fairness), `71_utility_primary2.py` (operating points and decision-curve net benefit), `55_oracle_grouped.py` (in-domain oracle), `61_sync_numbers.py` (the primary-analysis numbers in the manuscript and appendices are injected from `results/primary2_*.csv` by `61_sync_numbers.py` and checked by `60_verify_manuscript.py`; the separate exploration-run tables (Tables S11 in Multimedia Appendix 1 to S12) are transcribed from the corresponding run logs at the precision recorded there) and `60_verify_manuscript.py` (mechanical verification). Current results are `results/primary2_*.csv` together with `review4_oracle_grouped.csv`; earlier generations remain in `results/` but are listed in `results/_SUPERSEDED.md` and must not be quoted.
+ 
+
+--- BEFORE/cover_letter.md
++++ AFTER/cover_letter.md
+@@ -12,3 +12,3 @@
+ 
+-**Methodological rigor and transparency.** The work follows TRIPOD+AI (2024; an item-by-item mapping is enclosed as Multimedia Appendix 2, and the official checklist form will be uploaded with the submission) with PROBAST risk-of-bias self-assessment. The harmonized predictor set is restricted to items both surveys measure in a form reducible to a common definition, and the instrument differences that remain are reported item by item. Three of the seventeen entered through a dated protocol amendment, written while the study was under way and locked before any model using the amended set was fitted; the amendment is summarized in English in Multimedia Appendix 1, with the unmodified Korean original released with the code, the added items were chosen on survey availability and non-circularity rather than on any outcome association, and the contribution of those items is reported as a robustness analysis rather than a primary result. Fitting, tuning and algorithm selection for the primary model used development-data cross-validation only, the in-domain oracle being a deliberate diagnostic exception, and the deployment item count follows the analysis plan's margin applied inside the development data; a smaller-margin seven-item variant is reported and labeled exploratory, the 0.01 margin being post hoc while the plan fixed 0.02, and the inferential 14-versus-17-predictor comparison gave each model its own hyperparameter search, so that it is not confounded by tuning effort, while the predictor-set variants tabulated in the appendix share one common configuration. An adversarial data-integrity audit and subsequent peer review identified seven data-processing and harmonization defects, all corrected in the primary analysis, each described in the data-integrity audit paragraph of External Validation and Sensitivity Analyses, and six harmonization corrections are quantified one by one in Multimedia Appendix 1 Table S10, the three audit corrections not being separable in that way. The analysis code, variable-harmonization dictionary, model card, and protocol/pre-specification documents are available from the corresponding author on reasonable request, subject to survey data-use restrictions; generative AI tools assisted with code and drafting under full author verification.
++**Methodological rigor and transparency.** The work follows TRIPOD+AI (2024; an item-by-item mapping is enclosed as Multimedia Appendix 2, and the official checklist form will be uploaded with the submission) with PROBAST risk-of-bias self-assessment. The harmonized predictor set is restricted to items both surveys measure in a form reducible to a common definition, and the instrument differences that remain are reported item by item. Three of the seventeen entered through a dated protocol amendment, written while the study was under way and locked before any model using the amended set was fitted; the amendment is summarized in English in Multimedia Appendix 1, with the unmodified Korean original released with the code, the added items were chosen on survey availability and non-circularity rather than on any outcome association, and the contribution of those items is reported as a robustness analysis rather than a primary result. Fitting, tuning and algorithm selection for the primary model used development-data cross-validation only, the in-domain oracle being a deliberate diagnostic exception, and the deployment item count follows the analysis plan's margin applied inside the development data; a smaller-margin seven-item variant is reported and labeled exploratory, the 0.01 margin being post hoc while the plan fixed 0.02, and the inferential 14-versus-17-predictor comparison gave each model its own hyperparameter search, so that it is not confounded by tuning effort, while the predictor-set variants tabulated in the appendix share one common configuration. An adversarial data-integrity audit and subsequent peer review identified seven data-processing and harmonization defects, all corrected in the primary analysis, each described in the data-integrity audit paragraph of External Validation and Sensitivity Analyses, and six harmonization corrections are quantified one by one in Multimedia Appendix 1 Table S7, the three audit corrections not being separable in that way. The analysis code, variable-harmonization dictionary, model card, and protocol/pre-specification documents are available from the corresponding author on reasonable request, subject to survey data-use restrictions; generative AI tools assisted with code and drafting under full author verification.
+ 
